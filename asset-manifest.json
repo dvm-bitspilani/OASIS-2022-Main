@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/oasis-main/static/css/main.073c9b0a.css",
-    "main.js": "/oasis-main/static/js/main.5a37c39a.js",
-    "static/js/787.afe8fd94.chunk.js": "/oasis-main/static/js/787.afe8fd94.chunk.js",
-    "static/media/logo.svg": "/oasis-main/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/oasis-main/index.html",
-    "main.073c9b0a.css.map": "/oasis-main/static/css/main.073c9b0a.css.map",
-    "main.5a37c39a.js.map": "/oasis-main/static/js/main.5a37c39a.js.map",
-    "787.afe8fd94.chunk.js.map": "/oasis-main/static/js/787.afe8fd94.chunk.js.map"
+    "main.css": "/Oasis-main/static/css/main.073c9b0a.css",
+    "main.js": "/Oasis-main/static/js/main.e839d899.js",
+    "static/js/787.afe8fd94.chunk.js": "/Oasis-main/static/js/787.afe8fd94.chunk.js",
+    "static/media/logo.svg": "/Oasis-main/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Oasis-main/index.html",
+    "main.073c9b0a.css.map": "/Oasis-main/static/css/main.073c9b0a.css.map",
+    "main.e839d899.js.map": "/Oasis-main/static/js/main.e839d899.js.map",
+    "787.afe8fd94.chunk.js.map": "/Oasis-main/static/js/787.afe8fd94.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.5a37c39a.js"
+    "static/js/main.e839d899.js"
   ]
 }
