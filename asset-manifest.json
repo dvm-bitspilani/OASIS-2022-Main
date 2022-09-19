@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Oasis-main/static/css/main.9114a53d.css",
+    "main.js": "/Oasis-main/static/js/main.e0e28dd5.js",
+    "static/media/background.png": "/Oasis-main/static/media/background.c5fc7839fde88584ce67.png",
+    "static/media/window.png": "/Oasis-main/static/media/window.62b012a859d07a513c17.png",
+    "static/media/throne.png": "/Oasis-main/static/media/throne.d3648ea2aef2358dd788.png",
+    "static/media/gold_lines.png": "/Oasis-main/static/media/gold_lines.8849dad5c384932cf91b.png",
+    "index.html": "/Oasis-main/index.html",
+    "main.9114a53d.css.map": "/Oasis-main/static/css/main.9114a53d.css.map",
+    "main.e0e28dd5.js.map": "/Oasis-main/static/js/main.e0e28dd5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9114a53d.css",
+    "static/js/main.e0e28dd5.js"
+  ]
+}
