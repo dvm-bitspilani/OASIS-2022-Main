@@ -10,7 +10,10 @@ const Lander = () => {
         <div className="lander">
             <img src={logo} alt="" className="logo" />
             <img src={window} alt="" className="window" />
-            <img src={goldrings} alt="" className="goldrings" />
+            <div className="goldrings">
+                <img src={goldrings} alt="" className="goldrings-img goldrings-img-up" />
+                <img src={goldrings} alt="" className="goldrings-img" />
+            </div>
             <img src={king} alt="" className="king" />
         </div>
     )

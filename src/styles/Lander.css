@@ -14,11 +14,28 @@
     top: 2vh;
 }
 
-.window, .goldrings{
+.window, .goldrings-img{
     width: 68%;
     object-fit: cover;
     position: absolute;
     left: 16%;
+}
+
+.goldrings-img-up{
+    transform: rotateX(180deg) translateY(100%);
+}
+
+.goldrings{
+    animation: rotateRings 10s infinite;
+}
+
+@keyframes rotateRings{
+    from{
+        transform: rotate(0deg) scale(1.03);
+    }
+    to{
+        transform: rotate(359deg) scale(1.03);
+    }
 }
 
 .king{
