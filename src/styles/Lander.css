@@ -1,0 +1,28 @@
+.lander{
+    width: 100vw;
+    height: 100vh;
+    background: url(../Assets/background.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo{
+    position: absolute;
+    width: 3.5%;
+    left: 2vw;
+    top: 2vh;
+}
+
+.window, .goldrings{
+    width: 68%;
+    object-fit: cover;
+    position: absolute;
+    left: 16%;
+}
+
+.king{
+    width: 59%;
+    position: absolute;
+    left: 20.5%;
+}
