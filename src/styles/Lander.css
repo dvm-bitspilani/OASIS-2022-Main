@@ -2,6 +2,7 @@
     width: 100vw;
     height: 100vh;
     background: url(../Assets/background.png) no-repeat center;
+   
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -26,8 +27,160 @@
 }
 
 .goldrings{
-    animation: rotateRings 10s infinite;
+    animation: rotateRings 10s infinite linear;
 }
+
+.eye-svg{
+    position: absolute;
+    /* left:50%; */
+    left:48.6%;
+
+    /* transform: translateX(-50%); */
+    /* top:37.68%; */
+    top:37.685%;
+    width:1.85%;
+    /* height: 0.56%; */
+}
+.eve-svg-container{}
+
+.left-lava{
+    overflow: hidden;
+    width:50px;
+    --left-lava-height:300px;
+    height: var(--left-lava-height);
+    position: absolute;
+    left:8%;
+    top:32%;
+    display: flex;
+    justify-content: space-around;
+    /* border:2px solid red; */
+    /* position: relative; */
+}
+.left-lava > div {
+    /* border:1px solid white; */
+    width: 25%;
+    overflow: hidden;
+}
+
+
+.left-lava__1{
+    height: 70%;
+    /* overflow: hidden; */
+}
+.left-lava__4{
+    height: 60%;
+    position: relative;
+    /* top:20%; */
+}
+.left-lava__1--img{
+    position: relative;
+    /* top:-100px; */
+    animation: translate-left-lava__1 7s linear infinite forwards;
+
+}
+.left-lava__2--img{
+    position: relative;
+    animation: translate-left-lava__2 8s linear infinite forwards;
+
+}
+.left-lava__3--img{
+    position: relative;
+    animation: translate-left-lava__3 10s linear infinite forwards;
+
+}
+.left-lava__4--img{
+    
+    animation: translate-left-lava__4 13s linear infinite;
+    position: relative;
+    /* left:-20px; */
+}
+
+/* @keyframes translate-left-lava__1--img {
+    from{
+        transform: translate(0,0);
+    }
+    to{
+        transform: translate(-20px,200px);
+    }
+    
+} */
+@keyframes translate-left-lava__4 {
+   
+    0%{
+        transform: translate(0,-100%);
+    }
+    25%{
+        transform: translate(0,-50%) rotate(5deg);
+    }
+    50%{
+        transform: translate(0,0%) rotate(0deg);
+    }
+    75%{
+        transform: translate(0,50%) rotate(-5deg);
+    }
+    100%{
+        transform: translate(0,100%);
+    }
+    
+}
+@keyframes translate-left-lava__3 {
+   
+    0%{
+        transform: translate(0,-100%);
+    }
+    25%{
+        transform: translate(0,-50%) rotate(2deg);
+    }
+    50%{
+        transform: translate(0,0%) rotate(0deg);
+    }
+    75%{
+        transform: translate(0,50%) rotate(2deg);
+    }
+    100%{
+        transform: translate(0,100%) rotate(0);
+    }
+    
+}
+@keyframes translate-left-lava__2 {
+   
+    0%{
+        transform: translate(0,-100%);
+    }
+    25%{
+        transform: translate(0,-50%) rotate(5deg);
+    }
+    50%{
+        transform: translate(0,0%) rotate(0deg);
+    }
+    75%{
+        transform: translate(0,50%) rotate(5deg);
+    }
+    100%{
+        transform: translate(0,130%);
+    }
+    
+}
+@keyframes translate-left-lava__1 {
+   
+    0%{
+        transform: translate(0,-100%);
+    }
+    25%{
+        transform: translate(0,-50%) rotate(3deg);
+    }
+    50%{
+        transform: translate(0,0%) rotate(0deg);
+    }
+    75%{
+        transform: translate(0,50%) rotate(3deg);
+    }
+    100%{
+        transform: translate(0,100%);
+    }
+    
+}
+
 
 @keyframes rotateRings{
     from{
@@ -40,6 +193,11 @@
 
 .king{
     width: 59%;
+    /* top:30%; */
+    top:0;
+    
     position: absolute;
+    /* left:50%; */
+    /* transform: translateX(-50%) */
     left: 20.5%;
 }
