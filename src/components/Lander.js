@@ -10,8 +10,23 @@ import leftLava2 from "../Assets/left-lava-2.png";
 import leftLava1 from "../Assets/left-lava-1.png";
 
 import { ReactComponent as EyeSvg } from "../Assets/eyes.svg";
+import { useEffect, useRef, useState } from "react";
 
 const Lander = () => {
+    const [eyePosition,setEyePosition]=useState({top:null})
+    
+    const kingEl=useRef(null)
+
+    useEffect(()=>{
+        // const kingImg=document.querySelector(".king")
+        const KingPos=kingEl.current.getBoundingClientRect()
+        setEyePosition({top:KingPos.height*0.3})
+        console.log(kingEl.current.getBoundingClientRect(), eyePosition)
+
+    //    console.log(kingRef.getBoundingClientRect().height)
+    },[])
+
+
   return (
     <div className="lander">
       <img src={logo} alt="" className="logo" />
@@ -24,7 +39,7 @@ const Lander = () => {
         />
         <img src={goldrings} alt="" className="goldrings-img" />
       </div>
-      <img src={king} alt="" className="king" />
+      <img src={king} alt="" className="king" ref={kingEl}/>
       <div className="eye-svg-container">
         <EyeSvg />
       </div>

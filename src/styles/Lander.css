@@ -31,17 +31,24 @@
 }
 
 .eye-svg{
-    position: absolute;
-    /* left:50%; */
-    left:48.6%;
-
+   
     /* transform: translateX(-50%); */
     /* top:37.68%; */
-    top:37.685%;
-    width:1.85%;
+    
     /* height: 0.56%; */
+    transform: scale(1.2);
 }
-.eve-svg-container{}
+.eye-svg-container{
+    position: absolute;
+    /* left:50%; */
+    top:calc(37.685%  + 67px);
+    width:1.85%;
+    /* height: 2%; */
+
+
+    left:48.6%;
+
+}
 
 .left-lava{
     overflow: hidden;
