@@ -1,6 +1,6 @@
 {
   "name": "oasis-main",
-  "homepage": "https://dvm-bitspilani.github.io/Oasis-main",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
