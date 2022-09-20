@@ -1,4 +1,4 @@
-import "../styles/Lander.css";
+import LanderCSS from "../styles/Lander.module.css";
 import window from "../Assets/window.png";
 import goldrings from "../Assets/goldrings.png";
 import king from "../Assets/king.png";
@@ -28,33 +28,33 @@ const Lander = () => {
 
 
   return (
-    <div className="lander">
-      <img src={logo} alt="" className="logo" />
-      <img src={window} alt="" className="window" />
-      <div className="goldrings">
+    <div className={LanderCSS.lander}>
+      <img src={logo} alt="" className={LanderCSS.logo} />
+      <img src={window} alt="" className={LanderCSS.window} />
+      <div className={LanderCSS.goldrings}>
         <img
           src={goldrings}
           alt=""
-          className="goldrings-img goldrings-img-up"
+          className={[LanderCSS.goldringsImg, LanderCSS.goldringsImgUp].join(' ')}
         />
-        <img src={goldrings} alt="" className="goldrings-img" />
+        <img src={goldrings} alt="" className={LanderCSS.goldringsImg} />
       </div>
-      <img src={king} alt="" className="king" ref={kingEl}/>
+      <img src={king} alt="" className={LanderCSS.king} ref={kingEl}/>
       <div className="eye-svg-container">
         <EyeSvg />
       </div>
-      <div className="left-lava">
-        <div className="left-lava__1">
-          <img className="left-lava__1--img" src={leftLava1} alt="" />
+      <div className={LanderCSS.leftLava}>
+        <div className={LanderCSS.leftLava__1}>
+          <img className={LanderCSS.leftLava__1Img} src={leftLava1} alt="" />
         </div>
-        <div className="left-lava__2">
-          <img className="left-lava__2--img" src={leftLava2} alt="" />
+        <div className={LanderCSS.leftLava__2}>
+          <img className={LanderCSS.leftLava__2Img} src={leftLava2} alt="" />
         </div>
-        <div className="left-lava__3">
-          <img className="left-lava__3--img" src={leftLava3} alt="" />
+        <div className={LanderCSS.leftLava__3}>
+          <img className={LanderCSS.leftLava__3Img} src={leftLava3} alt="" />
         </div>
-        <div className="left-lava__4">
-          <img className="left-lava__4--img" src={leftLava4} alt="" />
+        <div className={LanderCSS.leftLava__4}>
+          <img className={LanderCSS.leftLava__4Img} src={leftLava4} alt="" />
         </div>
       </div>
     </div>

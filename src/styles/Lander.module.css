@@ -15,14 +15,14 @@
     top: 2vh;
 }
 
-.window, .goldrings-img{
+.window, .goldringsImg{
     width: 68%;
     object-fit: cover;
     position: absolute;
     left: 16%;
 }
 
-.goldrings-img-up{
+.goldringsImgUp{
     transform: rotateX(180deg) translateY(100%);
 }
 
@@ -30,7 +30,7 @@
     animation: rotateRings 10s infinite linear;
 }
 
-.eye-svg{
+.eyeSvg{
    
     /* transform: translateX(-50%); */
     /* top:37.68%; */
@@ -38,7 +38,7 @@
     /* height: 0.56%; */
     transform: scale(1.2);
 }
-.eye-svg-container{
+.eyeSvgContainer{
     position: absolute;
     /* left:50%; */
     top:calc(37.685%  + 67px);
@@ -50,7 +50,7 @@
 
 }
 
-.left-lava{
+.leftLava{
     overflow: hidden;
     width:50px;
     --left-lava-height:300px;
@@ -63,39 +63,39 @@
     /* border:2px solid red; */
     /* position: relative; */
 }
-.left-lava > div {
+.leftLava > div {
     /* border:1px solid white; */
     width: 25%;
     overflow: hidden;
 }
 
 
-.left-lava__1{
+.leftLava__1{
     height: 70%;
     /* overflow: hidden; */
 }
-.left-lava__4{
+.leftLava__4{
     height: 60%;
     position: relative;
     /* top:20%; */
 }
-.left-lava__1--img{
+.leftLava__1Img{
     position: relative;
     /* top:-100px; */
     animation: translate-left-lava__1 7s linear infinite forwards;
 
 }
-.left-lava__2--img{
+.leftLava__2Img{
     position: relative;
     animation: translate-left-lava__2 8s linear infinite forwards;
 
 }
-.left-lava__3--img{
+.leftLava__3Img{
     position: relative;
     animation: translate-left-lava__3 10s linear infinite forwards;
 
 }
-.left-lava__4--img{
+.leftLava__4Img{
     
     animation: translate-left-lava__4 13s linear infinite;
     position: relative;
