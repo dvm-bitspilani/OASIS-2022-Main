@@ -1,11 +1,16 @@
 import './App.css';
 import Lander from './components/Lander.js';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from './Pages/Home';
 
 function App() {
   return (
-    <div className="App">
-      <Lander />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
