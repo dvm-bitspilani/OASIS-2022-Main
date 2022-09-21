@@ -22,15 +22,10 @@
     left: 20%;
 }
 
+/* rings */
 .goldringsImgUp{
     transform: rotateX(180deg) translateY(100%);
-    /* transform-origin: 50% -50%; */
 }
-
-/* .window, .goldringsImgDown{
-    transform-origin: 50% 0;
-    transform: scale(0.9);
-} */
 
 .goldrings{
     animation: rotateRings 15s infinite linear;
@@ -50,7 +45,7 @@
     }
 }
 
-
+/* king */
 .kingContainer{
     position: absolute;
     top:0;
@@ -60,6 +55,8 @@
     flex-direction: column;
     align-items: center;
 }
+
+/* king eyes */
 .eyeSvgContainer{
     width:100%;
     display: flex;
@@ -111,10 +108,7 @@
     transform: rotate(-7deg) translateX(-22.5%);
 }
 
-
-
-
-
+/* OASIS title */
 .title{
     position: absolute;
     width: 38%;
@@ -122,6 +116,7 @@
     top: 54%;
 }
 
+/* register btn */
 .register{
     position: absolute;
     width: 100%;
@@ -133,25 +128,29 @@
 }
 
 .register div{
-    padding: .5rem 1rem;
-    border: 1px solid gold;
-    border-radius: 1rem;
+    padding: 8px 18px;
+    border: 1px solid #FEDB7E;
+    border-radius: 15px;
 }
 
+.register div:hover{
+    background: linear-gradient(94.75deg, #D19A08 0%, #FEDB7E 16.49%, #EBB935 43.37%, #FCD776 74.96%, #D19A08 100%);
+    cursor: pointer;
+}
+
+/* icons */
 .icons{
     display: flex;
     position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-    width: 4rem;
-    justify-content: space-around;
+    bottom: 2%;
+    right: 2%;
+    width: 6%;
+    justify-content: space-evenly;
 }
 
-i{
-    color: gold;
-    font-size: 1.2rem;
+.icons svg{
+    width: 20px;
 }
-
 
 .leftLava{
     overflow: hidden;
