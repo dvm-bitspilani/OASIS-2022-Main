@@ -50,16 +50,50 @@
     }
 }
 
+
+.kingContainer{
+    position: absolute;
+    top:0;
+    left:25%;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.eyeSvgContainer{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:43.5%;
+    transform: translateX(-0.85%);
+    
+}
+
 .king{
-    width: 50%;
+    width: 100%;
     /* top:30%; */
     top:0;
     
-    position: absolute;
+    /* position: absolute; */
     /* left:50%; */
     /* transform: translateX(-50%) */
-    left: 25%;
+    /* left: 25%; */
 }
+.leftEye,.rightEye{
+
+    width: 3.1%;
+}
+.leftEye{
+    transform: rotate(3deg) translateX(25%);
+}
+.rightEye{
+    transform: rotate(-3deg) translateX(-25%);
+}
+
+
+
+
 
 .title{
     position: absolute;
@@ -98,25 +132,6 @@ i{
     font-size: 1.2rem;
 }
 
-.eyeSvg{
-   
-    /* transform: translateX(-50%); */
-    /* top:37.68%; */
-    
-    /* height: 0.56%; */
-    transform: scale(1.2);
-}
-.eyeSvgContainer{
-    position: absolute;
-    /* left:50%; */
-    top:calc(37.685%  + 67px);
-    width:1.85%;
-    /* height: 2%; */
-
-
-    left:48.6%;
-
-}
 
 .leftLava{
     overflow: hidden;

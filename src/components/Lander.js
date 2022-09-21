@@ -13,23 +13,16 @@ import leftLava3 from "../Assets/left-lava-3.png";
 import leftLava2 from "../Assets/left-lava-2.png";
 import leftLava1 from "../Assets/left-lava-1.png";
 
+import leftEye from "../Assets/lefteye.png";
+import rightEye from "../Assets/righteye.png";
+
 import { ReactComponent as EyeSvg } from "../Assets/eyes.svg";
 import { useEffect, useRef, useState } from "react";
 
 const Lander = () => {
-    const [eyePosition,setEyePosition]=useState({top:null})
-    
-    const kingEl=useRef(null)
+  const [eyePosition, setEyePosition] = useState({ top: null });
 
-    useEffect(()=>{
-        // const kingImg=document.querySelector(".king")
-        const KingPos=kingEl.current.getBoundingClientRect()
-        setEyePosition({top:KingPos.height*0.3})
-        console.log(kingEl.current.getBoundingClientRect(), eyePosition)
-
-    //    console.log(kingRef.getBoundingClientRect().height)
-    },[])
-
+  const kingEl = useRef(null);
 
   return (
     <div className={LanderCSS.lander}>
@@ -37,17 +30,89 @@ const Lander = () => {
       <img src={window} alt="" className={LanderCSS.window} />
 
       <div className={LanderCSS.goldrings}>
-        <img src={ring1} alt="" className={[LanderCSS.ring1, LanderCSS.goldringsImg, LanderCSS.goldringsImgUp].join(' ')} />
-        <img src={ring2} alt="" className={[LanderCSS.ring2, LanderCSS.goldringsImg, LanderCSS.goldringsImgUp].join(' ')} />
-        <img src={ring3} alt="" className={[LanderCSS.ring3, LanderCSS.goldringsImg, LanderCSS.goldringsImgUp].join(' ')} />
-        <img src={ring4} alt="" className={[LanderCSS.ring4, LanderCSS.goldringsImg, LanderCSS.goldringsImgUp].join(' ')} />
-        <img src={ring1} alt="" className={[LanderCSS.ring1, LanderCSS.goldringsImg, LanderCSS.goldringsImgDown].join(' ')} />
-        <img src={ring2} alt="" className={[LanderCSS.ring2, LanderCSS.goldringsImg, LanderCSS.goldringsImgDown].join(' ')} />
-        <img src={ring3} alt="" className={[LanderCSS.ring3, LanderCSS.goldringsImg, LanderCSS.goldringsImgDown].join(' ')} />
-        <img src={ring4} alt="" className={[LanderCSS.ring4, LanderCSS.goldringsImg, LanderCSS.goldringsImgDown].join(' ')} />
+        <img
+          src={ring1}
+          alt=""
+          className={[
+            LanderCSS.ring1,
+            LanderCSS.goldringsImg,
+            LanderCSS.goldringsImgUp,
+          ].join(" ")}
+        />
+        <img
+          src={ring2}
+          alt=""
+          className={[
+            LanderCSS.ring2,
+            LanderCSS.goldringsImg,
+            LanderCSS.goldringsImgUp,
+          ].join(" ")}
+        />
+        <img
+          src={ring3}
+          alt=""
+          className={[
+            LanderCSS.ring3,
+            LanderCSS.goldringsImg,
+            LanderCSS.goldringsImgUp,
+          ].join(" ")}
+        />
+        <img
+          src={ring4}
+          alt=""
+          className={[
+            LanderCSS.ring4,
+            LanderCSS.goldringsImg,
+            LanderCSS.goldringsImgUp,
+          ].join(" ")}
+        />
+        <img
+          src={ring1}
+          alt=""
+          className={[
+            LanderCSS.ring1,
+            LanderCSS.goldringsImg,
+            LanderCSS.goldringsImgDown,
+          ].join(" ")}
+        />
+        <img
+          src={ring2}
+          alt=""
+          className={[
+            LanderCSS.ring2,
+            LanderCSS.goldringsImg,
+            LanderCSS.goldringsImgDown,
+          ].join(" ")}
+        />
+        <img
+          src={ring3}
+          alt=""
+          className={[
+            LanderCSS.ring3,
+            LanderCSS.goldringsImg,
+            LanderCSS.goldringsImgDown,
+          ].join(" ")}
+        />
+        <img
+          src={ring4}
+          alt=""
+          className={[
+            LanderCSS.ring4,
+            LanderCSS.goldringsImg,
+            LanderCSS.goldringsImgDown,
+          ].join(" ")}
+        />
       </div>
 
-      <img src={king} alt="" className={LanderCSS.king} ref={kingEl}/>
+      <div className={LanderCSS.kingContainer}>
+        <img src={king} alt="" className={LanderCSS.king} ref={kingEl} />
+
+        <div className={LanderCSS.eyeSvgContainer}>
+          <img src={leftEye} alt=""  className={LanderCSS.leftEye}/>
+          <img src={rightEye} alt="" className={LanderCSS.rightEye}/>
+        </div>
+      </div>
+
       <img src={title} alt="" className={LanderCSS.title} />
 
       <div className={LanderCSS.register}>
@@ -61,9 +126,6 @@ const Lander = () => {
       </div>
 
       {/* king eyes */}
-      <div className="eye-svg-container">
-        <EyeSvg />
-      </div>
 
       {/* lava */}
       <div className={LanderCSS.leftLava}>
