@@ -34,7 +34,7 @@ const Lander = () => {
           src={ring1}
           alt=""
           className={[
-            LanderCSS.ring1,
+            LanderCSS.ring1Up,
             LanderCSS.goldringsImg,
             LanderCSS.goldringsImgUp,
           ].join(" ")}
@@ -43,7 +43,7 @@ const Lander = () => {
           src={ring2}
           alt=""
           className={[
-            LanderCSS.ring2,
+            LanderCSS.ring2Up,
             LanderCSS.goldringsImg,
             LanderCSS.goldringsImgUp,
           ].join(" ")}
@@ -52,7 +52,7 @@ const Lander = () => {
           src={ring3}
           alt=""
           className={[
-            LanderCSS.ring3,
+            LanderCSS.ring3Up,
             LanderCSS.goldringsImg,
             LanderCSS.goldringsImgUp,
           ].join(" ")}
@@ -61,7 +61,7 @@ const Lander = () => {
           src={ring4}
           alt=""
           className={[
-            LanderCSS.ring4,
+            LanderCSS.ring4Up,
             LanderCSS.goldringsImg,
             LanderCSS.goldringsImgUp,
           ].join(" ")}
@@ -70,7 +70,7 @@ const Lander = () => {
           src={ring1}
           alt=""
           className={[
-            LanderCSS.ring1,
+            LanderCSS.ring1Down,
             LanderCSS.goldringsImg,
             LanderCSS.goldringsImgDown,
           ].join(" ")}
@@ -79,7 +79,7 @@ const Lander = () => {
           src={ring2}
           alt=""
           className={[
-            LanderCSS.ring2,
+            LanderCSS.ring2Down,
             LanderCSS.goldringsImg,
             LanderCSS.goldringsImgDown,
           ].join(" ")}
@@ -88,7 +88,7 @@ const Lander = () => {
           src={ring3}
           alt=""
           className={[
-            LanderCSS.ring3,
+            LanderCSS.ring3Down,
             LanderCSS.goldringsImg,
             LanderCSS.goldringsImgDown,
           ].join(" ")}
@@ -97,7 +97,7 @@ const Lander = () => {
           src={ring4}
           alt=""
           className={[
-            LanderCSS.ring4,
+            LanderCSS.ring4Down,
             LanderCSS.goldringsImg,
             LanderCSS.goldringsImgDown,
           ].join(" ")}

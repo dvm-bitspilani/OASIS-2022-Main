@@ -23,25 +23,60 @@
 }
 
 /* rings */
-.goldringsImgUp{
-    transform: rotateX(180deg) translateY(100%);
+.ring1Down{
+    animation: rotateRingsDown 15s infinite linear;
 }
 
-.goldrings{
-    animation: rotateRings 15s infinite linear;
+.ring2Down{
+    animation: rotateRingsDown 13s infinite linear;
+}
+
+.ring3Down{
+    animation: rotateRingsDown 11s infinite linear;
+}
+
+.ring4Down{
+    animation: rotateRingsDown 9s infinite linear;
+}
+
+.ring1Up{
+    animation: rotateRingsUp 15s infinite linear;
+}
+
+.ring2Up{
+    animation: rotateRingsUp 13s infinite linear;
+}
+
+.ring3Up{
+    animation: rotateRingsUp 11s infinite linear;
+}
+
+.ring4Up{
+    animation: rotateRingsUp 9s infinite linear;
 }
 
 .goldringsImg{
     width: 59%;
     left: 20.5%;
+    transform-origin: 50% 0;
 }
 
-@keyframes rotateRings{
+@keyframes rotateRingsDown{
     from{
         transform: rotate(0deg);
     }
     to{
         transform: rotate(359deg);
+    }
+}
+
+@keyframes rotateRingsUp{
+    from{
+        transform: rotate(180deg);
+    }
+
+    to{
+        transform: rotate(539deg);
     }
 }
 
@@ -120,7 +155,7 @@
 .register{
     position: absolute;
     width: 100%;
-    top: 90%;
+    top: 92%;
     display: flex;
     justify-content: center;
     color: white;
