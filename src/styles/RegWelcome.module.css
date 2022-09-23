@@ -1,3 +1,73 @@
 .welcome{
-    border-right: 1px solid gold;
+    font-family: 'Allura', cursive;
+    border: 2px solid #524916;
+    border-radius: .5rem 0 0 .5rem;
+    border-right: none;
+    position: relative;
+    background-color: rgba(20,20,20,1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flower{
+    position: absolute;
+    object-fit: cover;
+}
+
+#flower1{
+    left: 0;
+    top: 2%;
+    width: 20%;
+}
+
+#flower2{
+    left: 0;
+    bottom: 7%;
+    width: 10%;
+}
+
+#flower3{
+    right: -17%;
+    bottom: 0;
+    width: 40%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: gold;
+}
+
+.welc{
+    font-size: 2rem;
+}
+
+.fifty{
+    font-size: 4rem;
+    display: flex;
+}
+
+.th{
+    font-size: 2rem;
+    padding-left: 5px;
+}
+
+.title{
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+.theme{
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.line{
+    position: absolute;
+    right: 0;
+    height: 85%;
+    width: 3px;
 }
