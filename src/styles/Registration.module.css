@@ -1,0 +1,12 @@
+.registrationPage{
+    width:80%;
+    position: fixed;
+    
+    display: flex;
+}
+.welcome{
+    width: 35%;
+}
+.regPage{
+    width:65%;
+}
