@@ -1,12 +1,25 @@
-.registrationPage{
-    width:80%;
+.regPage {
+    width: 100vw;
+    height: 100vh;
     position: fixed;
+    z-index: 2;
+
+    background: hsla(0, 0%, 0%, 0.5);
+
+    display: grid;
+    place-items: center;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.formContainer{
+    width: 86%;
+    height: 86%;
+
+    border:1px solid gold;
+    border-radius: 0.5rem;
+
+    display: grid;
+    grid-template-columns:0.35fr .65fr ;
     
-    display: flex;
-}
-.welcome{
-    width: 35%;
-}
-.regPage{
-    width:65%;
 }

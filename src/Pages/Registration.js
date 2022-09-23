@@ -1,15 +1,18 @@
-import RegistrationCSS from '../styles/Registration.module.css'
+import RegistrationCSS from "../styles/Registration.module.css";
+import RegForm from "../components/RegForm";
+import RegWelcome from "../components/RegWelcome";
 
-import React from 'react'
+import React from "react";
 
 const Registration = () => {
   return (
-    <div className='registrationPage'>
-        <RegWelcome/>
-        <RegForm/>
-
+    <div className={RegistrationCSS.regPage}>
+      <div className={RegistrationCSS.formContainer}>
+        <RegWelcome />
+        <RegForm />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Registration
+export default Registration;

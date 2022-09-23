@@ -3,7 +3,7 @@ import RegWelcomeCSS from '../styles/RegWelcome.module.css'
 
 const RegWelcome = () => {
   return (
-    <div className='welcome'>RegWelcome</div>
+    <div className={RegWelcomeCSS.welcome}>RegWelcome</div>
   )
 }
 
