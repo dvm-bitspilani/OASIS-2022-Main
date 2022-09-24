@@ -4,24 +4,21 @@
     position: fixed;
     z-index: 2;
 
-    background: hsla(0, 0%, 0%, 0.5);
+    background: hsla(0, 0%, 0%, 0.7);
 
     display: grid;
     place-items: center;
-    
-    /* align-items: center;
-    justify-content: center; */
+
+
 }
 
 .formContainer{
     width: 86%;
     height: 86%;
-
-    border:1px solid gold;
+    box-shadow: 0 0 10px #9f9874b3;
     border-radius: 0.5rem;
-
     display: grid;
     grid-template-columns:0.35fr .65fr ;
     overflow: hidden;
-    
+
 }
