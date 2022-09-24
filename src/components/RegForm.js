@@ -13,16 +13,9 @@ const RegForm = () => {
   });
 
   const handleInputClick = (e) => {
-    let label = e.target.parentNode.querySelector("label");
-    let input = e.target.parentNode.querySelector("input");
-
-
-    // labelList.forEach((label)=>{
-    //   if(label.hasAttribute('shiftUp'))
-    //     label.removeAttribute('shiftUp')
-
-    // })
-    // console.log(labelList)
+    const label = e.target.parentNode.querySelector("label");
+    const input = e.target.parentNode.querySelector("input");
+  
     if (input.hasAttribute("activeInput")) {
       input.blur();
     } else {
@@ -32,8 +25,29 @@ const RegForm = () => {
       label.toggleAttribute("shiftUp");
       input.toggleAttribute("activeInput")
     }
+    else{
+      input.focus()
+    }
     // console.log(input,label)
   };
+
+  const nameChangeHandler=(e)=>{
+    setUserInfo((prevInfo)=>({...prevInfo,name:e.target.value}))
+  }
+  const emailChangeHandler=(e)=>{
+    setUserInfo((prevInfo)=>({...prevInfo,email:e.target.value}))
+  }
+  const phoneChangeHandler=(e)=>{
+    setUserInfo((prevInfo)=>({...prevInfo,phone:e.target.value}))
+  }
+  const genderChangeHandler=(e)=>{
+    setUserInfo((prevInfo)=>{
+      if(e.target.checked){
+        
+        return({...prevInfo,gender:e.target.dataset.gender})
+      }
+    })
+  }
 
   return (
     <div className={RegFormCSS.regFormBox}>
@@ -43,18 +57,18 @@ const RegForm = () => {
           onClick={handleInputClick}
         >
           <label>Name</label>
-          <input type="text" className={RegFormCSS.textInput} />
+          <input type="text" className={RegFormCSS.textInput} onChange={nameChangeHandler}/>
         </div>
         <div className={RegFormCSS.formControl} onClick={handleInputClick}>
           <label>Email ID</label>
-          <input type="text" className={RegFormCSS.textInput} />
+          <input type="text" className={RegFormCSS.textInput} onChange={emailChangeHandler}/>
         </div>
         <div
           className={`${RegFormCSS.formControl} ${RegFormCSS.phoneControl}`}
           onClick={handleInputClick}
         >
           <label>Phone No.</label>
-          <input type="text" className={RegFormCSS.textInput} />
+          <input type="text" className={RegFormCSS.textInput} onChange={phoneChangeHandler} />
         </div>
         <div
           className={`${RegFormCSS.formControl} ${RegFormCSS.genderControl} `}
@@ -62,15 +76,15 @@ const RegForm = () => {
           <label>Gender</label>
           <div className={RegFormCSS.genderOptions}>
             <div className={RegFormCSS.male}>
-              <input type="radio" className={RegFormCSS.genderInput} />
+              <input type="radio" data-gender="male" className={RegFormCSS.genderInput} name="gender" onChange={genderChangeHandler}/>
               <span>Male</span>
             </div>
             <div className={RegFormCSS.female}>
-              <input type="radio" className={RegFormCSS.genderInput} />
+              <input type="radio" data-gender="female" className={RegFormCSS.genderInput} name="gender" onChange={genderChangeHandler}/>
               <span>Female</span>
             </div>
             <div className={RegFormCSS.others}>
-              <input type="radio" className={RegFormCSS.genderInput} />
+              <input type="radio" data-gender="others" className={RegFormCSS.genderInput} name="gender" onChange={genderChangeHandler}/>
               <span>Others</span>
             </div>
           </div>
@@ -89,6 +103,8 @@ const RegForm = () => {
           <label>City/Town</label>
           <input className={RegFormCSS.dropDownInput} />
         </div>
+
+        <button type="submit" className={RegFormCSS.submitForm}>Register Now</button>
       </form>
     </div>
   );

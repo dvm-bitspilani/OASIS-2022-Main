@@ -2,9 +2,9 @@
     width: 100vw;
     height: 100vh;
     position: fixed;
-    z-index: 2;
+    z-index: 10;
 
-    background: hsla(0, 0%, 0%, 0.7);
+    background: hsla(0, 0%, 0%, 0.675);
 
     display: grid;
     place-items: center;

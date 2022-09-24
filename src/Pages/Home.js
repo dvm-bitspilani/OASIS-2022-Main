@@ -5,7 +5,7 @@ import Registration from "./Registration";
 export default function Home() {
   return (
     <div>
-      {/*<Registration/>*/}
+      <Registration/>
       <Lander />
     </div>
   );
