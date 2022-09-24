@@ -1,242 +1,254 @@
-.lander{
-    width: 100vw;
-    min-height: 100vh;
-    background: url(../Assets/background.png) no-repeat center;
-   
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
+.lander {
+  width: 100vw;
+  min-height: 100vh;
+  background: url(../Assets/background.png) no-repeat center;
+
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
 }
 
-.logo{
-    position: absolute;
-    width: 3.5%;
-    left: 2vw;
-    top: 2vh;
+.logo {
+  position: absolute;
+  width: 3.5%;
+  left: 2vw;
+  top: 2vh;
+  z-index: 2;
 }
 
-.window, .goldringsImg{
-    width: 60%;
-    object-fit: cover;
-    position: absolute;
-    left: 20%;
+.goldringsImg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(
+    calc(-50% + var(--offsetX)),
+    calc(-50% + var(--offsetY))
+  );
+  width: 57%;
+  transform-origin: calc(50% - var(--offsetX)) calc(50% - var(--offsetY));
+  animation: rotateRings var(--speed) infinite linear;
+  z-index: 3;
+}
+
+.window {
+  width: 60%;
+  object-fit: cover;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
 /* rings */
-.ring1Down{
-    animation: rotateRingsDown 15s infinite linear;
+.ring1Down {
+  animation: rotateRingsDown 15s infinite linear;
 }
 
-.ring2Down{
-    animation: rotateRingsDown 13s infinite linear;
+.ring2Down {
+  animation: rotateRingsDown 13s infinite linear;
 }
 
-.ring3Down{
-    animation: rotateRingsDown 11s infinite linear;
+.ring3Down {
+  animation: rotateRingsDown 11s infinite linear;
 }
 
-.ring4Down{
-    animation: rotateRingsDown 9s infinite linear;
+.ring4Down {
+  animation: rotateRingsDown 9s infinite linear;
 }
 
-.ring1Up{
-    animation: rotateRingsUp 15s infinite linear;
+.ring1Up {
+  animation: rotateRingsUp 15s infinite linear;
 }
 
-.ring2Up{
-    animation: rotateRingsUp 13s infinite linear;
+.ring2Up {
+  animation: rotateRingsUp 13s infinite linear;
 }
 
-.ring3Up{
-    animation: rotateRingsUp 11s infinite linear;
+.ring3Up {
+  animation: rotateRingsUp 11s infinite linear;
 }
 
-.ring4Up{
-    animation: rotateRingsUp 9s infinite linear;
+.ring4Up {
+  animation: rotateRingsUp 9s infinite linear;
 }
 
-.goldringsImg{
-    width: 59%;
-    left: 20.5%;
-    transform-origin: 50% 0;
-}
-
-@keyframes rotateRingsDown{
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(359deg);
-    }
-}
-
-@keyframes rotateRingsUp{
-    from{
-        transform: rotate(180deg);
-    }
-
-    to{
-        transform: rotate(539deg);
-    }
+@keyframes rotateRings {
+  from {
+    transform: translate(
+        calc(-50% + var(--offsetX)),
+        calc(-50% + var(--offsetY))
+      )
+      rotate(0deg);
+  }
+  to {
+    transform: translate(
+        calc(-50% + var(--offsetX)),
+        calc(-50% + var(--offsetY))
+      )
+      rotate(359deg);
+  }
 }
 
 /* king */
-.kingContainer{
-    position: absolute;
-    top:0;
-    left:25%;
-    width:50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.kingContainer {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 4;
 }
 
 /* king eyes */
-.eyeSvgContainer{
-    width:100%;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top:43.5%;
-    transform: translateX(-0.85%);
-    
+.eyeSvgContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 43.5%;
+  transform: translateX(-0.85%);
 }
-.eyeSvgContainer::after{
-    position: absolute;
-    content:'';
+.eyeSvgContainer::after {
+  position: absolute;
+  content: "";
 }
 
 @keyframes eye-animation {
-    0%{
-        opacity: 1;
-    }
-    95%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
+  0% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.king{
-    width: 100%;
-    /* top:30%; */
-    top:0;
-    
-    /* position: absolute; */
-    /* left:50%; */
-    /* transform: translateX(-50%) */
-    /* left: 25%; */
-}
-.leftEye,.rightEye{
+.king {
+  width: 100%;
+  /* top:30%; */
+  top: 0;
 
-    width: 3%;
-    animation: eye-animation 4.5s 1s  cubic-bezier(0.05, 0.59, 0.02, 0.81) infinite ;
-    
+  /* position: absolute; */
+  /* left:50%; */
+  /* transform: translateX(-50%) */
+  /* left: 25%; */
 }
-.leftEye{
-    transform: rotate(7deg) translateX(22.5%);
-
+.leftEye,
+.rightEye {
+  width: 3%;
+  animation: eye-animation 4.5s 1s cubic-bezier(0.05, 0.59, 0.02, 0.81) infinite;
+}
+.leftEye {
+  transform: rotate(7deg) translateX(22.5%);
 }
 
-.rightEye{
-    transform: rotate(-7deg) translateX(-22.5%);
+.rightEye {
+  transform: rotate(-7deg) translateX(-22.5%);
 }
 
 /* OASIS title */
-.title{
-    position: absolute;
-    width: 38%;
-    left: 31%;
-    top: 54%;
+.title {
+  position: absolute;
+  width: 38%;
+  left: 31%;
+  top: 54%;
+  z-index: 5;
 }
 
 /* register btn */
-.register{
-    position: absolute;
-    width: 100%;
-    top: 92%;
-    display: flex;
-    justify-content: center;
-    color: white;
-    font-family: 'Mulish', sans-serif;;
+.register {
+  position: absolute;
+  width: 100%;
+  top: 92%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "Mulish", sans-serif;
+  z-index: 5;
 }
 
-.register div{
-    padding: 8px 18px;
-    border: 1px solid #FEDB7E;
-    border-radius: 15px;
+.register div {
+  padding: 8px 18px;
+  border: 1px solid #fedb7e;
+  border-radius: 15px;
 }
 
-.register div:hover{
-    background: linear-gradient(94.75deg, #D19A08 0%, #FEDB7E 16.49%, #EBB935 43.37%, #FCD776 74.96%, #D19A08 100%);
-    cursor: pointer;
+.register div:hover {
+  background: linear-gradient(
+    94.75deg,
+    #d19a08 0%,
+    #fedb7e 16.49%,
+    #ebb935 43.37%,
+    #fcd776 74.96%,
+    #d19a08 100%
+  );
+  cursor: pointer;
 }
 
 /* icons */
-.icons{
-    display: flex;
-    position: absolute;
-    bottom: 2%;
-    right: 2%;
-    width: 6%;
-    justify-content: space-evenly;
+.icons {
+  display: flex;
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  width: 6%;
+  justify-content: space-evenly;
+  z-index: 5;
 }
 
-.icons svg{
-    width: 20px;
+.icons svg {
+  width: 20px;
 }
 
-.leftLava{
-    overflow: hidden;
-    width:50px;
-    --left-lava-height:300px;
-    height: var(--left-lava-height);
-    position: absolute;
-    left:8%;
-    top:32%;
-    display: flex;
-    justify-content: space-around;
-    /* border:2px solid red; */
-    /* position: relative; */
+.leftLava {
+  overflow: hidden;
+  width: 50px;
+  --left-lava-height: 300px;
+  height: var(--left-lava-height);
+  position: absolute;
+  left: 8%;
+  top: 32%;
+  display: flex;
+  justify-content: space-around;
+  /* border:2px solid red; */
+  /* position: relative; */
 }
 .leftLava > div {
-    /* border:1px solid white; */
-    width: 25%;
-    overflow: hidden;
+  /* border:1px solid white; */
+  width: 25%;
+  overflow: hidden;
 }
 
-
-.leftLava__1{
-    height: 70%;
-    /* overflow: hidden; */
+.leftLava__1 {
+  height: 70%;
+  /* overflow: hidden; */
 }
-.leftLava__4{
-    height: 60%;
-    position: relative;
-    /* top:20%; */
+.leftLava__4 {
+  height: 60%;
+  position: relative;
+  /* top:20%; */
 }
-.leftLava__1Img{
-    position: relative;
-    /* top:-100px; */
-    animation: translate-left-lava__1 7s linear infinite forwards;
-
+.leftLava__1Img {
+  position: relative;
+  /* top:-100px; */
+  animation: translate-left-lava__1 7s linear infinite forwards;
 }
-.leftLava__2Img{
-    position: relative;
-    animation: translate-left-lava__2 8s linear infinite forwards;
-
+.leftLava__2Img {
+  position: relative;
+  animation: translate-left-lava__2 8s linear infinite forwards;
 }
-.leftLava__3Img{
-    position: relative;
-    animation: translate-left-lava__3 10s linear infinite forwards;
-
+.leftLava__3Img {
+  position: relative;
+  animation: translate-left-lava__3 10s linear infinite forwards;
 }
-.leftLava__4Img{
-    
-    animation: translate-left-lava__4 13s linear infinite;
-    position: relative;
-    /* left:-20px; */
+.leftLava__4Img {
+  animation: translate-left-lava__4 13s linear infinite;
+  position: relative;
+  /* left:-20px; */
 }
 
 /* @keyframes translate-left-lava__1--img {
@@ -249,78 +261,70 @@
     
 } */
 @keyframes translate-left-lava__4 {
-   
-    0%{
-        transform: translate(0,-100%);
-    }
-    25%{
-        transform: translate(0,-50%) rotate(5deg);
-    }
-    50%{
-        transform: translate(0,0%) rotate(0deg);
-    }
-    75%{
-        transform: translate(0,50%) rotate(-5deg);
-    }
-    100%{
-        transform: translate(0,100%);
-    }
-    
+  0% {
+    transform: translate(0, -100%);
+  }
+  25% {
+    transform: translate(0, -50%) rotate(5deg);
+  }
+  50% {
+    transform: translate(0, 0%) rotate(0deg);
+  }
+  75% {
+    transform: translate(0, 50%) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 100%);
+  }
 }
 @keyframes translate-left-lava__3 {
-   
-    0%{
-        transform: translate(0,-100%);
-    }
-    25%{
-        transform: translate(0,-50%) rotate(2deg);
-    }
-    50%{
-        transform: translate(0,0%) rotate(0deg);
-    }
-    75%{
-        transform: translate(0,50%) rotate(2deg);
-    }
-    100%{
-        transform: translate(0,100%) rotate(0);
-    }
-    
+  0% {
+    transform: translate(0, -100%);
+  }
+  25% {
+    transform: translate(0, -50%) rotate(2deg);
+  }
+  50% {
+    transform: translate(0, 0%) rotate(0deg);
+  }
+  75% {
+    transform: translate(0, 50%) rotate(2deg);
+  }
+  100% {
+    transform: translate(0, 100%) rotate(0);
+  }
 }
 @keyframes translate-left-lava__2 {
-   
-    0%{
-        transform: translate(0,-100%);
-    }
-    25%{
-        transform: translate(0,-50%) rotate(5deg);
-    }
-    50%{
-        transform: translate(0,0%) rotate(0deg);
-    }
-    75%{
-        transform: translate(0,50%) rotate(5deg);
-    }
-    100%{
-        transform: translate(0,130%);
-    }
-    
+  0% {
+    transform: translate(0, -100%);
+  }
+  25% {
+    transform: translate(0, -50%) rotate(5deg);
+  }
+  50% {
+    transform: translate(0, 0%) rotate(0deg);
+  }
+  75% {
+    transform: translate(0, 50%) rotate(5deg);
+  }
+  100% {
+    transform: translate(0, 130%);
+  }
 }
 @keyframes translate-left-lava__1 {
-   
-    0%{
-        transform: translate(0,-100%);
-    }
-    25%{
-        transform: translate(0,-50%) rotate(3deg);
-    }
-    50%{
-        transform: translate(0,0%) rotate(0deg);
-    }
-    75%{
-        transform: translate(0,50%) rotate(3deg);
-    }
-    100%{
-        transform: translate(0,100%);
-    }
-    
+  0% {
+    transform: translate(0, -100%);
+  }
+  25% {
+    transform: translate(0, -50%) rotate(3deg);
+  }
+  50% {
+    transform: translate(0, 0%) rotate(0deg);
+  }
+  75% {
+    transform: translate(0, 50%) rotate(3deg);
+  }
+  100% {
+    transform: translate(0, 100%);
+  }
 }
