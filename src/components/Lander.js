@@ -17,13 +17,17 @@ import rightEye from "../Assets/righteye.png";
 import { ReactComponent as EyeSvg } from "../Assets/eyes.svg";
 import { useEffect, useRef, useState } from "react";
 
-const Lander = () => {
+const Lander = (props) => {
   const [eyePosition, setEyePosition] = useState({ top: null });
 
   const kingEl = useRef(null);
   const ringCount = Math.floor(6 + Math.random() * 4);
   const shardCount = Math.floor(150 + Math.random() * 50);
   console.log(ringCount);
+
+
+  
+
 
   return (
     <div className={LanderCSS.lander}>
@@ -56,8 +60,8 @@ const Lander = () => {
       <img src={title} alt="" className={LanderCSS.title} />
 
       {/* register */}
-      <div className={LanderCSS.register}>
-        <div>Register Now</div>
+      <div className={LanderCSS.register} >
+        <div onClick={props.changeRegState}>Register Now</div>
       </div>
 
       {/* icons */}
