@@ -53,22 +53,22 @@ const RegForm = () => {
     <div className={RegFormCSS.regFormBox}>
       <form className={RegFormCSS.regForm}>
         <div
-          className={`${RegFormCSS.formControl} ${RegFormCSS.nameControl}`}
+          className={RegFormCSS.formControl}
           onClick={handleInputClick}
         >
           <label>Name</label>
-          <input type="text" className={RegFormCSS.textInput} onChange={nameChangeHandler}/>
+          <input type="text" className={RegFormCSS.textInput} onChange={nameChangeHandler} value={userInfo.name}/>
         </div>
         <div className={RegFormCSS.formControl} onClick={handleInputClick}>
           <label>Email ID</label>
-          <input type="text" className={RegFormCSS.textInput} onChange={emailChangeHandler}/>
+          <input type="text" className={RegFormCSS.textInput} onChange={emailChangeHandler} value={userInfo.email}/>
         </div>
         <div
           className={`${RegFormCSS.formControl} ${RegFormCSS.phoneControl}`}
           onClick={handleInputClick}
         >
           <label>Phone No.</label>
-          <input type="text" className={RegFormCSS.textInput} onChange={phoneChangeHandler} />
+          <input type="text" className={RegFormCSS.textInput} onChange={phoneChangeHandler} value={userInfo.phone}/>
         </div>
         <div
           className={`${RegFormCSS.formControl} ${RegFormCSS.genderControl} `}
@@ -89,6 +89,8 @@ const RegForm = () => {
             </div>
           </div>
         </div>
+
+
         <div
           className={`${RegFormCSS.formControl} ${RegFormCSS.collegeControl}`}
           onClick={handleInputClick}
@@ -96,6 +98,8 @@ const RegForm = () => {
           <label>College</label>
           <input className={RegFormCSS.dropDownInput} />
         </div>
+
+
         <div
           className={`${RegFormCSS.formControl} ${RegFormCSS.locationControl}`}
           onClick={handleInputClick}
@@ -103,6 +107,8 @@ const RegForm = () => {
           <label>City/Town</label>
           <input className={RegFormCSS.dropDownInput} />
         </div>
+
+
 
         <button type="submit" className={RegFormCSS.submitForm}>Register Now</button>
       </form>

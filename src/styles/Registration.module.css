@@ -22,3 +22,24 @@
     overflow: hidden;
 
 }
+
+
+@media(max-width:760px){
+    .formContainer{
+        grid-template-columns: 1fr;
+        width: 75%;
+        
+    }
+}
+
+@media(max-width:550px){
+    .formContainer{
+        width: 80%;
+    }
+}
+
+@media(max-width:400px){
+    .formContainer{
+        width: 85%;
+    }
+}

@@ -1,10 +1,10 @@
-.welcome{
+.welcome {
     font-family: 'Allura', cursive;
     border: 2px solid #524916;
     border-radius: .5rem 0 0 .5rem;
     border-right: none;
     position: relative;
-    background-color: rgba(20,20,20,1);
+    background-color: rgba(20, 20, 20, 1);
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -12,30 +12,30 @@
     z-index: 2;
 }
 
-.flower{
+.flower {
     position: absolute;
     object-fit: cover;
 }
 
-#flower1{
+#flower1 {
     left: 0;
     top: 2%;
     width: 20%;
 }
 
-#flower2{
+#flower2 {
     left: 0;
     bottom: 7%;
     width: 10%;
 }
 
-#flower3{
+#flower3 {
     right: -17%;
     bottom: 0;
     width: 40%;
 }
 
-.content{
+.content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,34 +43,57 @@
     color: gold;
 }
 
-.welc{
+.welc {
     font-size: 2rem;
 }
 
-.fifty{
+.fifty {
     font-size: 4rem;
     display: flex;
 }
 
-.th{
+.th {
     font-size: 2rem;
     padding-left: 5px;
 }
 
-.title{
+.title {
     width: 60%;
     margin-bottom: 10px;
 }
 
-.theme{
+.theme {
     font-family: 'Julius Sans One', sans-serif;
 }
 
-.line{
+.line {
     position: absolute;
     right: -1.5px;
     z-index: 3;
     height: 85%;
     width: 3px;
 
+}
+
+@media(max-width:760px) {
+    .welcome {
+        border: 2px solid #524916;
+        border-radius: .5rem 0.5rem 0 0;
+        border-bottom: none;
+    }
+
+    .line {
+        position: absolute;
+      
+        left:50%;
+        top:100%;
+        transform: translateY(-50%) rotate(90deg);
+        
+
+        /* transform: rotate(90deg); */
+        z-index: 3;
+        /* height: 85%; */
+        /* width: 3px; */
+    
+    }
 }
