@@ -8,6 +8,8 @@
 
     display: grid;
     place-items: center;
+
+
 }
 
 .formContainer{
@@ -18,4 +20,5 @@
     display: grid;
     grid-template-columns:0.35fr .65fr ;
     overflow: hidden;
+
 }
