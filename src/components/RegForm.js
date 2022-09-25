@@ -16,7 +16,7 @@ const RegForm = () => {
   const handleInputClick = (e) => {
     const label = e.target.parentNode.querySelector("label");
     const input = e.target.parentNode.querySelector("input");
-    console.log(textLabelRef.current)
+    
   
     if (input.hasAttribute("activeInput")) {
       input.blur();
@@ -51,8 +51,76 @@ const RegForm = () => {
     })
   }
 
+ 
+  
+
+  const handleCollegeClick=(e)=>{
+    const label = e.target.parentNode.parentNode.querySelector('label')
+    const collegeList = e.target.parentNode.parentNode.querySelector('ul')
+    const icon =e.target
+
+    if(icon.hasAttribute('rotateUp')){
+      icon.removeAttribute('rotateUp')
+      icon.setAttribute('rotateDown','')
+    }
+    else{
+      icon.removeAttribute('rotateDown')
+      icon.setAttribute('rotateUp','')
+    }
+   
+    
+    // collegeList.style.display='block'
+    if(collegeList.style.display==='block'){
+      collegeList.style.display=`none`
+    }
+    else{
+      collegeList.style.display=`block`
+    }
+    
+    console.log(collegeList)
+    label.toggleAttribute('shiftUp')
+
+    console.log(icon)
+
+
+  }
+  const handleLocationClick=(e)=>{
+    const label = e.target.parentNode.parentNode.querySelector('label')
+    const locationList = e.target.parentNode.parentNode.querySelector('ul')
+    const icon =e.target
+
+    if(icon.hasAttribute('rotateUp')){
+      icon.removeAttribute('rotateUp')
+      icon.setAttribute('rotateDown','')
+    }
+    else{
+      icon.removeAttribute('rotateDown')
+      icon.setAttribute('rotateUp','')
+    }
+   
+    
+    // collegeList.style.display='block'
+    if(locationList.style.display==='block'){
+      locationList.style.display=`none`
+    }
+    else{
+      locationList.style.display=`block`
+    }
+    
+    // console.log(collegeList)
+    label.toggleAttribute('shiftUp')
+
+    console.log(icon)
+
+
+  }
+
+  const handleBoxClick =()=>{
+
+  }
+
   return (
-    <div className={RegFormCSS.regFormBox}>
+    <div className={RegFormCSS.regFormBox} onClick={handleBoxClick}>
       <form className={RegFormCSS.regForm}>
         <div
           className={RegFormCSS.formControl}
@@ -94,20 +162,47 @@ const RegForm = () => {
 
 
         <div
-          className={`${RegFormCSS.formControl} ${RegFormCSS.collegeControl}`}
-          onClick={handleInputClick}
+          className={`${RegFormCSS.formControl} ${RegFormCSS.collegeControl}` } 
         >
-          <label>College</label>
-          <input className={RegFormCSS.dropDownInput} />
+          <label className={RegFormCSS.collegeLabel}>College</label>
+          <div><i className={`fa-solid fa-caret-down ${RegFormCSS.caretDown}`} onClick={handleCollegeClick} rotateDown=''
+          ></i></div>
+          <ul className={RegFormCSS.collegeList}>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            
+          </ul>
+
+          {/* <input className={RegFormCSS.dropDownInput} /> */}
         </div>
 
 
         <div
           className={`${RegFormCSS.formControl} ${RegFormCSS.locationControl}`}
-          onClick={handleInputClick}
+          
         >
           <label>City/Town</label>
-          <input className={RegFormCSS.dropDownInput} />
+          <div><i className={`fa-solid fa-caret-down ${RegFormCSS.caretDown}`} onClick={handleLocationClick}></i></div>
+          <ul className={RegFormCSS.locationList}>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            
+          </ul>
+          {/* <input className={RegFormCSS.dropDownInput} /> */}
         </div>
 
 

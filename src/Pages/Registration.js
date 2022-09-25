@@ -2,14 +2,12 @@ import RegistrationCSS from "../styles/Registration.module.css";
 import RegForm from "../components/RegForm";
 import RegWelcome from "../components/RegWelcome";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const Registration = (props) => {
 
-  // useEffect(()=>{},[regPageContent])
   const [regClassName,setRegClassName]=useState(`${RegistrationCSS.regPage}`)
-
-
+  
   const backdropClickHandler=()=>{
 
     
@@ -22,7 +20,6 @@ const Registration = (props) => {
     }
 
   const innerClickHandler=(e)=>{
-   
     e.stopPropagation()
   }
 
@@ -33,10 +30,9 @@ const Registration = (props) => {
     </div>
   </div>)
 
-  if(props.regState){
 
-    return regPageContent;
-  }
+  return props.regState && regPageContent
+
   };
 
 export default Registration;
