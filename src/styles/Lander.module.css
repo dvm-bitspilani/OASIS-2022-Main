@@ -187,7 +187,9 @@
     #d19a08 100%
   );
   cursor: pointer;
+  color: black;
 }
+
 
 /* icons */
 .icons {

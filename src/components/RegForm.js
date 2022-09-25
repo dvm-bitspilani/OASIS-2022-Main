@@ -112,7 +112,7 @@ const RegForm = () => {
 
 
 
-        <button type="submit" className={RegFormCSS.submitForm}>Register Now</button>
+        <button type="submit" className={RegFormCSS.submitForm}>Register</button>
       </form>
     </div>
   );
