@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <div>
-      <Registration regState={regState.open} changeRegState={changeRegState}/>
+      <Registration class={'RegistrationCSS.regPage'} regState={regState.open} changeRegState={changeRegState}/>
       <Lander changeRegState={changeRegState}/>
     </div>
   );

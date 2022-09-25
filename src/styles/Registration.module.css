@@ -8,9 +8,35 @@
 
     display: grid;
     place-items: center;
+    animation: showPage 0.2s ease;
     
 
 
+}
+.removePage{
+    animation: removePage 0.3s ease;
+}
+@keyframes removePage {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+    
+}
+
+
+@keyframes showPage {
+    from{
+        opacity: 0;
+        
+    }
+    
+    to{
+        opacity: 1;
+       
+    }
 }
 
 .formContainer{
