@@ -1,18 +1,13 @@
 .regFormBox {
     background-color: rgb(16, 16, 16);
     color: white;
-
     display: flex;
-
-
     align-items: center;
     justify-content: center;
     border: 2px solid #524916;
     border-radius: 0rem 0.5rem 0.5rem 0rem;
     border-left: none;
     overflow: hidden;
-
-
 }
 
 .regForm {
@@ -24,9 +19,6 @@
     gap: 3rem;
     font-family: Arial, Helvetica, sans-serif;
     transform: translateX(-10%);
-
-    
-
 }
 
 
@@ -57,11 +49,7 @@
     position: relative !important;
 }
 
-
-
 .formControl input {
-
-
     background-color: hsla(0, 0%, 0%, 0.108);
     outline: none;
     border: none;
@@ -69,21 +57,15 @@
     height: 100%;
     color: lightgrey;
     font-size: 1.5rem;
-
     display: flex;
     align-items: flex-end;
     padding: 5px 0 2px 10px;
-
     /* position: absolute; */
-
-
-
 }
 
 .genderControl>input {
     height: 0.5rem;
 }
-
 
 .formControl label {
     position: absolute;
@@ -91,17 +73,12 @@
     z-index: 2;
     width: 100%;
     height: 100%;
-
     transition: 0.2s;
     transform-origin: left;
     display: flex;
     align-items: center;
     padding-left: 10px;
-
-
 }
-
-
 
 .phoneControl label,
 .collegeControl label,
@@ -115,20 +92,17 @@
     border: none;
     height: 4rem;
     padding: none;
-
 }
 .genderControl > label{
     padding-left:0px ;
     display: flex;
     align-items: flex-start;
     height: fit-content;
-
 }
 
 .genderOptions {
     display: flex;
     align-items: flex-end;
-
     width: 100%;
     height: 100%;
 }
@@ -141,16 +115,15 @@
 
 button.submitForm{
     padding: 8px 18px;
-  border: 1px solid #fedb7e;
-  border-radius: 15px;
-  
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-  background: none;
-  color: white;
-  font-size: 1.1rem;
- text-shadow: 1px 1px black;
+    border: 1px solid #fedb7e;
+    border-radius: 15px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
+    color: white;
+    font-size: 1.1rem;
+    /* text-shadow: 1px 1px black; */
 }
 
 button.submitForm:hover {
@@ -161,13 +134,13 @@ button.submitForm:hover {
             #fcd776 74.96%,
             #d19a08 100%);
     cursor: pointer;
+    color: black;
 }
 
 
 @media screen and (max-width:1200px){
     .regForm{
         transform: translate(0);
-        
     }
 
     .formControl{
