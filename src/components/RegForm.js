@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import RegFormCSS from "../styles/RegForm.module.css";
 import { useState } from "react";
 
@@ -11,10 +11,12 @@ const RegForm = () => {
     college: "",
     location: "",
   });
+  const textLabelRef=useRef([])
 
   const handleInputClick = (e) => {
     const label = e.target.parentNode.querySelector("label");
     const input = e.target.parentNode.querySelector("input");
+    console.log(textLabelRef.current)
   
     if (input.hasAttribute("activeInput")) {
       input.blur();
@@ -56,18 +58,18 @@ const RegForm = () => {
           className={RegFormCSS.formControl}
           onClick={handleInputClick}
         >
-          <label>Name</label>
+          <label >Name</label>
           <input type="text" className={RegFormCSS.textInput} onChange={nameChangeHandler} value={userInfo.name}/>
         </div>
         <div className={RegFormCSS.formControl} onClick={handleInputClick}>
-          <label>Email ID</label>
+          <label >Email ID</label>
           <input type="text" className={RegFormCSS.textInput} onChange={emailChangeHandler} value={userInfo.email}/>
         </div>
         <div
           className={`${RegFormCSS.formControl} ${RegFormCSS.phoneControl}`}
           onClick={handleInputClick}
         >
-          <label>Phone No.</label>
+          <label >Phone No.</label>
           <input type="text" className={RegFormCSS.textInput} onChange={phoneChangeHandler} value={userInfo.phone}/>
         </div>
         <div

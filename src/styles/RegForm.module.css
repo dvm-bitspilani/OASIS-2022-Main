@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 .regFormBox {
     background-color: rgb(16, 16, 16);
     color: white;
@@ -122,6 +126,7 @@
     display: flex;
     align-items: flex-start;
     height: fit-content;
+    position: relative;
 
 }
 
@@ -130,7 +135,8 @@
     align-items: flex-end;
 
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+    height: 2.5rem;
 }
 
 .formControl label[shiftUp] {
@@ -144,7 +150,8 @@ button.submitForm{
   border: 1px solid #fedb7e;
   border-radius: 15px;
   
-  margin-top: auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
   background: none;
@@ -164,7 +171,10 @@ button.submitForm:hover {
 }
 
 
-@media screen and (max-width:1200px){
+
+
+
+@media screen and (max-width:1300px){
     .regForm{
         transform: translate(0);
         
@@ -189,6 +199,14 @@ button.submitForm:hover {
     }
 }
 
+@media  screen and (max-width:1000px) and (min-height:870px) {
+
+    .regForm{
+        gap:4rem;
+    }
+    
+}
+
 
 
 @media screen and (max-height:720px){
@@ -200,14 +218,24 @@ button.submitForm:hover {
     }
 }
 
+@media screen and (max-height:670px){
+    .regForm{
+        overflow-y: scroll;
+    }
+    .regForm::-webkit-scrollbar{
+        display: none;
+    }
+}
+
 @media screen and (max-width:760px){
     .regFormBox{
         
         border: 2px solid #524916;
-    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    border-radius: 0rem 0rem 1.5rem 1.5rem;
     border-top:none;
 
     }
+    
     
 
     .regForm{
@@ -215,6 +243,10 @@ button.submitForm:hover {
         
         overflow-y: scroll;
         width: 80%;
+        padding: 30px 0;
+
+        
+        /* height: 120%; */
     }
     .regForm::-webkit-scrollbar {
         display: none;

@@ -8,13 +8,18 @@
 
     display: grid;
     place-items: center;
+    
 
 
 }
 
 .formContainer{
     width: 86%;
+    max-width: 1300px;
+
     height: 86%;
+    max-height: 800px;
+
     box-shadow: 0 0 10px #9f9874b3;
     border-radius: 0.5rem;
     display: grid;
@@ -28,7 +33,21 @@
 @media(max-width:760px){
     .formContainer{
         grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.6fr;
         width: 75%;
+        height: 95%;
+        border-radius: 1.5rem;
+        
+    }
+}
+
+@media(max-height:670px){
+    .formContainer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.6fr;
+        width: 75%;
+        height: 95%;
+        border-radius: 1.5rem;
         
     }
 }
