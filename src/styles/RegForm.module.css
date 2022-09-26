@@ -1,5 +1,11 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --tic-gap:1.5rem;
 }
 
 .regFormBox {
@@ -16,125 +22,32 @@
 
 .regForm {
     width: 85%;
-    max-width: 500px;
+    max-width: 450px;
     height: 90%;
     display: flex;
     flex-direction: column;
     gap: 3rem;
     font-family: Arial, Helvetica, sans-serif;
-    transform: translateX(-10%);
+    /* transform: translateX(-10%); */
+    /* border: 1px solid white; */
 }
 
-
-.formControl {
-    position: relative;
-    border-bottom: 2px solid darkgray;
-    height: 2.4rem;
-
-}
-
-.genderControl {
-    height: 4rem;
-}
-
-.male,
-.female,
-.others {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.genderControl span {
-    margin-right: 3rem;
-}
-
-.genderInput {
-    position: relative !important;
-}
-
-.formControl input {
-    background-color: hsla(0, 0%, 0%, 0.108);
-    outline: none;
-    border: none;
-    width: 100%;
-    height: 100%;
-    color: lightgrey;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: flex-end;
-    padding: 5px 0 2px 10px;
-    /* position: absolute; */
-}
-
-.genderControl>input {
-    height: 0.5rem;
-}
-
-.formControl label {
-    position: absolute;
-    font-size: 1.5rem;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    transition: 0.2s;
-    transform-origin: left;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-}
-
-.phoneControl label,
-.collegeControl label,
-.locationControl label {
-    color: goldenrod;
-    width: 100%;
-    height: 100%;
-}
-
-.genderControl {
-    border: none;
-    height: 4rem;
-    padding: none;
-}
-.genderControl > label{
-    padding-left:0px ;
-    display: flex;
-    align-items: flex-start;
-    height: fit-content;
-
-    position: relative;
-
-
-}
-
-.genderOptions {
-    display: flex;
-    align-items: flex-end;
-    width: 100%;
-    /* height: 100%; */
-    height: 2.5rem;
-}
-
-.formControl label[shiftUp] {
-    transform: scale(0.65) translate(0, -100%);
-    padding-left: 0;
+.regForm > *{
+    /* border: 1px solid gold; */
 }
 
 
 button.submitForm{
-    padding: 8px 18px;
+    padding: 10px 34px;
+    
 
   border: 1px solid #fedb7e;
-  border-radius: 15px;
+  border-radius: 25px;
   
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   background: none;
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
  
 
 }
@@ -150,190 +63,35 @@ button.submitForm:hover {
     color: black;
 }
 
-.collegeControl,.locationControl{
-    /* height: 3.5rem; */
+
+.textInputContainer{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 0;
-    /* padding-bottom:30px ; */
+    flex-direction: column;
+    gap:var(--tic-gap)
 }
-.collegeControl label,.locationControl label{
+
+
+@media screen and (max-width:760px) {
+    .regFormBox{
+        border: 2px solid #524916;
+    border-radius: 0rem 0rem 1.8rem 1.8rem;
+    border-top: none;
     position: relative;
-    width: auto;
-}
-.caretDown{
-    margin: 0 15px;
 }
 
-.collegeList,.locationList{
-    position: absolute;
-    width: 100%;
-    height: 150px;
-    bottom: 0;
-    transform: translateY(calc(100% + 2px));
-    background-color:hsl(0, 0%, 15%);
-    z-index: 5;
-    overflow-y: scroll;
-    display: none;
-}
-.collegeList li,.locationList li{
-    list-style: none;
-    border: 1px solid black;
-    height: 30px;
-}
-
-i[rotateUp]{
-    transform: rotate(180deg);
-    transition: 0.2s;
-}
-
-i[rotateDown]{
-    transform: rotate(0);
-    transition: 0.2s;
-}
-
-
-
-
-
-@media screen and (max-width:1300px){
-    .regForm{
-        transform: translate(0);
-    }
-
-    .formControl{
-        height:2rem ;
-    }
-    .genderControl{
-        height: 3.5rem;
-    }
-    .formControl label{
-        font-size: 1.3rem;
-    }
-}
-
-@media screen and (max-width:1000px){
-    .regForm{
-        transform: translate(0);
-        width: 80%;
-        max-width: 700px;
-    }
-}
-
-@media  screen and (max-width:1000px) and (min-height:870px) {
-
-    .regForm{
-        gap:4rem;
-    }
-    
-}
-
-
-
-@media screen and (max-height:720px){
-    .regForm{
-        gap:2.4rem;
-    }
-    .formControl label{
-        font-size: 1.3rem;
-    }
-}
-
-@media screen and (max-height:670px){
     .regForm{
         overflow-y: scroll;
+        box-sizing: border-box;
+        padding: 20px 0 25px 0;
     }
+
     .regForm::-webkit-scrollbar{
         display: none;
     }
-}
-
-@media screen and (max-width:760px){
-    .regFormBox{
-        
-        border: 2px solid #524916;
-    border-radius: 0rem 0rem 1.5rem 1.5rem;
-    border-top:none;
-
-    }
-    
-    
-
-    .regForm{
-        position: relative;
-        
-        overflow-y: scroll;
-        width: 80%;
-        padding: 30px 0;
-
-        
-        /* height: 120%; */
-    }
-    .regForm::-webkit-scrollbar {
-        display: none;
-    }
-
-    .formControl label{
-        font-size: 1.1rem;
-    }
-    .formControl input{
-        font-size: 1.1rem;
-    }
-    .genderOptions{
-        font-size: 1rem;
-    }
-
-    .genderControl{
-        /* height: 5rem; */
-        display: flex;
-        flex-direction: column;
-        gap:15px;
-    }
-    .genderControl span{
-        margin-right: 2rem;
-    }
-
-    .genderOptions{
-        display: flex;
-        /* justify-content: center; */
-        /* gap: -20px; */
-    }
-
-    .genderControl label{
-        position: relative;
-    }
-
-    
-
-    
-}
-
-@media screen and (max-width:550px){
-    .formControl label{
-        font-size: 1rem;
-    }
-    .genderOptions{
-        font-size: 0.9rem;
-    }
 
 
-    .genderControl span{
-        margin-right: 1.5rem;
-    }
-
-    .regForm{
-       
-        width: 85%;
-    }
 
    
+
+    
 }
-
-
-
-/* @media(max-height:800px){
-    .regForm{
-        gap:1.5rem;
-    }
-} */
