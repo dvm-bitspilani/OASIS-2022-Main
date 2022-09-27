@@ -26,7 +26,7 @@ const RegForm = () => {
   
 return (
     <div className={RegFormCSS.regFormBox}>
-      <form className={RegFormCSS.regForm}>
+      <form className={RegFormCSS.regForm} onSubmit={(e)=>{e.preventDefault()}}>
         <div className={RegFormCSS.textInputContainer}>
           <TextInputControl  label={'Name'} type={'text'}  setValue={setName} info={'name'}/>
           <TextInputControl label={'Email Id'} type={'email'} setValue={setEmail} info={'email'} />
@@ -35,13 +35,11 @@ return (
         <div className={RegFormCSS.genderInputContainer} >
           <GenderInputControl setValue={setGender}/>
         </div>
-        <div className={RegFormCSS.dropdownInputContainer}>
-        <TextInputControl  label={'College'} type={'text'}   info={'name'}/>
-        <TextInputControl  label={'City/Town'} type={'text'}  info={'name'}/>
+        
+        <DropdownControl/>
+        <TextInputControl label={'City/Town'} type={'text'}  info={'name'}/>
 
-          {/* <DropdownControl/> */}
-          <DropdownControl/>
-        </div>
+        
 
         
         <button type="submit" className={RegFormCSS.submitForm}>Register</button>

@@ -11,20 +11,118 @@
     --gender-control-height:55px;
    
     --gender-options-gap:25px;
-    --gender-inter-gap:5px
+    --gender-inter-gap:5px;
+    --college-control-height:40px;
 }
 
 .formControl{
     width: 100%;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     position: relative;
 
-    height: var(--gender-control-height);
+    height: var(--college-control-height);
     justify-content: space-between;
     
     font-size: var(--label-font-size);
 
 
     /* color: gray; */
+}
+
+/* .label{
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+    
+} */
+.collegeLabel{
+    padding-left:5px ;
+    padding-top: 5px;
+}
+
+.collegeList{
+    list-style: none;
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 0;
+    background-color: rgb(32, 32, 32);
+    z-index: 2;
+    overflow-y: scroll;
+    /* display: none; */
+    /* transform: translateY(20%); */
+    /* z-index: -5; */
+    /* opacity: 0; */
+
+}
+
+.openList{
+    /* display: block; */
+    border:2px solid black;
+    transition:0.3s;
+    bottom: -200px;
+    height: 200px;
+    border-top:none;
+    border-right: none;
+   
+}
+
+.collegeList > li{
+    height: 35px;
+    width: 100%;
+    /* border: 1px solid ; */
+    margin: 3px 0px;
+    background-color: rgba(1, 1, 1, 0.658);
+}
+.collegeList > li:hover{
+    background-color: lightgray;
+}
+
+.collegeList::-webkit-scrollbar{
+    /* display: none; */
+    width:4px
+}
+.collegeList::-webkit-scrollbar-track{
+    background-color: rgb(0, 0, 0);
+}
+.collegeList::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, 0.696);
+    border-radius: 100vw;
+    height: 10px;
+}
+
+
+
+.closeList{
+  bottom:2px;
+  height: 0;
+  transition: 0.1s;
+}
+.collegeInput{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    background: none;
+    outline: none;
+    border: none;
+    z-index: 0;
+    border-bottom:2px solid gray ;
+
+    color: white;
+    font-size: 20px;
+    padding-left: 10px;
+    /* background-color: black; */
+}
+.collegeLabel{
+    font-size:22px;
+    transform-origin: left;
+    transition: 0.15s;
+    color:goldenrod;
+    z-index: 5;
+}
+
+.shiftLabelUp{
+    transform: scale(0.65) translateY(-100%);
+    margin-bottom: 8px;
 }
