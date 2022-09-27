@@ -19,6 +19,8 @@ const RegForm = () => {
   const [email,setEmail]=useState('')
   const [phone,setPhone]=useState('')
   const [gender,setGender]=useState('')
+  const [college,setCollege]=useState('')
+  const [location,setLocation]=useState('')
 
   
 
@@ -36,8 +38,8 @@ return (
           <GenderInputControl setValue={setGender}/>
         </div>
         
-        <DropdownControl/>
-        <TextInputControl label={'City/Town'} type={'text'}  info={'name'}/>
+        <DropdownControl setValue={setCollege}/>
+        <TextInputControl label={'City/Town'} type={'text'}  info={'name'} setValue={setLocation}/>
 
         
 
