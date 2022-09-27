@@ -1,3 +1,8 @@
+:root{
+  --king_wid: 50%;
+  --title_wid: 38%;
+}
+
 .lander {
   width: 100vw;
   min-height: 100vh;
@@ -39,39 +44,6 @@
   z-index: 2;
 }
 
-/* rings */
-.ring1Down {
-  animation: rotateRingsDown 15s infinite linear;
-}
-
-.ring2Down {
-  animation: rotateRingsDown 13s infinite linear;
-}
-
-.ring3Down {
-  animation: rotateRingsDown 11s infinite linear;
-}
-
-.ring4Down {
-  animation: rotateRingsDown 9s infinite linear;
-}
-
-.ring1Up {
-  animation: rotateRingsUp 15s infinite linear;
-}
-
-.ring2Up {
-  animation: rotateRingsUp 13s infinite linear;
-}
-
-.ring3Up {
-  animation: rotateRingsUp 11s infinite linear;
-}
-
-.ring4Up {
-  animation: rotateRingsUp 9s infinite linear;
-}
-
 @keyframes rotateRings {
   from {
     transform: translate(
@@ -93,8 +65,8 @@
 .kingContainer {
   position: absolute;
   top: 0;
-  left: 25%;
-  width: 50%;
+  left: calc(50% - var(--king_wid)/2);
+  width: var(--king_wid);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -153,8 +125,8 @@
 /* OASIS title */
 .title {
   position: absolute;
-  width: 38%;
-  left: 31%;
+  width: var(--title_wid);
+  left: calc(50% - var(--title_wid)/2);
   top: 54%;
   z-index: 5;
 }
@@ -197,7 +169,7 @@
   position: absolute;
   bottom: 2%;
   right: 2%;
-  width: 6%;
+  width: 10%;
   justify-content: space-evenly;
   z-index: 5;
 }
@@ -328,5 +300,83 @@
   }
   100% {
     transform: translate(0, 100%);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  :root{
+    --king_wid: 60%;
+    --title_wid: 45%;
+  }
+
+  .window{
+    width: 65%;
+  }
+
+  .goldringsImg{
+    width: 62%;
+  }
+
+  .title{
+    top: 60%;
+  }
+
+  .icons{
+    width: 14%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .logo{
+    width: 4.5%;
+  }
+
+  .title{
+    top: 55%;
+  }
+
+  .register{
+    top: 87%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  :root{
+    --king_wid: 85%;
+    --title_wid: 85%;
+  }
+
+  .logo{
+    top: 90vh;
+    width: 8vw;
+  }
+
+  .window{
+    width: 130%;
+  }
+
+  .goldringsImg{
+    width: 125%;
+  }
+
+  .kingContainer{
+    top: 20%;
+  }
+
+  .title{
+    top: 55%;
+  }
+
+  .register{
+    font-size: .8rem;
+    top: 83%;
+  }
+
+  .icons{
+    width: 30%;
+  }
+
+  .icons svg{
+    width: 16px;
   }
 }
