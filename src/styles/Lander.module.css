@@ -347,7 +347,7 @@
   }
 
   .logo{
-    top: 98%;
+    top: calc(98% - 8vw);
     width: 8vw;
   }
 
