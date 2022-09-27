@@ -7,6 +7,7 @@ const DropdownControl = () => {
   const [empty,setEmpty]=useState(true)
   const [listClass,setListClass]=useState('')
   const [labelClass,setLabelClass]=useState('')
+  const [caretClass,setCaretClass]=useState(null)
   const isMounted = useRef(false)
   const inputRef = useRef()
   
@@ -17,6 +18,7 @@ const DropdownControl = () => {
       setListClass(DdcCSS.openList)
       setActive(true)
       setLabelClass(DdcCSS.shiftLabelUp)
+      setCaretClass(DdcCSS.rotateUp)
 
       inputRef.focus()
     }
@@ -38,8 +40,8 @@ const DropdownControl = () => {
   return (
     <div className={DdcCSS.formControl} onClick={handleControlClick}>
       <span className={`${DdcCSS.collegeLabel} ${labelClass}`}>College</span>
-      <span><i className="fa-solid fa-caret-down"></i></span>
-      <input type='text' className={DdcCSS.collegeInput} onBlur={()=>{setListClass(DdcCSS.closeList); setActive(false);
+      <span><i className={`fa-solid fa-caret-down caretDown ${caretClass}`}></i></span>
+      <input type='text' className={DdcCSS.collegeInput} onBlur={()=>{setListClass(DdcCSS.closeList); setActive(false);setCaretClass(DdcCSS.rotateDown);
       if(inputRef.current.value.trim()===''){setLabelClass()}}} ref={inputRef}/>
       <ul className={`${DdcCSS.collegeList} ${listClass}`}>
         <li></li>

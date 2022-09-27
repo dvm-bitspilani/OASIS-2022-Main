@@ -13,7 +13,7 @@ const GenderInputControl = (props) => {
 
   return (
     <div className={GicCSS.formControl}>
-        <div>Gender</div>
+        <div className={GicCSS.genderLabel}>Gender</div>
         <div className={GicCSS.genderOptions}>
           <div className={GicCSS.genderContent} onClick={()=>{setSelected('male')}}>
              <span className={`${GicCSS.genderIcon} ${selected==='male' ? GicCSS.selected : null}`}></span>
