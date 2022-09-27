@@ -21,6 +21,7 @@ const TextInputControl = (props) => {
          setLabelClass(`${TicCSS.shiftLabelUp}`)
          inputRef.current.focus()
         }
+       
         else if(inputRef.current.value.trim()===''){
             setLabelClass(`${TicCSS.shiftLabelDown}`)
             inputRef.current.blur()
@@ -36,7 +37,10 @@ const TextInputControl = (props) => {
         // e.stopPropagation()
     }
     const handleBlur=()=>{
-        handleControlClick()
+        // handleControlClick()
+        setActive(false)
+
+
     }
     const inputChangeHandler=(e)=>{
         props.setValue(e.target.value)
