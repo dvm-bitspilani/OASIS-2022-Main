@@ -178,6 +178,10 @@
   width: 20px;
 }
 
+svg:hover path{
+  fill: url(#paint0_linear_737_546);
+}
+
 .leftLava {
   overflow: hidden;
   width: 50px;
@@ -239,13 +243,13 @@
     transform: translate(0, -100%);
   }
   25% {
-    transform: translate(0, -50%) rotate(5deg);
+    transform: translate(0, -50%);
   }
   50% {
-    transform: translate(0, 0%) rotate(0deg);
+    transform: translate(0, 0%);
   }
   75% {
-    transform: translate(0, 50%) rotate(-5deg);
+    transform: translate(0, 50%);
   }
   100% {
     transform: translate(0, 100%);
@@ -256,16 +260,16 @@
     transform: translate(0, -100%);
   }
   25% {
-    transform: translate(0, -50%) rotate(2deg);
+    transform: translate(0, -50%);
   }
   50% {
-    transform: translate(0, 0%) rotate(0deg);
+    transform: translate(0, 0%);
   }
   75% {
-    transform: translate(0, 50%) rotate(2deg);
+    transform: translate(0, 50%);
   }
   100% {
-    transform: translate(0, 100%) rotate(0);
+    transform: translate(0, 100%);
   }
 }
 @keyframes translate-left-lava__2 {
@@ -273,13 +277,13 @@
     transform: translate(0, -100%);
   }
   25% {
-    transform: translate(0, -50%) rotate(5deg);
+    transform: translate(0, -50%);
   }
   50% {
-    transform: translate(0, 0%) rotate(0deg);
+    transform: translate(0, 0%);
   }
   75% {
-    transform: translate(0, 50%) rotate(5deg);
+    transform: translate(0, 50%);
   }
   100% {
     transform: translate(0, 130%);
