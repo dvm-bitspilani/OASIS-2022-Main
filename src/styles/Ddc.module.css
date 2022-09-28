@@ -77,7 +77,10 @@
 }
 
 .collegeList > li{
-    height: 35px;
+    /* height: 35px; */
+    padding: 5px 0;
+    display: flex;
+    
     width: 100%;
     /* border: 1px solid ; */
     margin: 1px 0px;
