@@ -176,9 +176,10 @@
 
 .icons svg {
   width: 20px;
+  cursor: pointer;
 }
 
-svg:hover path{
+.icons svg:hover path {
   fill: url(#paint0_linear_737_546);
 }
 
