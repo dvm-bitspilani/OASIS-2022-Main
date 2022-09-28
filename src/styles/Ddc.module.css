@@ -50,10 +50,13 @@
     position: absolute;
     bottom:0;
     width: 100%;
+    /* padding: 0 5px 0 5px; */
     height: 0;
-    background-color: rgb(182, 182, 182);
-    z-index: 2;
+    background-color: rgb(60, 60, 60);
+    z-index: 5;
     overflow-y: scroll;
+    box-shadow: -1px 5px 15px 0px black;
+    /* border: 1px solid white; */
     /* display: none; */
     /* transform: translateY(20%); */
     /* z-index: -5; */
@@ -78,9 +81,12 @@
     /* border: 1px solid ; */
     margin: 1px 0px;
     background-color: rgba(1, 1, 1, 0.779);
+    padding-left: 8px;
+    display: flex;
+    align-items: center;
 }
 .collegeList > li:hover{
-    background-color: lightgray;
+    background-color: rgb(88, 88, 88);
 }
 
 .collegeList::-webkit-scrollbar{
@@ -101,7 +107,7 @@
 .closeList{
   bottom:2px;
   height: 0;
-  transition: 0.1s;
+  transition: 0.2s;
 }
 .collegeInput{
     width:100%;
@@ -142,6 +148,11 @@
 .rotateDown{
     transition: 0.3s;
     transform: rotate(0);
+}
+
+
+span.caretDown{
+    z-index: 4;
 }
 
 @media screen and (max-width:760px) {

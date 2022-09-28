@@ -10,6 +10,7 @@ const DropdownControl = (props) => {
   const [caretClass,setCaretClass]=useState(null)
   const isMounted = useRef(false)
   const inputRef = useRef()
+  const listRef=useRef()
   const [searchTerm,setSearchTerm]=useState('')
 
   // const fetchedData=props.listData
@@ -29,6 +30,7 @@ const DropdownControl = (props) => {
     
     
   }
+  
 
   const handleBlur=()=>{
     setTimeout(()=>{
@@ -38,7 +40,7 @@ const DropdownControl = (props) => {
        setCaretClass(DdcCSS.rotateDown);
         if(inputRef.current.value.trim()==='')
         {setLabelClass()}
-    },200)
+    },250)
     }
 
   const handleCollegeSelection=(e)=>{
@@ -46,6 +48,15 @@ const DropdownControl = (props) => {
     props.setValue(e.target.textContent)
   }
 
+  // const setListHeight=()=>{
+  //   let length=listRef.current.childElementCount
+  //   if(length<4){
+  //     listRef.current.style.height=`${length*35}px`
+  //   }
+  //   else{
+  //     listRef.current.style.height=`${4*35}px`
+  //   }
+  // }
   
   
 
@@ -62,9 +73,10 @@ const DropdownControl = (props) => {
   return (
     <div className={DdcCSS.formControl} onClick={handleControlClick}>
       <span className={`${DdcCSS.collegeLabel} ${labelClass}`}>{props.label}</span>
-      <span onClick={handleBlur}><i className={`fa-solid fa-caret-down caretDown ${caretClass}`}></i></span>
-      <input type='text' className={DdcCSS.collegeInput} onBlur={handleBlur} ref={inputRef} onChange={(e)=>{props.setValue(e.target.value); setSearchTerm(e.target.value)}}/>
-      <ul className={`${DdcCSS.collegeList} ${listClass}`} onClick={handleCollegeSelection}>
+      <span className={DdcCSS.caretDown}><i className={`fa-solid fa-caret-down  ${caretClass}`}
+      onClick={handleControlClick}></i></span>
+      <input type='text' className={DdcCSS.collegeInput} onBlur={handleBlur} ref={inputRef} onChange={(e)=>{props.setValue(e.target.value); setSearchTerm(e.target.value);}}/>
+      <ul className={`${DdcCSS.collegeList} ${listClass}`} onMouseDown={handleCollegeSelection} ref={listRef}>
           
         {props.listData.filter((data)=>{
           if(searchTerm===''){

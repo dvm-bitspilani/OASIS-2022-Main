@@ -4,6 +4,7 @@ import { useState } from "react";
 import TextInputControl from './TextInputControl'
 import GenderInputControl from './GenderInputControl'
 import DropdownControl from "./DropdownControl";
+import EventsControl  from "./EventsControl";
 
 const RegForm = () => {
   // const [userInfo, setUserInfo] = useState({
@@ -48,6 +49,8 @@ return (
         <div className={RegFormCSS.genderInputContainer} >
           <GenderInputControl setValue={setGender}/>
         </div>
+
+        <EventsControl/>
         
         <DropdownControl setValue={setCollege} label={'College'} listData={collegeList}/>
         <DropdownControl setValue={setYear} label={'Year Of Study'} listData={yearList}/>

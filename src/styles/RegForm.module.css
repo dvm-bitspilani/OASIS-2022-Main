@@ -37,6 +37,7 @@
 
 .regFormBox::-webkit-scrollbar{
     width: 3px;
+    display: none;
     /* transform: translateX(4px); */
 
 }
