@@ -1,4 +1,4 @@
-:root{
+:root {
   --king_wid: 50%;
   --title_wid: 38%;
 }
@@ -27,31 +27,15 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  transform-origin: 50% 0;
   z-index: 2;
-}
-
-@keyframes rotateRings {
-  from {
-    transform: translate(
-        calc(-50% + var(--offsetX)),
-        calc(-50% + var(--offsetY))
-      )
-      rotate(0deg);
-  }
-  to {
-    transform: translate(
-        calc(-50% + var(--offsetX)),
-        calc(-50% + var(--offsetY))
-      )
-      rotate(359deg);
-  }
 }
 
 /* king */
 .kingContainer {
   position: absolute;
   top: 0;
-  left: calc(50% - var(--king_wid)/2);
+  left: calc(50% - var(--king_wid) / 2);
   width: var(--king_wid);
   display: flex;
   flex-direction: column;
@@ -115,7 +99,7 @@
 .title {
   position: absolute;
   width: var(--title_wid);
-  left: calc(50% - var(--title_wid)/2);
+  left: calc(50% - var(--title_wid) / 2);
   top: 54%;
   z-index: 5;
 }
@@ -151,7 +135,6 @@
   color: black;
 }
 
-
 /* icons */
 .icons {
   display: flex;
@@ -167,7 +150,7 @@
   width: 20px;
 }
 
-svg:hover path{
+svg:hover path {
   fill: url(#paint0_linear_737_546);
 }
 
@@ -306,79 +289,80 @@ svg:hover path{
 }
 
 @media screen and (max-width: 1000px) {
-  :root{
+  :root {
     --king_wid: 60%;
     --title_wid: 45%;
   }
 
-  .window{
-    width: 65%;
+  .window {
+    width: 65vw;
+    height: auto;
   }
 
-  .goldringsImg{
+  .goldringsImg {
     width: 62%;
   }
 
-  .title{
+  .title {
     top: 60%;
   }
 
-  .icons{
+  .icons {
     width: 14%;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .logo{
+  .logo {
     width: 4.5%;
   }
 
-  .title{
+  .title {
     top: 55%;
   }
 
-  .register{
+  .register {
     top: 87%;
   }
 }
 
 @media screen and (max-width: 450px) {
-  :root{
+  :root {
     --king_wid: 85%;
     --title_wid: 85%;
   }
 
-  .logo{
+  .logo {
     top: calc(98% - 8vw);
     width: 8vw;
   }
 
-  .window{
-    width: 130%;
+  .window {
+    width: 130vw;
   }
 
-  .goldringsImg{
+  .goldringsImg {
     width: 125%;
   }
 
-  .kingContainer{
+  .kingContainer {
     top: 20%;
   }
 
-  .title{
+  .title {
     top: 55%;
   }
 
-  .register{
-    font-size: .8rem;
+  .register {
+    font-size: 0.8rem;
     top: 83%;
   }
 
-  .icons{
+  .icons {
     width: 30%;
   }
 
-  .icons svg{
+  .icons svg {
     width: 16px;
   }
 }

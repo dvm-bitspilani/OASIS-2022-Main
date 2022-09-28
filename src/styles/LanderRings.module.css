@@ -4,9 +4,9 @@
   left: 50%;
   transform: translate(
     calc(-50% + var(--offsetX)),
-    calc(-50% + var(--offsetY))
+    calc(-53% + var(--offsetY))
   );
-  width: 57%;
+  width: 60vw;
   transform-origin: calc(50% - var(--offsetX)) calc(50% - var(--offsetY));
   animation: rotateRings var(--speed) infinite linear;
   z-index: 3;
@@ -23,15 +23,27 @@
   from {
     transform: translate(
         calc(-50% + var(--offsetX)),
-        calc(-50% + var(--offsetY))
+        calc(-53% + var(--offsetY))
       )
       rotate(0deg);
   }
   to {
     transform: translate(
         calc(-50% + var(--offsetX)),
-        calc(-50% + var(--offsetY))
+        calc(-53% + var(--offsetY))
       )
       rotate(359deg);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .goldringsImg {
+    width: 65vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .goldringsImg {
+    width: 131vw;
   }
 }
