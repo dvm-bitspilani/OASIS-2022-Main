@@ -25,8 +25,13 @@ const RegForm = () => {
   const [choreographer,setChoreo]=useState('')
   const [year,setYear]=useState('')
 
-  const collegeList={}
-  const yearList={}
+  const collegeList=[{name:'xkjgkjyz'},
+                     {name:'jkgsdf'},
+                     {name:'sdfgdf'},
+                     {name:'sodcz'},
+                     {name:'hdfytdggs'},
+                     {name:'werqwqwe'}]
+  const yearList=[]
 
   
 

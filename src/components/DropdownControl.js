@@ -10,6 +10,9 @@ const DropdownControl = (props) => {
   const [caretClass,setCaretClass]=useState(null)
   const isMounted = useRef(false)
   const inputRef = useRef()
+  const [searchTerm,setSearchTerm]=useState('')
+
+  // const fetchedData=props.listData
   
 
   const handleControlClick=()=>{
@@ -60,26 +63,17 @@ const DropdownControl = (props) => {
     <div className={DdcCSS.formControl} onClick={handleControlClick}>
       <span className={`${DdcCSS.collegeLabel} ${labelClass}`}>{props.label}</span>
       <span onClick={handleBlur}><i className={`fa-solid fa-caret-down caretDown ${caretClass}`}></i></span>
-      <input type='text' className={DdcCSS.collegeInput} onBlur={handleBlur} ref={inputRef} onChange={(e)=>props.setValue(e.target.value)}/>
+      <input type='text' className={DdcCSS.collegeInput} onBlur={handleBlur} ref={inputRef} onChange={(e)=>{props.setValue(e.target.value); setSearchTerm(e.target.value)}}/>
       <ul className={`${DdcCSS.collegeList} ${listClass}`} onClick={handleCollegeSelection}>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+          
+        {props.listData.filter((data)=>{
+          if(searchTerm===''){
+            return data
+          }
+          else if(data.name.toLowerCase().includes(searchTerm.toLowerCase())){
+            return data
+          }
+        }).map((data,index)=>(<li key={index}>{data.name}</li>))}
       </ul>
       
     </div>
