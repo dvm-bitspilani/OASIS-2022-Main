@@ -4,6 +4,7 @@
     /* --text-control-height:45px; */
     --label-font-color:goldenrod;
     --input-font-color:white;
+    --label-font-size:22px;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -28,12 +29,7 @@ input[type=number] {
     position: relative;
     --text-control-height:50px;
     height: var(--text-control-height);
-    
-    
-
-
     color: gray;
-
 }
 
 .formControl input{
@@ -44,22 +40,16 @@ input[type=number] {
     margin-top: auto;
     outline: none;
     height: calc(0.65*var(--control-height));
-
     width: 100%;
     border-bottom: 2px solid gray;
     color:var(--input-font-color);
     padding: 0 0px 5px 9px;
-
-
-
-
 }
 
 .formControl label{
     position: absolute;
     bottom: 0;
     height: calc(0.65*var(--control-height));
-    --label-font-size:22px;
 
     font-size: var(--label-font-size);
     color:var(--label-font-color);
@@ -83,29 +73,29 @@ input[type=number] {
 
 }
 
+@media screen and (max-width: 800px) {
+    :root{
+    --label-font-size: 15px !important;
+    }
+
+    .college{
+        font-size: 15px;
+    }
+}
 
 @media screen and (max-width:760px) {
     .formControl label{
-    --label-font-size:19px;
-    margin-bottom: 5px;
-
-
+        margin-bottom: 5px;
     }
    
     .formControl input{
     --input-font-size:17px;
     padding-bottom: 3px;
     border-bottom: 2px solid rgb(185, 184, 184);
-
-    
-
-     
     }
 
     .formControl{
     --text-control-height:38px;
-    
-
     }
    
     .shiftLabelUp{

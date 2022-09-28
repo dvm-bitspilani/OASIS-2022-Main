@@ -3,16 +3,21 @@
     height: 100vh;
     position: fixed;
     z-index: 10;
-
     background: hsla(0, 0%, 0%, 0.675);
-
     display: grid;
     place-items: center;
     animation: showPage 0.2s ease;
-    
-
-
 }
+
+.close{
+    right: 10%;
+    top: 10%;
+    width: 20px;
+    position: fixed;
+    z-index: 6;
+    cursor: pointer;
+}
+
 .removePage{
     animation: removePage 0.3s ease;
 }
@@ -59,15 +64,19 @@
 @media(max-width:760px){
     .formContainer{
         grid-template-columns: 1fr;
-        grid-template-rows: 0.25fr 0.8fr;
+        grid-template-rows: 0.35fr 0.8fr;
         max-width: 400px;
         width: 90%;
         height: 95%;
         border-radius: 1.5rem;
         transform: translateY(-1%);
         box-shadow: none;
+    }
 
-        
+    .close{
+        right: 6%;
+        top: 3%;
+        width: 15px;
     }
 }
 

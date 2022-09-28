@@ -109,9 +109,18 @@
         font-size: 3rem;
     }
 
+    #flower1{
+        width: 16%;
+    }
+
     #flower2{
         display: none;
     }
+
+    #flower3{
+        width: 32%;
+    }
+
     .theme{
         display: none;
     }

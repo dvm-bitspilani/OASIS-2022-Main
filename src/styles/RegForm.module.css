@@ -81,20 +81,24 @@ button.submitForm:hover {
     color: black;
 }
 
-
 .textInputContainer{
     display: flex;
     flex-direction: column;
     gap:var(--tic-gap)
 }
 
+@media screen and (max-width: 800px) {
+    .submitForm{ 
+        font-size: .8rem !important;
+    }
+}
 
 @media screen and (max-width:760px) {
     .regFormBox{
         border: 2px solid #524916;
-    border-radius: 0rem 0rem 1.8rem 1.8rem;
-    border-top: none;
-    position: relative;
+        border-radius: 0rem 0rem 1.8rem 1.8rem;
+        border-top: none;
+        position: relative;
 }
 
     .regForm{
@@ -106,10 +110,6 @@ button.submitForm:hover {
     .regForm::-webkit-scrollbar{
         display: none;
     }
-
-
-
-   
 
     
 }
