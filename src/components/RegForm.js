@@ -16,11 +16,17 @@ const RegForm = () => {
   // });
 
   const [name,setName]=useState('')
-  const [email,setEmail]=useState('')
+  const [email_id,setEmail]=useState('')
   const [phone,setPhone]=useState('')
   const [gender,setGender]=useState('')
   const [college,setCollege]=useState('')
   const [location,setLocation]=useState('')
+  const [headOfSociety,setHeadOfSociety]=useState('')
+  const [choreographer,setChoreo]=useState('')
+  const [year,setYear]=useState('')
+
+  const collegeList={}
+  const yearList={}
 
   
 
@@ -38,8 +44,12 @@ return (
           <GenderInputControl setValue={setGender}/>
         </div>
         
-        <DropdownControl setValue={setCollege}/>
-        <TextInputControl label={'City/Town'} type={'text'}  info={'name'} setValue={setLocation}/>
+        <DropdownControl setValue={setCollege} label={'College'} listData={collegeList}/>
+        <DropdownControl setValue={setYear} label={'Year Of Study'} listData={yearList}/>
+        <TextInputControl label={'Head Of Society'} type={'text'} setValue={setHeadOfSociety} />
+        <TextInputControl label={'Choreographer'} type={'text'} setValue={setChoreo} />
+        
+        <TextInputControl label={'City'} type={'text'}  info={'name'} setValue={setLocation}/>
 
         
 

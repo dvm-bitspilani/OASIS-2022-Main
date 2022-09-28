@@ -20,8 +20,10 @@ const DropdownControl = (props) => {
       setLabelClass(DdcCSS.shiftLabelUp)
       setCaretClass(DdcCSS.rotateUp)
 
-      inputRef.focus()
+      inputRef.current.focus()
     }
+ 
+    
     
   }
 
@@ -56,13 +58,13 @@ const DropdownControl = (props) => {
 
   return (
     <div className={DdcCSS.formControl} onClick={handleControlClick}>
-      <span className={`${DdcCSS.collegeLabel} ${labelClass}`}>College</span>
-      <span><i className={`fa-solid fa-caret-down caretDown ${caretClass}`}></i></span>
+      <span className={`${DdcCSS.collegeLabel} ${labelClass}`}>{props.label}</span>
+      <span onClick={handleBlur}><i className={`fa-solid fa-caret-down caretDown ${caretClass}`}></i></span>
       <input type='text' className={DdcCSS.collegeInput} onBlur={handleBlur} ref={inputRef} onChange={(e)=>props.setValue(e.target.value)}/>
       <ul className={`${DdcCSS.collegeList} ${listClass}`} onClick={handleCollegeSelection}>
-        <li>kjh</li>
-        <li>kjh</li>
-        <li>kjh</li>
+        <li></li>
+        <li></li>
+        <li></li>
         <li></li>
         <li></li>
         <li></li>

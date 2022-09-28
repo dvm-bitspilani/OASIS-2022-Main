@@ -17,7 +17,7 @@
     border: 2px solid #524916;
     border-radius: 0rem 0.5rem 0.5rem 0rem;
     border-left: none;
-    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .regForm {
@@ -28,8 +28,26 @@
     flex-direction: column;
     gap: 3rem;
     font-family: Arial, Helvetica, sans-serif;
+    /* margin: 20px 0; */
+    /* padding: 20px 0 ; */
+    /* overflow-y: scroll; */
     /* transform: translateX(-10%); */
     /* border: 1px solid white; */
+}
+
+.regFormBox::-webkit-scrollbar{
+    width: 3px;
+    /* transform: translateX(4px); */
+
+}
+.regFormBox::-webkit-scrollbar-track{
+    /* width: 4px; */
+    background-color: #524916;
+}
+.regFormBox::-webkit-scrollbar-thumb{
+    background-color: #d19a08;
+    border-radius: 100vw;
+    /* max-height: 30px; */
 }
 
 .regForm > *{
