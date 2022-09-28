@@ -1,14 +1,14 @@
 .shard {
-  width: 6px;
-  height: 2px;
+  width: 12px;
+  height: 1px;
   border-radius: 1px;
   position: absolute;
   top: 0;
   left: 50vw;
   z-index: 1;
   background-color: var(--bgCol);
-  box-shadow: 0 0 3px 1px var(--bgCol);
-  animation: shardMove 5s ease-out infinite var(--delay);
+  box-shadow: 0 0 2px 1px var(--bgCol);
+  animation: shardMove 2.5s ease-out infinite var(--delay);
 }
 
 @keyframes shardMove {
@@ -22,5 +22,11 @@
   100% {
     transform: translate(var(--offX), var(--offY)) rotate(var(--rot));
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .shard {
+    width: 8px;
   }
 }
