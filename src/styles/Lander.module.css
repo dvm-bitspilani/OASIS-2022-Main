@@ -1,3 +1,8 @@
+:root{
+  --king_wid: 50%;
+  --title_wid: 38%;
+}
+
 .lander {
   width: 100vw;
   min-height: 100vh;
@@ -25,12 +30,29 @@
   z-index: 2;
 }
 
+@keyframes rotateRings {
+  from {
+    transform: translate(
+        calc(-50% + var(--offsetX)),
+        calc(-50% + var(--offsetY))
+      )
+      rotate(0deg);
+  }
+  to {
+    transform: translate(
+        calc(-50% + var(--offsetX)),
+        calc(-50% + var(--offsetY))
+      )
+      rotate(359deg);
+  }
+}
+
 /* king */
 .kingContainer {
   position: absolute;
   top: 0;
-  left: 25%;
-  width: 50%;
+  left: calc(50% - var(--king_wid)/2);
+  width: var(--king_wid);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,8 +114,8 @@
 /* OASIS title */
 .title {
   position: absolute;
-  width: 38%;
-  left: 31%;
+  width: var(--title_wid);
+  left: calc(50% - var(--title_wid)/2);
   top: 54%;
   z-index: 5;
 }
@@ -126,7 +148,9 @@
     #d19a08 100%
   );
   cursor: pointer;
+  color: black;
 }
+
 
 /* icons */
 .icons {
@@ -134,13 +158,17 @@
   position: absolute;
   bottom: 2%;
   right: 2%;
-  width: 6%;
+  width: 10%;
   justify-content: space-evenly;
   z-index: 5;
 }
 
 .icons svg {
   width: 20px;
+}
+
+svg:hover path{
+  fill: url(#paint0_linear_737_546);
 }
 
 .leftLava {
@@ -210,13 +238,13 @@
     transform: translate(0, -100%);
   }
   25% {
-    transform: translate(0, -50%) rotate(5deg);
+    transform: translate(0, -50%);
   }
   50% {
-    transform: translate(0, 0%) rotate(0deg);
+    transform: translate(0, 0%);
   }
   75% {
-    transform: translate(0, 50%) rotate(-5deg);
+    transform: translate(0, 50%);
   }
   100% {
     transform: translate(0, 100%);
@@ -228,16 +256,16 @@
     transform: translate(0, -100%);
   }
   25% {
-    transform: translate(0, -50%) rotate(2deg);
+    transform: translate(0, -50%);
   }
   50% {
-    transform: translate(0, 0%) rotate(0deg);
+    transform: translate(0, 0%);
   }
   75% {
-    transform: translate(0, 50%) rotate(2deg);
+    transform: translate(0, 50%);
   }
   100% {
-    transform: translate(0, 100%) rotate(0);
+    transform: translate(0, 100%);
   }
 }
 
@@ -246,13 +274,13 @@
     transform: translate(0, -100%);
   }
   25% {
-    transform: translate(0, -50%) rotate(5deg);
+    transform: translate(0, -50%);
   }
   50% {
-    transform: translate(0, 0%) rotate(0deg);
+    transform: translate(0, 0%);
   }
   75% {
-    transform: translate(0, 50%) rotate(5deg);
+    transform: translate(0, 50%);
   }
   100% {
     transform: translate(0, 130%);
@@ -274,5 +302,83 @@
   }
   100% {
     transform: translate(0, 100%);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  :root{
+    --king_wid: 60%;
+    --title_wid: 45%;
+  }
+
+  .window{
+    width: 65%;
+  }
+
+  .goldringsImg{
+    width: 62%;
+  }
+
+  .title{
+    top: 60%;
+  }
+
+  .icons{
+    width: 14%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .logo{
+    width: 4.5%;
+  }
+
+  .title{
+    top: 55%;
+  }
+
+  .register{
+    top: 87%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  :root{
+    --king_wid: 85%;
+    --title_wid: 85%;
+  }
+
+  .logo{
+    top: calc(98% - 8vw);
+    width: 8vw;
+  }
+
+  .window{
+    width: 130%;
+  }
+
+  .goldringsImg{
+    width: 125%;
+  }
+
+  .kingContainer{
+    top: 20%;
+  }
+
+  .title{
+    top: 55%;
+  }
+
+  .register{
+    font-size: .8rem;
+    top: 83%;
+  }
+
+  .icons{
+    width: 30%;
+  }
+
+  .icons svg{
+    width: 16px;
   }
 }

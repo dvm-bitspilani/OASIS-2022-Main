@@ -1,94 +1,75 @@
-import React from "react";
+import React, { useRef } from "react";
 import RegFormCSS from "../styles/RegForm.module.css";
 import { useState } from "react";
+import TextInputControl from './TextInputControl'
+import GenderInputControl from './GenderInputControl'
+import DropdownControl from "./DropdownControl";
+import EventsControl  from "./EventsControl";
 
 const RegForm = () => {
-  const [userInfo, setUserInfo] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    gender: "",
-    college: "",
-    location: "",
-  });
+  // const [userInfo, setUserInfo] = useState({
+  //   name: "",
+  //   email: "",
+  //   phone: "",
+  //   gender: "",
+  //   college: "",
+  //   location: "",
+  // });
 
-  const handleInputClick = (e) => {
-    let label = e.target.parentNode.querySelector("label");
-    let input = e.target.parentNode.querySelector("input");
+  const [name,setName]=useState('')
+  const [email_id,setEmail]=useState('')
+  const [phone,setPhone]=useState('')
+  const [gender,setGender]=useState('')
+  const [college,setCollege]=useState('')
+  const [location,setLocation]=useState('')
+  const [headOfSociety,setHeadOfSociety]=useState('')
+  const [choreographer,setChoreo]=useState('')
+  const [year,setYear]=useState('')
+  const [events,setEvents]=useState()
 
+  const collegeList=[{name:'xkjgkjyz'},
+                     {name:'jkgsdf'},
+                     {name:'sdfgdf'},
+                     {name:'sodcz'},
+                     {name:'hdfytdggs'},
+                     {name:'werqwqwe'}]
+  const yearList=[{name:'1'},{name:'2'},{name:'3'},{name:'4'},{name:'5'}];
+  const sportsList=[{name:'Atheltics(boys)'},
+  {name:'Atheltics(boys)'},{name:'Atheltics(boys)'},{name:'Atheltics(boys)'},{name:'Atheltics(boys)'},{name:'Atheltics(boys)'},{name:'Atheltics(boys)'},{name:'Atheltics(boys)'},{name:'Atheltics(boys)'},]
 
-    // labelList.forEach((label)=>{
-    //   if(label.hasAttribute('shiftUp'))
-    //     label.removeAttribute('shiftUp')
+  
 
-    // })
-    // console.log(labelList)
-    if (input.hasAttribute("activeInput")) {
-      input.blur();
-    } else {
-      input.focus();
-    }
-    if (input.value.trim() === "") {
-      label.toggleAttribute("shiftUp");
-      input.toggleAttribute("activeInput")
-    }
-    // console.log(input,label)
-  };
-
-  return (
+ 
+  
+return (
     <div className={RegFormCSS.regFormBox}>
-      <form className={RegFormCSS.regForm}>
-        <div
-          className={`${RegFormCSS.formControl} ${RegFormCSS.nameControl}`}
-          onClick={handleInputClick}
-        >
-          <label>Name</label>
-          <input type="text" className={RegFormCSS.textInput} />
+      <form className={RegFormCSS.regForm} onSubmit={(e)=>{}}>
+        <div className={RegFormCSS.textInputContainer}>
+          <TextInputControl  label={'Name'} type={'text'}  setValue={setName} info={'name'} />
+          <TextInputControl label={'Email Id'} type={'email'} setValue={setEmail} info={'email'} />
+          <TextInputControl label={'Phone No.'} type={'text'} setValue={setPhone} info={'phone'} pattern={'[1-9]{1}[0-9]{9}'}/>
         </div>
-        <div className={RegFormCSS.formControl} onClick={handleInputClick}>
-          <label>Email ID</label>
-          <input type="text" className={RegFormCSS.textInput} />
+        <div className={RegFormCSS.genderInputContainer} >
+          <GenderInputControl setValue={setGender}/>
         </div>
-        <div
-          className={`${RegFormCSS.formControl} ${RegFormCSS.phoneControl}`}
-          onClick={handleInputClick}
-        >
-          <label>Phone No.</label>
-          <input type="text" className={RegFormCSS.textInput} />
+        <div className={RegFormCSS.sportsContainer}>
+
+          <DropdownControl setValue={setEvents} label={'Sports'} listData={sportsList}/>
+          <ul className={RegFormCSS.sportsListContainer}></ul>
         </div>
-        <div
-          className={`${RegFormCSS.formControl} ${RegFormCSS.genderControl} `}
-        >
-          <label>Gender</label>
-          <div className={RegFormCSS.genderOptions}>
-            <div className={RegFormCSS.male}>
-              <input type="radio" className={RegFormCSS.genderInput} />
-              <span>Male</span>
-            </div>
-            <div className={RegFormCSS.female}>
-              <input type="radio" className={RegFormCSS.genderInput} />
-              <span>Female</span>
-            </div>
-            <div className={RegFormCSS.others}>
-              <input type="radio" className={RegFormCSS.genderInput} />
-              <span>Others</span>
-            </div>
-          </div>
-        </div>
-        <div
-          className={`${RegFormCSS.formControl} ${RegFormCSS.collegeControl}`}
-          onClick={handleInputClick}
-        >
-          <label>College</label>
-          <input className={RegFormCSS.dropDownInput} />
-        </div>
-        <div
-          className={`${RegFormCSS.formControl} ${RegFormCSS.locationControl}`}
-          onClick={handleInputClick}
-        >
-          <label>City/Town</label>
-          <input className={RegFormCSS.dropDownInput} />
-        </div>
+        
+        <DropdownControl setValue={setCollege} label={'College'} listData={collegeList}/>
+        <DropdownControl setValue={setYear} label={'Year Of Study'} listData={yearList} info={'sports'}/>
+        <TextInputControl label={'Head Of Society'} type={'text'} setValue={setHeadOfSociety} />
+        <TextInputControl label={'Choreographer'} type={'text'} setValue={setChoreo} />
+        
+        <TextInputControl label={'City'} type={'text'}  info={'name'} setValue={setLocation}/>
+
+        
+
+        
+        <button type="submit" className={RegFormCSS.submitForm}>Register</button>
+        <div className={RegFormCSS.bottomPadding}></div>
       </form>
     </div>
   );

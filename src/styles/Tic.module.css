@@ -1,0 +1,106 @@
+:root{
+    /* --input-font-size:20px; */
+    /* --label-font-size:22px; */
+    /* --text-control-height:45px; */
+    --label-font-color:goldenrod;
+    --input-font-color:white;
+    --label-font-size:22px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.formControl{
+    width: 100%;
+    display: flex;
+    position: relative;
+    --text-control-height:50px;
+    height: var(--text-control-height);
+    color: gray;
+}
+
+.formControl input{
+    --input-font-size:20px;
+    font-size: var(--input-font-size);
+    background: none;
+    border:none;
+    margin-top: auto;
+    outline: none;
+    height: calc(0.65*var(--control-height));
+    width: 100%;
+    border-bottom: 2px solid gray;
+    color:var(--input-font-color);
+    padding: 0 0px 5px 9px;
+}
+
+.formControl label{
+    position: absolute;
+    bottom: 0;
+    height: calc(0.65*var(--control-height));
+
+    font-size: var(--label-font-size);
+    color:var(--label-font-color);
+    width: 100%;
+    padding: 0 0px 5px 5px;
+
+}
+
+.formLabel{
+    transform-origin: left;
+    transition: 0.15s ease-out;
+    
+}
+
+.shiftLabelUp{
+    transform: scale(0.65) translateY(-100%);
+    margin-bottom: 3px;
+}
+.shiftLabelDown{
+    transform: translateY(0);
+
+}
+
+@media screen and (max-width: 800px) {
+    :root{
+    --label-font-size: 15px !important;
+    }
+
+    .college{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:760px) {
+    .formControl label{
+        margin-bottom: 5px;
+    }
+   
+    .formControl input{
+    --input-font-size:17px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid rgb(185, 184, 184);
+    }
+
+    .formControl{
+    --text-control-height:38px;
+    }
+   
+    .shiftLabelUp{
+        transform: scale(0.65) translateY(-125%);
+        /* margin-bottom: 10px; */
+    }
+}
+
