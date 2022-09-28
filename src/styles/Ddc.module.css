@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     position: relative;
-
+    border-bottom: 3px solid rgb(140, 140, 140);;
     height: var(--college-control-height);
     justify-content: space-between;
     
@@ -62,6 +62,10 @@
     /* z-index: -5; */
     /* opacity: 0; */
 
+}
+
+span.caretDown{
+    background-color: rgb(16, 16, 16);
 }
 
 .openList{
@@ -120,7 +124,7 @@
     outline: none;
     border: none;
     z-index: 0;
-    border-bottom:2px solid gray ;
+    /* border-bottom:2px solid gray ; */
     color: white;
     font-size: 20px;
     padding-left: 10px;
@@ -174,7 +178,7 @@ span.caretDown{
         font-size:15px;
     }
     .collegeInput{
-        border-bottom: 3px solid rgb(140, 140, 140);
+        /* border-bottom: 3px solid rgb(140, 140, 140); */
         font-size:17px ;
     }
     .formControl{
