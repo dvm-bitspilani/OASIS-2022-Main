@@ -30,9 +30,24 @@ const DropdownControl = (props) => {
     
     
   }
+
+  if(!isMounted){
+    isMounted.current=true
+  }
+  else{
+    setInterval(()=>{
+      if(inputRef.current===document.activeElement){
+          handleControlClick()
+          
+      }
+  },50)
+  }
   
 
   const handleBlur=()=>{
+    if(props.info==='sports'){
+      inputRef.current.textContent=''
+    }
     setTimeout(()=>{
 
       setListClass(DdcCSS.closeList);
@@ -75,7 +90,7 @@ const DropdownControl = (props) => {
       <span className={`${DdcCSS.collegeLabel} ${labelClass}`}>{props.label}</span>
       <span className={DdcCSS.caretDown}><i className={`fa-solid fa-caret-down  ${caretClass}`}
       onClick={handleControlClick}></i></span>
-      <input type='text' className={DdcCSS.collegeInput} onBlur={handleBlur} ref={inputRef} onChange={(e)=>{props.setValue(e.target.value); setSearchTerm(e.target.value);}}/>
+      <input type='text' className={DdcCSS.collegeInput} onBlur={handleBlur} ref={inputRef} onChange={(e)=>{props.setValue(e.target.value); setSearchTerm(e.target.value);}} required/>
       <ul className={`${DdcCSS.collegeList} ${listClass}`} onMouseDown={handleCollegeSelection} ref={listRef}>
           
         {props.listData.filter((data)=>{

@@ -3,7 +3,10 @@ import EcCSS from '../styles/Ec.module.css'
 
 const EventsControl = () => {
   return (
-    <div>
+    <div className={EcCSS.formControl}>
+        <span className={EcCSS.label}></span>
+        <span className={EcCSS.caretDown}></span>
+        <input type='text'/>
 
     </div>
   )

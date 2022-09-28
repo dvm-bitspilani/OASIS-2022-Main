@@ -11,11 +11,23 @@ const TextInputControl = (props) => {
     const [labelClass,setLabelClass]=useState(`${TicCSS.shiftLabelDown}`)
     const [inputClass,setInputClass]=useState('')
 
+    
+
    useEffect(()=>{
  if(isMounted.current){
     isMounted.current=true
+    
  }
  else{
+    setInterval(()=>{
+        if(inputRef.current===document.activeElement){
+            // handleControlClick()
+            if(!active){
+                setActive(true)
+            }
+            console.log('click')
+        }
+    },50)
      
      if(labelClass===`${TicCSS.shiftLabelDown}` && active===true){
          setLabelClass(`${TicCSS.shiftLabelUp}`)
@@ -50,7 +62,7 @@ const TextInputControl = (props) => {
   return (
     <div className={TicCSS.formControl} onClick={handleControlClick} >
         <label className={`${labelClass} ${TicCSS.formLabel}`}>{props.label}</label>
-        <input className={inputClass} ref={inputRef} type={props.type} onBlur={handleBlur} onChange={(e)=>{props.setValue(e.target.value)}} />
+        <input className={inputClass} ref={inputRef} type={props.type} onBlur={handleBlur} onChange={(e)=>{props.setValue(e.target.value)}} pattern={props.pattern} required/>
     </div>
   )
 }
