@@ -21,7 +21,7 @@ const Lander = () => {
   const [eyePosition, setEyePosition] = useState({ top: null });
 
   const kingEl = useRef(null);
-  const ringCount = Math.floor(6 + Math.random() * 4);
+  const ringCount = Math.floor(7 + Math.random() * 2);
   const shardCount = Math.floor(150 + Math.random() * 50);
   console.log(ringCount);
 
@@ -35,8 +35,9 @@ const Lander = () => {
         {[...Array(ringCount)].map((count, idx) => (
           <LanderRing
             key={idx}
-            offX={`${idx * (-1.25 + Math.random() * 1.25)}px`}
+            offX={`${idx * (-1.25 + Math.random() + 2.5)}px`}
             offY={`${idx * (-1.25 + Math.random() * 1.25)}px`}
+            filter={idx < 2 ? 2 : idx < 4 ? 1 : 0}
           />
         ))}
         {[...Array(shardCount)].map((count, idx) => (

@@ -1,0 +1,5 @@
+[
+  "drop-shadow(0 0 2px rgba(238, 194, 99, 1)) drop-shadow(0 0 5px rgba(254, 219, 126, 0.7)) drop-shadow(0 0 5px rgba(209, 154, 8, 0.5)) drop-shadow(0 0 10px rgba(235, 185, 53, 0.3)) drop-shadow(0 0 10px rgba(252, 215, 118, 0.3))",
+  "drop-shadow(0 0 2px rgb(238, 157, 99)) drop-shadow(0 0 5px rgba(254, 209, 126, 0.7)) drop-shadow(0 0 5px rgb(209, 115, 8)) drop-shadow(0 0 10px rgba(235, 156, 53, 0.3)) drop-shadow(0 0 10px rgba(252, 178, 118, 0.3))",
+  "drop-shadow(0 0 2px rgba(238, 115, 99, 0.92)) drop-shadow(0 0 5px rgba(254, 145, 126, 0.7)) drop-shadow(0 0 5px rgba(209, 45, 8, 0.61)) drop-shadow(0 0 10px rgba(235, 95, 53, 0.3)) drop-shadow(0 0 10px rgba(252, 149, 118, 0.49))"
+]

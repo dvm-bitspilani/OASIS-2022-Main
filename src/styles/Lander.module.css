@@ -16,77 +16,13 @@
   z-index: 2;
 }
 
-.goldringsImg {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(
-    calc(-50% + var(--offsetX)),
-    calc(-50% + var(--offsetY))
-  );
-  width: 57%;
-  transform-origin: calc(50% - var(--offsetX)) calc(50% - var(--offsetY));
-  animation: rotateRings var(--speed) infinite linear;
-  z-index: 3;
-}
-
 .window {
-  width: 60%;
+  width: 59vw;
   object-fit: cover;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-}
-
-/* rings */
-.ring1Down {
-  animation: rotateRingsDown 15s infinite linear;
-}
-
-.ring2Down {
-  animation: rotateRingsDown 13s infinite linear;
-}
-
-.ring3Down {
-  animation: rotateRingsDown 11s infinite linear;
-}
-
-.ring4Down {
-  animation: rotateRingsDown 9s infinite linear;
-}
-
-.ring1Up {
-  animation: rotateRingsUp 15s infinite linear;
-}
-
-.ring2Up {
-  animation: rotateRingsUp 13s infinite linear;
-}
-
-.ring3Up {
-  animation: rotateRingsUp 11s infinite linear;
-}
-
-.ring4Up {
-  animation: rotateRingsUp 9s infinite linear;
-}
-
-@keyframes rotateRings {
-  from {
-    transform: translate(
-        calc(-50% + var(--offsetX)),
-        calc(-50% + var(--offsetY))
-      )
-      rotate(0deg);
-  }
-  to {
-    transform: translate(
-        calc(-50% + var(--offsetX)),
-        calc(-50% + var(--offsetY))
-      )
-      rotate(359deg);
-  }
 }
 
 /* king */
@@ -110,6 +46,7 @@
   top: 43.5%;
   transform: translateX(-0.85%);
 }
+
 .eyeSvgContainer::after {
   position: absolute;
   content: "";
@@ -137,11 +74,13 @@
   /* transform: translateX(-50%) */
   /* left: 25%; */
 }
+
 .leftEye,
 .rightEye {
   width: 3%;
   animation: eye-animation 4.5s 1s cubic-bezier(0.05, 0.59, 0.02, 0.81) infinite;
 }
+
 .leftEye {
   transform: rotate(7deg) translateX(22.5%);
 }
@@ -217,6 +156,7 @@
   /* border:2px solid red; */
   /* position: relative; */
 }
+
 .leftLava > div {
   /* border:1px solid white; */
   width: 25%;
@@ -227,24 +167,29 @@
   height: 70%;
   /* overflow: hidden; */
 }
+
 .leftLava__4 {
   height: 60%;
   position: relative;
   /* top:20%; */
 }
+
 .leftLava__1Img {
   position: relative;
   /* top:-100px; */
   animation: translate-left-lava__1 7s linear infinite forwards;
 }
+
 .leftLava__2Img {
   position: relative;
   animation: translate-left-lava__2 8s linear infinite forwards;
 }
+
 .leftLava__3Img {
   position: relative;
   animation: translate-left-lava__3 10s linear infinite forwards;
 }
+
 .leftLava__4Img {
   animation: translate-left-lava__4 13s linear infinite;
   position: relative;
@@ -277,6 +222,7 @@
     transform: translate(0, 100%);
   }
 }
+
 @keyframes translate-left-lava__3 {
   0% {
     transform: translate(0, -100%);
@@ -294,6 +240,7 @@
     transform: translate(0, 100%) rotate(0);
   }
 }
+
 @keyframes translate-left-lava__2 {
   0% {
     transform: translate(0, -100%);
@@ -311,6 +258,7 @@
     transform: translate(0, 130%);
   }
 }
+
 @keyframes translate-left-lava__1 {
   0% {
     transform: translate(0, -100%);
