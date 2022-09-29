@@ -76,7 +76,7 @@ const EventsControl = (props) => {
     })
     setSelectedEvents([...updatedList])
     setEventList((prevList)=>[...prevList,...removedEvent])
-    console.log(updatedList)
+    // console.log(updatedList)
     // console.log(eventId)
   }
   // if(!isMounted){

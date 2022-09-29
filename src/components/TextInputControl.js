@@ -25,7 +25,7 @@ const TextInputControl = (props) => {
             if(!active){
                 setActive(true)
             }
-            console.log('click')
+            // console.log('click')
         }
     },50)
      
