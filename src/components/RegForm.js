@@ -5,6 +5,7 @@ import TextInputControl from './TextInputControl'
 import GenderInputControl from './GenderInputControl'
 import DropdownControl from "./DropdownControl";
 import EventsControl  from "./EventsControl";
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 
@@ -14,6 +15,7 @@ const RegForm = () => {
 
 const BOSM_END_POINT = "https://www.bitsbosm.org/2022/registrations";
 const OASIS_END_POINT = "https://bits-oasis.org/2022/main/registrations";
+const OASIS_END_POINT_POST="http://bits-oasis.org/2022/main/registrations/Register"
 
 let yearList=[{name:'1'},{name:'2'},{name:'3'},{name:'4'},{name:'5'}];
 
@@ -34,6 +36,8 @@ let yearList=[{name:'1'},{name:'2'},{name:'3'},{name:'4'},{name:'5'}];
   const [year_of_study,setYear]=useState('')
   const [events_ids,setEventsIds]=useState([])
   const [events,setEvents]=useState([])
+
+  const recaptchaRef = React.createRef();
 
 
 const [collegeList,setCollegeList]=useState([])
@@ -71,7 +75,7 @@ const [collegeList,setCollegeList]=useState([])
 
       let eventsListJson = await eventsRes.json()
       // availEvents=eventsListJson.data
-      // console.log(eventsListJson.data)
+     
       // collegeList=[...availColleges]
       setCollegeList([...availColleges])
       // setEventsList([...availEvents])
@@ -80,11 +84,10 @@ const [collegeList,setCollegeList]=useState([])
 
 
 
-      // console.log(collegeList)
+      
     }
     catch(e){
       alert("Failure in getting Data")
-      // console.log(e)
     }
   }
 
@@ -100,27 +103,60 @@ const [collegeList,setCollegeList]=useState([])
 
   
 
-  const handleSubmit=(e)=>{
+  const handleSubmit= async(e)=>{
     e.preventDefault()
+
     if(events_ids.length===0){
       alert('fill in atleast one event')
+      return;
     }
-    const data={
-      name:name,
-      email_id:email_id,
-      phone:phone,
-      gender:gender,
-      college_id:college_id,
-      city:location,
-      head_of_society:head_of_society,
-      choreographer:choreographer,
-      year_of_study:year_of_study,
-      events_ids:events_ids,
 
+    try{
+      let capt = recaptchaRef.current.getResponse();
+
+      const data={
+        name:name,
+        email_id:email_id,
+        phone:phone,
+        gender:gender,
+        college_id:college_id,
+        city:location,
+        head_of_society:head_of_society,
+        choreographer:choreographer,
+        year_of_study:year_of_study,
+        events_ids:events_ids,
+        captcha:capt,
+        
+        
+        
+      }
+      
+      const options ={
+        method:'POST',
+        headers:{
+          'Content-Type':'application/json',
+        },
+        body:JSON.stringify(data)
+      }
+
+      
+      let res= await fetch(`${OASIS_END_POINT_POST}`,options)
+      let res_json= await res.json()
+      alert(res_json.message)
+
+      recaptchaRef.current.reset()
+
+      if(res.ok){
+
+      }
+    }catch(e){
+      // console.log(e)
 
     }
-    console.log(data)
+
+    // console.log(data)
   }
+  
 
   const handleEventCross=(e)=>{
     //  console.log(e.target)
@@ -130,7 +166,7 @@ const [collegeList,setCollegeList]=useState([])
       // console.log(item)
      }
      if(e.target.tagName.toLowerCase()==='div'){
-      console.log('div')
+      // console.log('div')
      }
   }
   // console.log(collegeList)
@@ -138,7 +174,7 @@ const [collegeList,setCollegeList]=useState([])
   
 return (
     <div className={RegFormCSS.regFormBox}>
-      <form className={RegFormCSS.regForm} onSubmit={handleSubmit}>
+      <form className={RegFormCSS.regForm} onSubmit={handleSubmit}  method="post">
         <div className={RegFormCSS.textInputContainer}>
           <TextInputControl  label={'Name'} type={'text'}  setValue={setName} info={'name'} />
           <TextInputControl label={'Email Id'} type={'email'} setValue={setEmail} info={'email'} />
@@ -166,6 +202,12 @@ return (
 
         
         <button type="submit" className={RegFormCSS.submitForm}>Register</button>
+        <ReCAPTCHA
+        ref={recaptchaRef}
+        size="invisible"
+        sitekey="Your client site key"
+        
+      />
         <div className={RegFormCSS.bottomPadding}></div>
       </form>
     </div>

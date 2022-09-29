@@ -104,7 +104,7 @@ const DropdownControl = (props) => {
 
     }
     if(props.info==='college'){
-      console.log(idNo)
+      // console.log(idNo)
       props.setValue(idNo)
     }
     if(props.info==='year'){
