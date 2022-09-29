@@ -24,7 +24,7 @@
     /* background-color: black; */
     color: white;
     padding-left:10px ;
-    font-size: 1.3rem;
+    font-size: 20px;
     z-index: 1;
 }
 .inputContainer{
@@ -40,18 +40,21 @@
 }
 
 .label{
-    color: gold;
+    color: goldenrod;
     z-index: 1;
     font-size: 1.3rem;
-    margin-left: 5px;
+    padding: 5px 0 0 5px;
     transform-origin: left;
     transition: 0.2s;
 }
 .caretClass{
-    /* z-index: 1; */
-    /* margin-right: 5px; */
-    width: 30px;
-    /* background-color: white; */
+    /* z-index: 4; */
+    /* width: 100%; */
+    height: 100%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -63,25 +66,22 @@
     width: 100%;
     margin-top: 2px;
     border: 2px solid gray;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
     padding: 5px;
-    gap:10px;
-    flex-wrap: wrap;
     /* background-color: aquamarine; */
     /* transform: translateY(100%); */
 }
 .eventsContainer > li{
     list-style: none;
-   
     background-color: rgb(93, 93, 93);
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap:10px;
+    gap: 10px;
     padding: 5px 10px;
     border-radius: 0.4rem;
-    font-size: 1.2rem;
+    font-size: 17px;
+    height: min-content;
+    width: fit-content;
+    margin: 4px 3px;
 }
 
 .shiftLabelUp{
@@ -105,7 +105,6 @@
     flex-direction: column; */
     gap:1px;
     z-index: 5;
-    /* flex-wrap: wrap; */
     /* margin-top: 10px; */
     /* padding:0 2px; */
     /* z-index: -1; */
@@ -116,7 +115,7 @@
     width: 100%;
     padding: 0 5px;
     background-color: rgb(13, 13, 13);
-    font-size: 1.3rem;
+    font-size: 20px;
     margin-bottom:1px ;
     display: flex;
     align-items: center;
@@ -140,4 +139,29 @@
 .hideList{
     height: 0;
     bottom: -2px;
+}
+
+@media screen and (max-width: 800px) {
+    .label{
+        font-size: 15px;
+    }
+
+    .dropDown > li{
+        font-size: 15px;
+    }
+
+    .eventsContainer > li{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    
+    .inputContainer input{
+        font-size: 17px;
+    }
+
+    .inputContainer{
+        height: 38px;
+    }
 }
