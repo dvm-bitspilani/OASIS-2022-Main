@@ -127,7 +127,7 @@ const EventsControl = (props) => {
 
           <span className={`${EcCSS.label} ${labelClass}`}>Events</span>
           <span className={EcCSS.caretClass}>
-            <i className={`fa-solid fa-caret-down fa-xl ${EcCSS.caretDown}`}></i>
+            <i className={`fa-solid fa-caret-down ${EcCSS.caretDown}`}></i>
           </span>
           <input type='text' ref={inputRef}  onChange={handleInputChange} onClick={inputContainerClick} onBlur={inputBlur}/>
 

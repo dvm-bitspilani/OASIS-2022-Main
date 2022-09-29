@@ -84,7 +84,7 @@
 .leftEye,
 .rightEye {
   width: 3%;
-  animation: eye-animation 4.5s 1s cubic-bezier(0.05, 0.59, 0.02, 0.81) infinite;
+  animation: eye-animation 2.5s 1s cubic-bezier(0.05, 0.59, 0.02, 0.81) infinite;
 }
 
 .leftEye {
