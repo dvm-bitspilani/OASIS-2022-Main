@@ -6,10 +6,9 @@
 }
 
 :root{
-    --span-font-size:20px;
-    --label-font-size:22px;
+    --span-font-size:17px;
+    --label-font-size:20px;
     --gender-control-height:55px;
-   
     --gender-options-gap:25px;
     --gender-inter-gap:5px;
     --college-control-height:45px;
@@ -20,7 +19,7 @@
     display: flex;
     align-items: center;
     position: relative;
-
+    border-bottom: 3px solid rgb(140, 140, 140);;
     height: var(--college-control-height);
     justify-content: space-between;
     
@@ -63,6 +62,10 @@
     /* z-index: -5; */
     /* opacity: 0; */
 
+}
+
+span.caretDown{
+    background-color: rgb(16, 16, 16);
 }
 
 .openList{
@@ -121,19 +124,18 @@
     outline: none;
     border: none;
     z-index: 0;
-    border-bottom:2px solid gray ;
-
+    /* border-bottom:2px solid gray ; */
     color: white;
     font-size: 20px;
     padding-left: 10px;
     /* background-color: black; */
 }
 .collegeLabel{
-    font-size:22px;
+    font-size:20px;
     transform-origin: left;
     transition: 0.1s;
     color:goldenrod;
-    padding-bottom: 7px;
+    /* padding-bottom: 7px; */
     /* width: 100%; */
     /* z-index: 2; */
 }
@@ -165,13 +167,18 @@ span.caretDown{
     align-items: center;
 }
 
+@media screen and (max-width: 800px) {
+    .collegeLabel{
+        font-size:15px;
+    }
+}
+
 @media screen and (max-width:760px) {
     .collegeLabel{
         font-size:15px;
-        margin-bottom: 20px;
     }
     .collegeInput{
-        border-bottom: 3px solid rgb(140, 140, 140);
+        /* border-bottom: 3px solid rgb(140, 140, 140); */
         font-size:17px ;
     }
     .formControl{

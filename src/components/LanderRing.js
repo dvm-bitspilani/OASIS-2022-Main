@@ -1,16 +1,20 @@
-import LanderCSS from "../styles/Lander.module.css";
+import RingCss from "../styles/LanderRings.module.css";
+import RingShadows from "../JSON/dropShadows.json";
 
 const LanderRing = (props) => {
+  const idxGen = Math.random();
+  const idx = idxGen < 0.4 ? 0 : idxGen < 0.75 ? 1 : 2;
   return (
     <svg
       viewBox="0 0 1283 1283"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={LanderCSS.goldringsImg}
+      className={RingCss.goldringsImg}
       style={{
         "--offsetX": props.offX,
         "--offsetY": props.offY,
-        "--speed": `${0.5 + Math.random() * 0.3}s`,
+        "--speed": `${0.8 + Math.random() * 0.3}s`,
+        "--filter": RingShadows[props.filter],
       }}
     >
       <path

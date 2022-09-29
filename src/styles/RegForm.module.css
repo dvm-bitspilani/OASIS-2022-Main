@@ -29,7 +29,7 @@
     flex-direction: column; */
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
     /* margin: 20px 0; */
     /* padding: 20px 0 ; */
@@ -106,21 +106,19 @@
 
 
 button.submitForm{
-    padding: 10px 34px;
+    padding: 8px 18px;
+    position: relative;
+    border: 1px solid #fedb7e;
+    border-radius: 25px;
     
-position: relative;
-  border: 1px solid #fedb7e;
-  border-radius: 25px;
-  
-  margin: 0 auto;
-  background: none;
-  color: white;
-  font-size: 1.3rem;
-  /* margin-bottom: 2rem; */
-  /* height: 200px; */
- 
-
+    margin: 0 auto;
+    background: none;
+    color: white;
+    font-size: 1.1rem;
+    /* margin-bottom: 2rem; */
+    /* height: 200px; */
 }
+
 .bottomPadding{
     display: block;
     height: 10px;
@@ -150,6 +148,10 @@ button.submitForm:hover {
     .submitForm{ 
         font-size: .8rem !important;
     }
+
+    .regForm{
+        width: 70%;
+    }
 }
 
 @media screen and (max-width:760px) {
@@ -163,7 +165,7 @@ button.submitForm:hover {
     .regForm{
         overflow-y: scroll;
         box-sizing: border-box;
-        padding: 0px 0 20px 0;
+        width: 75%;
     }
 
     .regForm::-webkit-scrollbar{

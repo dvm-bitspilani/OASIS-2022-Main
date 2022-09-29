@@ -2,10 +2,16 @@ import React from "react";
 import StrangeShardCSS from "../styles/StrangeShard.module.css";
 
 const StrangeShard = () => {
-  const offX = -50 + Math.random() * 100;
-  const offY = 10 + Math.random() * 90;
+  const offXMod = Math.random() * 50;
+  const mul = Math.random() > 0.5 ? 1 : -1;
+  const offX = mul * offXMod;
+  const offYMin = Math.max(
+    Math.sqrt(2 * Math.pow(35, 2) - Math.pow(offX, 2)),
+    0
+  );
+  const offY = offYMin + Math.random() * (70 - offYMin);
   const deg = Math.atan(offY / offX) * (180 / Math.PI);
-  const delay = Math.random() * 10;
+  const delay = Math.random() * 5;
   const cols = ["#D19A08", "#FEDB7E", "#EBB935", "#FCD776", "#D19A08"];
   const colIdx = Math.floor(Math.random() * cols.length);
   const col = cols[colIdx];
