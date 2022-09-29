@@ -1,0 +1,141 @@
+
+*{
+    box-sizing: border-box;
+}
+.formControl{
+    width: 100%;
+    /* height:45px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    /* padding: 0 5px; */
+}
+
+.inputContainer input{
+    width: 100%;
+    height: 100%;
+    /* height: ; */
+    position: absolute;
+    outline: none;
+    border: none;
+    background: none;
+    /* background-color: black; */
+    color: white;
+    padding-left:10px ;
+    font-size: 1.3rem;
+    z-index: 1;
+}
+.inputContainer{
+    position: relative;
+    display: flex;
+    height: 45px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    border-bottom:2px solid gray ;
+
+}
+
+.label{
+    color: gold;
+    z-index: 1;
+    font-size: 1.3rem;
+    margin-left: 5px;
+    transform-origin: left;
+    transition: 0.2s;
+}
+.caretClass{
+    /* z-index: 1; */
+    /* margin-right: 5px; */
+    width: 30px;
+    /* background-color: white; */
+}
+
+
+
+.eventsContainer{
+    position: relative;
+    /* bottom: -150px; */
+    height: 150px;
+    width: 100%;
+    margin-top: 2px;
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5px;
+    gap:10px;
+    /* background-color: aquamarine; */
+    /* transform: translateY(100%); */
+}
+.eventsContainer > li{
+    list-style: none;
+   
+    background-color: rgb(93, 93, 93);
+    display: flex;
+    align-items: center;
+    gap:10px;
+    padding: 5px 10px;
+    border-radius: 0.4rem;
+    font-size: 1.2rem;
+}
+
+.shiftLabelUp{
+    transform: translateY(-100%) scale(0.65);
+}
+.shiftLabelDown{
+    transform: none;
+}
+
+.dropDown{
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 0px;
+    background-color: rgb(52, 52, 52);
+    transition: 0.2s;
+    overflow-y: scroll;
+    /* padding: 0 2px; */
+    /* margin:0 2px; */
+    /* display: flex;
+    flex-direction: column; */
+    gap:1px;
+    z-index: 5;
+    /* margin-top: 10px; */
+    /* padding:0 2px; */
+    /* z-index: -1; */
+    
+}
+.dropDown > li{
+    height: 40px;
+    width: 100%;
+    padding: 0 5px;
+    background-color: rgb(13, 13, 13);
+    font-size: 1.3rem;
+    margin-bottom:1px ;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid gray; */
+    /* margin: 2px 0; */
+}
+.dropDown::-webkit-scrollbar{
+    width: 2px;
+}
+.dropDown::-webkit-scrollbar-track{
+    background-color: rgb(35, 35, 35);
+}
+.dropDown::-webkit-scrollbar-thumb{
+    background-color: rgb(182, 182, 182);
+    border-radius: 100vw;
+}
+.showList{
+    height: 120px;
+    bottom: -122px;
+}
+.hideList{
+    height: 0;
+    bottom: -2px;
+}

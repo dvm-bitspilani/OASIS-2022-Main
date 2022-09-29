@@ -12,12 +12,40 @@ const DropdownControl = (props) => {
   const inputRef = useRef()
   const listRef=useRef()
   const [searchTerm,setSearchTerm]=useState('')
+  const [requiredInp,setRequired]=useState()
 
-  // const fetchedData=props.listData
+  const [eventList,setEventList]=useState()
+ 
+  let pattern = new RegExp()
+  let patterns = []
+
   
+ 
+
+  useEffect(()=>{
+    if(props.info!=='events'){
+      setRequired(`required`)
+    }
+  },[props.info])
+  useEffect(()=>{
+    
+    if(props.info==='college'){
+
+      patterns=props.listData.map((data)=>data.name).join('|')
+      
+      inputRef.current.pattern=patterns
+    }
+    if(props.info==='year'){
+      patterns=`${1}|${2}|${3}|${4}|${5}`
+      inputRef.current.pattern=patterns
+    }
+    setEventList([...props.listData])
+    
+
+  },[props.listData])
 
   const handleControlClick=()=>{
-    console.log('roll')
+    // console.log('roll')
     if(!active){
       setListClass(DdcCSS.openList)
       setActive(true)
@@ -63,61 +91,42 @@ const DropdownControl = (props) => {
 
   const handleCollegeSelection=(e)=>{
     inputRef.current.value=e.target.textContent
-
+    // console.log(props.listData)
+    let idNo=e.target.getAttribute('idno')
+    
     if(props.info==='events'){
-      props.setValue((prev)=>([...prev,e.target.textContent]))
-    }
-    else{
+      // let selectedEvent=[]
+      
+    //  props.listData
+      
+      e.target.remove()
+   
 
+    }
+    if(props.info==='college'){
+      console.log(idNo)
+      props.setValue(idNo)
+    }
+    if(props.info==='year'){
       props.setValue(e.target.textContent)
+      // console.log(e.target)
     }
-
-    // if(props.info==='events'){
-    //   inputRef.current.value=''
-    //   console.log('removed')
-    // }
+    
   }
 
   const handleInputChange=(e)=>{
     
-      if(props.info==='events'){
-
-      }
-      else{
-
-        props.setValue(e.target.value);
-      }
+  
        setSearchTerm(e.target.value);
   }
 
-  // const setListHeight=()=>{
-  //   let length=listRef.current.childElementCount
-  //   if(length<4){
-  //     listRef.current.style.height=`${length*35}px`
-  //   }
-  //   else{
-  //     listRef.current.style.height=`${4*35}px`
-  //   }
-  // }
-  
-  
-
-  // useEffect(()=>{
-  //   if(isMounted.current){
-  //      isMounted.current=true
-  //   }
-  //   else{
-        
-       
-       
-  //     }},[active])
 
   return (
     <div className={DdcCSS.formControl} onClick={handleControlClick}>
       <span className={`${DdcCSS.collegeLabel} ${labelClass}`}>{props.label}</span>
       <span className={DdcCSS.caretDown}><i className={`fa-solid fa-caret-down  ${caretClass}`}
       onClick={handleControlClick}></i></span>
-      <input type='text' className={DdcCSS.collegeInput} onBlur={handleBlur} ref={inputRef} onChange={handleInputChange} required/>
+      <input type='text' className={DdcCSS.collegeInput} onBlur={handleBlur} ref={inputRef} onChange={handleInputChange} required={requiredInp}/>
       <ul className={`${DdcCSS.collegeList} ${listClass}`} onMouseDown={handleCollegeSelection} ref={listRef}>
           
         {props.listData.filter((data)=>{
@@ -127,7 +136,7 @@ const DropdownControl = (props) => {
           else if(data.name.toLowerCase().includes(searchTerm.toLowerCase())){
             return data
           }
-        }).map((data)=>(<li key={data.id}>{data.name}</li>))}
+        }).map((data)=>(<li key={data.id} idno={data.id}>{data.name}</li>))}
       </ul>
       
     </div>
