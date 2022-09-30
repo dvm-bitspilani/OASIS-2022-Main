@@ -74,10 +74,6 @@ const DropdownControl = (props) => {
 
   const handleBlur=()=>{
 
-    if(props.info==='events'){
-      inputRef.current.value=''
-      
-    }
     setSearchTerm('')
     setTimeout(()=>{
 

@@ -13,9 +13,9 @@ import ReCAPTCHA from "react-google-recaptcha";
 const RegForm = () => {
 
 
-const BOSM_END_POINT = `${process.env.REACT_APP_BOSM_END_POINT}`
-const OASIS_END_POINT = `${process.env.REACT_APP_OASIS_END_POINT}`
-const OASIS_END_POINT_POST=`${process.env.REACT_APP_OASIS_END_POINT_POST}`
+const BOSM_END_POINT = "https://www.bitsbosm.org/2022/registrations";
+const OASIS_END_POINT = "https://bits-oasis.org/2022/main/registrations";
+const OASIS_END_POINT_POST="https://bits-oasis.org/2022/main/registrations/Register"
 
 
 
@@ -68,7 +68,7 @@ const OASIS_END_POINT_POST=`${process.env.REACT_APP_OASIS_END_POINT_POST}`
     }
     catch(e){
       alert("Failure in getting Data")
-      // console.log(e)
+      console.log(e)
     }
   }
 
