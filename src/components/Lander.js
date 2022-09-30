@@ -1,15 +1,15 @@
 import LanderCSS from "../styles/Lander.module.css";
 import LanderRing from "./LanderRing";
 import StrangeShard from "./StrangeShard";
-import windowImg from "../Assets/window-min.png";
-import king from "../Assets/king-min.png";
+import windowImg from "../Assets/window.png";
+import king from "../Assets/king.png";
 import logo from "../Assets/logo.png";
-import title from "../Assets/title-min.png";
+import title from "../Assets/title.png";
 
-import leftLava4 from "../Assets/left-lava-4.png";
-import leftLava3 from "../Assets/left-lava-3.png";
-import leftLava2 from "../Assets/left-lava-2.png";
-import leftLava1 from "../Assets/left-lava-1.png";
+// import leftLava4 from "../Assets/left-lava-4.png";
+// import leftLava3 from "../Assets/left-lava-3.png";
+// import leftLava2 from "../Assets/left-lava-2.png";
+// import leftLava1 from "../Assets/left-lava-1.png";
 
 import leftEye from "../Assets/lefteye.png";
 import rightEye from "../Assets/righteye.png";
@@ -22,10 +22,10 @@ const Lander = (props) => {
 
   const kingEl = useRef(null);
   const ringCount = Math.floor(7 + Math.random() * 2);
-  let shardCount = Math.floor(150 + Math.random() * 50);
+  let shardCount = Math.floor(100 + Math.random() * 50);
   window.addEventListener("resize", () => {
     if (window.innerWidth < 800) {
-      shardCount = Math.floor(100 + Math.random() * 50);
+      shardCount = Math.floor(50 + Math.random() * 50);
     }
   });
 
