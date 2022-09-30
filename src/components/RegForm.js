@@ -11,7 +11,7 @@ const RegForm = () => {
   const BOSM_END_POINT = "https://www.bitsbosm.org/2022/registrations";
   const OASIS_END_POINT = "https://bits-oasis.org/2022/main/registrations";
   const OASIS_END_POINT_POST =
-    "https://bits-oasis.org/2022/main/registrations/Register";
+    "https://bits-oasis.org/2022/main/registrations/Register/";
 
   let availColleges = [];
   let availEvents = [];
