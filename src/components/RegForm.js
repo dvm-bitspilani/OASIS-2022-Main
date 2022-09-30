@@ -7,7 +7,7 @@ import DropdownControl from "./DropdownControl";
 import EventsControl from "./EventsControl";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const RegForm = () => {
+const RegForm = (props) => {
   const BOSM_END_POINT = "https://www.bitsbosm.org/2022/registrations";
   const OASIS_END_POINT = "https://bits-oasis.org/2022/main/registrations";
   const OASIS_END_POINT_POST =
@@ -98,6 +98,7 @@ const RegForm = () => {
         city: location,
         college_id: college_id,
       };
+      console.log(data)
 
       const options = {
         method: "POST",
@@ -110,6 +111,9 @@ const RegForm = () => {
       let res = await fetch(`${OASIS_END_POINT_POST}`, options);
       let res_json = await res.json();
       alert(res_json.message);
+      if(res.ok){
+        props.resetPage()
+      }
     } catch (e) {}
   };
 

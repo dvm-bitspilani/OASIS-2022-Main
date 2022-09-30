@@ -45,7 +45,7 @@ const Registration = (props) => {
         </svg>
 
         <RegWelcome />
-        <RegForm />
+        <RegForm resetPage={backdropClickHandler}/>
       </div>
     </div>
   );

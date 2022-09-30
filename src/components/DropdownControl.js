@@ -26,7 +26,7 @@ const DropdownControl = (props) => {
   }, [props.info]);
   useEffect(() => {
     if (props.info === "college") {
-      patterns = props.listData.map((data) => data.name).join("|");
+      patterns = props.listData.map((data) => data.name.trim()).join("|");
 
       inputRef.current.pattern = patterns;
     }
