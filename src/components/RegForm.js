@@ -5,7 +5,7 @@ import TextInputControl from './TextInputControl'
 import GenderInputControl from './GenderInputControl'
 import DropdownControl from "./DropdownControl";
 import EventsControl  from "./EventsControl";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 
 
@@ -110,9 +110,9 @@ const [collegeList,setCollegeList]=useState([])
       alert('fill in atleast one event')
       return;
     }
+    // let capt = recaptchaRef.current.getValue();
 
     try{
-      let capt = recaptchaRef.current.getResponse();
 
       const data={
         name:name,
@@ -125,7 +125,7 @@ const [collegeList,setCollegeList]=useState([])
         choreographer:choreographer,
         year_of_study:year_of_study,
         events_ids:events_ids,
-        captcha:capt,
+        captcha:null,
         
         
         
@@ -144,7 +144,7 @@ const [collegeList,setCollegeList]=useState([])
       let res_json= await res.json()
       alert(res_json.message)
 
-      recaptchaRef.current.reset()
+      // recaptchaRef.current.reset()
 
       if(res.ok){
 
@@ -202,12 +202,12 @@ return (
 
         
         <button type="submit" className={RegFormCSS.submitForm}>Register</button>
-        <ReCAPTCHA
+        {/* <ReCAPTCHA
         ref={recaptchaRef}
         size="invisible"
-        sitekey="Your client site key"
+        sitekey="6Lcw7D8iAAAAACeLJ8zEsSukRW6vE-S-NUU9qbSb"
         
-      />
+      /> */}
         <div className={RegFormCSS.bottomPadding}></div>
       </form>
     </div>
