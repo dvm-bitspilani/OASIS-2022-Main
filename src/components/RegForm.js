@@ -5,7 +5,7 @@ import TextInputControl from './TextInputControl'
 import GenderInputControl from './GenderInputControl'
 import DropdownControl from "./DropdownControl";
 import EventsControl  from "./EventsControl";
-// import ReCAPTCHA from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 
@@ -13,11 +13,10 @@ import EventsControl  from "./EventsControl";
 const RegForm = () => {
 
 
-const BOSM_END_POINT = "https://www.bitsbosm.org/2022/registrations";
-const OASIS_END_POINT = "https://bits-oasis.org/2022/main/registrations";
-const OASIS_END_POINT_POST="http://bits-oasis.org/2022/main/registrations/Register"
+const BOSM_END_POINT = `${process.env.REACT_APP_BOSM_END_POINT}`
+const OASIS_END_POINT = `${process.env.REACT_APP_OASIS_END_POINT}`
+const OASIS_END_POINT_POST=`${process.env.REACT_APP_OASIS_END_POINT_POST}`
 
-let yearList=[{name:'1'},{name:'2'},{name:'3'},{name:'4'},{name:'5'}];
 
 
 
@@ -36,33 +35,14 @@ let yearList=[{name:'1'},{name:'2'},{name:'3'},{name:'4'},{name:'5'}];
   const [year_of_study,setYear]=useState('')
   const [events_ids,setEventsIds]=useState([])
   const [events,setEvents]=useState([])
+  const [validate,setValidate]=useState(false)
 
-  const recaptchaRef = React.createRef();
+  const recaptchaRef = useRef(null);
 
 
-const [collegeList,setCollegeList]=useState([])
+  const [collegeList,setCollegeList]=useState([])
   const [eventsList,setEventsList]=useState([{name:'Dance',id:'12'},{name:'Music',id:'32'},{name:'Astro',id:'3'},{name:'Coding',id:'2'}])
-
-  const [eventsListCopy,setEventsListCopy]=useState([])
-  const [unselectedEventsList,setUnselectedEventsList]=useState([])
-  const unselectedEventsListRef=useRef([])
-
-  const data={
-    name:name,
-    email_id:email_id,
-    phone:phone,
-    gender:gender,
-    college_id:college_id,
-    city:location,
-    head_of_society:head_of_society,
-    choreographer:choreographer,
-    year_of_study:year_of_study,
-    events_ids:events_ids,
-
-
-  }
-
- 
+  const yearList=[{name:'1'},{name:'2'},{name:'3'},{name:'4'},{name:'5'}];
 
 
   const getElems = async () => {
@@ -88,6 +68,7 @@ const [collegeList,setCollegeList]=useState([])
     }
     catch(e){
       alert("Failure in getting Data")
+      // console.log(e)
     }
   }
 
@@ -105,32 +86,35 @@ const [collegeList,setCollegeList]=useState([])
 
   const handleSubmit= async(e)=>{
     e.preventDefault()
-
+    
+    
     if(events_ids.length===0){
       alert('fill in atleast one event')
+      
       return;
     }
-    // let capt = recaptchaRef.current.getValue();
+    
+    
 
+    const captchaToken = recaptchaRef.current.executeAsync();
+    console.log(captchaToken)
+   
     try{
 
       const data={
-        name:name,
+        captcha:captchaToken,
         email_id:email_id,
+        events:events_ids,
         phone:phone,
-        gender:gender,
-        college_id:college_id,
-        city:location,
-        head_of_society:head_of_society,
-        choreographer:choreographer,
         year_of_study:year_of_study,
-        events_ids:events_ids,
-        captcha:null,
-        
-        
-        
+        choreographer:choreographer,
+        head_of_society:head_of_society,
+        name:name,
+        gender:gender,
+        city:location,
+        college_id:college_id,
       }
-      
+        
       const options ={
         method:'POST',
         headers:{
@@ -138,24 +122,18 @@ const [collegeList,setCollegeList]=useState([])
         },
         body:JSON.stringify(data)
       }
-
-      
+        
       let res= await fetch(`${OASIS_END_POINT_POST}`,options)
       let res_json= await res.json()
       alert(res_json.message)
-
-      // recaptchaRef.current.reset()
-
-      if(res.ok){
-
-      }
     }catch(e){
-      // console.log(e)
 
     }
-
-    // console.log(data)
   }
+      
+      
+
+      
   
 
   const handleEventCross=(e)=>{
@@ -187,7 +165,7 @@ return (
 
         <div className={RegFormCSS.sportsContainer}>
 
-          <EventsControl setValue={setEvents} label={'Events'} listData={eventsList} info={'events'} setUnselectedEventsList={setUnselectedEventsList} setEventsIds={setEventsIds}/>
+          <EventsControl setValue={setEvents} label={'Events'} listData={eventsList} info={'events'} setEventsIds={setEventsIds}/>
          
         </div>
         
@@ -202,12 +180,13 @@ return (
 
         
         <button type="submit" className={RegFormCSS.submitForm}>Register</button>
-        {/* <ReCAPTCHA
+
+        <ReCAPTCHA
         ref={recaptchaRef}
         size="invisible"
-        sitekey="6Lcw7D8iAAAAACeLJ8zEsSukRW6vE-S-NUU9qbSb"
+        sitekey={`${process.env.REACT_APP_SITE_KEY}`}
         
-      /> */}
+      />
         <div className={RegFormCSS.bottomPadding}></div>
       </form>
     </div>
