@@ -1,11 +1,11 @@
 .shard {
+  top: 0;
+  left: 50vw;
+  z-index: 1;
   width: 12px;
   height: 1px;
   border-radius: 1px;
   position: absolute;
-  top: 0;
-  left: 50vw;
-  z-index: 1;
   background-color: var(--bgCol);
   box-shadow: 0 0 2px 1px var(--bgCol);
   animation: shardMove 2.5s ease-out infinite var(--delay);
@@ -16,9 +16,11 @@
     transform: translate(0, 0) rotate(var(--rot));
     opacity: 1;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     transform: translate(var(--offX), var(--offY)) rotate(var(--rot));
     opacity: 0;
