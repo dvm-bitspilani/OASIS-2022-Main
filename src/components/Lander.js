@@ -1,10 +1,10 @@
 import LanderCSS from "../styles/Lander.module.css";
 import LanderRing from "./LanderRing";
 import StrangeShard from "./StrangeShard";
-import windowImg from "../Assets/window.png";
-import king from "../Assets/king.png";
+import windowImg from "../Assets/window-min.png";
+import king from "../Assets/king-min.png";
 import logo from "../Assets/logo.png";
-import title from "../Assets/title.png";
+import title from "../Assets/title-min.png";
 
 import leftLava4 from "../Assets/left-lava-4.png";
 import leftLava3 from "../Assets/left-lava-3.png";
