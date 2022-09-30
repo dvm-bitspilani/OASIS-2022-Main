@@ -1,17 +1,18 @@
-import './App.css';
-import Lander from './components/Lander.js';
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Home from './Pages/Home';
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./Pages/Home";
+import ErrorPage from "./Pages/ErrorPage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    errorElement: <ErrorPage />,
+  },
+]);
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
