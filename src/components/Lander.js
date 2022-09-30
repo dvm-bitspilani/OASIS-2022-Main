@@ -1,25 +1,21 @@
+import { useRef } from "react";
 import LanderCSS from "../styles/Lander.module.css";
 import LanderRing from "./LanderRing";
 import StrangeShard from "./StrangeShard";
+
 import windowImg from "../Assets/window.png";
 import king from "../Assets/king.png";
 import logo from "../Assets/logo.png";
 import title from "../Assets/title.png";
+import leftEye from "../Assets/lefteye.png";
+import rightEye from "../Assets/righteye.png";
 
 // import leftLava4 from "../Assets/left-lava-4.png";
 // import leftLava3 from "../Assets/left-lava-3.png";
 // import leftLava2 from "../Assets/left-lava-2.png";
 // import leftLava1 from "../Assets/left-lava-1.png";
 
-import leftEye from "../Assets/lefteye.png";
-import rightEye from "../Assets/righteye.png";
-
-import { ReactComponent as EyeSvg } from "../Assets/eyes.svg";
-import { useEffect, useRef, useState } from "react";
-
 const Lander = (props) => {
-  const [eyePosition, setEyePosition] = useState({ top: null });
-
   const kingEl = useRef(null);
   const ringCount = Math.floor(7 + Math.random() * 2);
   let shardCount = Math.floor(100 + Math.random() * 50);
@@ -31,8 +27,8 @@ const Lander = (props) => {
 
   return (
     <div className={LanderCSS.lander}>
-      <img src={logo} alt="" className={LanderCSS.logo} />
-      <img src={windowImg} alt="" className={LanderCSS.window} />
+      <img src={logo} className={LanderCSS.logo} />
+      <img src={windowImg} className={LanderCSS.window} />
 
       <div className={LanderCSS.goldrings}>
         <LanderRing offX={`10px`} offY={`10px`} />
@@ -50,15 +46,15 @@ const Lander = (props) => {
       </div>
 
       <div className={LanderCSS.kingContainer}>
-        <img src={king} alt="" className={LanderCSS.king} ref={kingEl} />
+        <img src={king} className={LanderCSS.king} ref={kingEl} />
 
         <div className={LanderCSS.eyeSvgContainer}>
-          <img src={leftEye} alt="" className={LanderCSS.leftEye} />
-          <img src={rightEye} alt="" className={LanderCSS.rightEye} />
+          <img src={leftEye} className={LanderCSS.leftEye} />
+          <img src={rightEye} className={LanderCSS.rightEye} />
         </div>
       </div>
 
-      <img src={title} alt="" className={LanderCSS.title} />
+      <img src={title} className={LanderCSS.title} />
 
       {/* register */}
       <div className={LanderCSS.register}>
@@ -189,16 +185,16 @@ const Lander = (props) => {
       {/* lava */}
       {/* <div className={LanderCSS.leftLava}>
         <div className={LanderCSS.leftLava__1}>
-          <img className={LanderCSS.leftLava__1Img} src={leftLava1} alt="" />
+          <img className={LanderCSS.leftLava__1Img} src={leftLava1} />
         </div>
         <div className={LanderCSS.leftLava__2}>
-          <img className={LanderCSS.leftLava__2Img} src={leftLava2} alt="" />
+          <img className={LanderCSS.leftLava__2Img} src={leftLava2} />
         </div>
         <div className={LanderCSS.leftLava__3}>
-          <img className={LanderCSS.leftLava__3Img} src={leftLava3} alt="" />
+          <img className={LanderCSS.leftLava__3Img} src={leftLava3} />
         </div>
         <div className={LanderCSS.leftLava__4}>
-          <img className={LanderCSS.leftLava__4Img} src={leftLava4} alt="" />
+          <img className={LanderCSS.leftLava__4Img} src={leftLava4} />
         </div>
       </div> */}
     </div>
