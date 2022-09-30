@@ -22,8 +22,8 @@ const RegForm = () => {
   const [gender, setGender] = useState("");
   const [college_id, setCollege] = useState(null);
   const [location, setLocation] = useState("");
-  const [head_of_society, setHeadOfSociety] = useState("");
-  const [choreographer, setChoreo] = useState("");
+  const [head_of_society, setHeadOfSociety] = useState(false);
+  const [choreographer, setChoreo] = useState(false);
   const [year_of_study, setYear] = useState("");
   const [events_ids, setEventsIds] = useState([]);
   const [events, setEvents] = useState([]);
@@ -32,12 +32,7 @@ const RegForm = () => {
   const recaptchaRef = useRef(null);
 
   const [collegeList, setCollegeList] = useState([]);
-  const [eventsList, setEventsList] = useState([
-    { name: "Dance", id: "12" },
-    { name: "Music", id: "32" },
-    { name: "Astro", id: "3" },
-    { name: "Coding", id: "2" },
-  ]);
+  const [eventsList, setEventsList] = useState([]);
   const yearList = [
     { name: "1" },
     { name: "2" },
@@ -48,7 +43,7 @@ const RegForm = () => {
 
   const getElems = async () => {
     try {
-      let collegeRes = await fetch(`${BOSM_END_POINT}/get_colleges`, {
+      let collegeRes = await fetch(`${OASIS_END_POINT}/get_college`, {
         method: "GET",
       });
       let eventsRes = await fetch(`${OASIS_END_POINT}/events_details`, {
@@ -59,11 +54,12 @@ const RegForm = () => {
       availColleges = collegeListJson.data;
 
       let eventsListJson = await eventsRes.json();
-      // availEvents=eventsListJson.data
+      availEvents = eventsListJson[0].events;
+      // console.log([...availEvents]);
 
       // collegeList=[...availColleges]
+      setEventsList([...availEvents]);
       setCollegeList([...availColleges]);
-      // setEventsList([...availEvents])
 
       // setDynamicEventsList([...availEvents])
     } catch (e) {
@@ -76,7 +72,6 @@ const RegForm = () => {
     getElems();
   }, []);
 
-  useEffect(() => {}, [eventsList]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -88,7 +83,6 @@ const RegForm = () => {
     }
 
     const captchaToken = recaptchaRef.current.executeAsync();
-    console.log(captchaToken);
 
     try {
       const data = {
@@ -96,7 +90,7 @@ const RegForm = () => {
         email_id: email_id,
         events: events_ids,
         phone: phone,
-        year_of_study: year_of_study,
+        year: year_of_study,
         choreographer: choreographer,
         head_of_society: head_of_society,
         name: name,
@@ -131,6 +125,23 @@ const RegForm = () => {
     }
   };
   // console.log(collegeList)
+
+  const choreoChange=(e)=>{
+    if(e.target.checked){
+      setChoreo(true)
+    }
+    else{
+      setChoreo(false)
+    }
+  }
+  const hosChange=(e)=>{
+    if(e.target.checked){
+      setHeadOfSociety(true)
+    }
+    else{
+      setHeadOfSociety(false)
+    }
+  }
 
   return (
     <div className={RegFormCSS.regFormBox}>
@@ -188,6 +199,22 @@ const RegForm = () => {
           info={"year"}
         />
         <TextInputControl
+          label={"City"}
+          type={"text"}
+          info={"name"}
+          setValue={setLocation}
+        />
+        <div className={RegFormCSS.checkboxContainer}>
+          <input type="checkbox" onChange={choreoChange}/>
+          <label>Are you the Choreographer?</label>
+        </div>
+        <div className={RegFormCSS.checkboxContainer}>
+          <input type="checkbox" onChange={hosChange}/>
+
+          <label>Are you the Head of Society?</label>
+        </div>
+
+        {/* <TextInputControl
           label={"Head Of Society"}
           type={"text"}
           setValue={setHeadOfSociety}
@@ -196,14 +223,7 @@ const RegForm = () => {
           label={"Choreographer"}
           type={"text"}
           setValue={setChoreo}
-        />
-
-        <TextInputControl
-          label={"City"}
-          type={"text"}
-          info={"name"}
-          setValue={setLocation}
-        />
+        /> */}
 
         <button type="submit" className={RegFormCSS.submitForm}>
           Register

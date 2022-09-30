@@ -33,18 +33,20 @@ const EventsControl = (props) => {
   }
 
   function handleEventSelection(e) {
+    console.log('fuck')
     let eventSelected = e.target;
     let eventId = e.target.getAttribute("idno");
+    console.log(eventId)
 
-    let updatedList = eventsList.filter((event) => {
-      if (event.id !== eventId) {
+    let updatedList = eventsList.filter((events) => {
+      if (events.id.toString() !== eventId) {
         // console.log('success')
-        return event;
+        return events;
       }
     });
-    let selectedEventList = eventsList.filter((event) => {
-      if (event.id === eventId) {
-        return event;
+    let selectedEventList = eventsList.filter((events) => {
+      if (events.id.toString() === eventId) {
+        return events;
       }
     });
     setEventList([...updatedList]);
@@ -56,15 +58,15 @@ const EventsControl = (props) => {
     let eventSelected = e.target.parentNode;
     let eventId = eventSelected.getAttribute("idno");
 
-    let updatedList = selectedEvents.filter((event) => {
-      if (event.id !== eventId) {
-        return event;
+    let updatedList = selectedEvents.filter((events) => {
+      if (events.id.toString() !== eventId) {
+        return events;
       }
     });
 
-    let removedEvent = selectedEvents.filter((event) => {
-      if (event.id === eventId) {
-        return event;
+    let removedEvent = selectedEvents.filter((events) => {
+      if (events.id.toString() === eventId) {
+        return events;
       }
     });
     setSelectedEvents([...updatedList]);
@@ -85,8 +87,8 @@ const EventsControl = (props) => {
 
   useEffect(() => {
     let eventsIds = [];
-    selectedEvents.forEach((event) => {
-      let id = event.id;
+    selectedEvents.forEach((events) => {
+      let id = events.id;
       eventsIds.push(id);
     });
     props.setEventsIds([...eventsIds]);
