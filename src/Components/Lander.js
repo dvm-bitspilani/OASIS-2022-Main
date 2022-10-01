@@ -65,6 +65,8 @@ const Lander = (props) => {
       </div>
 
       {/* icons */}
+      <div className={LanderCSS.iconDiv}>
+      {<img src={logo} className={LanderCSS.bottomLogo} />}
       <div className={LanderCSS.icons}>
         <a href="https://www.facebook.com/oasis.bitspilani" target="_blank">
           <svg
@@ -190,6 +192,7 @@ const Lander = (props) => {
             <defs></defs>
           </svg>
         </a>
+      </div>
       </div>
       <div className={LanderCSS.transition}></div>
 
