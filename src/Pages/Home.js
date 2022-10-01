@@ -1,8 +1,9 @@
 import React from "react";
-import Lander from "../components/Lander";
+import Lander from "../Components/Lander";
 import Registration from "./Registration";
 import { useState } from "react";
-import Contact from "../components/Contact";
+import Contact from "../Components/Contact";
+import Events from "../Components/Events";
 
 export default function Home() {
   window.scrollTo(0, 0);
@@ -20,6 +21,7 @@ export default function Home() {
         changeRegState={changeRegState}
       />
       <Lander changeRegState={changeRegState} />
+      <Events />
       <Contact />
     </main>
   );
