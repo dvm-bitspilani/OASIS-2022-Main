@@ -16,7 +16,6 @@ const EventsControl = (props) => {
 
   function inputContainerClick(e) {
     setActive(true);
-    
   }
 
   function inputBlur(e) {
@@ -25,7 +24,6 @@ const EventsControl = (props) => {
     }, 200);
 
     setActive(false);
-   
   }
 
   function handleInputChange(e) {
@@ -33,14 +31,12 @@ const EventsControl = (props) => {
   }
 
   function handleEventSelection(e) {
-    
     let eventSelected = e.target;
     let eventId = e.target.getAttribute("idno");
     console.log(eventId);
 
     let updatedList = eventsList.filter((events) => {
       if (events.id.toString() !== eventId) {
-       
         return events;
       }
     });
@@ -51,7 +47,6 @@ const EventsControl = (props) => {
     });
     setEventList([...updatedList]);
     setSelectedEvents((prevList) => [...prevList, ...selectedEventList]);
-  
   }
 
   function handleEventDeselect(e) {
@@ -71,9 +66,7 @@ const EventsControl = (props) => {
     });
     setSelectedEvents([...updatedList]);
     setEventList((prevList) => [...prevList, ...removedEvent]);
- 
   }
- 
 
   useEffect(() => {
     let eventsIds = [];
@@ -99,7 +92,6 @@ const EventsControl = (props) => {
 
   useEffect(() => {
     setEventList([...props.listData]);
-  
   }, [props.listData]);
 
   return (
