@@ -10,6 +10,7 @@ import ashirwad from "../Assets/ContactUs/ashirwad.jpg";
 function Contact() {
   const four1 = [],
     four2 = [],
+    eight = [],
     data = [
       {
         image: anshal,
@@ -78,8 +79,8 @@ function Contact() {
         <div className={ContactCSS.contactName}>{data[a].name}</div>
         <div className={ContactCSS.contactDept}>{data[a].dept}</div>
         <div className={ContactCSS.contactLinks}>
-          <PhoneIcon />
-          <MailIcon />
+          <PhoneIcon tele={data[a].tele} />
+          <MailIcon email={data[a].email} />
         </div>
       </div>
     );
@@ -101,12 +102,29 @@ function Contact() {
     );
   }
 
+  for (let a = 0; a < 8; a++) {
+    eight[a] = (
+      <div key={a} className={ContactCSS.contactCard}>
+        <div className={ContactCSS.contactImageCont}>
+          <img src={data[a].image} className={ContactCSS.contactImage} />
+        </div>
+        <div className={ContactCSS.contactName}>{data[a].name}</div>
+        <div className={ContactCSS.contactDept}>{data[a].dept}</div>
+        <div className={ContactCSS.contactLinks}>
+          <PhoneIcon tele={data[a].tele} />
+          <MailIcon email={data[a].email} />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <section className={ContactCSS.contactContainer}>
       <h2 className="secHead">CONTACT US</h2>
       <div className={ContactCSS.contactBody}>
         <div className={ContactCSS.four1}>{four1}</div>
         <div className={ContactCSS.four2}>{four2}</div>
+        <div className={ContactCSS.eight}>{eight}</div>
       </div>
     </section>
   );
