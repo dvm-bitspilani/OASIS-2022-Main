@@ -72,7 +72,7 @@ const DropdownControl = (props) => {
   };
 
   const handleCollegeSelection = (e) => {
-    inputRef.current.value = e.target.textContent;
+    inputRef.current.value = e.target.textContent.trim();
     // console.log(props.listData)
     let idNo = e.target.getAttribute("idno");
 
