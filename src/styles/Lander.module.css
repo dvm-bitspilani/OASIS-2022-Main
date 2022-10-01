@@ -7,7 +7,7 @@
   width: 100vw;
   min-height: 100vh;
   background: url(../Assets/background.png) no-repeat center;
-
+  overflow-x: hidden;
   background-size: cover;
   position: relative;
 }
@@ -197,11 +197,11 @@
 }
 
 .transition {
-  z-index: 2;
+  z-index: 4;
   width: 100vw;
   height: 15rem;
   position: absolute;
-  bottom: -5%;
+  bottom: -12%;
   margin: -10rem 0 -2rem 0;
   background: linear-gradient(
     180deg,
