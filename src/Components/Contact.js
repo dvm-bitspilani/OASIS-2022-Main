@@ -106,13 +106,13 @@ function Contact() {
   }
 
   return (
-    <div className={ContactCSS.contactContainer}>
+    <section className={ContactCSS.contactContainer}>
       <h2 className={ContactCSS.contactHead}>CONTACT US</h2>
       <div className={ContactCSS.contactBody}>
         <div className={ContactCSS.five}>{five}</div>
         <div className={ContactCSS.four}>{four}</div>
       </div>
-    </div>
+    </section>
   );
 }
 

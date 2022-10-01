@@ -196,6 +196,21 @@
   position: relative;
 }
 
+.transition {
+  z-index: 2;
+  width: 100vw;
+  height: 15rem;
+  position: absolute;
+  bottom: -5%;
+  margin: -10rem 0 -2rem 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    #000000 50.07%,
+    #000000 100%
+  );
+}
+
 @keyframes translate-left-lava__4 {
   0% {
     transform: translate(0, -100%);

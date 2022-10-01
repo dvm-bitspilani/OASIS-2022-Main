@@ -1,6 +1,6 @@
 import RegistrationCSS from "../styles/Registration.module.css";
-import RegForm from "../components/RegForm";
-import RegWelcome from "../components/RegWelcome";
+import RegForm from "../Components/RegForm";
+import RegWelcome from "../Components/RegWelcome";
 import React, { useState } from "react";
 
 const Registration = (props) => {

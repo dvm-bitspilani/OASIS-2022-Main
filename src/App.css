@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,9 +8,14 @@
 
 body {
   overflow-x: hidden;
+  background-color: black;
 }
 
 img {
   pointer-events: none;
   -webkit-user-drag: none;
+}
+
+section {
+  margin: 160px 0;
 }
