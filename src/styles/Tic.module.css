@@ -1,106 +1,99 @@
-:root{
-    /* --input-font-size:20px; */
-    /* --label-font-size:22px; */
-    /* --text-control-height:45px; */
-    --label-font-color:goldenrod;
-    --input-font-color:white;
-    --label-font-size:22px;
+:root {
+  --label-font-color: goldenrod;
+  --input-font-color: white;
+  --label-font-size: 22px;
 }
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
   margin: 0;
+  -webkit-appearance: none;
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-.formControl{
-    width: 100%;
-    display: flex;
-    position: relative;
-    --text-control-height:50px;
-    height: var(--text-control-height);
-    color: gray;
+.formControl {
+  width: 100%;
+  display: flex;
+  position: relative;
+  --text-control-height: 50px;
+  height: var(--text-control-height);
+  color: gray;
 }
 
-.formControl input{
-    --input-font-size:20px;
-    font-size: var(--input-font-size);
-    background: none;
-    border:none;
-    margin-top: auto;
-    outline: none;
-    height: calc(0.65*var(--control-height));
-    width: 100%;
-    border-bottom: 2px solid gray;
-    color:var(--input-font-color);
-    padding: 0 0px 5px 9px;
+.formControl input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  margin-top: auto;
+  --input-font-size: 20px;
+  font-size: var(--input-font-size);
+  height: calc(0.65 * var(--control-height));
+  border-bottom: 2px solid gray;
+  color: var(--input-font-color);
+  padding: 0 0px 5px 9px;
 }
 
-.formControl label{
-    position: absolute;
-    bottom: 0;
-    height: calc(0.65*var(--control-height));
+.formControl label {
+  bottom: 0;
+  position: absolute;
+  height: calc(0.65 * var(--control-height));
 
-    font-size: var(--label-font-size);
-    color:var(--label-font-color);
-    width: 100%;
-    padding: 0 0px 5px 5px;
-
+  width: 100%;
+  padding: 0 0px 5px 5px;
+  font-size: var(--label-font-size);
+  color: var(--label-font-color);
 }
 
-.formLabel{
-    transform-origin: left;
-    transition: 0.15s ease-out;
-    
+.formLabel {
+  transform-origin: left;
+  transition: 0.15s ease-out;
 }
 
-.shiftLabelUp{
-    transform: scale(0.65) translateY(-100%);
-    margin-bottom: 3px;
+.shiftLabelUp {
+  transform: scale(0.65) translateY(-100%);
+  margin-bottom: 3px;
 }
-.shiftLabelDown{
-    transform: translateY(0);
 
+.shiftLabelDown {
+  transform: translateY(0);
 }
 
 @media screen and (max-width: 800px) {
-    :root{
+  :root {
     --label-font-size: 15px !important;
-    }
+  }
 
-    .college{
-        font-size: 15px;
-    }
+  .college {
+    font-size: 15px;
+  }
 }
 
-@media screen and (max-width:760px) {
-    .formControl label{
-        margin-bottom: 5px;
-    }
-   
-    .formControl input{
-    --input-font-size:17px;
+@media screen and (max-width: 760px) {
+  .formControl label {
+    margin-bottom: 5px;
+  }
+
+  .formControl input {
     padding-bottom: 3px;
+    --input-font-size: 17px;
     border-bottom: 2px solid rgb(185, 184, 184);
-    }
+  }
 
-    .formControl{
-    --text-control-height:38px;
-    }
-   
-    .shiftLabelUp{
-        transform: scale(0.65) translateY(-125%);
-        /* margin-bottom: 10px; */
-    }
+  .formControl {
+    --text-control-height: 38px;
+  }
+
+  .shiftLabelUp {
+    transform: scale(0.65) translateY(-125%);
+  }
 }
-

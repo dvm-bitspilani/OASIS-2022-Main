@@ -1,103 +1,79 @@
 .regPage {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: 10;
-    background: hsla(0, 0%, 0%, 0.675);
-    display: grid;
-    place-items: center;
-    animation: showPage 0.2s ease;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background: hsla(0, 0%, 0%, 0.675);
+  animation: showPage 0.2s ease;
 }
 
-.close{
-    right: 4%;
-    top: 4%;
-    width: 20px;
-    position: absolute;
-    z-index: 6;
-    cursor: pointer;
+.close {
+  top: 4%;
+  z-index: 6;
+  right: 4%;
+  width: 20px;
+  position: absolute;
+  cursor: pointer;
 }
 
 .close:hover path {
-    fill: url(#paint0_linear_737_546);
+  fill: url(#paint0_linear_737_546);
 }
 
-.removePage{
-    animation: removePage 0.3s ease;
+.removePage {
+  animation: removePage 0.3s ease;
 }
+
 @keyframes removePage {
-    from{
-        opacity: 1;
-    }
-    to{
-        opacity: 0;
-    }
-}
+  from {
+    opacity: 1;
+  }
 
+  to {
+    opacity: 0;
+  }
+}
 
 @keyframes showPage {
-    from{
-        opacity: 0;
-    }
-    
-    to{
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
-.formContainer{
-    width: 86%;
-    max-width: 1300px;
-    position: relative;
-    height: 86%;
-    max-height: 800px;
-    box-shadow: 0 0 10px  #9f9874b3;
-    border-radius: 0.5rem;
-    display: grid;
-    grid-template-columns:0.35fr .65fr ;
-    overflow: hidden;
-    /* z-index: 2; */
+.formContainer {
+  width: 86%;
+  max-width: 1300px;
+  position: relative;
+  height: 86%;
+  max-height: 800px;
+  box-shadow: 0 0 10px #9f9874b3;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: 0.35fr 0.65fr;
+  overflow: hidden;
 }
 
+@media (max-width: 760px) {
+  .formContainer {
+    width: 90%;
+    height: 95%;
+    max-width: 400px;
+    border-radius: 1.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.35fr 0.8fr;
+    transform: translateY(-1%);
+    box-shadow: none;
+  }
 
-@media(max-width:760px){
-    .formContainer{
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.35fr 0.8fr;
-        max-width: 400px;
-        width: 90%;
-        height: 95%;
-        border-radius: 1.5rem;
-        transform: translateY(-1%);
-        box-shadow: none;
-    }
-
-    .close{
-        right: 6%;
-        top: 3%;
-        width: 15px;
-    }
+  .close {
+    right: 6%;
+    top: 3%;
+    width: 15px;
+  }
 }
-
-/* @media(max-height:670px){
-    .formContainer{
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.4fr 0.6fr;
-        width: 75%;
-        height: 95%;
-        border-radius: 1.5rem;
-        
-    }
-}
-
-@media(max-width:550px){
-    .formContainer{
-        width: 80%;
-    }
-}
-
-@media(max-width:400px){
-    .formContainer{
-        width: 85%;
-    }
-}  */

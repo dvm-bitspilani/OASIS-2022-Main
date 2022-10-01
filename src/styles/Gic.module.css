@@ -1,119 +1,90 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-:root{
-    --span-font-size:20px;
-    --label-font-size:22px;
-    --gender-control-height:55px;
-    --gender-options-gap:25px;
-    --gender-inter-gap:5px
+:root {
+  --span-font-size: 20px;
+  --label-font-size: 22px;
+  --gender-control-height: 55px;
+  --gender-options-gap: 25px;
+  --gender-inter-gap: 5px;
 }
 
-.formControl{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: var(--gender-control-height);
-    justify-content: space-between;
-    font-size: var(--label-font-size);
-    /* color: gray; */
+.formControl {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: var(--gender-control-height);
+  justify-content: space-between;
+  font-size: var(--label-font-size);
 }
 
-.genderOptions{
-    display: flex;
-    align-items: center;
-    gap:var(--gender-options-gap);
-    font-size:var(--span-font-size);
-    padding-left:10px;
-    height:20px;
+.genderOptions {
+  display: flex;
+  align-items: center;
+  gap: var(--gender-options-gap);
+  font-size: var(--span-font-size);
+  padding-left: 10px;
+  height: 20px;
 }
 
-.genderContent{
-    display: flex;
-    gap:var(--gender-inter-gap)
-}
-/* .genderOptions > div {
-    display: flex;
-    gap:var(--gender-inter-gap);
-    align-items: center;
-} */
-
-.genderContent:hover{
-    cursor: pointer;
+.genderContent {
+  display: flex;
+  gap: var(--gender-inter-gap);
 }
 
-.genderIcon{
-    height: calc(var(--span-font-size) - 5px);
-    width: calc(var(--span-font-size) - 5px);
-    border-radius: 50%;
-    /* padding: 3px; */
-    position: relative;
-    border: 1px solid gold;
+.genderContent:hover {
+  cursor: pointer;
 }
 
-.genderIcon::after{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    content: '';
-    width: 90%;
-    height: 90%;
-    /* background-color: gold; */
-    border-radius: 50%;
-    z-index: 2;
+.genderIcon {
+  height: calc(var(--span-font-size) - 5px);
+  width: calc(var(--span-font-size) - 5px);
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid gold;
 }
 
-.genderContent > input{
-    /* background-color: black; */
-    /* opacity: 0; */
-    position: relative;
-    /* line-height: 20px; */
+.genderIcon::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  z-index: 2;
 }
 
-.selected::after{
-    background-color: gold;
+.genderContent > input {
+  position: relative;
 }
 
-/* span[selected]{
-    color:goldenrod
-} */
+.selected::after {
+  background-color: gold;
+}
 
-
-/* .genderContent > input::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height:100%;
-    top:0;
-    left:0;
-    border:2px solid gold;
-    background-color: black;
-    border-radius: 50%;
-    z-index: 5;
-} */
-
-.genderContent{
-    display: flex;
-    gap:var(--gender-inter-gap);
-    align-items: center;
+.genderContent {
+  display: flex;
+  gap: var(--gender-inter-gap);
+  align-items: center;
 }
 
 @media screen and (max-width: 800px) {
-    :root{
-        --span-font-size:15px !important;
-    }
+  :root {
+    --span-font-size: 15px !important;
+  }
 
-    .genderLabel{
-        font-size: 15px;
-    }
-    
-    .genderOptions{
-        font-size: 12px;
-        gap:20px;
-    }
+  .genderLabel {
+    font-size: 15px;
+  }
+
+  .genderOptions {
+    font-size: 12px;
+    gap: 20px;
+  }
 }
