@@ -129,7 +129,7 @@ button.submitForm:hover {
   display: flex;
   gap: 10px;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 20px;
   padding-left: 10px;
 }
 /* .checkboxContainer div{
@@ -161,6 +161,10 @@ button.submitForm:hover {
 
   .regForm {
     width: 70%;
+  }
+
+  .checkboxContainer{
+    font-size: 15px;
   }
 }
 
