@@ -19,7 +19,6 @@ const Lander = (props) => {
   const kingEl = useRef(null);
   const ringCount = Math.floor(7 + Math.random() * 2);
   let shardCount = Math.floor(100 + Math.random() * 50);
-
   window.addEventListener("resize", () => {
     if (window.innerWidth < 800) {
       shardCount = Math.floor(50 + Math.random() * 50);
