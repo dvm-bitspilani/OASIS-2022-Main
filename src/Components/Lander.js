@@ -19,10 +19,10 @@ const Lander = (props) => {
   const kingEl = useRef(null);
   const ringCount = Math.floor(7 + Math.random() * 2);
   let [shardCount, setShardCount] = useState(
-    window.innerWidth > 800 ? Math.floor(100 + Math.random() * 50) : 0
+    Math.floor(100 + Math.random() * 50)
   );
   window.addEventListener("resize", () => {
-    if (window.innerWidth <= 800) {
+    if (window.innerWidth <= 600) {
       setShardCount(Math.floor(0));
     } else {
       setShardCount(Math.floor(100 + Math.random() * 50));
@@ -35,7 +35,6 @@ const Lander = (props) => {
       <img src={windowImg} className={LanderCSS.window} />
 
       <div className={LanderCSS.goldrings}>
-        <LanderRing offX={`10px`} offY={`10px`} />
         {[...Array(ringCount)].map((count, idx) => (
           <LanderRing
             key={idx}

@@ -11,7 +11,12 @@ const EventItem = (props) => {
       />
       <div className={EventItemCss.eventItemText}>
         <div className={EventItemCss.eventItemHeading}>{props.eventName}</div>
-        <div className={EventItemCss.eventItemDesc}>{props.eventDesc}</div>
+        <div
+          className={EventItemCss.eventItemDesc}
+          dangerouslySetInnerHTML={{
+            __html: props.eventDesc.replace(new RegExp("<.*?>", "g"), ""),
+          }}
+        ></div>
       </div>
       <div className={EventItemCss.eventItemRead}>Read More</div>
     </div>

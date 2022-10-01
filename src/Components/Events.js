@@ -18,10 +18,7 @@ const Events = () => {
               ? require("../Assets/Event.png")
               : event.img_url,
           name: event.name,
-          desc:
-            event.details === "NA"
-              ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur atque distinctio error minus, natus nesciunt nihil nostrum quae rem!"
-              : event.details,
+          desc: event.details,
         };
       });
       setEventsArr(evtArr);
