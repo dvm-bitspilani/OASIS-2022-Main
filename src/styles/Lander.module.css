@@ -62,7 +62,7 @@
     opacity: 1;
   }
 
-  95% {
+  90% {
     opacity: 1;
   }
 
@@ -79,15 +79,15 @@
 .leftEye,
 .rightEye {
   width: 3%;
-  animation: eye-animation 2.5s 1s cubic-bezier(0.05, 0.59, 0.02, 0.81) infinite;
+  animation: eye-animation 5.5s 1s cubic-bezier(0.05, 0.59, 0.02, 0.81) infinite;
 }
 
 .leftEye {
-  transform: rotate(7deg) translateX(22.5%);
+  transform: rotate(3deg) translateX(27.5%) translateY(37%) scale(0.95);
 }
 
 .rightEye {
-  transform: rotate(-7deg) translateX(-22.5%);
+  transform: rotate(-3deg) translateX(-28.5%) translateY(37%) scale(0.95);
 }
 
 /* OASIS title */
@@ -346,6 +346,7 @@
   .logo {
     top: calc(98% - 8vw);
     width: 8vw;
+    z-index: 5;
   }
 
   .window {
