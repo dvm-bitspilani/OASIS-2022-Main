@@ -20,6 +20,10 @@ section {
   margin: 140px 0;
 }
 
+section:last-child {
+  margin-bottom: 2rem;
+}
+
 .secHead {
   font-family: "Mulish";
   margin-bottom: 100px;
@@ -44,6 +48,7 @@ section {
   section {
     margin: 130px 0;
   }
+
   .secHead {
     font-size: 1.8rem;
   }
