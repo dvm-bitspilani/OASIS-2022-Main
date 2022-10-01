@@ -63,6 +63,7 @@ const Lander = (props) => {
 
       {/* icons */}
       <div className={LanderCSS.icons}>
+        <a href="https://www.facebook.com/oasis.bitspilani" target="_blank">
         <svg
           width="36"
           height="37"
@@ -101,7 +102,9 @@ const Lander = (props) => {
             </clipPath>
           </defs>
         </svg>
+        </a>
 
+        <a href="https://instagram.com/bitsoasis" target="_blank">
         <svg
           width="37"
           height="37"
@@ -148,7 +151,9 @@ const Lander = (props) => {
             </clipPath>
           </defs>
         </svg>
+        </a>
 
+        <a href="https://m.youtube.com/channel/UCf40GISJivaYZK2pPOyt1kw" target="_blank">
         <svg
           width="37"
           height="37"
@@ -178,6 +183,7 @@ const Lander = (props) => {
           </linearGradient>
           <defs></defs>
         </svg>
+        </a>
       </div>
       <div className={LanderCSS.transition}></div>
 
