@@ -29,10 +29,10 @@
 }
 
 .contactBody {
+  gap: 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 45px;
 }
 
 .contactCard {
@@ -90,10 +90,10 @@
 }
 
 .contactLinks {
-  display: flex;
-  justify-content: space-around;
   width: 50%;
+  display: flex;
   margin-top: 1rem;
+  justify-content: space-around;
 }
 
 .four1,
@@ -102,4 +102,64 @@
   column-gap: 1rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   max-width: 72vw;
+}
+
+.eight {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .four1,
+  .four2 {
+    max-width: 95vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .four1,
+  .four2 {
+    display: none;
+  }
+
+  .eight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+  }
+
+  .contactCard {
+    transform: none;
+  }
+
+  .contactName {
+    margin: 1.5rem 0 1rem 0;
+  }
+
+  .contactLinks {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .eight {
+    gap: 0;
+  }
+
+  .contactBody {
+    gap: 0;
+  }
+
+  .contactCard {
+    margin-top: -30px;
+    padding: 20px 5px;
+    transform: scale(0.75);
+  }
+
+  .contactImageCont {
+    transform: scale(0.8);
+  }
+
+  .eight {
+    margin-top: -30px;
+  }
 }
