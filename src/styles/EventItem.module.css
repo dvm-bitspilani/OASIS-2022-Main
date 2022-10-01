@@ -12,6 +12,10 @@
   margin: 0 0 80px;
 }
 
+.eventItemCont:last-of-type {
+  margin: 0;
+}
+
 .eventItemImg {
   width: clamp(14vw, 30%, 19vw);
   height: auto;

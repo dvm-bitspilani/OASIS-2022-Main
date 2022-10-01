@@ -179,6 +179,7 @@ const Lander = (props) => {
           <defs></defs>
         </svg>
       </div>
+      <div className={LanderCSS.transition}></div>
 
       {/* king eyes */}
 

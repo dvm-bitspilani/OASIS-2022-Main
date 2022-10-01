@@ -8,9 +8,14 @@
 
 body {
   overflow-x: hidden;
+  background-color: black;
 }
 
 img {
   pointer-events: none;
   -webkit-user-drag: none;
+}
+
+section {
+  margin: 160px 0;
 }
