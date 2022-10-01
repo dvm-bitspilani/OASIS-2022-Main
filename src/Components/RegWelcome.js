@@ -36,8 +36,8 @@ const RegWelcome = () => {
         </span>
 
         <img src={title} alt="" className={RegWelcomeCSS.title} />
-        <span className={RegWelcomeCSS.theme}>DEMESNE OF THE</span>
-        <span className={RegWelcomeCSS.theme}>LOST GOLD</span>
+        {/* <span className={RegWelcomeCSS.theme}>DEMESNE OF THE</span> */}
+        {/* <span className={RegWelcomeCSS.theme}>LOST GOLD</span> */}
       </div>
     </div>
   );
