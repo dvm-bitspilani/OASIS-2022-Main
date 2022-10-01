@@ -50,6 +50,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.3s;
+  scale:0.93;
+}
+
+.rotateUp{
+  transform: rotate(180deg);
+}
+.rotateDown{
+  transform: rotate(0);
 }
 
 .eventsContainer {

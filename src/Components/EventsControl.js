@@ -10,6 +10,7 @@ const EventsControl = (props) => {
   const [dropDownClass, setDropDownClass] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [events_ids, setEventsIds] = useState([]);
+  const [caretClass,setCaretClass] = useState(EcCSS.rotateDown)
 
   const [eventsList, setEventList] = useState([]);
   const [selectedEvents, setSelectedEvents] = useState([]);
@@ -81,11 +82,13 @@ const EventsControl = (props) => {
     if (active) {
       setLabelClass(EcCSS.shiftLabelUp);
       setDropDownClass(EcCSS.showList);
+      setCaretClass(EcCSS.rotateUp)
       inputRef.current.focus();
     } else {
       inputRef.current.value = "";
       setLabelClass(EcCSS.shiftLabelDown);
       setDropDownClass(EcCSS.hideList);
+      setCaretClass(EcCSS.rotateDown)
       inputRef.current.blur();
     }
   }, [active]);
@@ -99,7 +102,7 @@ const EventsControl = (props) => {
       <div className={EcCSS.inputContainer}>
         <span className={`${EcCSS.label} ${labelClass}`}>Events</span>
         <span className={EcCSS.caretClass}>
-          <i className={`fa-solid fa-caret-down ${EcCSS.caretDown}`}></i>
+          <i className={`fa-solid fa-caret-down fa-xl ${EcCSS.caretClass} ${caretClass}`}></i>
         </span>
         <input
           type="text"

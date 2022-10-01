@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import LanderCSS from "../styles/Lander.module.css";
 import LanderRing from "./LanderRing";
 import StrangeShard from "./StrangeShard";
@@ -18,10 +18,14 @@ import rightEye from "../Assets/righteye.png";
 const Lander = (props) => {
   const kingEl = useRef(null);
   const ringCount = Math.floor(7 + Math.random() * 2);
-  let shardCount = Math.floor(100 + Math.random() * 50);
+  let [shardCount, setShardCount] = useState(
+    window.innerWidth > 800 ? Math.floor(100 + Math.random() * 50) : 0
+  );
   window.addEventListener("resize", () => {
-    if (window.innerWidth < 800) {
-      shardCount = Math.floor(50 + Math.random() * 50);
+    if (window.innerWidth <= 800) {
+      setShardCount(Math.floor(0));
+    } else {
+      setShardCount(Math.floor(100 + Math.random() * 50));
     }
   });
 
