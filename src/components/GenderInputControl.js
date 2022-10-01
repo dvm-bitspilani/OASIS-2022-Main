@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import GicCSS from "../styles/Gic.module.css";
 
 const GenderInputControl = (props) => {
-  const [selected, setSelected] = useState("male");
+  const [selected, setSelected] = useState("m");
 
   useEffect(() => {
     props.setValue(selected);
@@ -16,12 +16,12 @@ const GenderInputControl = (props) => {
         <div
           className={GicCSS.genderContent}
           onClick={() => {
-            setSelected("male");
+            setSelected("m");
           }}
         >
           <span
             className={`${GicCSS.genderIcon} ${
-              selected === "male" ? GicCSS.selected : null
+              selected === "m" ? GicCSS.selected : null
             }`}
           ></span>
           <span>Male</span>
@@ -29,12 +29,12 @@ const GenderInputControl = (props) => {
         <div
           className={GicCSS.genderContent}
           onClick={() => {
-            setSelected("female");
+            setSelected("f");
           }}
         >
           <span
             className={`${GicCSS.genderIcon} ${
-              selected === "female" ? GicCSS.selected : null
+              selected === "f" ? GicCSS.selected : null
             }`}
           ></span>
           <span>Female</span>
@@ -42,12 +42,12 @@ const GenderInputControl = (props) => {
         <div
           className={GicCSS.genderContent}
           onClick={() => {
-            setSelected("others");
+            setSelected("o");
           }}
         >
           <span
             className={`${GicCSS.genderIcon} ${
-              selected === "others" ? GicCSS.selected : null
+              selected === "o" ? GicCSS.selected : null
             }`}
           >
             {" "}
