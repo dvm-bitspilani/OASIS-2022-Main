@@ -13,7 +13,7 @@
 }
 
 .eventItemCont:last-of-type {
-  margin: 0;
+  margin: 0 !important;
 }
 
 .eventItemImg {
@@ -75,10 +75,94 @@
   font-family: "Mulish";
   color: black;
   font-weight: 400;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   cursor: pointer;
 }
 
 .eventItemRead:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+  .eventItemRead {
+    bottom: 8%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .eventItemImg {
+    width: clamp(19vw, 30%, 24vw);
+  }
+
+  .eventItemCont {
+    width: 45%;
+    padding: 20px 15px;
+    margin: 0 0 40px;
+  }
+
+  .eventItemDesc {
+    -webkit-line-clamp: 3;
+  }
+
+  .eventItemRead {
+    --br: 5px;
+    bottom: 6%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .eventItemCont {
+    padding: 15px 12px;
+  }
+  .eventItemHeading {
+    font-size: 1.3rem;
+    margin: 10px 0;
+  }
+
+  .eventItemDesc {
+    font-size: 0.9rem;
+  }
+
+  .eventItemRead {
+    --f: 10px;
+    --br: 4px;
+    padding: 5px 40px calc(var(--f) + 6px) 5px;
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .eventItemCont {
+    width: 90%;
+    margin: 0 0 30px;
+  }
+
+  .eventItemImg {
+    width: clamp(30vw, 30%, 35vw);
+  }
+
+  .eventItemRead {
+    bottom: 10%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .eventItemCont {
+    margin: 0 0 25px;
+  }
+
+  .eventItemHeading {
+    font-size: 1rem;
+    margin: 8px 0;
+  }
+
+  .eventItemDesc {
+    font-size: 0.8rem;
+  }
+
+  .eventItemRead {
+    --f: 8px;
+    font-size: 0.7rem;
+    bottom: 9%;
+  }
 }

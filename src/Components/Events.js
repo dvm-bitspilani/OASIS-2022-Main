@@ -37,7 +37,7 @@ const Events = () => {
 
   return (
     <section className={EventsCss.eventSec}>
-      <div className={EventsCss.eventHead}>KERNEL EVENTS</div>
+      <div className="secHead">KERNEL EVENTS</div>
       <div className={EventsCss.eventsCarCont}>
         <div className={EventsCss.eventsCont}>
           {eventsArr.map((event, idx) => {

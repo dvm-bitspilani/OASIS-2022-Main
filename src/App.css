@@ -17,5 +17,40 @@ img {
 }
 
 section {
-  margin: 160px 0;
+  margin: 140px 0;
+}
+
+.secHead {
+  font-family: "Mulish";
+  margin-bottom: 100px;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+  background: linear-gradient(
+    94.75deg,
+    #d19a08 0%,
+    #fedb7e 27.6%,
+    #eac460 50%,
+    #d19a08 66.15%,
+    #d19a08 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@media screen and (max-width: 800px) {
+  section {
+    margin: 130px 0;
+  }
+  .secHead {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .secHead {
+    font-size: 1.5rem;
+  }
 }

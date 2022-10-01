@@ -8,26 +8,6 @@
   overflow: auto;
 }
 
-.eventHead {
-  font-family: "Mulish";
-  margin-bottom: 60px;
-  font-weight: 700;
-  font-size: 2rem;
-  letter-spacing: 0.02em;
-  background: linear-gradient(
-    94.75deg,
-    #d19a08 0%,
-    #fedb7e 27.6%,
-    #eac460 50%,
-    #d19a08 66.15%,
-    #d19a08 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
-
 .eventsCarCont {
   display: flex;
   flex-direction: row;
@@ -79,4 +59,10 @@
 
 .eventsTranslateDecrease {
   transform: translateX(0);
+}
+
+@media screen and (max-width: 800px) {
+  .eventsCont {
+    width: 95vw;
+  }
 }
