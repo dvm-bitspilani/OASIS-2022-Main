@@ -2,8 +2,6 @@ import RingCss from "../styles/LanderRings.module.css";
 import RingShadows from "../JSON/dropShadows.json";
 
 const LanderRing = (props) => {
-  const idxGen = Math.random();
-  const idx = idxGen < 0.4 ? 0 : idxGen < 0.75 ? 1 : 2;
   return (
     <svg
       viewBox="0 0 1283 1283"
