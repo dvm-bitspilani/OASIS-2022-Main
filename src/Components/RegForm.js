@@ -70,6 +70,7 @@ const RegForm = (props) => {
 
   useEffect(() => {
     getElems();
+    console.log('events req')
   }, []);
 
   const handleSubmit = async (e) => {

@@ -133,9 +133,7 @@ button.submitForm:hover {
   padding-left: 10px;
 }
 /* .checkboxContainer div{
-
-  width: 15px;
-  height: 15px;
+  :root {
   border: 1px solid goldenrod;
   border-radius: 50%;
   position: relative;
