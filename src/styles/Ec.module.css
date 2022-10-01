@@ -61,7 +61,7 @@
   padding: 5px;
   overflow-y: scroll;
 }
-.eventsContainer::-webkit-scrollbar{
+.eventsContainer::-webkit-scrollbar {
   display: none;
 }
 

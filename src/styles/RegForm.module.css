@@ -123,11 +123,11 @@ button.submitForm:hover {
   gap: var(--tic-gap);
 }
 
-.checkboxContainer{
+.checkboxContainer {
   height: 25px;
   width: 100%;
   display: flex;
-  gap:10px;
+  gap: 10px;
   align-items: center;
   font-size: 1.3rem;
   padding-left: 10px;
@@ -153,9 +153,6 @@ button.submitForm:hover {
 
 
 } */
-
-
-
 
 @media screen and (max-width: 800px) {
   .submitForm {
