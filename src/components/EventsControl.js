@@ -33,10 +33,10 @@ const EventsControl = (props) => {
   }
 
   function handleEventSelection(e) {
-    console.log('fuck')
+    console.log("fuck");
     let eventSelected = e.target;
     let eventId = e.target.getAttribute("idno");
-    console.log(eventId)
+    console.log(eventId);
 
     let updatedList = eventsList.filter((events) => {
       if (events.id.toString() !== eventId) {

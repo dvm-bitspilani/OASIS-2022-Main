@@ -72,7 +72,6 @@ const RegForm = (props) => {
     getElems();
   }, []);
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -98,7 +97,7 @@ const RegForm = (props) => {
         city: location,
         college_id: college_id,
       };
-      console.log(data)
+      console.log(data);
 
       const options = {
         method: "POST",
@@ -111,8 +110,8 @@ const RegForm = (props) => {
       let res = await fetch(`${OASIS_END_POINT_POST}`, options);
       let res_json = await res.json();
       alert(res_json.message);
-      if(res.ok){
-        props.resetPage()
+      if (res.ok) {
+        props.resetPage();
       }
     } catch (e) {}
   };
@@ -130,22 +129,20 @@ const RegForm = (props) => {
   };
   // console.log(collegeList)
 
-  const choreoChange=(e)=>{
-    if(e.target.checked){
-      setChoreo(true)
+  const choreoChange = (e) => {
+    if (e.target.checked) {
+      setChoreo(true);
+    } else {
+      setChoreo(false);
     }
-    else{
-      setChoreo(false)
+  };
+  const hosChange = (e) => {
+    if (e.target.checked) {
+      setHeadOfSociety(true);
+    } else {
+      setHeadOfSociety(false);
     }
-  }
-  const hosChange=(e)=>{
-    if(e.target.checked){
-      setHeadOfSociety(true)
-    }
-    else{
-      setHeadOfSociety(false)
-    }
-  }
+  };
 
   return (
     <div className={RegFormCSS.regFormBox}>
@@ -209,11 +206,11 @@ const RegForm = (props) => {
           setValue={setLocation}
         />
         <div className={RegFormCSS.checkboxContainer}>
-          <input type="checkbox" onChange={choreoChange}/>
+          <input type="checkbox" onChange={choreoChange} />
           <label>Are you the Choreographer?</label>
         </div>
         <div className={RegFormCSS.checkboxContainer}>
-          <input type="checkbox" onChange={hosChange}/>
+          <input type="checkbox" onChange={hosChange} />
 
           <label>Are you the Head of Society?</label>
         </div>
