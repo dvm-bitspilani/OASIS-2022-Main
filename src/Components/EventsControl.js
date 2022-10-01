@@ -16,7 +16,7 @@ const EventsControl = (props) => {
 
   function inputContainerClick(e) {
     setActive(true);
-    // console.log(e.target)
+    
   }
 
   function inputBlur(e) {
@@ -25,7 +25,7 @@ const EventsControl = (props) => {
     }, 200);
 
     setActive(false);
-    // handleEventSelection()
+   
   }
 
   function handleInputChange(e) {
@@ -33,14 +33,14 @@ const EventsControl = (props) => {
   }
 
   function handleEventSelection(e) {
-    console.log("fuck");
+    
     let eventSelected = e.target;
     let eventId = e.target.getAttribute("idno");
     console.log(eventId);
 
     let updatedList = eventsList.filter((events) => {
       if (events.id.toString() !== eventId) {
-        // console.log('success')
+       
         return events;
       }
     });
@@ -51,7 +51,7 @@ const EventsControl = (props) => {
     });
     setEventList([...updatedList]);
     setSelectedEvents((prevList) => [...prevList, ...selectedEventList]);
-    //  console.log(selectedEventList)
+  
   }
 
   function handleEventDeselect(e) {
@@ -71,19 +71,9 @@ const EventsControl = (props) => {
     });
     setSelectedEvents([...updatedList]);
     setEventList((prevList) => [...prevList, ...removedEvent]);
-    // console.log(updatedList)
-    // console.log(eventId)
+ 
   }
-  // if(!isMounted){
-  //   isMounted.current=true
-  // }
-  // else{
-  //   setInterval(()=>{
-  //     if(document.activeElement===inputRef.current){
-  //       inputContainerClick()
-  //     }
-  //   },50)
-  // }
+ 
 
   useEffect(() => {
     let eventsIds = [];
@@ -109,9 +99,7 @@ const EventsControl = (props) => {
 
   useEffect(() => {
     setEventList([...props.listData]);
-    // let pattern=props.listData.map((data)=>data.name).join('|')
-
-    // inputRef.current.pattern=pattern
+  
   }, [props.listData]);
 
   return (
