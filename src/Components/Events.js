@@ -38,18 +38,18 @@ const Events = () => {
   return (
     <section className={EventsCss.eventSec}>
       <div className="secHead">KERNEL EVENTS</div>
-        <div className={EventsCss.eventsCont}>
-          {eventsArr.map((event, idx) => {
-            return (
-              <EventItem
-                key={idx}
-                eventImg={event.img}
-                eventName={event.name}
-                eventDesc={event.desc}
-              />
-            );
-          })}
-        </div>
+      <div className={EventsCss.eventsCont}>
+        {eventsArr.map((event, idx) => {
+          return (
+            <EventItem
+              key={idx}
+              eventImg={event.img}
+              eventName={event.name}
+              eventDesc={event.desc}
+            />
+          );
+        })}
+      </div>
     </section>
   );
 };
