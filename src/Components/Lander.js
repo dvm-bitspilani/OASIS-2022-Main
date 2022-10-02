@@ -19,14 +19,18 @@ const Lander = (props) => {
   const kingEl = useRef(null);
   const ringCount = Math.floor(7 + Math.random() * 2);
   let [shardCount, setShardCount] = useState(
-    window.innerWidth > 600 ? Math.floor(100 + Math.random() * 50) : 0
+    window.innerWidth > 800 ? Math.floor(100 + Math.random() * 50) : window.innerWidth > 600 ? Math.floor(80 + Math.random() * 50) : 0
   );
+  let [prevWidth, setPrevWidth] = useState(window.innerWidth);
   window.addEventListener("resize", () => {
-    if (window.innerWidth <= 600) {
-      setShardCount(Math.floor(0));
-    } else {
+    if (window.innerWidth <= 600 && prevWidth > 600) {
+      setShardCount(0);
+    } else if (window.innerWidth <= 800 && (prevWidth > 800 || prevWidth < 600)) {
+      setShardCount(Math.floor(80 + Math.random() * 50));
+    } else if (window.innerWidth > 800 && prevWidth <= 800) {
       setShardCount(Math.floor(100 + Math.random() * 50));
     }
+    setPrevWidth(window.innerWidth)
   });
 
   return (

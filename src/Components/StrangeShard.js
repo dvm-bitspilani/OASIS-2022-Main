@@ -9,7 +9,11 @@ const StrangeShard = () => {
     Math.sqrt(2 * Math.pow(35, 2) - Math.pow(offX, 2)),
     0
   );
-  const offY = offYMin + Math.random() * (70 - offYMin);
+  let offYMax = 70;
+  if (window.innerWidth <= 800) {
+    offYMax = 50
+  }
+  const offY = offYMin + Math.random() * (offYMax - offYMin);
   const deg = Math.atan(offY / offX) * (180 / Math.PI);
   const delay = Math.random() * 5;
   const cols = ["#D19A08", "#FEDB7E", "#EBB935", "#FCD776", "#D19A08"];
