@@ -1,4 +1,5 @@
 .goldringsImg {
+  --width: 60vw;
   position: absolute;
   top: 0;
   left: 50%;
@@ -6,11 +7,11 @@
     calc(-50% + var(--offsetX)),
     calc(-53% + var(--offsetY))
   );
-  width: 60vw;
+  width: var(--width);
+  height: calc(var(--width) + 10px);
   transform-origin: calc(50% - var(--offsetX)) calc(50% - var(--offsetY));
   animation: rotateRings var(--speed) infinite linear;
   z-index: 3;
-  filter: var(--filter);
   border-radius: 50%;
 }
 
@@ -34,12 +35,12 @@
 
 @media screen and (max-width: 1000px) {
   .goldringsImg {
-    width: 65vw;
+    --width: 65vw;
   }
 }
 
 @media screen and (max-width: 450px) {
   .goldringsImg {
-    width: 131vw;
+    --width: 131vw;
   }
 }
