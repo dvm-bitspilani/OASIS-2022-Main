@@ -10,12 +10,14 @@ import title from "../Assets/title.png";
 import leftEye from "../Assets/lefteye.png";
 import rightEye from "../Assets/righteye.png";
 
+import React from "react";
+
 // import leftLava4 from "../Assets/left-lava-4.png";
 // import leftLava3 from "../Assets/left-lava-3.png";
 // import leftLava2 from "../Assets/left-lava-2.png";
 // import leftLava1 from "../Assets/left-lava-1.png";
 
-const Lander = (props) => {
+const Lander = React.forwardRef((props,ref)=>{
   const kingEl = useRef(null);
   const ringCount = Math.floor(7 + Math.random() * 2);
   let [shardCount, setShardCount] = useState(
@@ -34,7 +36,7 @@ const Lander = (props) => {
   });
 
   return (
-    <div className={LanderCSS.lander}>
+    <div className={LanderCSS.lander} ref={ref}>
       <img src={logo} className={LanderCSS.logo} />
       <img src={windowImg} className={LanderCSS.window} />
 
@@ -219,6 +221,8 @@ const Lander = (props) => {
       </div> */}
     </div>
   );
-};
+})  
+  
+
 
 export default Lander;

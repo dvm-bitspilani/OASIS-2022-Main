@@ -7,7 +7,8 @@ import anshal from "../Assets/ContactUs/anshal.jpeg";
 import madhav from "../Assets/ContactUs/madhav.jpg";
 import ashirwad from "../Assets/ContactUs/ashirwad.jpg";
 
-function Contact() {
+const Contact=React.forwardRef((props,ref)=>{
+
   const four1 = [],
     four2 = [],
     eight = [],
@@ -119,7 +120,7 @@ function Contact() {
   }
 
   return (
-    <section className={ContactCSS.contactContainer}>
+    <section className={ContactCSS.contactContainer} ref={ref}>
       <h2 className="secHead">CONTACT US</h2>
       <div className={ContactCSS.contactBody}>
         <div className={ContactCSS.four1}>{four1}</div>
@@ -128,6 +129,7 @@ function Contact() {
       </div>
     </section>
   );
-}
+}) 
+
 
 export default Contact;
