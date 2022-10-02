@@ -18,7 +18,6 @@ const EventItem = (props) => {
           }}
         ></div>
       </div>
-      <div className={EventItemCss.eventItemRead}>Read More</div>
     </div>
   );
 };

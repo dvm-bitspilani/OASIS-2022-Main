@@ -11,6 +11,7 @@
   border-radius: 20px;
   position: relative;
   transform: scale(0.9);
+  overflow: hidden;
 }
 
 .eventItemCont:last-of-type {
@@ -42,7 +43,7 @@
   -webkit-box-orient: vertical;
   font-size: 1.1rem;
   line-height: 1.2;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 8;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -102,7 +103,7 @@
   }
 
   .eventItemDesc {
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 6;
   }
 
   .eventItemRead {
