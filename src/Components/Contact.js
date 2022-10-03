@@ -7,8 +7,7 @@ import anshal from "../Assets/ContactUs/anshal.jpeg";
 import madhav from "../Assets/ContactUs/madhav.jpg";
 import ashirwad from "../Assets/ContactUs/ashirwad.jpg";
 
-const Contact=React.forwardRef((props,ref)=>{
-
+const Contact = React.forwardRef((props, ref) => {
   const four1 = [],
     four2 = [],
     eight = [],
@@ -75,7 +74,11 @@ const Contact=React.forwardRef((props,ref)=>{
     four1[a] = (
       <div key={a} className={ContactCSS.contactCard}>
         <div className={ContactCSS.contactImageCont}>
-          <img src={data[a].image} className={ContactCSS.contactImage} />
+          <img
+            src={data[a].image}
+            alt={data[a].name}
+            className={ContactCSS.contactImage}
+          />
         </div>
         <div className={ContactCSS.contactName}>{data[a].name}</div>
         <div className={ContactCSS.contactDept}>{data[a].dept}</div>
@@ -91,7 +94,11 @@ const Contact=React.forwardRef((props,ref)=>{
     four2[a] = (
       <div key={a} className={ContactCSS.contactCard}>
         <div className={ContactCSS.contactImageCont}>
-          <img src={data[a + 4].image} className={ContactCSS.contactImage} />
+          <img
+            src={data[a + 4].image}
+            alt={data[a + 4].name}
+            className={ContactCSS.contactImage}
+          />
         </div>
         <div className={ContactCSS.contactName}>{data[a + 4].name}</div>
         <div className={ContactCSS.contactDept}>{data[a + 4].dept}</div>
@@ -107,7 +114,11 @@ const Contact=React.forwardRef((props,ref)=>{
     eight[a] = (
       <div key={a} className={ContactCSS.contactCard}>
         <div className={ContactCSS.contactImageCont}>
-          <img src={data[a].image} className={ContactCSS.contactImage} />
+          <img
+            src={data[a].image}
+            alt={data[a].name}
+            className={ContactCSS.contactImage}
+          />
         </div>
         <div className={ContactCSS.contactName}>{data[a].name}</div>
         <div className={ContactCSS.contactDept}>{data[a].dept}</div>
@@ -129,7 +140,6 @@ const Contact=React.forwardRef((props,ref)=>{
       </div>
     </section>
   );
-}) 
-
+});
 
 export default Contact;
