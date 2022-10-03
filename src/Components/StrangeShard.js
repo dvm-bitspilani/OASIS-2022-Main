@@ -11,7 +11,7 @@ const StrangeShard = () => {
   );
   let offYMax = 70;
   if (window.innerWidth <= 800) {
-    offYMax = 50
+    offYMax = 50;
   }
   const offY = offYMin + Math.random() * (offYMax - offYMin);
   const deg = Math.atan(offY / offX) * (180 / Math.PI);

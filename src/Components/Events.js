@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import EventsCss from "../styles/Events.module.css";
 import EventItem from "./EventItem";
 
-const Events = React.forwardRef((props,ref)=>{
+const Events = React.forwardRef((props, ref) => {
   const EVENT_URL =
     "https://bits-oasis.org/2022/main/registrations/events_details";
   const [eventsArr, setEventsArr] = useState([]);
-  
+
   const getEvents = async () => {
     try {
       let res = await fetch(EVENT_URL, { method: "GET" });
@@ -27,11 +27,11 @@ const Events = React.forwardRef((props,ref)=>{
       alert("NETWORK ERROR!");
     }
   };
-  
+
   useEffect(() => {
     getEvents();
   }, []);
-  
+
   return (
     <section className={EventsCss.eventSec} ref={ref}>
       <div className="secHead">KERNEL EVENTS</div>
@@ -49,8 +49,6 @@ const Events = React.forwardRef((props,ref)=>{
       </div>
     </section>
   );
-
-}) 
-
+});
 
 export default Events;
