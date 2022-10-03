@@ -3,7 +3,7 @@
   --title_wid: 38%;
 }
 
-.lander {
+.landerWrapper {
   width: 100vw;
   min-height: 100vh;
   background: url(../Assets/background.png) no-repeat center;
@@ -12,7 +12,7 @@
   position: relative;
 }
 
-.logo {
+.oasisLogo {
   position: absolute;
   width: 3.5%;
   left: 2vw;
@@ -20,7 +20,7 @@
   z-index: 2;
 }
 
-.window {
+.portalWindow {
   width: 59vw;
   object-fit: cover;
   position: absolute;
@@ -31,7 +31,7 @@
 }
 
 /* king */
-.kingContainer {
+.kingBodyWrapper {
   top: 0;
   position: absolute;
   left: calc(50% - var(--king_wid) / 2);
@@ -43,7 +43,7 @@
 }
 
 /* king eyes */
-.eyeSvgContainer {
+.kingEyesWrapper {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -52,7 +52,7 @@
   transform: translateX(-0.85%);
 }
 
-.eyeSvgContainer::after {
+.kingEyesWrapper::after {
   position: absolute;
   content: "";
 }
@@ -71,7 +71,7 @@
   }
 }
 
-.king {
+.kingBody {
   top: 0;
   width: 100%;
 }
@@ -91,7 +91,7 @@
 }
 
 /* OASIS title */
-.title {
+.oasisTitle {
   position: absolute;
   width: var(--title_wid);
   left: calc(50% - var(--title_wid) / 2);
@@ -100,7 +100,7 @@
 }
 
 /* register btn */
-.register {
+.registerWrapper {
   position: absolute;
   width: 100%;
   top: 92%;
@@ -111,13 +111,13 @@
   z-index: 5;
 }
 
-.register div {
+.registerWrapper div {
   padding: 8px 18px;
   border: 1px solid #fedb7e;
   border-radius: 15px;
 }
 
-.register div:hover {
+.registerWrapper div:hover {
   background: linear-gradient(
     94.75deg,
     #d19a08 0%,
@@ -131,7 +131,7 @@
 }
 
 /* icons */
-.iconDiv{
+.bottomWrapper {
   position: absolute;
   bottom: 2%;
   display: flex;
@@ -141,13 +141,13 @@
   align-items: center;
 }
 
-.bottomLogo{
+.oasisLogoBottom {
   display: none;
   width: 10%;
   z-index: 5;
 }
 
-.icons {
+.iconWrapper {
   display: flex;
   right: 2%;
   width: 10%;
@@ -155,63 +155,17 @@
   z-index: 5;
 }
 
-.icons svg {
+.iconWrapper svg {
   width: 20px;
   cursor: pointer;
   height: fit-content;
 }
 
-.icons svg:hover path {
+.iconWrapper svg:hover path {
   fill: url(#paint0_linear_737_546);
 }
 
-.leftLava {
-  left: 8%;
-  top: 32%;
-  display: flex;
-  overflow: hidden;
-  width: 50px;
-  --left-lava-height: 300px;
-  height: var(--left-lava-height);
-  position: absolute;
-  justify-content: space-around;
-}
-
-.leftLava > div {
-  width: 25%;
-  overflow: hidden;
-}
-
-.leftLava__1 {
-  height: 70%;
-}
-
-.leftLava__4 {
-  height: 60%;
-  position: relative;
-}
-
-.leftLava__1Img {
-  position: relative;
-  animation: translate-left-lava__1 7s linear infinite forwards;
-}
-
-.leftLava__2Img {
-  position: relative;
-  animation: translate-left-lava__2 8s linear infinite forwards;
-}
-
-.leftLava__3Img {
-  position: relative;
-  animation: translate-left-lava__3 10s linear infinite forwards;
-}
-
-.leftLava__4Img {
-  animation: translate-left-lava__4 13s linear infinite;
-  position: relative;
-}
-
-.transition {
+.landerTransition {
   z-index: 4;
   width: 100vw;
   height: 15rem;
@@ -226,101 +180,13 @@
   );
 }
 
-@keyframes translate-left-lava__4 {
-  0% {
-    transform: translate(0, -100%);
-  }
-
-  25% {
-    transform: translate(0, -50%);
-  }
-
-  50% {
-    transform: translate(0, 0%);
-  }
-
-  75% {
-    transform: translate(0, 50%);
-  }
-
-  100% {
-    transform: translate(0, 100%);
-  }
-}
-
-@keyframes translate-left-lava__3 {
-  0% {
-    transform: translate(0, -100%);
-  }
-
-  25% {
-    transform: translate(0, -50%);
-  }
-
-  50% {
-    transform: translate(0, 0%);
-  }
-
-  75% {
-    transform: translate(0, 50%);
-  }
-
-  100% {
-    transform: translate(0, 100%);
-  }
-}
-
-@keyframes translate-left-lava__2 {
-  0% {
-    transform: translate(0, -100%);
-  }
-
-  25% {
-    transform: translate(0, -50%);
-  }
-
-  50% {
-    transform: translate(0, 0%);
-  }
-
-  75% {
-    transform: translate(0, 50%);
-  }
-
-  100% {
-    transform: translate(0, 130%);
-  }
-}
-
-@keyframes translate-left-lava__1 {
-  0% {
-    transform: translate(0, -100%);
-  }
-
-  25% {
-    transform: translate(0, -50%) rotate(3deg);
-  }
-
-  50% {
-    transform: translate(0, 0%) rotate(0deg);
-  }
-
-  75% {
-    transform: translate(0, 50%) rotate(3deg);
-  }
-
-  100% {
-    transform: translate(0, 100%);
-  }
-}
-
 @media screen and (max-width: 1000px) {
   :root {
     --king_wid: 60%;
     --title_wid: 45%;
   }
 
-  .window {
+  .portalWindow {
     width: 65vw;
     height: auto;
   }
@@ -329,25 +195,25 @@
     width: 62%;
   }
 
-  .title {
+  .oasisTitle {
     top: 60%;
   }
 
-  .icons {
+  .iconWrapper {
     width: 15%;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .logo {
+  .oasisLogo {
     width: 4.5%;
   }
 
-  .title {
+  .oasisTitle {
     top: 55%;
   }
 
-  .register {
+  .registerWrapper {
     top: 87%;
   }
 }
@@ -358,19 +224,19 @@
     --title_wid: 85%;
   }
 
-  .logo {
+  .oasisLogo {
     display: none;
   }
 
-  .iconDiv{
+  .bottomWrapper {
     justify-content: space-between;
   }
 
-  .bottomLogo{
+  .oasisLogoBottom {
     display: block;
   }
 
-  .window {
+  .portalWindow {
     width: 130vw;
   }
 
@@ -378,24 +244,24 @@
     width: 125%;
   }
 
-  .kingContainer {
+  .kingBodyWrapper {
     top: 20%;
   }
 
-  .title {
+  .oasiTitle {
     top: 55%;
   }
 
-  .register {
+  .registerWrapper {
     font-size: 0.8rem;
     top: 83%;
   }
 
-  .icons {
+  .iconWrapper {
     width: 30%;
   }
 
-  .icons svg {
+  .iconWrapper svg {
     width: 16px;
   }
 }
