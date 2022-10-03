@@ -28,9 +28,13 @@ input[type="number"] {
   height: var(--text-control-height);
   color: gray;
 }
+.formControl:hover{
+  cursor: text;
+}
 
 .formControl input {
   width: 100%;
+  height: 100%;
   border: none;
   outline: none;
   background: none;

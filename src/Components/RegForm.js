@@ -28,6 +28,8 @@ const RegForm = (props) => {
   const [events_ids, setEventsIds] = useState([]);
   const [events, setEvents] = useState([]);
   const [validate, setValidate] = useState(false);
+  const [checkboxChoreo,setCheckboxChoreo]=useState('');
+  const [checkboxHos,setCheckboxHos]=useState('');
 
   const recaptchaRef = useRef(null);
 
@@ -131,18 +133,26 @@ const RegForm = (props) => {
   // console.log(collegeList)
 
   const choreoChange = (e) => {
-    if (e.target.checked) {
-      setChoreo(true);
-    } else {
-      setChoreo(false);
-    }
+    setChoreo((prev)=>!prev)
+    setCheckboxChoreo((prev)=>{
+      if(prev===''){
+        setCheckboxChoreo(RegFormCSS.checked)
+      }
+      else{
+        setCheckboxChoreo('')
+      }
+    })
   };
   const hosChange = (e) => {
-    if (e.target.checked) {
-      setHeadOfSociety(true);
-    } else {
-      setHeadOfSociety(false);
-    }
+   setHeadOfSociety((prev)=>!prev)
+   setCheckboxHos((prev)=>{
+      if(prev===''){
+        setCheckboxHos(RegFormCSS.checked)
+      }
+      else{
+        setCheckboxHos('')
+      }
+    })
   };
 
   const ruleBook=()=>{
@@ -213,12 +223,12 @@ const RegForm = (props) => {
           info={"name"}
           setValue={setLocation}
         />
-        <div className={RegFormCSS.checkboxContainer}>
-          <input type="checkbox" onChange={choreoChange} />
+        <div className={RegFormCSS.checkboxContainer} onClick={choreoChange}>
+          <div className={`${RegFormCSS.checkbox} ${checkboxChoreo}`}  ></div>
           <label>Are you a Choreographer?</label>
         </div>
-        <div className={RegFormCSS.checkboxContainer}>
-          <input type="checkbox" onChange={hosChange} />
+        <div className={RegFormCSS.checkboxContainer} onClick={hosChange} >
+          <div className={`${RegFormCSS.checkbox} ${checkboxHos}`} ></div>
 
           <label>Are you the Head of a Society?</label>
         </div>
