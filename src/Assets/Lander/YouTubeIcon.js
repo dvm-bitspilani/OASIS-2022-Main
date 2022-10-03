@@ -8,6 +8,7 @@ function YouTubeIcon() {
       viewBox="0 0 49 49"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      style={{ transform: "scale(1.25)", marginLeft: "2px" }}
     >
       <g clipPath="url(#clip0_985_608)">
         <path

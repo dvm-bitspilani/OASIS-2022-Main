@@ -3,8 +3,8 @@ import React from "react";
 function FaceBookIcon() {
   return (
     <svg
-      width="36"
-      height="37"
+      width="30"
+      height="30"
       viewBox="0 0 36 37"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
