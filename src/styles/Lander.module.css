@@ -133,10 +133,10 @@
 /* icons */
 .bottomWrapper {
   position: absolute;
-  bottom: 2%;
+  bottom: calc(2% + 0.1vh);
   display: flex;
   justify-content: flex-end;
-  padding: 0 5vw;
+  padding: 0 1.5vw;
   width: 100vw;
   align-items: center;
 }
@@ -159,6 +159,7 @@
   width: 20px;
   cursor: pointer;
   height: fit-content;
+  transform: scale(1.2);
 }
 
 .iconWrapper svg:hover path {
