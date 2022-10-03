@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --span-font-size: 17px;
+  --label-font-size: 20px;
+  --gender-control-height: 55px;
+  --gender-options-gap: 25px;
+  --gender-inter-gap: 5px;
+  --college-control-height: 45px;
+}
+
+.formControl {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-bottom: 3px solid rgb(140, 140, 140);
+  height: var(--college-control-height);
+  justify-content: space-between;
+  font-size: var(--label-font-size);
+}
+
+.collegeInput:hover {
+  cursor: pointer;
+}
+
+.collegeLabel {
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.collegeList {
+  list-style: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  z-index: 5;
+  overflow-y: scroll;
+  background-color: rgb(60, 60, 60);
+  box-shadow: -1px 5px 15px 0px black;
+}
+
+span.caretDown {
+  background-color: rgb(16, 16, 16);
+}
+
+.openList {
+  transition: 0.3s;
+  bottom: -140px;
+  height: 140px;
+  border-top: none;
+  border-right: none;
+}
+
+.collegeList > li {
+  padding: 5px 0;
+  display: flex;
+  width: 100%;
+  margin: 1px 0px;
+  background-color: rgba(1, 1, 1, 0.779);
+  align-items: center;
+  padding-left: 8px;
+  display: flex;
+}
+
+.collegeList > li:hover {
+  background-color: rgb(88, 88, 88);
+}
+
+.collegeList::-webkit-scrollbar {
+  width: 3px;
+}
+
+.collegeList::-webkit-scrollbar-track {
+  background-color: rgb(0, 0, 0);
+}
+
+.collegeList::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.696);
+  border-radius: 100vw;
+  height: 10px;
+}
+
+.closeList {
+  bottom: 2px;
+  height: 0;
+  transition: 0.2s;
+}
+
+.collegeInput {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: none;
+  outline: none;
+  border: none;
+  z-index: 0;
+  color: white;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.collegeLabel {
+  font-size: 20px;
+  transform-origin: left;
+  transition: 0.1s;
+  color: goldenrod;
+}
+
+.shiftLabelUp {
+  transform: scale(0.65) translateY(-100%);
+  margin-bottom: 8px;
+}
+
+.rotateUp {
+  transition: 0.3s;
+  transform: rotate(180deg);
+}
+
+.rotateDown {
+  transition: 0.3s;
+  transform: rotate(0);
+}
+
+span.caretDown {
+  z-index: 4;
+  height: 100%;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .collegeLabel {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .collegeLabel {
+    font-size: 15px;
+  }
+
+  .collegeInput {
+    font-size: 17px;
+  }
+
+  .formControl {
+    height: 38px;
+  }
+
+  .openList {
+    height: 150px;
+    bottom: -150px;
+  }
+}
