@@ -1,11 +1,9 @@
 import React from "react";
 import PhoneIcon from "../Assets/ContactUs/PhoneIcon";
 import MailIcon from "../Assets/ContactUs/MailIcon";
+import MaleAvatar from "../Assets/ContactUs/MaleAvatar";
+import FemaleAvatar from "../Assets/ContactUs/FemaleAvatar";
 import ContactCSS from "../styles/Contact.module.css";
-
-import anshal from "../Assets/ContactUs/anshal.jpeg";
-import madhav from "../Assets/ContactUs/madhav.jpg";
-import ashirwad from "../Assets/ContactUs/ashirwad.jpg";
 
 const Contact = React.forwardRef((props, ref) => {
   const four1 = [],
@@ -13,7 +11,8 @@ const Contact = React.forwardRef((props, ref) => {
     eight = [],
     data = [
       {
-        image: anshal,
+        image: "",
+        gender: "male",
         name: "Anshal Shukla",
         dept: "Website, App & Online Payments",
         email: "mailto:webmaster@bits-oasis.org",
@@ -21,6 +20,7 @@ const Contact = React.forwardRef((props, ref) => {
       },
       {
         image: "",
+        gender: "female",
         name: "Karishma K",
         dept: "Sponsorship and Marketing",
         email: "mailto:sponsorship@bits-oasis.org",
@@ -28,6 +28,7 @@ const Contact = React.forwardRef((props, ref) => {
       },
       {
         image: "",
+        gender: "male",
         name: "Rhythm Saxena",
         dept: "Online Collaborations and Publicity",
         email: "mailto:collaborations@bits-oasis.org",
@@ -35,13 +36,15 @@ const Contact = React.forwardRef((props, ref) => {
       },
       {
         image: "",
+        gender: "female",
         name: "Angel Maria Baby",
         dept: "Reception and Accommodation",
         email: "mailto:recnacc@bits-oasis.org",
         tele: "tel:+918921977221",
       },
       {
-        image: madhav,
+        image: "",
+        gender: "male",
         name: "Madhav Gupta",
         dept: "Registration, Events & Other Enquiries",
         email: "mailto:pcr@bits-oasis.org",
@@ -49,13 +52,15 @@ const Contact = React.forwardRef((props, ref) => {
       },
       {
         image: "",
+        gender: "male",
         name: "Pranav Dangi",
         dept: "Logistics and Operations",
         email: "mailto:controls@bits-oasis.org",
         tele: "tel:+918080263399",
       },
       {
-        image: ashirwad,
+        image: "",
+        gender: "male",
         name: "Ashirwad Karande",
         dept: "President, Student Union",
         email: "mailto:finance@bits-oasis.org",
@@ -63,6 +68,7 @@ const Contact = React.forwardRef((props, ref) => {
       },
       {
         image: "",
+        gender: "male",
         name: "Naman Jalan",
         dept: "General Secretary, Student Union",
         email: "mailto:inventory@bits-oasis.org",
@@ -74,11 +80,14 @@ const Contact = React.forwardRef((props, ref) => {
     four1[a] = (
       <div key={a} className={ContactCSS.contactCard}>
         <div className={ContactCSS.contactImageCont}>
-          <img
+          {/* <img
             src={data[a].image}
             alt={data[a].name}
             className={ContactCSS.contactImage}
-          />
+          /> */}
+          <div className={ContactCSS.contactImage}>
+            {data[a].gender == "male" ? <MaleAvatar /> : <FemaleAvatar />}
+          </div>
         </div>
         <div className={ContactCSS.contactName}>{data[a].name}</div>
         <div className={ContactCSS.contactDept}>{data[a].dept}</div>
@@ -94,11 +103,14 @@ const Contact = React.forwardRef((props, ref) => {
     four2[a] = (
       <div key={a} className={ContactCSS.contactCard}>
         <div className={ContactCSS.contactImageCont}>
-          <img
+          {/* <img
             src={data[a + 4].image}
             alt={data[a + 4].name}
             className={ContactCSS.contactImage}
-          />
+          /> */}
+          <div className={ContactCSS.contactImage}>
+            {data[a + 4].gender == "male" ? <MaleAvatar /> : <FemaleAvatar />}
+          </div>
         </div>
         <div className={ContactCSS.contactName}>{data[a + 4].name}</div>
         <div className={ContactCSS.contactDept}>{data[a + 4].dept}</div>
@@ -114,11 +126,14 @@ const Contact = React.forwardRef((props, ref) => {
     eight[a] = (
       <div key={a} className={ContactCSS.contactCard}>
         <div className={ContactCSS.contactImageCont}>
-          <img
+          {/* <img
             src={data[a].image}
             alt={data[a].name}
             className={ContactCSS.contactImage}
-          />
+          /> */}
+          <div className={ContactCSS.contactImage}>
+            {data[a].gender == "male" ? <MaleAvatar /> : <FemaleAvatar />}
+          </div>
         </div>
         <div className={ContactCSS.contactName}>{data[a].name}</div>
         <div className={ContactCSS.contactDept}>{data[a].dept}</div>

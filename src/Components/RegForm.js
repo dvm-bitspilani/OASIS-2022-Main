@@ -28,8 +28,8 @@ const RegForm = (props) => {
   const [events_ids, setEventsIds] = useState([]);
   const [events, setEvents] = useState([]);
   const [validate, setValidate] = useState(false);
-  const [checkboxChoreo,setCheckboxChoreo]=useState('');
-  const [checkboxHos,setCheckboxHos]=useState('');
+  const [checkboxChoreo, setCheckboxChoreo] = useState("");
+  const [checkboxHos, setCheckboxHos] = useState("");
 
   const recaptchaRef = useRef(null);
 
@@ -133,34 +133,34 @@ const RegForm = (props) => {
   // console.log(collegeList)
 
   const choreoChange = (e) => {
-    setChoreo((prev)=>!prev)
-    setCheckboxChoreo((prev)=>{
-      if(prev===''){
-        setCheckboxChoreo(RegFormCSS.checked)
+    setChoreo((prev) => !prev);
+    setCheckboxChoreo((prev) => {
+      if (prev === "") {
+        setCheckboxChoreo(RegFormCSS.checked);
+      } else {
+        setCheckboxChoreo("");
       }
-      else{
-        setCheckboxChoreo('')
-      }
-    })
+    });
   };
   const hosChange = (e) => {
-   setHeadOfSociety((prev)=>!prev)
-   setCheckboxHos((prev)=>{
-      if(prev===''){
-        setCheckboxHos(RegFormCSS.checked)
+    setHeadOfSociety((prev) => !prev);
+    setCheckboxHos((prev) => {
+      if (prev === "") {
+        setCheckboxHos(RegFormCSS.checked);
+      } else {
+        setCheckboxHos("");
       }
-      else{
-        setCheckboxHos('')
-      }
-    })
+    });
   };
 
-  const ruleBook=()=>{
-    const file = new Blob('../Assets/rulebook.pdf',{type:'application/pdf'})
-    const fileURL = URL.createObjectURL(file)
+  const ruleBook = () => {
+    const file = new Blob("../Assets/rulebook.pdf", {
+      type: "application/pdf",
+    });
+    const fileURL = URL.createObjectURL(file);
     const pdfWindow = window.open();
-    pdfWindow.location.href=fileURL
-  }
+    pdfWindow.location.href = fileURL;
+  };
 
   return (
     <div className={RegFormCSS.regFormBox}>
@@ -224,11 +224,11 @@ const RegForm = (props) => {
           setValue={setLocation}
         />
         <div className={RegFormCSS.checkboxContainer} onClick={choreoChange}>
-          <div className={`${RegFormCSS.checkbox} ${checkboxChoreo}`}  ></div>
+          <div className={`${RegFormCSS.checkbox} ${checkboxChoreo}`}></div>
           <label>Are you a Choreographer?</label>
         </div>
-        <div className={RegFormCSS.checkboxContainer} onClick={hosChange} >
-          <div className={`${RegFormCSS.checkbox} ${checkboxHos}`} ></div>
+        <div className={RegFormCSS.checkboxContainer} onClick={hosChange}>
+          <div className={`${RegFormCSS.checkbox} ${checkboxHos}`}></div>
 
           <label>Are you the Head of a Society?</label>
         </div>

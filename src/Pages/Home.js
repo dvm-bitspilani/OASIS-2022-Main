@@ -11,15 +11,14 @@ export default function Home() {
   const [regState, setRegState] = useState({ open: false });
 
   useEffect(() => {
-    if(regState.open) {
-      document.querySelector('main').style.height = '100vh';
-      document.querySelector('main').style.overflow = 'hidden';
-      console.log('opened')
-    }
-    else {
-      document.querySelector('main').style.height = 'auto';
-      document.querySelector('main').style.overflow = 'none';
-      console.log('closed')
+    if (regState.open) {
+      document.querySelector("main").style.height = "100vh";
+      document.querySelector("main").style.overflow = "hidden";
+      console.log("opened");
+    } else {
+      document.querySelector("main").style.height = "auto";
+      document.querySelector("main").style.overflow = "none";
+      console.log("closed");
     }
   }, [regState]);
 

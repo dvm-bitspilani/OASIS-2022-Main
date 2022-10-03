@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { act } from "react-dom/test-utils";
 import EcCSS from "../styles/Ec.module.css";
-import ruleBookPdf from "../Assets/rulebook.pdf"
-
+import ruleBookPdf from "../Assets/rulebook.pdf";
 
 const EventsControl = (props) => {
   const inputRef = useRef();
@@ -136,7 +135,6 @@ const EventsControl = (props) => {
                 {data.name}
               </li>
             ))}
-
         </ul>
       </div>
 
@@ -147,8 +145,9 @@ const EventsControl = (props) => {
             <i class="fa-solid fa-xmark" onClick={handleEventDeselect}></i>
           </li>
         ))}
-        <a href={ruleBookPdf} className={EcCSS.ruleBook}><i class="fa-solid fa-book-bookmark"></i>&nbsp;Rulebook</a>
-
+        <a href={ruleBookPdf} className={EcCSS.ruleBook}>
+          <i class="fa-solid fa-book-bookmark"></i>&nbsp;Rulebook
+        </a>
       </ul>
 
       {/* {dynamicEventsList.map((eventData)=>( <li>{eventData.name}<div className={RegFormCSS.eventCrossIcon} onClick={handleEventCross}><i class="fa-solid fa-xmark"></i></div></li>))} */}
