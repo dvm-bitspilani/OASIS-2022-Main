@@ -28,9 +28,6 @@ input[type="number"] {
   height: var(--text-control-height);
   color: gray;
 }
-.formControl:hover {
-  cursor: text;
-}
 
 .formControl input {
   width: 100%;
@@ -56,9 +53,10 @@ input[type="number"] {
   padding: 0 0px 5px 5px;
   font-size: var(--label-font-size);
   color: var(--label-font-color);
+  z-index: 1;
 }
 
-.formControl:hover {
+.formControl > label:hover  {
   cursor: text;
 }
 

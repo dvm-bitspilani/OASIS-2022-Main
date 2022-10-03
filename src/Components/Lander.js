@@ -18,27 +18,27 @@ import InstaGramIcon from "../Assets/Lander/InstaGramIcon";
 const Lander = React.forwardRef((props, ref) => {
   const kingEl = useRef(null);
   const ringCount = Math.floor(7 + Math.random() * 2);
-  let [shardCount, setShardCount] = useState(
-    window.innerWidth > 800
-      ? Math.floor(100 + Math.random() * 50)
-      : window.innerWidth > 600
-      ? Math.floor(80 + Math.random() * 50)
-      : 0
-  );
-  let [prevWidth, setPrevWidth] = useState(window.innerWidth);
-  window.addEventListener("resize", () => {
-    if (window.innerWidth <= 600 && prevWidth > 600) {
-      setShardCount(0);
-    } else if (
-      window.innerWidth <= 800 &&
-      (prevWidth > 800 || prevWidth < 600)
-    ) {
-      setShardCount(Math.floor(80 + Math.random() * 50));
-    } else if (window.innerWidth > 800 && prevWidth <= 800) {
-      setShardCount(Math.floor(100 + Math.random() * 50));
-    }
-    setPrevWidth(window.innerWidth);
-  });
+  // let [shardCount, setShardCount] = useState(
+  //   window.innerWidth > 800
+  //     ? Math.floor(100 + Math.random() * 50)
+  //     : window.innerWidth > 600
+  //     ? Math.floor(80 + Math.random() * 50)
+  //     : 0
+  // );
+  // let [prevWidth, setPrevWidth] = useState(window.innerWidth);
+  // window.addEventListener("resize", () => {
+  //   if (window.innerWidth <= 600 && prevWidth > 600) {
+  //     setShardCount(0);
+  //   } else if (
+  //     window.innerWidth <= 800 &&
+  //     (prevWidth > 800 || prevWidth < 600)
+  //   ) {
+  //     setShardCount(Math.floor(80 + Math.random() * 50));
+  //   } else if (window.innerWidth > 800 && prevWidth <= 800) {
+  //     setShardCount(Math.floor(100 + Math.random() * 50));
+  //   }
+  //   setPrevWidth(window.innerWidth);
+  // });
 
   return (
     <div className={LanderCSS.landerWrapper} ref={ref}>
@@ -54,9 +54,9 @@ const Lander = React.forwardRef((props, ref) => {
             filter={idx < 2 ? 2 : idx < 4 ? 1 : 0}
           />
         ))}
-        {[...Array(shardCount)].map((count, idx) => (
+        {/* {[...Array(shardCount)].map((count, idx) => (
           <StrangeShard key={idx} />
-        ))}
+        ))} */}
       </div>
 
       <div className={LanderCSS.kingBodyWrapper}>
