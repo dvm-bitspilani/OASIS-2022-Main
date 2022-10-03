@@ -145,6 +145,13 @@ const RegForm = (props) => {
     }
   };
 
+  const ruleBook=()=>{
+    const file = new Blob('../Assets/rulebook.pdf',{type:'application/pdf'})
+    const fileURL = URL.createObjectURL(file)
+    const pdfWindow = window.open();
+    pdfWindow.location.href=fileURL
+  }
+
   return (
     <div className={RegFormCSS.regFormBox}>
       <form
