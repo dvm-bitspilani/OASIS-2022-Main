@@ -123,7 +123,6 @@ button.submitForm:hover {
   gap: var(--tic-gap);
 }
 
-
 .checkboxContainer {
   height: 25px;
   width: 100%;
@@ -162,7 +161,7 @@ button.submitForm:hover {
     width: 70%;
   }
 
-  .checkboxContainer{
+  .checkboxContainer {
     font-size: 15px;
   }
 }

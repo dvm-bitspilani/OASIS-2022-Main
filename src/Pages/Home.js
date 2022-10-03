@@ -4,7 +4,7 @@ import Registration from "./Registration";
 import { useState } from "react";
 import Contact from "../Components/Contact";
 import Events from "../Components/Events";
-import HomeCSS from '../styles/Home.module.css'
+import HomeCSS from "../styles/Home.module.css";
 
 export default function Home() {
   window.scrollTo(0, 0);

@@ -1,5 +1,5 @@
-.homePage{
-    overflow-y: hidden;
-    /* height: 100vh; */
-    height: auto;
+.homePage {
+  overflow: hidden;
+  /* height: 100vh; */
+  height: auto;
 }

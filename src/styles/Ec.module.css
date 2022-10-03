@@ -51,13 +51,13 @@
   justify-content: center;
   align-items: center;
   transition: 0.3s;
-  scale:0.93;
+  scale: 0.93;
 }
 
-.rotateUp{
+.rotateUp {
   transform: rotate(180deg);
 }
-.rotateDown{
+.rotateDown {
   transform: rotate(0);
 }
 
