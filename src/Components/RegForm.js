@@ -6,6 +6,7 @@ import GenderInputControl from "./GenderInputControl";
 import DropdownControl from "./DropdownControl";
 import EventsControl from "./EventsControl";
 import ReCAPTCHA from "react-google-recaptcha";
+import Button from "./Button";
 
 const RegForm = (props) => {
   const BOSM_END_POINT = "https://www.bitsbosm.org/2022/registrations";
@@ -245,8 +246,9 @@ const RegForm = (props) => {
         /> */}
 
         <button type="submit" className={RegFormCSS.submitForm}>
-          Register
+        Register
         </button>
+        {/* <Button btn_title='Register' type="submit" /> */}
 
         <ReCAPTCHA
           ref={recaptchaRef}

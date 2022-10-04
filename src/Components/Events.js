@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import EventsCss from "../styles/Events.module.css";
 import EventItem from "./EventItem";
+import ruleBookPdf from "../Assets/rulebook.pdf"
+import Button from "./Button";
 
 const Events = React.forwardRef((props, ref) => {
   const EVENT_URL =
@@ -46,6 +48,13 @@ const Events = React.forwardRef((props, ref) => {
             />
           );
         })}
+      </div>
+
+      <div className={EventsCss.btn}>
+        {/* <Button btn_title="Guidelines" /> */}
+        <a href={ruleBookPdf}>
+          Guidelines
+        </a>
       </div>
     </section>
   );

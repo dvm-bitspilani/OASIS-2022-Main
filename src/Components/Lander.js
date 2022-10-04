@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import LanderCSS from "../styles/Lander.module.css";
 import LanderRing from "./LanderRing";
 import StrangeShard from "./StrangeShard";
+import Button from "./Button"
 
 import king from "../Assets/king.png";
 import logo from "../Assets/logo.png";
@@ -72,8 +73,10 @@ const Lander = React.forwardRef((props, ref) => {
 
       {/* register */}
       <div className={LanderCSS.registerWrapper}>
-        <div onClick={props.changeRegState}>Register Now</div>
+        {/* <div onClick={props.changeRegState}>Register Now</div> */}
+        <Button btn_title='Register Now' onClick_fun={props.changeRegState} />
       </div>
+      
 
       {/* icons */}
       <div className={LanderCSS.bottomWrapper}>
