@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import EventsCss from "../styles/Events.module.css";
 import EventItem from "./EventItem";
+import ruleBookPdf from "../Assets/rulebook.pdf"
+import Button from "./Button";
 
-const Events = () => {
+const Events = React.forwardRef((props, ref) => {
   const EVENT_URL =
     "https://bits-oasis.org/2022/main/registrations/events_details";
   const [eventsArr, setEventsArr] = useState([]);
@@ -33,7 +35,7 @@ const Events = () => {
   }, []);
 
   return (
-    <section className={EventsCss.eventSec}>
+    <section className={EventsCss.eventSec} ref={ref}>
       <div className="secHead">KERNEL EVENTS</div>
       <div className={EventsCss.eventsCont}>
         {eventsArr.map((event, idx) => {
@@ -47,8 +49,15 @@ const Events = () => {
           );
         })}
       </div>
+
+      <div className={EventsCss.btn}>
+        {/* <Button btn_title="Guidelines" /> */}
+        <a href={ruleBookPdf}>
+          Guidelines
+        </a>
+      </div>
     </section>
   );
-};
+});
 
 export default Events;

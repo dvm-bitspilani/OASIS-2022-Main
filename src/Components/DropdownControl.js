@@ -1,70 +1,64 @@
 import React from "react";
-import DdcCSS from "../styles/Ddc.module.css";
+import DropdownCSS from "../styles/Dropdown.module.css";
 import { useState, useRef, useEffect } from "react";
 
 const DropdownControl = (props) => {
-  const [active, setActive] = useState(false);
-  const [empty, setEmpty] = useState(true);
-  const [listClass, setListClass] = useState("");
-  const [labelClass, setLabelClass] = useState("");
-  const [caretClass, setCaretClass] = useState(null);
-  const isMounted = useRef(false);
-  const inputRef = useRef();
-  const listRef = useRef();
-  const [searchTerm, setSearchTerm] = useState("");
-  const [requiredInp, setRequired] = useState();
+  const inputRef = useRef(),
+    listRef = useRef(),
+    isMounted = useRef(false),
+    [active, setActive] = useState(false),
+    [listClass, setListClass] = useState(""),
+    [labelClass, setLabelClass] = useState(""),
+    [caretClass, setCaretClass] = useState(null),
+    [searchTerm, setSearchTerm] = useState(""),
+    [requiredInp, setRequired] = useState(),
+    [eventList, setEventList] = useState();
 
-  const [eventList, setEventList] = useState();
-
-  let pattern = new RegExp();
-  let patterns = [];
+  let pattern = new RegExp(),
+    patterns = [];
 
   useEffect(() => {
-    if (props.info !== "events") {
-      setRequired(`required`);
-    }
+    if (props.info !== "events") setRequired(`required`);
   }, [props.info]);
+
   useEffect(() => {
     if (props.info === "college") {
       patterns = props.listData.map((data) => data.name.trim()).join("|");
-
       inputRef.current.pattern = patterns;
     }
+
     if (props.info === "year") {
       patterns = `${1}|${2}|${3}|${4}|${5}`;
       inputRef.current.pattern = patterns;
     }
+
     setEventList([...props.listData]);
   }, [props.listData]);
 
   const handleControlClick = () => {
-    // console.log('roll')
     if (!active) {
-      setListClass(DdcCSS.openList);
       setActive(true);
-      setLabelClass(DdcCSS.shiftLabelUp);
-      setCaretClass(DdcCSS.rotateUp);
+      setListClass(DropdownCSS.openList);
+      setLabelClass(DropdownCSS.shiftLabelUp);
+      setCaretClass(DropdownCSS.rotateUp);
 
       inputRef.current.focus();
     }
   };
 
-  if (!isMounted) {
-    isMounted.current = true;
-  } else {
+  if (!isMounted) isMounted.current = true;
+  else {
     setInterval(() => {
-      if (inputRef.current === document.activeElement) {
-        handleControlClick();
-      }
+      if (inputRef.current === document.activeElement) handleControlClick();
     }, 50);
   }
 
   const handleBlur = () => {
     setSearchTerm("");
     setTimeout(() => {
-      setListClass(DdcCSS.closeList);
+      setListClass(DropdownCSS.closeList);
       setActive(false);
-      setCaretClass(DdcCSS.rotateDown);
+      setCaretClass(DropdownCSS.rotateDown);
       if (inputRef.current.value.trim() === "") {
         setLabelClass();
       }
@@ -72,25 +66,12 @@ const DropdownControl = (props) => {
   };
 
   const handleCollegeSelection = (e) => {
-    inputRef.current.value = e.target.textContent.trim();
-    // console.log(props.listData)
     let idNo = e.target.getAttribute("idno");
+    inputRef.current.value = e.target.textContent.trim();
 
-    if (props.info === "events") {
-      // let selectedEvent=[]
-
-      //  props.listData
-
-      e.target.remove();
-    }
-    if (props.info === "college") {
-      // console.log(idNo)
-      props.setValue(idNo);
-    }
-    if (props.info === "year") {
-      props.setValue(e.target.textContent);
-      // console.log(e.target)
-    }
+    if (props.info === "events") e.target.remove();
+    if (props.info === "college") props.setValue(idNo);
+    if (props.info === "year") props.setValue(e.target.textContent);
   };
 
   const handleInputChange = (e) => {
@@ -98,11 +79,11 @@ const DropdownControl = (props) => {
   };
 
   return (
-    <div className={DdcCSS.formControl} onClick={handleControlClick}>
-      <span className={`${DdcCSS.collegeLabel} ${labelClass}`}>
+    <div className={DropdownCSS.formControl} onClick={handleControlClick}>
+      <span className={`${DropdownCSS.collegeLabel} ${labelClass}`}>
         {props.label}
       </span>
-      <span className={DdcCSS.caretDown}>
+      <span className={DropdownCSS.caretDown}>
         <i
           className={`fa-solid fa-caret-down  ${caretClass}`}
           onClick={handleControlClick}
@@ -110,26 +91,24 @@ const DropdownControl = (props) => {
       </span>
       <input
         type="text"
-        className={DdcCSS.collegeInput}
+        className={DropdownCSS.collegeInput}
         onBlur={handleBlur}
         ref={inputRef}
         onChange={handleInputChange}
         required={requiredInp}
       />
       <ul
-        className={`${DdcCSS.collegeList} ${listClass}`}
+        className={`${DropdownCSS.collegeList} ${listClass}`}
         onMouseDown={handleCollegeSelection}
         ref={listRef}
       >
         {props.listData
           .filter((data) => {
-            if (searchTerm === "") {
+            if (searchTerm === "") return data;
+            else if (data.name.toLowerCase().includes(searchTerm.toLowerCase()))
               return data;
-            } else if (
-              data.name.toLowerCase().includes(searchTerm.toLowerCase())
-            ) {
-              return data;
-            }
+
+            return 0;
           })
           .map((data) => (
             <li key={data.id} idno={data.id}>

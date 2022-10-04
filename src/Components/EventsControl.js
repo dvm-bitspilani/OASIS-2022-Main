@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { act } from "react-dom/test-utils";
 import EcCSS from "../styles/Ec.module.css";
+import ruleBookPdf from "../Assets/rulebook.pdf";
 
 const EventsControl = (props) => {
   const inputRef = useRef();
@@ -10,7 +11,7 @@ const EventsControl = (props) => {
   const [dropDownClass, setDropDownClass] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [events_ids, setEventsIds] = useState([]);
-  const [caretClass,setCaretClass] = useState(EcCSS.rotateDown)
+  const [caretClass, setCaretClass] = useState(EcCSS.rotateDown);
 
   const [eventsList, setEventList] = useState([]);
   const [selectedEvents, setSelectedEvents] = useState([]);
@@ -82,13 +83,13 @@ const EventsControl = (props) => {
     if (active) {
       setLabelClass(EcCSS.shiftLabelUp);
       setDropDownClass(EcCSS.showList);
-      setCaretClass(EcCSS.rotateUp)
+      setCaretClass(EcCSS.rotateUp);
       inputRef.current.focus();
     } else {
       inputRef.current.value = "";
       setLabelClass(EcCSS.shiftLabelDown);
       setDropDownClass(EcCSS.hideList);
-      setCaretClass(EcCSS.rotateDown)
+      setCaretClass(EcCSS.rotateDown);
       inputRef.current.blur();
     }
   }, [active]);
@@ -102,7 +103,9 @@ const EventsControl = (props) => {
       <div className={EcCSS.inputContainer}>
         <span className={`${EcCSS.label} ${labelClass}`}>Events</span>
         <span className={EcCSS.caretClass}>
-          <i className={`fa-solid fa-caret-down fa-xl ${EcCSS.caretClass} ${caretClass}`}></i>
+          <i
+            className={`fa-solid fa-caret-down fa-xl ${EcCSS.caretClass} ${caretClass}`}
+          ></i>
         </span>
         <input
           type="text"
@@ -142,6 +145,7 @@ const EventsControl = (props) => {
             <i class="fa-solid fa-xmark" onClick={handleEventDeselect}></i>
           </li>
         ))}
+        
       </ul>
 
       {/* {dynamicEventsList.map((eventData)=>( <li>{eventData.name}<div className={RegFormCSS.eventCrossIcon} onClick={handleEventCross}><i class="fa-solid fa-xmark"></i></div></li>))} */}

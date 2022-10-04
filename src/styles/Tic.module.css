@@ -31,6 +31,7 @@ input[type="number"] {
 
 .formControl input {
   width: 100%;
+  height: 100%;
   border: none;
   outline: none;
   background: none;
@@ -52,6 +53,11 @@ input[type="number"] {
   padding: 0 0px 5px 5px;
   font-size: var(--label-font-size);
   color: var(--label-font-color);
+  z-index: 1;
+}
+
+.formControl > label:hover  {
+  cursor: text;
 }
 
 .formLabel {
@@ -61,7 +67,7 @@ input[type="number"] {
 
 .shiftLabelUp {
   transform: scale(0.65) translateY(-100%);
-  margin-bottom: 3px;
+  margin-bottom: 6px;
 }
 
 .shiftLabelDown {
