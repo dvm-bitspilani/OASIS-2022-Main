@@ -14,15 +14,6 @@
   overflow: hidden;
 }
 
-.eventItemCont:last-of-type {
-  margin: 0 !important;
-}
-
-.eventItemImg {
-  width: clamp(14vw, 30%, 19vw);
-  height: auto;
-}
-
 .eventItemText {
   font-family: "Montserrat", sans-serif;
   display: flex;
