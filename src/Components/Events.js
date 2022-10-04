@@ -9,6 +9,9 @@ const Events = React.forwardRef((props, ref) => {
     "https://bits-oasis.org/2022/main/registrations/events_details";
   const [eventsArr, setEventsArr] = useState([]);
 
+  const [angle, setAngle] = useState(0);
+  const [itrCount, setItrCount] = useState(0);
+
   const getEvents = async () => {
     try {
       let res = await fetch(EVENT_URL, { method: "GET" });
@@ -40,15 +43,20 @@ const Events = React.forwardRef((props, ref) => {
     <section className={EventsCss.eventSec} ref={ref}>
       <div className="secHead">KERNEL EVENTS</div>
       <div className={EventsCss.eventsCont}>
-        {eventsArr.length > 0 ? (
-          <EventItem
-            eventImg={eventsArr[0].img}
-            eventName={eventsArr[0].name}
-            eventDesc={eventsArr[0].desc}
+        
+        {eventsArr.map((event,idx) => {
+          return (
+          <EventItem key={idx}
+            eventImg={event.img}
+            eventName={event.name}
+            eventDesc={event.desc}
+            idx={idx}
+            angle={angle}
+            itrCount={itrCount}
           />
-        ) : (
-          <></>
-        )}
+          )
+        })}
+        
       </div>
 
       <div className={EventsCss.btn}>
