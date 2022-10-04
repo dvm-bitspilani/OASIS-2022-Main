@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import EventsCss from "../styles/Events.module.css";
 import EventItem from "./EventItem";
-import ruleBookPdf from "../Assets/rulebook.pdf"
+import ruleBookPdf from "../Assets/rulebook.pdf";
 import Button from "./Button";
 
 const Events = React.forwardRef((props, ref) => {
@@ -23,6 +23,7 @@ const Events = React.forwardRef((props, ref) => {
           desc: event.details,
         };
       });
+      console.log(evtArr);
       setEventsArr(evtArr);
     } catch (e) {
       console.log(e);
@@ -32,29 +33,27 @@ const Events = React.forwardRef((props, ref) => {
 
   useEffect(() => {
     getEvents();
+    console.log(eventsArr);
   }, []);
 
   return (
     <section className={EventsCss.eventSec} ref={ref}>
       <div className="secHead">KERNEL EVENTS</div>
       <div className={EventsCss.eventsCont}>
-        {eventsArr.map((event, idx) => {
-          return (
-            <EventItem
-              key={idx}
-              eventImg={event.img}
-              eventName={event.name}
-              eventDesc={event.desc}
-            />
-          );
-        })}
+        {eventsArr.length > 0 ? (
+          <EventItem
+            eventImg={eventsArr[0].img}
+            eventName={eventsArr[0].name}
+            eventDesc={eventsArr[0].desc}
+          />
+        ) : (
+          <></>
+        )}
       </div>
 
       <div className={EventsCss.btn}>
         {/* <Button btn_title="Guidelines" /> */}
-        <a href={ruleBookPdf}>
-          Guidelines
-        </a>
+        <a href={ruleBookPdf}>Guidelines</a>
       </div>
     </section>
   );
