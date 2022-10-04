@@ -10,7 +10,9 @@ const LanderRing = (props) => {
       style={{
         "--offsetX": props.offX,
         "--offsetY": props.offY,
-        "--speed": `${1.0 + Math.random() * 0.5}s`,
+        "--offsetRot": `${props.initAngle}deg`,
+        "--speed": `${4.5 + Math.random() * 1.2}s`,
+        "--stretch": `${props.stretch / 76.6}`,
       }}
     />
   );

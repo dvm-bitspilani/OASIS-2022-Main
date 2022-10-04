@@ -1,5 +1,5 @@
 .goldringsImg {
-  --width: 60vw;
+  --width: 60.5vw;
   position: absolute;
   top: 0;
   left: 50%;
@@ -7,8 +7,8 @@
     calc(-50% + var(--offsetX)),
     calc(-53% + var(--offsetY))
   );
-  width: var(--width);
-  height: calc(var(--width) + 10px);
+  width: calc((1 + var(--stretch)) * var(--width));
+  height: calc((1 - var(--stretch)) * (var(--width) + 10px));
   transform-origin: calc(50% - var(--offsetX)) calc(50% - var(--offsetY));
   animation: rotateRings var(--speed) infinite linear;
   z-index: 3;
@@ -16,31 +16,40 @@
 }
 
 @keyframes rotateRings {
-  from {
+  0% {
     transform: translate(
         calc(-50% + var(--offsetX)),
         calc(-53% + var(--offsetY))
       )
-      rotate(0deg);
+      rotate(calc(0deg + var(--offsetRot)));
+    width: calc((1 + var(--stretch)) * var(--width) + 4px);
+    height: calc((1 - var(--stretch)) * (var(--width) + 10px) + 4px);
   }
 
-  to {
+  50% {
+    width: calc((1 + var(--stretch)) * var(--width) - 4px);
+    height: calc((1 - var(--stretch)) * (var(--width) + 10px) - 4px);
+  }
+
+  100% {
     transform: translate(
         calc(-50% + var(--offsetX)),
         calc(-53% + var(--offsetY))
       )
-      rotate(359deg);
+      rotate(calc(359deg + var(--offsetRot)));
+    width: calc((1 + var(--stretch)) * var(--width) + 4px);
+    height: calc((1 - var(--stretch)) * (var(--width) + 10px) + 4px);
   }
 }
 
 @media screen and (max-width: 1000px) {
   .goldringsImg {
-    --width: 65vw;
+    --width: 66vw;
   }
 }
 
 @media screen and (max-width: 450px) {
   .goldringsImg {
-    --width: 131vw;
+    --width: 135vw;
   }
 }

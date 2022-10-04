@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import LanderCSS from "../styles/Lander.module.css";
 import LanderRing from "./LanderRing";
 import StrangeShard from "./StrangeShard";
-import Button from "./Button"
+import Button from "./Button";
 
 import king from "../Assets/king.png";
 import logo from "../Assets/logo.png";
@@ -18,7 +18,7 @@ import InstaGramIcon from "../Assets/Lander/InstaGramIcon";
 
 const Lander = React.forwardRef((props, ref) => {
   const kingEl = useRef(null);
-  const ringCount = Math.floor(5 + Math.random() * 2);
+  const ringCount = Math.floor(4 + Math.random() * 3);
 
   return (
     <div className={LanderCSS.landerWrapper} ref={ref}>
@@ -51,9 +51,8 @@ const Lander = React.forwardRef((props, ref) => {
       {/* register */}
       <div className={LanderCSS.registerWrapper}>
         {/* <div onClick={props.changeRegState}>Register Now</div> */}
-        <Button btn_title='Register Now' onClick_fun={props.changeRegState} />
+        <Button btn_title="Register Now" onClick_fun={props.changeRegState} />
       </div>
-      
 
       {/* icons */}
       <div className={LanderCSS.bottomWrapper}>
