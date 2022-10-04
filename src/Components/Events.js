@@ -36,7 +36,6 @@ const Events = React.forwardRef((props, ref) => {
 
   useEffect(() => {
     getEvents();
-    console.log(eventsArr);
   }, []);
 
   return (
