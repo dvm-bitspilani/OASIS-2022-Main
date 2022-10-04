@@ -140,7 +140,11 @@ const Contact = React.forwardRef((props, ref) => {
             className={ContactCSS.contactImage}
           /> */}
           <div className={ContactCSS.contactImage}>
-            {data[a].gender == "male" ? <MaleAvatar /> : <FemaleAvatar />}
+          {data[a].image == "" ? (data[a].gender == "male" ? <MaleAvatar /> : <FemaleAvatar />) : <img
+            src={data[a].image}
+            alt={data[a].name}
+            className={ContactCSS.contactImage}
+          />}
           </div>
         </div>
         <div className={ContactCSS.contactName}>{data[a].name}</div>
