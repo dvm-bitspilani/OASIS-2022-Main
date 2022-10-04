@@ -17,17 +17,7 @@ import rightEye from "../Assets/righteye.png";
 
 const Lander = (props) => {
   const kingEl = useRef(null);
-  const ringCount = Math.floor(7 + Math.random() * 2);
-  let [shardCount, setShardCount] = useState(
-    window.innerWidth > 600 ? Math.floor(100 + Math.random() * 50) : 0
-  );
-  window.addEventListener("resize", () => {
-    if (window.innerWidth <= 600) {
-      setShardCount(Math.floor(0));
-    } else {
-      setShardCount(Math.floor(100 + Math.random() * 50));
-    }
-  });
+  const ringCount = Math.floor(5 + Math.random() * 2);
 
   return (
     <div className={LanderCSS.lander}>
@@ -38,13 +28,11 @@ const Lander = (props) => {
         {[...Array(ringCount)].map((count, idx) => (
           <LanderRing
             key={idx}
-            offX={`${idx * (-1.25 + Math.random() + 1.5)}px`}
-            offY={`${idx * (-1.25 + Math.random() * 1.25)}px`}
-            filter={idx < 2 ? 2 : idx < 4 ? 1 : 0}
+            offX={`${idx * (-0.8 + Math.random() + 0.8)}px`}
+            offY={`${idx * (-0.8 + Math.random() * 0.8)}px`}
+            stretch={idx % 4}
+            initAngle={idx * 10}
           />
-        ))}
-        {[...Array(shardCount)].map((count, idx) => (
-          <StrangeShard key={idx} />
         ))}
       </div>
 

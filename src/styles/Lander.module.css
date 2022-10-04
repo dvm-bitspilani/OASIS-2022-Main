@@ -1,6 +1,6 @@
 :root {
   --king_wid: 50%;
-  --title_wid: 38%;
+  --title_wid: 28%;
 }
 
 .lander {
@@ -24,22 +24,24 @@
   width: 59vw;
   object-fit: cover;
   position: absolute;
+  top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-2%);
   transform-origin: 50% 0;
   z-index: 2;
 }
 
 /* king */
 .kingContainer {
-  top: 0;
+  top: -7%;
   position: absolute;
-  left: calc(50% - var(--king_wid) / 2);
+  left: 50%;
   width: var(--king_wid);
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 4;
+  transform: translateX(-50%);
 }
 
 /* king eyes */
@@ -94,16 +96,17 @@
 .title {
   position: absolute;
   width: var(--title_wid);
-  left: calc(50% - var(--title_wid) / 2);
-  top: 54%;
+  left: 50%;
+  top: 60%;
   z-index: 5;
+  transform: translateX(-50%);
 }
 
 /* register btn */
 .register {
   position: absolute;
   width: 100%;
-  top: 92%;
+  top: 88%;
   display: flex;
   justify-content: center;
   color: white;
@@ -131,7 +134,7 @@
 }
 
 /* icons */
-.iconDiv{
+.iconDiv {
   position: absolute;
   bottom: 2%;
   display: flex;
@@ -141,7 +144,7 @@
   align-items: center;
 }
 
-.bottomLogo{
+.bottomLogo {
   display: none;
   width: 10%;
   z-index: 5;
@@ -317,7 +320,7 @@
 @media screen and (max-width: 1000px) {
   :root {
     --king_wid: 60%;
-    --title_wid: 45%;
+    --title_wid: 38%;
   }
 
   .window {
@@ -325,8 +328,8 @@
     height: auto;
   }
 
-  .goldringsImg {
-    width: 62%;
+  .kingContainer {
+    top: 10%;
   }
 
   .title {
@@ -354,19 +357,19 @@
 
 @media screen and (max-width: 450px) {
   :root {
-    --king_wid: 85%;
-    --title_wid: 85%;
+    --king_wid: 125%;
+    --title_wid: 75%;
   }
 
   .logo {
     display: none;
   }
 
-  .iconDiv{
+  .iconDiv {
     justify-content: space-between;
   }
 
-  .bottomLogo{
+  .bottomLogo {
     display: block;
   }
 
@@ -379,11 +382,11 @@
   }
 
   .kingContainer {
-    top: 20%;
+    top: 15%;
   }
 
   .title {
-    top: 55%;
+    top: 60%;
   }
 
   .register {
