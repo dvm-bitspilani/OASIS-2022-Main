@@ -228,6 +228,11 @@
     --title_wid: 75%;
   }
 
+  .landerWrapper {
+    background: url(../Assets/Lander/phoneLanderBg.png) no-repeat center center;
+    background-size: cover;
+  }
+
   .oasisLogo {
     display: none;
   }
