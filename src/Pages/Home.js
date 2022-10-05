@@ -30,8 +30,7 @@ export default function Home() {
 
   useEffect(() => {
      window.addEventListener('load', () => {
-      setIsLoaded(true);
-      // document.querySelector('body').style.background = 'black url(Assets/wallsbg.png) repeat center center'
+      setTimeout(() => {setIsLoaded(true)},2000)    
       console.log('loaded')
      })
   }, []);
