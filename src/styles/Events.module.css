@@ -1,8 +1,4 @@
 .eventSec {
-  /* background-color: black; */
-  /* background: url(../Assets/wallsbg.png) no-repeat center center;
-  background-size: 100%; */
-  /* background-attachment: fixed; */
   display: flex;
   flex-direction: column;
   justify-content: center;
