@@ -34,6 +34,11 @@ export default function Home() {
       <Lander changeRegState={changeRegState} />
       <Events />
       <Contact />
+      <div className={HomeCSS.love}>
+    <div class={HomeCSS.foot}>
+      Made with <i aria-hidden="true" class="fa fa-heart"></i> by DVM
+    </div>
+  </div>
     </main>
   );
 }

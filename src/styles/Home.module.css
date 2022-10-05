@@ -3,3 +3,16 @@
   /* height: 100vh; */
   height: auto;
 }
+.love {
+  padding-block: 0.8rem;
+  font-size: 1.1rem;
+  width: 100%;
+  z-index: 30;
+  text-align: center;
+  font-family: "Montserrat";
+  background-color: rgb(12, 11, 11);
+  color: wheat;
+}
+.foot > i {
+  color: goldenrod;
+}

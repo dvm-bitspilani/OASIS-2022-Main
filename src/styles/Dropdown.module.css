@@ -10,7 +10,7 @@
   --gender-control-height: 55px;
   --gender-options-gap: 25px;
   --gender-inter-gap: 5px;
-  --college-control-height: 45px;
+  --college-control-height: 40px;
 }
 
 .formControl {
@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  border-bottom: 3px solid rgb(140, 140, 140);
+  border-bottom: 2px solid rgb(140, 140, 140);
   height: var(--college-control-height);
   justify-content: space-between;
   font-size: var(--label-font-size);
@@ -135,16 +135,28 @@ span.caretDown {
   justify-content: center;
   align-items: center;
 }
-
+@media (max-width:900px) {
+  .collegeLabel{
+    font-size: 17px;
+  }
+  .collegeInput{
+    font-size: 17px;
+  }
+  .formControl{
+    height: 40px;
+  }
+  
+}
 @media screen and (max-width: 800px) {
   .collegeLabel {
     font-size: 15px;
   }
+  
 }
 
 @media screen and (max-width: 760px) {
   .collegeLabel {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .collegeInput {
