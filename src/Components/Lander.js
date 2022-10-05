@@ -8,6 +8,7 @@ import Button from "./Button";
 import king from "../Assets/king.png";
 import logo from "../Assets/logo.png";
 import title from "../Assets/title.png";
+import rect from "../Assets/Lander/blackRect.png";
 import leftEye from "../Assets/lefteye.png";
 import windowImg from "../Assets/window.png";
 import rightEye from "../Assets/righteye.png";
@@ -48,6 +49,7 @@ const Lander = React.forwardRef((props, ref) => {
       </div>
 
       <img src={title} alt="OASIS '22" className={LanderCSS.oasisTitle} />
+      <div className={LanderCSS.titleBgGrad}></div>
 
       {/* register */}
       <div className={LanderCSS.registerWrapper}>
