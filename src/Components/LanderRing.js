@@ -1,10 +1,11 @@
 import RingCss from "../styles/LanderRings.module.css";
-import RingImg from "../Assets/rings.png";
+import YellowRingImg from "../Assets/ringsYellow.png";
+import OrangeRingImg from "../Assets/ringsOrange.png";
 
 const LanderRing = (props) => {
   return (
     <img
-      src={RingImg}
+      src={props.idx > 2 ? YellowRingImg : OrangeRingImg}
       alt="Ring"
       className={RingCss.goldringsImg}
       style={{

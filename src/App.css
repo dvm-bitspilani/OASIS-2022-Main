@@ -8,7 +8,9 @@
 
 body {
   overflow-x: hidden;
-  background-color: black;
+  background: black url(Assets/wallsbg.png) repeat center center;
+  background-size: 100%;
+  height: max-content;
 }
 
 img {

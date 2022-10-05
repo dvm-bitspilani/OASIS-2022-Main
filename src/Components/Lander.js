@@ -33,6 +33,7 @@ const Lander = React.forwardRef((props, ref) => {
             offY={`${idx * (-0.8 + Math.random() * 0.8)}px`}
             stretch={idx % 4}
             initAngle={idx * 10}
+            idx={idx}
           />
         ))}
       </div>
