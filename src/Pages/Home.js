@@ -30,8 +30,7 @@ export default function Home() {
 
   useEffect(() => {
      window.addEventListener('load', () => {
-      setIsLoaded(true);
-      // document.querySelector('body').style.background = 'black url(Assets/wallsbg.png) repeat center center'
+      setTimeout(() => {setIsLoaded(true)},2000)    
       console.log('loaded')
      })
   }, []);
@@ -47,6 +46,11 @@ export default function Home() {
       <Lander changeRegState={changeRegState} />
       <Events />
       <Contact />
+      <div className={HomeCSS.love}>
+    <div class={HomeCSS.foot}>
+      Made with <i aria-hidden="true" class="fa fa-heart"></i> by DVM
+    </div>
+  </div>
     </main>
   );
   }

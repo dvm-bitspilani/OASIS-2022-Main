@@ -6,9 +6,7 @@ import FemaleAvatar from "../Assets/ContactUs/FemaleAvatar";
 import ContactCSS from "../styles/Contact.module.css";
 
 const Contact = React.forwardRef((props, ref) => {
-  const four1 = [],
-    four2 = [],
-    eight = [],
+  const eight = [],
     data = [
       {
         image: require("../Assets/ContactUs/anshal.png"),
@@ -67,7 +65,7 @@ const Contact = React.forwardRef((props, ref) => {
         tele: "tel:+918793009454",
       },
       {
-        image: require("../Assets/ContactUs/naman.png"), 
+        image: require("../Assets/ContactUs/naman.png"),
         gender: "male",
         name: "Naman Jalan",
         dept: "General Secretary, Student Union",
@@ -75,60 +73,6 @@ const Contact = React.forwardRef((props, ref) => {
         tele: "tel:+918617395921",
       },
     ];
-
-  for (let a = 0; a < 4; a++) {
-    four1[a] = (
-      <div key={a} className={ContactCSS.contactCard}>
-        <div className={ContactCSS.contactImageCont}>
-          {/* <img
-            src={data[a].image}
-            alt={data[a].name}
-            className={ContactCSS.contactImage}
-          /> */}
-          <div className={ContactCSS.contactImage}>
-            {data[a].image == "" ? (data[a].gender == "male" ? <MaleAvatar /> : <FemaleAvatar />) : <img
-            src={data[a].image}
-            alt={data[a].name}
-            className={ContactCSS.contactImage}
-          />}
-          </div>
-        </div>
-        <div className={ContactCSS.contactName}>{data[a].name}</div>
-        <div className={ContactCSS.contactDept}>{data[a].dept}</div>
-        <div className={ContactCSS.contactLinks}>
-          <PhoneIcon tele={data[a].tele} />
-          <MailIcon email={data[a].email} />
-        </div>
-      </div>
-    );
-  }
-
-  for (let a = 0; a < 4; a++) {
-    four2[a] = (
-      <div key={a} className={ContactCSS.contactCard}>
-        <div className={ContactCSS.contactImageCont}>
-          {/* <img
-            src={data[a + 4].image}
-            alt={data[a + 4].name}
-            className={ContactCSS.contactImage}
-          /> */}
-          <div className={ContactCSS.contactImage}>
-          {data[a+4].image == "" ? (data[a + 4].gender == "male" ? <MaleAvatar /> : <FemaleAvatar />) : <img
-            src={data[a + 4].image}
-            alt={data[a + 4].name}
-            className={ContactCSS.contactImage}
-          />}
-          </div>
-        </div>
-        <div className={ContactCSS.contactName}>{data[a + 4].name}</div>
-        <div className={ContactCSS.contactDept}>{data[a + 4].dept}</div>
-        <div className={ContactCSS.contactLinks}>
-          <PhoneIcon tele={data[a + 4].tele} />
-          <MailIcon email={data[a + 4].email} />
-        </div>
-      </div>
-    );
-  }
 
   for (let a = 0; a < 8; a++) {
     eight[a] = (
@@ -140,11 +84,19 @@ const Contact = React.forwardRef((props, ref) => {
             className={ContactCSS.contactImage}
           /> */}
           <div className={ContactCSS.contactImage}>
-          {data[a].image == "" ? (data[a].gender == "male" ? <MaleAvatar /> : <FemaleAvatar />) : <img
-            src={data[a].image}
-            alt={data[a].name}
-            className={ContactCSS.contactImage}
-          />}
+            {data[a].image == "" ? (
+              data[a].gender == "male" ? (
+                <MaleAvatar />
+              ) : (
+                <FemaleAvatar />
+              )
+            ) : (
+              <img
+                src={data[a].image}
+                alt={data[a].name}
+                className={ContactCSS.contactImage}
+              />
+            )}
           </div>
         </div>
         <div className={ContactCSS.contactName}>{data[a].name}</div>
@@ -161,8 +113,6 @@ const Contact = React.forwardRef((props, ref) => {
     <section className={ContactCSS.contactContainer} ref={ref}>
       <h2 className="secHead">CONTACT US</h2>
       <div className={ContactCSS.contactBody}>
-        <div className={ContactCSS.four1}>{four1}</div>
-        <div className={ContactCSS.four2}>{four2}</div>
         <div className={ContactCSS.eight}>{eight}</div>
       </div>
     </section>

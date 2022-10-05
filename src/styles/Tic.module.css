@@ -74,19 +74,32 @@ input[type="number"] {
   transform: translateY(0);
 }
 
+@media screen and (max-width:900px) {
+  .formControl label{
+    font-size: 18px;
+  }
+  .formControl input{
+    font-size: 17px;
+  }
+  
+}
+
 @media screen and (max-width: 800px) {
   :root {
     --label-font-size: 15px !important;
   }
 
   .college {
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 
 @media screen and (max-width: 760px) {
+  
   .formControl label {
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
+    /* padding:2px 0 2px 5px; */
+    font-size: 17px;
   }
 
   .formControl input {
@@ -96,10 +109,10 @@ input[type="number"] {
   }
 
   .formControl {
-    --text-control-height: 38px;
+    --text-control-height: 35px;
   }
 
   .shiftLabelUp {
-    transform: scale(0.65) translateY(-125%);
+    transform: scale(0.65) translateY(-100%);
   }
 }

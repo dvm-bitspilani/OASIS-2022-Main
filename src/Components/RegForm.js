@@ -165,11 +165,14 @@ const RegForm = (props) => {
 
   return (
     <div className={RegFormCSS.regFormBox}>
+      <div className={RegFormCSS.heading}>REGISTRATION</div>
       <form
         className={RegFormCSS.regForm}
         onSubmit={handleSubmit}
         method="post"
       >
+        <div className={RegFormCSS.leftSide}>
+
         <div className={RegFormCSS.textInputContainer}>
           <TextInputControl
             label={"Name"}
@@ -191,11 +194,26 @@ const RegForm = (props) => {
             pattern={"[1-9]{1}[0-9]{9}"}
           />
         </div>
-        <div className={RegFormCSS.genderInputContainer}>
-          <GenderInputControl setValue={setGender} />
+
+          <div className={RegFormCSS.genderInputContainer}>
+           <GenderInputControl setValue={setGender} />
+          </div>
+          <div className={RegFormCSS.checkboxContainer} onClick={choreoChange}>
+          <div className={`${RegFormCSS.checkbox} ${checkboxChoreo}`}></div>
+          <label>Are you a Choreographer?</label>
+        </div>
+        <div className={RegFormCSS.checkboxContainer} onClick={hosChange}>
+          <div className={`${RegFormCSS.checkbox} ${checkboxHos}`}></div>
+
+          <label>Are you the Head of a Society?</label>
+        </div>
+       
+
         </div>
 
-        <div className={RegFormCSS.sportsContainer}>
+
+      <div className={RegFormCSS.rightSide}>
+         <div className={RegFormCSS.sportsContainer}>
           <EventsControl
             setValue={setEvents}
             label={"Events"}
@@ -224,15 +242,14 @@ const RegForm = (props) => {
           info={"name"}
           setValue={setLocation}
         />
-        <div className={RegFormCSS.checkboxContainer} onClick={choreoChange}>
-          <div className={`${RegFormCSS.checkbox} ${checkboxChoreo}`}></div>
-          <label>Are you a Choreographer?</label>
-        </div>
-        <div className={RegFormCSS.checkboxContainer} onClick={hosChange}>
-          <div className={`${RegFormCSS.checkbox} ${checkboxHos}`}></div>
+        
+      </div>
+      <div className={RegFormCSS.buttonContainer}>
 
-          <label>Are you the Head of a Society?</label>
-        </div>
+      <button type="submit" className={RegFormCSS.submitForm}>
+      Register Now
+      </button>
+      </div>
 
         {/* <TextInputControl
           label={"Head Of Society"}
@@ -245,17 +262,14 @@ const RegForm = (props) => {
           setValue={setChoreo}
         /> */}
 
-        <button type="submit" className={RegFormCSS.submitForm}>
-        Register
-        </button>
         {/* <Button btn_title='Register' type="submit" /> */}
 
-        <ReCAPTCHA
+        {/* <ReCAPTCHA
           ref={recaptchaRef}
           size="invisible"
           sitekey={`${process.env.REACT_APP_SITE_KEY}`}
-        />
-        <div className={RegFormCSS.bottomPadding}></div>
+        /> */}
+        {/* <div className={RegFormCSS.bottomPadding}></div> */}
       </form>
     </div>
   );

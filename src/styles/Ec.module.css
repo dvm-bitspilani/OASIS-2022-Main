@@ -27,7 +27,7 @@
 .inputContainer {
   position: relative;
   display: flex;
-  height: 45px;
+  height: 40px;
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -38,10 +38,11 @@
 .label {
   color: goldenrod;
   z-index: 1;
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
+  font-size: 20px;
   padding: 5px 0 0 5px;
   transform-origin: left;
-  transition: 0.2s;
+  transition: 0.15s;
 }
 
 .caretClass {
@@ -89,7 +90,8 @@
 }
 
 .shiftLabelUp {
-  transform: translateY(-100%) scale(0.65);
+  transform: scale(0.65) translateY(-100%) ;
+  margin-bottom: 6px;
 }
 
 .shiftLabelDown {
@@ -176,6 +178,24 @@ a.ruleBook {
   color: #d19a08;
 }
 
+@media screen and (max-width:900px) {
+  .label{
+    font-size:17px;
+    margin-bottom: 0;
+  }
+  .inputContainer{
+    height: 35px;
+  }
+  .inputContainer input{
+    font-size: 17px;
+  }
+  .dropDown > li{
+    font-size: 16px;
+    height: 35px;
+  }
+  
+}
+
 @media screen and (max-width: 800px) {
   .label {
     font-size: 15px;
@@ -190,6 +210,9 @@ a.ruleBook {
   }
   .ruleBook:hover::after {
     width: 35%;
+  }
+  .shiftLabelUp{
+    margin-bottom: 8px;
   }
 }
 

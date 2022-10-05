@@ -79,6 +79,17 @@
   gap: var(--gender-inter-gap);
   align-items: center;
 }
+.genderLabel{
+  /* padding-left: 5px; */
+}
+@media screen and (max-width:900px) {
+  .genderLabel{
+    font-size: 18px;
+  }
+  .genderOptions{
+    font-size: 16px;
+  }
+}
 
 @media screen and (max-width: 800px) {
   :root {
@@ -86,7 +97,7 @@
   }
 
   .genderLabel {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .genderOptions {
