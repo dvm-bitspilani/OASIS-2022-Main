@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import EventsCss from "../styles/Events.module.css";
 import EventItem from "./EventItem";
 import ruleBookPdf from "../Assets/rulebook.pdf";
+import EventIcon from "../Assets/Event.png";
 import Button from "./Button";
 
 const Events = React.forwardRef((props, ref) => {
@@ -20,10 +21,7 @@ const Events = React.forwardRef((props, ref) => {
       let events = await res.json();
       let evtArr = events[0].events.map((event) => {
         return {
-          img:
-            event.img_url === "Nill"
-              ? require("../Assets/Event.png")
-              : event.img_url,
+          img: event.img_url,
           name: event.name,
           desc: event.details,
         };
@@ -41,6 +39,10 @@ const Events = React.forwardRef((props, ref) => {
     setItrCount((itrCount) => {
       return itrCount + 1;
     });
+  };
+
+  const handleNoImg = (evt) => {
+    evt.target.src = EventIcon;
   };
 
   useEffect(() => {
@@ -82,7 +84,11 @@ const Events = React.forwardRef((props, ref) => {
         })}
       </div>
       {eventsArr.length > 0 ? (
-        <img src={eventsArr[0].img} className={EventsCss.eventsPlaceholder} />
+        <img
+          src={eventsArr[0].img}
+          onError={handleNoImg}
+          className={EventsCss.eventsPlaceholder}
+        />
       ) : (
         <></>
       )}

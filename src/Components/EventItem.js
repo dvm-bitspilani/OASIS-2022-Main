@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import EventItemCss from "../styles/EventItem.module.css";
 import EventTriangleSvg from "../Assets/EventTriangle.svg";
+import EventIcon from "../Assets/Event.png";
 
 const EventItem = (props) => {
   let [opacity, setOpacity] = useState("0");
@@ -22,6 +23,10 @@ const EventItem = (props) => {
     }
   };
 
+  const handleNoImg = (evt) => {
+    evt.target.src = EventIcon;
+  };
+
   useEffect(updateOpacity, [props.itrCount]);
 
   const style = {
@@ -41,6 +46,7 @@ const EventItem = (props) => {
       <div className={EventItemCss.eventItemBody}>
         <img
           src={props.eventImg}
+          onError={handleNoImg}
           alt={props.eventName}
           className={EventItemCss.eventItemImg}
         />
