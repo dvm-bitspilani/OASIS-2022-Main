@@ -110,7 +110,7 @@
   left: 50%;
   top: 60%;
   z-index: 4;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 80%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
   transform: translateX(-50%);
   filter: blur(44px);
 }
@@ -227,6 +227,10 @@
     width: 4.5%;
   }
 
+  .kingBodyWrapper {
+    top: 10%;
+  }
+
   .oasisTitle {
     top: 55%;
   }
@@ -237,7 +241,8 @@
 
   .titleBgGrad {
     width: 70vw;
-    top: 25%;
+    top: 38%;
+    height: 15vh;
   }
 }
 
@@ -273,7 +278,7 @@
   }
 
   .kingBodyWrapper {
-    top: 20%;
+    top: 12%;
   }
 
   .oasiTitle {
@@ -282,7 +287,7 @@
 
   .titleBgGrad {
       width: 100vw;
-      top: 75%;
+      top: 55%;
       height: 20vh;
       z-index: 4;
   }
