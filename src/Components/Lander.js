@@ -2,7 +2,6 @@ import React from "react";
 import { useRef, useState } from "react";
 import LanderCSS from "../styles/Lander.module.css";
 import LanderRing from "./LanderRing";
-import StrangeShard from "./StrangeShard";
 import Button from "./Button";
 
 import king from "../Assets/king.png";
