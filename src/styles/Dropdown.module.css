@@ -111,7 +111,7 @@ span.caretDown {
   font-size: 17px;
   transform-origin: left;
   transition: 0.15s;
-  color: goldenrod;
+  color:white;
   display: flex;
   align-items: center;
 }
@@ -119,6 +119,8 @@ span.caretDown {
 .shiftLabelUp {
   transform: scale(0.65) translateY(-100%);
   margin-bottom: 8px;
+  color: goldenrod !important;
+
 }
 
 .rotateUp {

@@ -124,12 +124,14 @@ button.submitForm {
   /* background-color: #d19a08; */
   border-radius: 17px;
   background: linear-gradient( 94.75deg, #d19a08 0%, #fedb7e 16.49%, #ebb935 43.37%, #fcd776 74.96%, #d19a08 100% );
+  background-position: left;
 
   margin: auto auto;
   /* background: none; */
   color: Black;
   font-size: 1.1rem;
   grid-row: 3/-1;
+  transition: 0.3s;
  
 }
 .buttonContainer{
@@ -149,16 +151,18 @@ button.submitForm {
 }
 
 button.submitForm:hover {
-  background: linear-gradient(
+  /* background: linear-gradient(
     94.75deg,
     #d19a08 0%,
     #fedb7e 16.49%,
     #ebb935 43.37%,
     #fcd776 74.96%,
     #d19a08 100%
-  );
+
+  ); */
+  background-position: right;
   cursor: pointer;
-  color: black;
+  color: white;
 }
 
 .textInputContainer {
@@ -176,14 +180,14 @@ button.submitForm:hover {
   grid-row: 1/ span 1;
   display: flex;
   flex-direction: column;
-  gap:1.8rem;
+  gap:2.2rem;
   margin-top:9px;
   
 }
 .leftSide{
   display: flex;
   flex-direction: column;
-  gap:2rem;
+  gap:2.5rem;
 }
 
 .checkboxContainer {
@@ -198,7 +202,7 @@ button.submitForm:hover {
 .checkboxKePapa{
   display: flex;
   flex-direction: column;
-  gap:10px;
+  gap:25px;
 }
 .checkbox {
   position: relative;
