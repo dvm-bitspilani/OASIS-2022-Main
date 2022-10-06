@@ -13,12 +13,14 @@ export default function Home() {
   const [regState, setRegState] = useState({ open: false });
 
   // useEffect(() => {
-  //   if (regState.open) {
-  //     document.querySelector("main").style.height = "100vh";
-  //     document.querySelector("main").style.overflow = "hidden";
-  //   } else {
-  //     document.querySelector("main").style.height = "auto";
-  //     document.querySelector("main").style.overflow = "none";
+  //   if(isLoaded) {
+  //     if (regState.open) {
+  //       document.querySelector("main").style.height = "100vh";
+  //       document.querySelector("main").style.overflow = "hidden";
+  //     } else {
+  //       document.querySelector("main").style.height = "auto";
+  //       document.querySelector("main").style.overflow = "none";
+  //     }
   //   }
   // }, [regState]);
 
@@ -27,11 +29,18 @@ export default function Home() {
   };
 
   const [isLoaded, setIsLoaded] = useState(false);
+  const reg = document.querySelector('RegistrationCSS.regPage')
 
   useEffect(() => {
      window.addEventListener('load', () => {
-      setTimeout(() => {setIsLoaded(true)},2000)    
+      // setTimeout(() => {setIsLoaded(true)},2000)    
       console.log('loaded')
+      // if (document.readyState === 'interactive') {
+      //   setIsLoaded(true);
+      // } else 
+      if (document.readyState === 'complete') {
+        setTimeout(() => {setIsLoaded(true)},2000)
+      }
      })
   }, []);
 
@@ -39,7 +48,7 @@ export default function Home() {
   return (
     <main className={HomeCSS.homePage}>
       <Registration
-        class={"RegistrationCSS.regPage"}
+        className={"RegistrationCSS.regPage"}
         regState={regState.open}
         changeRegState={changeRegState}
       />
@@ -47,10 +56,10 @@ export default function Home() {
       <Events />
       <Contact />
       <div className={HomeCSS.love}>
-    <div class={HomeCSS.foot}>
-      Made with <i aria-hidden="true" class="fa fa-heart"></i> by DVM
-    </div>
-  </div>
+        <div class={HomeCSS.foot}>
+          Made with <i aria-hidden="true" class="fa fa-heart"></i> by DVM
+        </div>
+      </div>
     </main>
   );
   }
