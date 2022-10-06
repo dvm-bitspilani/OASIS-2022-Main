@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import vid from "../Assets/loader.MP4";
 import LoaderCSS from '../styles/Loader.module.css'
 
-export default function Loader() {
+export default function Loader(props) {
 
     // window.addEventListener("load", () => {
     //     const loader = document.querySelector(".loader");
@@ -32,7 +32,7 @@ export default function Loader() {
         // }, [isLoaded]);
 
   return (
-    <div className={LoaderCSS.wrapper}>
+    <div className={LoaderCSS.wrapper} style={props.style}>
         <video loop autoPlay controls={false} muted src={vid}></video>
     </div>
   )

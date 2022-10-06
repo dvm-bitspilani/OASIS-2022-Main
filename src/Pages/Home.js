@@ -29,32 +29,40 @@ export default function Home() {
   };
 
   const [isLoaded, setIsLoaded] = useState(false);
-  const reg = document.querySelector('RegistrationCSS.regPage')
+  // const [landerLoaded, setLanderLoaded] = useState(false);
+  const reg = document.querySelector('#reg');
+  const lander = document.querySelector('#lander');
+  const evt = document.querySelector('#evt');
+  const contact = document.querySelector('#contact');
 
   useEffect(() => {
-     window.addEventListener('load', () => {
-      // setTimeout(() => {setIsLoaded(true)},2000)    
+     document.addEventListener('readystatechange', () => {
       console.log('loaded')
-      // if (document.readyState === 'interactive') {
-      //   setIsLoaded(true);
-      // } else 
       if (document.readyState === 'complete') {
-        setTimeout(() => {setIsLoaded(true)},2000)
+        setIsLoaded(true);
       }
      })
+    //  lander.addEventListener('readystatechange', () => {
+    //   console.log('loaded')
+    //   if (lander.readyState === 'complete') {
+    //     setLanderLoaded(true);
+    //   }
+    //  })
   }, []);
 
-  if(isLoaded){
+  // if(isLoaded && landerLoaded){
   return (
-    <main className={HomeCSS.homePage}>
+    <main className={HomeCSS.homePage} style={isLoaded === false ? {maxHeight: '100vh', overflowY: 'hidden'} : {height: 'auto', overflowY: 'auto'}}>
+      <Loader style={isLoaded === false ? {display: 'block'} : {display: 'none'}} />
       <Registration
         className={"RegistrationCSS.regPage"}
+        id="reg"
         regState={regState.open}
         changeRegState={changeRegState}
       />
-      <Lander changeRegState={changeRegState} />
-      <Events />
-      <Contact />
+      <Lander changeRegState={changeRegState} id="lander" />
+      <Events id="evt" />
+      <Contact id="contact" />
       <div className={HomeCSS.love}>
         <div class={HomeCSS.foot}>
           Made with <i aria-hidden="true" class="fa fa-heart"></i> by DVM
@@ -62,8 +70,8 @@ export default function Home() {
       </div>
     </main>
   );
-  }
-  else {
-    return <Loader />
-  }
+  // }
+  // else {
+  //   return <Loader />
+  // }
 }
