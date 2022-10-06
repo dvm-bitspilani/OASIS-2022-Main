@@ -12,28 +12,23 @@ export default function Home() {
   window.scrollTo(0, 0);
   const [regState, setRegState] = useState({ open: false });
 
-  // useEffect(() => {
-  //   if(isLoaded) {
-  //     if (regState.open) {
-  //       document.querySelector("main").style.height = "100vh";
-  //       document.querySelector("main").style.overflow = "hidden";
-  //     } else {
-  //       document.querySelector("main").style.height = "auto";
-  //       document.querySelector("main").style.overflow = "none";
-  //     }
-  //   }
-  // }, [regState]);
+  useEffect(() => {
+    if(isLoaded) {
+      if (regState.open) {
+        document.querySelector("main").style.height = "100vh";
+        document.querySelector("main").style.overflow = "hidden";
+      } else {
+        document.querySelector("main").style.height = "auto";
+        document.querySelector("main").style.overflow = "none";
+      }
+    }
+  }, [regState]);
 
   const changeRegState = () => {
     setRegState((prevState) => ({ open: !prevState.open }));
   };
 
   const [isLoaded, setIsLoaded] = useState(false);
-  // const [landerLoaded, setLanderLoaded] = useState(false);
-  const reg = document.querySelector('#reg');
-  const lander = document.querySelector('#lander');
-  const evt = document.querySelector('#evt');
-  const contact = document.querySelector('#contact');
 
   useEffect(() => {
      document.addEventListener('readystatechange', () => {
@@ -42,18 +37,11 @@ export default function Home() {
         setTimeout(() => setIsLoaded(true),2000);
       }
      })
-    //  lander.addEventListener('readystatechange', () => {
-    //   console.log('loaded')
-    //   if (lander.readyState === 'complete') {
-    //     setLanderLoaded(true);
-    //   }
-    //  })
   }, []);
 
-  // if(isLoaded && landerLoaded){
   return (
     <main className={HomeCSS.homePage} style={isLoaded === false ? {maxHeight: '100vh', overflowY: 'hidden'} : {height: 'auto', overflowY: 'auto'}}>
-      <Loader style={isLoaded === false ? {display: 'block'} : {display: 'none'}} />
+      <Loader style={isLoaded === false ? {opacity: '1', zIndex: 1000} : {opacity: '0', zIndex: -1000}} />
       <Registration
         className={"RegistrationCSS.regPage"}
         id="reg"
@@ -70,8 +58,4 @@ export default function Home() {
       </div>
     </main>
   );
-  // }
-  // else {
-  //   return <Loader />
-  // }
 }
