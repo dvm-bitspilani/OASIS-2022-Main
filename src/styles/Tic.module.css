@@ -24,7 +24,7 @@ input[type="number"] {
   width: 100%;
   display: flex;
   position: relative;
-  --text-control-height: 50px;
+  --text-control-height: 35px;
   height: var(--text-control-height);
   color: gray;
 }
@@ -36,7 +36,7 @@ input[type="number"] {
   outline: none;
   background: none;
   margin-top: auto;
-  --input-font-size: 20px;
+  --input-font-size: 18px;
   font-size: var(--input-font-size);
   height: calc(0.65 * var(--control-height));
   border-bottom: 2px solid gray;
@@ -54,6 +54,7 @@ input[type="number"] {
   font-size: var(--label-font-size);
   color: var(--label-font-color);
   z-index: 1;
+  font-size: 18px;
 }
 
 .formControl > label:hover  {
@@ -76,10 +77,13 @@ input[type="number"] {
 
 @media screen and (max-width:900px) {
   .formControl label{
-    font-size: 18px;
+    font-size: 15px;
   }
   .formControl input{
-    font-size: 17px;
+    font-size: 15px;
+  }
+  .formControl{
+    height: 30px;
   }
   
 }
@@ -99,18 +103,19 @@ input[type="number"] {
   .formControl label {
     /* margin-bottom: 5px; */
     /* padding:2px 0 2px 5px; */
-    font-size: 17px;
+    font-size: 14px;
   }
 
   .formControl input {
-    padding-bottom: 3px;
-    --input-font-size: 17px;
-    border-bottom: 2px solid rgb(185, 184, 184);
+    /* padding-bottom: 3px; */
+    --input-font-size: 14px;
+    border-bottom: 1px solid rgb(199, 199, 199);
   }
 
   .formControl {
     --text-control-height: 35px;
   }
+  
 
   .shiftLabelUp {
     transform: scale(0.65) translateY(-100%);

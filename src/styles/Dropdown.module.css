@@ -7,10 +7,10 @@
 :root {
   --span-font-size: 17px;
   --label-font-size: 20px;
-  --gender-control-height: 55px;
+  /* --gender-control-height: 55px; */
   --gender-options-gap: 25px;
   --gender-inter-gap: 5px;
-  --college-control-height: 40px;
+  --college-control-height: 35px;
 }
 
 .formControl {
@@ -101,15 +101,19 @@ span.caretDown {
   border: none;
   z-index: 0;
   color: white;
-  font-size: 20px;
+  font-size: 17px;
   padding-left: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .collegeLabel {
-  font-size: 20px;
+  font-size: 17px;
   transform-origin: left;
-  transition: 0.1s;
+  transition: 0.15s;
   color: goldenrod;
+  display: flex;
+  align-items: center;
 }
 
 .shiftLabelUp {
@@ -137,13 +141,13 @@ span.caretDown {
 }
 @media (max-width:900px) {
   .collegeLabel{
-    font-size: 17px;
+    font-size: 15px;
   }
   .collegeInput{
-    font-size: 17px;
+    font-size: 15px;
   }
   .formControl{
-    height: 40px;
+    height: 30px;
   }
   
 }
@@ -156,19 +160,19 @@ span.caretDown {
 
 @media screen and (max-width: 760px) {
   .collegeLabel {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .collegeInput {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .formControl {
-    height: 38px;
+    height: 30px;
   }
 
   .openList {
-    height: 150px;
-    bottom: -150px;
+    height: 90px;
+    bottom: -90px;
   }
 }
