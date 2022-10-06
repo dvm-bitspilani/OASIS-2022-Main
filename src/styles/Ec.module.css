@@ -20,14 +20,14 @@
   background: none;
   color: white;
   padding-left: 10px;
-  font-size: 20px;
+  font-size: 17px;
   z-index: 1;
 }
 
 .inputContainer {
   position: relative;
   display: flex;
-  height: 40px;
+  height: 35px;
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -39,15 +39,20 @@
   color: goldenrod;
   z-index: 1;
   /* font-size: 1.3rem; */
-  font-size: 20px;
-  padding: 5px 0 0 5px;
+  font-size: 17px;
+  padding: 0 0 0 5px;
   transform-origin: left;
   transition: 0.15s;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .caretClass {
   height: 100%;
   width: 40px;
+  transform: scale(0.76);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,7 +69,7 @@
 
 .eventsContainer {
   position: relative;
-  height: 150px;
+  height: 100px;
   width: 100%;
   margin-top: 2px;
   border: 2px solid gray;
@@ -83,15 +88,15 @@
   gap: 10px;
   padding: 5px 10px;
   border-radius: 0.4rem;
-  font-size: 17px;
+  font-size: 16px;
   height: min-content;
   width: fit-content;
   margin: 4px 3px;
 }
 
 .shiftLabelUp {
-  transform: scale(0.65) translateY(-100%) ;
-  margin-bottom: 6px;
+  transform:scale(0.65) translateY(-100%)  ;
+  /* margin-bottom: 6px; */
 }
 
 .shiftLabelDown {
@@ -111,11 +116,11 @@
 }
 
 .dropDown > li {
-  height: 40px;
+  /* height: 35px; */
   width: 100%;
-  padding: 0 5px;
+  padding: 4px 5px;
   background-color: rgb(13, 13, 13);
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 1px;
   display: flex;
   align-items: center;
@@ -180,18 +185,18 @@ a.ruleBook {
 
 @media screen and (max-width:900px) {
   .label{
-    font-size:17px;
+    font-size:15px;
     margin-bottom: 0;
   }
   .inputContainer{
-    height: 35px;
+    height: 30px;
   }
   .inputContainer input{
-    font-size: 17px;
+    font-size: 15px;
   }
   .dropDown > li{
-    font-size: 16px;
-    height: 35px;
+    font-size: 15px;
+    /* height: 3px; */
   }
   
 }
@@ -212,16 +217,23 @@ a.ruleBook {
     width: 35%;
   }
   .shiftLabelUp{
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
+  }
+  .inputContainer{
+    height: 30px;
+    
+  }
+  .formControl{
+    margin-top: 5px;
   }
 }
 
 @media screen and (max-width: 760px) {
   .inputContainer input {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .inputContainer {
-    height: 38px;
+    height: 30px;
   }
 }

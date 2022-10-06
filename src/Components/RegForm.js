@@ -172,84 +172,83 @@ const RegForm = (props) => {
         method="post"
       >
         <div className={RegFormCSS.leftSide}>
-
-        <div className={RegFormCSS.textInputContainer}>
-          <TextInputControl
-            label={"Name"}
-            type={"text"}
-            setValue={setName}
-            info={"name"}
-          />
-          <TextInputControl
-            label={"Email Id"}
-            type={"email"}
-            setValue={setEmail}
-            info={"email"}
-          />
-          <TextInputControl
-            label={"Phone No."}
-            type={"text"}
-            setValue={setPhone}
-            info={"phone"}
-            pattern={"[1-9]{1}[0-9]{9}"}
-          />
-        </div>
+          <div className={RegFormCSS.textInputContainer}>
+            <TextInputControl
+              label={"Name"}
+              type={"text"}
+              setValue={setName}
+              info={"name"}
+            />
+            <TextInputControl
+              label={"Email Id"}
+              type={"email"}
+              setValue={setEmail}
+              info={"email"}
+            />
+            <TextInputControl
+              label={"Phone No."}
+              type={"text"}
+              setValue={setPhone}
+              info={"phone"}
+              pattern={"[1-9]{1}[0-9]{9}"}
+            />
+          </div>
 
           <div className={RegFormCSS.genderInputContainer}>
-           <GenderInputControl setValue={setGender} />
+            <GenderInputControl setValue={setGender} />
           </div>
-          <div className={RegFormCSS.checkboxContainer} onClick={choreoChange}>
-          <div className={`${RegFormCSS.checkbox} ${checkboxChoreo}`}></div>
-          <label>Are you a Choreographer/Mentor?</label>
+          <div className={RegFormCSS.checkboxKePapa}>
+            <div
+              className={RegFormCSS.checkboxContainer}
+              onClick={choreoChange}
+            >
+              <div className={`${RegFormCSS.checkbox} ${checkboxChoreo}`}></div>
+              <label>Are you a Choreographer?</label>
+            </div>
+            <div className={RegFormCSS.checkboxContainer} onClick={hosChange}>
+              <div className={`${RegFormCSS.checkbox} ${checkboxHos}`}></div>
+
+              <label>Are you the Head of a Society?</label>
+            </div>
+          </div>
         </div>
-        <div className={RegFormCSS.checkboxContainer} onClick={hosChange}>
-          <div className={`${RegFormCSS.checkbox} ${checkboxHos}`}></div>
 
-          <label>Are you the Head of a Society?</label>
-        </div>
-       
+        <div className={RegFormCSS.rightSide}>
+          <div className={RegFormCSS.sportsContainer}>
+            <EventsControl
+              setValue={setEvents}
+              label={"Events"}
+              listData={eventsList}
+              info={"events"}
+              setEventsIds={setEventsIds}
+            />
+          </div>
 
-        </div>
-
-
-      <div className={RegFormCSS.rightSide}>
-         <div className={RegFormCSS.sportsContainer}>
-          <EventsControl
-            setValue={setEvents}
-            label={"Events"}
-            listData={eventsList}
-            info={"events"}
-            setEventsIds={setEventsIds}
+          <DropdownControl
+            setValue={setCollege}
+            label={"College"}
+            listData={collegeList}
+            pattern=""
+            info={"college"}
+          />
+          <DropdownControl
+            setValue={setYear}
+            label={"Year Of Study"}
+            listData={yearList}
+            info={"year"}
+          />
+          <TextInputControl
+            label={"City"}
+            type={"text"}
+            info={"name"}
+            setValue={setLocation}
           />
         </div>
-
-        <DropdownControl
-          setValue={setCollege}
-          label={"College"}
-          listData={collegeList}
-          pattern=""
-          info={"college"}
-        />
-        <DropdownControl
-          setValue={setYear}
-          label={"Year Of Study"}
-          listData={yearList}
-          info={"year"}
-        />
-        <TextInputControl
-          label={"City"}
-          type={"text"}
-          info={"name"}
-          setValue={setLocation}
-        />
-        
-      </div>
-      <div className={RegFormCSS.buttonContainer}>
-
-      <button type="submit" className={RegFormCSS.submitForm}>
-      Register Now
-      </button>
-      </div>
+        <div className={RegFormCSS.buttonContainer}>
+          <button type="submit" className={RegFormCSS.submitForm}>
+            Register Now
+          </button>
+        </div>
 
         {/* <TextInputControl
           label={"Head Of Society"}
