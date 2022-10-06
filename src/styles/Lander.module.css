@@ -1,13 +1,14 @@
 :root {
   --king_wid: 50%;
   --title_wid: 28%;
+  overflow-x: hidden;
 }
 
 .landerWrapper {
   width: 100vw;
   min-height: 100vh;
   background: url(../Assets/background.png) no-repeat center;
-  overflow: hidden;
+  overflow-y: visible;
   background-size: cover;
   position: relative;
 }
@@ -191,8 +192,9 @@
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
-    #000000 40.07%,
-    #000000 100%
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 0.8) 60%,
+    rgba(0, 0, 0, 0) 100%
   );
 }
 

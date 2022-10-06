@@ -16,7 +16,7 @@
 }
 
 .foot > i {
-  color: goldenrod;
+  color: red;
 }
 
 @media screen and (max-width: 450px) {
