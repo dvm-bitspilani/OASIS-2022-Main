@@ -1,13 +1,14 @@
 :root {
   --king_wid: 50%;
   --title_wid: 28%;
+  overflow-x: hidden;
 }
 
 .landerWrapper {
   width: 100vw;
   min-height: 100vh;
   background: url(../Assets/background.png) no-repeat center;
-  overflow: hidden;
+  overflow-y: visible;
   background-size: cover;
   position: relative;
 }
@@ -102,6 +103,18 @@
   transform: translateX(-50%);
 }
 
+.titleBgGrad {
+  position: absolute;
+  width: 50vw;
+  height: 40vh;
+  left: 50%;
+  top: 60%;
+  z-index: 4;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 80%);
+  transform: translateX(-50%);
+  filter: blur(44px);
+}
+
 /* register btn */
 .registerWrapper {
   position: absolute;
@@ -179,8 +192,9 @@
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
-    #000000 50.07%,
-    #000000 100%
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 0.8) 60%,
+    rgba(0, 0, 0, 0) 100%
   );
 }
 
@@ -219,6 +233,11 @@
 
   .registerWrapper {
     top: 87%;
+  }
+
+  .titleBgGrad {
+    width: 70vw;
+    top: 25%;
   }
 }
 
@@ -259,6 +278,13 @@
 
   .oasiTitle {
     top: 55%;
+  }
+
+  .titleBgGrad {
+      width: 100vw;
+      top: 75%;
+      height: 20vh;
+      z-index: 4;
   }
 
   .registerWrapper {

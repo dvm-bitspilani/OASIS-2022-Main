@@ -3,6 +3,7 @@
   /* height: 100vh; */
   height: auto;
 }
+
 .love {
   padding-block: 0.8rem;
   font-size: 1.1rem;
@@ -13,6 +14,13 @@
   background-color: rgb(12, 11, 11);
   color: wheat;
 }
+
 .foot > i {
-  color: goldenrod;
+  color: red;
+}
+
+@media screen and (max-width: 450px) {
+  .love {
+    font-size: .7rem;
+  }
 }
