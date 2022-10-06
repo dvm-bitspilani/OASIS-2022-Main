@@ -39,7 +39,7 @@ export default function Home() {
      document.addEventListener('readystatechange', () => {
       console.log('loaded')
       if (document.readyState === 'complete') {
-        setIsLoaded(true);
+        setTimeout(() => setIsLoaded(true),2000);
       }
      })
     //  lander.addEventListener('readystatechange', () => {
