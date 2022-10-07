@@ -101,7 +101,9 @@ const RegForm = (props) => {
         city: location,
         college_id: college_id,
       };
-      console.log(data);
+      if(data.college_id == null){
+        alert("please select a valid college from the dropdown.")
+      }
 
       const options = {
         method: "POST",
