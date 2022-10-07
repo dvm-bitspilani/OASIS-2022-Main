@@ -85,11 +85,11 @@ const RegForm = (props) => {
       return;
     }
 
-    const captchaToken = recaptchaRef.current.executeAsync();
+    // const captchaToken = recaptchaRef.current.executeAsync();
 
     try {
       const data = {
-        captcha: captchaToken,
+        captcha: null,
         email_id: email_id,
         events: events_ids,
         phone: phone,
