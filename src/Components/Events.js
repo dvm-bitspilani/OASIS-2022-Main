@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import EventsCss from "../styles/Events.module.css";
 import EventItem from "./EventItem";
-import ruleBookPdf from "../Assets/rulebook.pdf"
+import ruleBookPdf from "../Assets/rulebook.pdf";
 import Button from "./Button";
 
 const Events = React.forwardRef((props, ref) => {
@@ -15,10 +15,7 @@ const Events = React.forwardRef((props, ref) => {
       let events = await res.json();
       let evtArr = events[0].events.map((event) => {
         return {
-          img:
-            event.img_url === "Nill"
-              ? require("../Assets/Event.png")
-              : event.img_url,
+          img: event.img_url,
           name: event.name,
           desc: event.details,
         };
@@ -52,9 +49,7 @@ const Events = React.forwardRef((props, ref) => {
 
       <div className={EventsCss.btn}>
         {/* <Button btn_title="Guidelines" /> */}
-        <a href={ruleBookPdf}>
-          Guidelines
-        </a>
+        <a href={ruleBookPdf}><Button btn_title="Guidelines" /></a>
       </div>
     </section>
   );

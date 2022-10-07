@@ -1,18 +1,29 @@
-div {
+.btn {
   padding: 8px 18px;
-  border: 1px solid #fedb7e;
+  /* border: 1px solid #fedb7e; */
   border-radius: 15px;
+  font-weight: bold;
+  background: linear-gradient( 94.75deg, #c6940d 0%, #cda825 16.49%, #ffe397 43.37%, #cda825 74.96%, #c6940d 100% ) 90% 0;
+  color: black;
+  background-size: 200% 100%;
+  transition: all 600ms ease;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  text-anchor: middle;
 }
 
-div:hover {
-  background: linear-gradient(
-    94.75deg,
-    #d19a08 0%,
-    #fedb7e 16.49%,
-    #ebb935 43.37%,
-    #fcd776 74.96%,
-    #d19a08 100%
-  );
+.btn:hover {
   cursor: pointer;
-  color: black;
+  transform: scale(1.02);
+  /* transform-origin: 50% 50%; */
+  background-position: 0 0;
+  box-shadow: 0 0 15px #9f9874b3;
+}
+
+@media screen and (max-width:450px) {
+  .btn {
+    font-size: .8rem;
+  }
 }

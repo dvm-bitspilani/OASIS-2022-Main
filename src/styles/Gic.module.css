@@ -6,9 +6,9 @@
 
 :root {
   --span-font-size: 20px;
-  --label-font-size: 22px;
-  --gender-control-height: 55px;
-  --gender-options-gap: 25px;
+  --label-font-size: 18px;
+  --gender-control-height: 45px;
+  --gender-options-gap: 2px;
   --gender-inter-gap: 5px;
 }
 
@@ -25,8 +25,10 @@
 .genderOptions {
   display: flex;
   align-items: center;
-  gap: var(--gender-options-gap);
-  font-size: var(--span-font-size);
+  /* gap: var(--gender-options-gap); */
+  gap:13px;
+  /* font-size: var(--span-font-size); */
+  font-size: 15px;
   padding-left: 10px;
   height: 20px;
 }
@@ -80,11 +82,10 @@
   align-items: center;
 }
 .genderLabel{
-  /* padding-left: 5px; */
-}
+font-size: 18px;}
 @media screen and (max-width:900px) {
   .genderLabel{
-    font-size: 18px;
+    font-size: 17px;
   }
   .genderOptions{
     font-size: 16px;
@@ -97,11 +98,11 @@
   }
 
   .genderLabel {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .genderOptions {
-    font-size: 12px;
-    gap: 20px;
+    font-size: 11px;
+    gap: 17px;
   }
 }
