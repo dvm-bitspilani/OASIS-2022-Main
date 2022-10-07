@@ -36,7 +36,6 @@
 }
 
 .label {
-  color: goldenrod;
   z-index: 1;
   /* font-size: 1.3rem; */
   font-size: 17px;
@@ -47,6 +46,7 @@
   height: 100%;
   display: flex;
   align-items: center;
+  color:white;
 }
 
 .caretClass {
@@ -96,6 +96,8 @@
 
 .shiftLabelUp {
   transform:scale(0.65) translateY(-100%)  ;
+  color: goldenrod !important;
+
   /* margin-bottom: 6px; */
 }
 
