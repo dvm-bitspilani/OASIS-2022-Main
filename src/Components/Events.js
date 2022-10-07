@@ -49,7 +49,7 @@ const Events = React.forwardRef((props, ref) => {
 
       <div className={EventsCss.btn}>
         {/* <Button btn_title="Guidelines" /> */}
-        <a href={ruleBookPdf}>Guidelines</a>
+        <a href={ruleBookPdf}><Button btn_title="Guidelines" /></a>
       </div>
     </section>
   );

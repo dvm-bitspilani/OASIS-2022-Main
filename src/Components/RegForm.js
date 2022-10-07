@@ -170,6 +170,7 @@ const RegForm = (props) => {
         className={RegFormCSS.regForm}
         onSubmit={handleSubmit}
         method="post"
+        id="reg-form"
       >
         <div className={RegFormCSS.leftSide}>
           <div className={RegFormCSS.textInputContainer}>
@@ -244,11 +245,12 @@ const RegForm = (props) => {
             setValue={setLocation}
           />
         </div>
-        <div className={RegFormCSS.buttonContainer}>
+        {/* <div className={RegFormCSS.buttonContainer}>
           <button type="submit" className={RegFormCSS.submitForm}>
             Register Now
           </button>
-        </div>
+        </div> */}
+        <Button type="submit" form="reg-form" btn_title="Register Now"/>
 
         {/* <TextInputControl
           label={"Head Of Society"}
