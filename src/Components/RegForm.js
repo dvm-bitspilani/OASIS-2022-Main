@@ -89,7 +89,7 @@ const RegForm = (props) => {
 
     try {
       const data = {
-        captcha: null,
+        captcha: 123,
         email_id: email_id,
         events: events_ids,
         phone: phone,
