@@ -4,22 +4,30 @@
   align-items: center;
   justify-content: center;
   color: white;
-  width: 20vw;
+  width: 15vw;
+  height: 55vh;
   padding: 0 20px;
   position: absolute;
   top: 0;
-  left: calc(50% - 10vw);
+  left: calc(50% - 7.5vw);
   border-radius: 20px;
   font-family: "Mulish", sans-serif;
   font-weight: 400;
   transform-origin: 50% 50%;
   transform-style: preserve-3d;
   transition: all 500ms ease;
-  overflow-x: hidden;
 }
 
 .eventItemBody {
   position: relative;
+  border-radius: 20px;
+  background-size: 110% 110%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 15vw;
+  height: 50vh;
+  transition: all 200ms ease;
+  overflow: auto;
 }
 
 .eventItemHeading {
@@ -27,13 +35,6 @@
   color: white;
   font-weight: 500;
   margin-bottom: 20px;
-}
-
-.eventItemImg {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 20px;
 }
 
 .eventItemClick {
@@ -48,7 +49,7 @@
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.8) 100%
+    rgba(0, 0, 0, 0.6) 100%
   );
   text-align: center;
   border-radius: 20px;
@@ -57,9 +58,6 @@
 .eventItemClickTriag {
   width: 10px;
   margin-bottom: 4px;
-}
-
-.eventItemClick:hover > .eventItemClickTriag {
   animation: triagHover 1.3s ease infinite;
 }
 

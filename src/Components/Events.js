@@ -35,10 +35,28 @@ const Events = React.forwardRef((props, ref) => {
   };
 
   const loopOver = () => {
-    console.log("RUNNING");
     setItrCount((itrCount) => {
       return itrCount + 1;
     });
+  };
+
+  const next = () => {
+    clearTimeout(eventTimer.current);
+    setItrCount((itrCount) => {
+      return itrCount + 1;
+    });
+  };
+
+  const prev = () => {
+    clearTimeout(eventTimer.current);
+    setItrCount((itrCount) => {
+      return itrCount - 1;
+    });
+  };
+
+  const setItr = (itr) => {
+    clearTimeout(eventTimer.current);
+    setItrCount(itr);
   };
 
   const handleNoImg = (evt) => {
@@ -79,6 +97,7 @@ const Events = React.forwardRef((props, ref) => {
               itrCount={itrCount % arrLength}
               itrCountAct={itrCount}
               len={arrLength}
+              itrSet={setItr}
             />
           );
         })}

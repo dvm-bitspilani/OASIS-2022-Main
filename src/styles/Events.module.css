@@ -10,6 +10,7 @@
 
 .eventsCar {
   position: relative;
+  width: 100vw;
 }
 
 .btn {

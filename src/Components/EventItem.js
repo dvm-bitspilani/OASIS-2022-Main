@@ -40,23 +40,37 @@ const EventItem = (props) => {
     opacity: opacity,
     zIndex: `${props.len - Math.abs(props.idx - props.itrCount)}`,
   };
+
+  const mouseOverEvt = (evt) => {
+    if (props.idx === props.itrCount) {
+      evt.target.style.boxShadow = "0 0 10px #9f9874b3";
+    }
+  };
+
+  const mouseOutEvt = (evt) => {
+    evt.target.style.boxShadow = "none";
+  };
+
+  const dispatchClick = () => {
+    props.itrSet(props.itrCountAct + props.idx - props.itrCount);
+  };
+
   return (
     <div className={EventItemCss.eventItemCont} style={style}>
       <div className={EventItemCss.eventItemHeading}>{props.eventName}</div>
-      <div className={EventItemCss.eventItemBody}>
-        <img
-          src={props.eventImg}
-          onError={handleNoImg}
-          alt={props.eventName}
-          className={EventItemCss.eventItemImg}
-        />
+      <div
+        className={EventItemCss.eventItemBody}
+        style={{ backgroundImage: `url(${props.eventImg})` }}
+        onMouseOver={mouseOverEvt}
+        onMouseOut={mouseOutEvt}
+        onClick={dispatchClick}
+      >
         <div className={EventItemCss.eventItemClick}>
           <img
             src={EventTriangleSvg}
             alt="Read More"
             className={EventItemCss.eventItemClickTriag}
           />
-          <div>Click to view more details</div>
         </div>
       </div>
     </div>
