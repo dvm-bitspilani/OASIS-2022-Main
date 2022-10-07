@@ -21,6 +21,7 @@
 .eventItemImg {
   width: clamp(14vw, 30%, 19vw);
   height: auto;
+  border-radius: 16px;
 }
 
 .eventItemText {
