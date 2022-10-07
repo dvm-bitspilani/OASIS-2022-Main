@@ -31,10 +31,10 @@ const EventItem = (props) => {
 
   const style = {
     transform: `perspective(5000px) translate3d(${
-      40 *
+      43 *
       Math.sin((props.angle * Math.PI * (props.idx - props.itrCount)) / 180)
     }vw, 0, ${
-      40 *
+      43 *
       Math.cos((props.angle * Math.PI * (props.idx - props.itrCount)) / 180)
     }vw) rotate3d(0, 1, 0, ${props.angle * (props.idx - props.itrCountAct)}deg`,
     opacity: opacity,

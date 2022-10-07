@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   color: white;
-  width: 18vw;
+  width: 20vw;
   padding: 0 20px;
   position: absolute;
   top: 0;
@@ -15,6 +15,7 @@
   transform-origin: 50% 50%;
   transform-style: preserve-3d;
   transition: all 500ms ease;
+  overflow-x: hidden;
 }
 
 .eventItemBody {
@@ -32,6 +33,7 @@
   width: 100%;
   height: auto;
   object-fit: contain;
+  border-radius: 20px;
 }
 
 .eventItemClick {
@@ -49,6 +51,7 @@
     rgba(0, 0, 0, 0.8) 100%
   );
   text-align: center;
+  border-radius: 20px;
 }
 
 .eventItemClickTriag {
