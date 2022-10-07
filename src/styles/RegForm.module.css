@@ -24,7 +24,8 @@
   /* z-index: 1; */
   /* border-radius: 0rem 0.5rem 0.5rem 0rem; */
 }
-.heading{
+
+.heading {
   display: flex;
   justify-content: center;
   /* padding: 25px; */
@@ -32,28 +33,87 @@
   font-size: 1.7rem;
   font-weight: 500;
   grid-column: 1/-1;
-  grid-row:1/span 1;
-  color:#d19a08;
+  grid-row: 1 / span 1;
+  color: #d19a08;
 }
 
 .regForm {
   width: 84%;
-  column-gap: 17%;
-  row-gap:10%;
-  /* height: 90%; */
-  display: grid;
-  /* column-gap: 3.5rem; */
-  /* max-width: 450px; */
-  grid-template-columns: 1fr 1fr;
-  /* column-gap: 2rem; */
-  grid-template-rows: 1fr auto;
   font-family: Arial, Helvetica, sans-serif;
   /* padding: 2rem 1rem; */
   padding: 2rem 2rem;
   border-radius: 0.5rem;
   margin: 0 auto;
   height: 100%;
+}
 
+.regFormFields {
+  grid-column-gap: 17%;
+  grid-row-gap: 10%;
+  /* height: 90%; */
+  display: grid;
+  /* column-gap: 3.5rem; */
+  /* max-width: 450px; */
+  grid-template-columns: 1fr 1fr;
+  /* column-gap: 2rem; */
+  grid-template-rows: 1fr;
+  height: 85%;
+}
+
+.regFormBtns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Instruc,
+.Instruc:visited {
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  background: linear-gradient(
+    94.75deg,
+    #d19a08 0%,
+    #fedb7e 27.6%,
+    #eac460 50%,
+    #d19a08 66.15%,
+    #d19a08 100%
+  );
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  padding: 3px 0;
+  transform-origin: 50% 100%;
+  transition: all 200ms ease;
+}
+
+.Instruc:hover,
+.Instruc:active {
+  transform: translateY(-2px);
+}
+
+.Instruc:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  min-height: 1px;
+  background: linear-gradient(
+    94.75deg,
+    #d19a08 0%,
+    #fedb7e 27.6%,
+    #eac460 50%,
+    #d19a08 66.15%,
+    #d19a08 100%
+  );
+  bottom: 0;
+  left: 0;
+  transition: all 200ms ease;
+}
+.Instruc:hover:after {
+  bottom: -2px;
 }
 
 .regFormBox::-webkit-scrollbar {
@@ -75,7 +135,7 @@
   display: flex;
   flex-direction: column;
   /* grid-column: 1/span 1;
-  grid-row:2/span 1; */
+    grid-row:2/span 1; */
 }
 
 .sportsListContainer {
@@ -123,7 +183,14 @@ button.submitForm {
   border: 1px solid #fedb7e;
   /* background-color: #d19a08; */
   border-radius: 17px;
-  background: linear-gradient( 94.75deg, #d19a08 0%, #fedb7e 16.49%, #ebb935 43.37%, #fcd776 74.96%, #d19a08 100% );
+  background: linear-gradient(
+    94.75deg,
+    #d19a08 0%,
+    #fedb7e 16.49%,
+    #ebb935 43.37%,
+    #fcd776 74.96%,
+    #d19a08 100%
+  );
   background-position: left;
 
   margin: auto auto;
@@ -132,9 +199,9 @@ button.submitForm {
   font-size: 1.1rem;
   grid-row: 3/-1;
   transition: 0.3s;
- 
 }
-.buttonContainer{
+
+.buttonContainer {
   grid-row: 2/-1;
   grid-column: 1/-1;
   display: flex;
@@ -152,14 +219,14 @@ button.submitForm {
 
 button.submitForm:hover {
   /* background: linear-gradient(
-    94.75deg,
-    #d19a08 0%,
-    #fedb7e 16.49%,
-    #ebb935 43.37%,
-    #fcd776 74.96%,
-    #d19a08 100%
-
-  ); */
+      94.75deg,
+      #d19a08 0%,
+      #fedb7e 16.49%,
+      #ebb935 43.37%,
+      #fcd776 74.96%,
+      #d19a08 100%
+  
+    ); */
   background-position: right;
   cursor: pointer;
   color: white;
@@ -169,25 +236,26 @@ button.submitForm:hover {
   display: flex;
   flex-direction: column;
   gap: var(--tic-gap);
-  grid-row: 1/ span 1;
+  grid-row: 1 / span 1;
 }
+
 /* .genderInputContainer{
   grid-column: 1/ span 1;
   grid-row:2/span 1
 } */
-.rightSide{
+.rightSide {
   grid-column: 2/-1;
-  grid-row: 1/ span 1;
+  grid-row: 1 / span 1;
   display: flex;
   flex-direction: column;
-  gap:2.2rem;
-  margin-top:9px;
-  
+  gap: 2.2rem;
+  margin-top: 9px;
 }
-.leftSide{
+
+.leftSide {
   display: flex;
   flex-direction: column;
-  gap:2.5rem;
+  gap: 2.5rem;
 }
 
 .checkboxContainer {
@@ -199,11 +267,13 @@ button.submitForm:hover {
   font-size: 16px;
   padding-left: 10px;
 }
-.checkboxKePapa{
+
+.checkboxKePapa {
   display: flex;
   flex-direction: column;
-  gap:25px;
+  gap: 25px;
 }
+
 .checkbox {
   position: relative;
   width: 0.8rem;
@@ -214,6 +284,7 @@ button.submitForm:hover {
 
   /* background-color: #d19a08; */
 }
+
 .checkbox::after {
   content: "";
   position: absolute;
@@ -221,18 +292,20 @@ button.submitForm:hover {
   height: 100%;
   border-radius: 0.2rem;
   /* top:calc(0.5rem - 50%);
-  left:calc(0.5rem - 50%); */
+    left:calc(0.5rem - 50%); */
   /* top:50%;
-  left:50%;
-  transform: translate(-50%,-50%); */
+    left:50%;
+    transform: translate(-50%,-50%); */
   background-color: goldenrod;
   z-index: 1;
   transform: scale(0);
   transition: 0.2s;
 }
+
 .checkbox.checked::after {
   transform: scale(0.86);
 }
+
 /* .checkboxContainer div{
   :root {
   border: 1px solid goldenrod;
@@ -253,9 +326,9 @@ button.submitForm:hover {
 
 } */
 
-@media screen and (max-width:1100px){
-  .regForm{
-    gap:12%
+@media screen and (max-width: 1100px) {
+  .regForm {
+    gap: 12%;
   }
 }
 
@@ -265,107 +338,114 @@ button.submitForm:hover {
   }
 
   /* .regForm {
-    width: 70%;
-  } */
-  .regForm{
-    gap:10%;
-    width:90%
-
+      width: 70%;
+    } */
+  .regForm {
+    gap: 10%;
+    width: 90%;
   }
 
   .checkboxContainer {
     font-size: 15px;
   }
-  .leftSide{
+
+  .leftSide {
     /* gap:2.7rem; */
-    gap:1.5rem;
+    gap: 1.5rem;
   }
-  .rightSide{
-    gap:1.5rem;
+
+  .rightSide {
+    gap: 1.5rem;
   }
 }
-@media screen and (max-width:900px) {
-  .rightSide{
+
+@media screen and (max-width: 900px) {
+  .rightSide {
     margin-top: 11px;
   }
-  .checkboxContainer{
+
+  .checkboxContainer {
     font-size: 15px;
   }
-  .regForm{
-    gap:8%;
+
+  .regForm {
+    gap: 8%;
     padding: 2.7rem 1.8rem;
   }
-  
 }
 
 @media screen and (max-width: 760px) {
   /* .regFormBox {
-    border: 2px solid #524916;
-    border-radius: 0rem 0rem 1.8rem 1.8rem;
-    border-top: none;
-    position: relative;
-  } */
-  
-
+      border: 2px solid #524916;
+      border-radius: 0rem 0rem 1.8rem 1.8rem;
+      border-top: none;
+      position: relative;
+    } */
   .regForm {
     overflow-y: scroll;
     box-sizing: border-box;
     /* width: 75%; */
     /* grid-template-columns: 1fr;
-    grid-template-rows: repeat(3,auto); */
+        grid-template-rows: repeat(3,auto); */
     display: block;
     padding: 2.5rem 1.5rem;
 
-
     /* grid-auto-row: ; */
     /* gap:1.5rem; */
+  }
 
+  .regFormFields {
+    display: block;
+    height: max-content;
+    margin-bottom: 40px;
   }
-  .textInputContainer{
-    gap:1.3rem;
+
+  .textInputContainer {
+    gap: 1.3rem;
   }
-  .leftSide,.rightSide{
+
+  .leftSide,
+  .rightSide {
     /* margin-bottom: 15px; */
-    gap:1.4rem;
+    gap: 1.4rem;
   }
-  
+
   /* .leftSide{
-    grid-row: 1/span 1;
-  }
-  .rightSide{
-    grid-row: 2/span 1;
-  } */
-  .submitForm{
+      grid-row: 1/span 1;
+    }
+    .rightSide{
+      grid-row: 2/span 1;
+    } */
+  .submitForm {
     /* grid-row: 3/span 1; */
     margin: 0 auto;
-
   }
-  .buttonContainer{
-    height:40px;
+
+  .buttonContainer {
+    height: 40px;
     margin-top: 35px;
   }
-
 
   .regForm::-webkit-scrollbar {
     display: none;
   }
 }
 
-@media screen and (max-width:620px) {
-  .regForm{
+@media screen and (max-width: 620px) {
+  .regForm {
     width: 95%;
     padding: 2.5rem 1rem;
   }
-
-  
 }
 
-@media screen and (max-width:520px) {
-  .regForm{
+@media screen and (max-width: 520px) {
+  .regForm {
     width: 99%;
   }
-  
-}@media screen and (max-width:520px) {
+}
 
-  
+@media screen and (max-width: 450px) {
+  .Instruc {
+    font-size: 0.7rem;
+  }
 }
