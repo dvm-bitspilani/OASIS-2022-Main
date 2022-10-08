@@ -11,7 +11,7 @@
   top: 0;
   left: calc(50% - 7.5vw);
   border-radius: 20px;
-  font-family: "Mulish", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   transform-origin: 50% 50%;
   transform-style: preserve-3d;
@@ -28,6 +28,15 @@
   height: 50vh;
   transition: all 200ms ease;
   overflow: auto;
+}
+
+.eventItemCont:hover > .eventItemBody {
+  transform: scale(1.008);
+}
+
+.eventItemActiveCont:hover > .eventItemBody {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px #9f9874b3;
 }
 
 .eventItemHeading {

@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import EventsCss from "../styles/Events.module.css";
 import EventItem from "./EventItem";
-import ruleBookPdf from "../Assets/rulebook.pdf";
 import EventIcon from "../Assets/Event.png";
-import Button from "./Button";
+import arrow from "../Assets/Arrow.svg";
+import EventsPopUp from "./EventsPopUp";
+import { doc } from "prettier";
 
 const Events = React.forwardRef((props, ref) => {
   const EVENT_URL =
@@ -13,6 +14,8 @@ const Events = React.forwardRef((props, ref) => {
   const [angle, setAngle] = useState(0);
   const [itrCount, setItrCount] = useState(0);
   const [arrLength, setArrLength] = useState(0);
+  const [shouldDisplayPopUp, setShouldDisplayPopUp] = useState(false);
+  const [popUpIdx, setPopUpIdx] = useState(0);
   const eventTimer = useRef(null);
 
   const getEvents = async () => {
@@ -24,6 +27,8 @@ const Events = React.forwardRef((props, ref) => {
           img: event.img_url,
           name: event.name,
           desc: event.details,
+          guidelines: event.rules,
+          contact: event.contact,
         };
       });
       console.log(evtArr);
@@ -63,6 +68,19 @@ const Events = React.forwardRef((props, ref) => {
     evt.target.src = EventIcon;
   };
 
+  const openPopUp = (evtIdx) => {
+    clearTimeout(eventTimer.current);
+    setShouldDisplayPopUp(true);
+    setPopUpIdx(evtIdx);
+    document.body.style.overflowY = "hidden";
+  };
+
+  const closePopUp = () => {
+    setShouldDisplayPopUp(false);
+    document.body.style.overflowY = "scroll";
+    eventTimer.current = setTimeout(loopOver, 5000);
+  };
+
   useEffect(() => {
     getEvents();
     clearInterval(eventTimer.current);
@@ -84,38 +102,60 @@ const Events = React.forwardRef((props, ref) => {
   return (
     <section className={EventsCss.eventSec} ref={ref}>
       <div className="secHead">KERNEL EVENTS</div>
-      <div className={EventsCss.eventsCar}>
-        {eventsArr.map((event, idx) => {
-          return (
-            <EventItem
-              key={idx}
-              eventImg={event.img}
-              eventName={event.name}
-              eventDesc={event.desc}
-              idx={idx}
-              angle={angle}
-              itrCount={itrCount % arrLength}
-              itrCountAct={itrCount}
-              len={arrLength}
-              itrSet={setItr}
+      <div className={EventsCss.eventsCarCont}>
+        <div
+          onClick={prev}
+          className={`${EventsCss.eventsArr} ${EventsCss.eventsLeftArr}`}
+        >
+          <img src={arrow} alt="Right Arrrow" />
+        </div>
+        <div className={EventsCss.eventsCar}>
+          {eventsArr.map((event, idx) => {
+            return (
+              <EventItem
+                key={idx}
+                eventImg={event.img}
+                eventName={event.name}
+                eventDesc={event.desc}
+                idx={idx}
+                angle={angle}
+                itrCount={itrCount % arrLength}
+                itrCountAct={itrCount}
+                len={arrLength}
+                itrSet={setItr}
+                openPopUp={openPopUp}
+              />
+            );
+          })}
+          {eventsArr.length > 0 ? (
+            <img
+              src={eventsArr[0].img}
+              onError={handleNoImg}
+              className={EventsCss.eventsPlaceholder}
             />
-          );
-        })}
+          ) : (
+            <></>
+          )}
+        </div>
+        <div
+          onClick={next}
+          className={`${EventsCss.eventsArr} ${EventsCss.eventsRightArr}`}
+        >
+          <img src={arrow} alt="Right Arrrow" />
+        </div>
       </div>
-      {eventsArr.length > 0 ? (
-        <img
-          src={eventsArr[0].img}
-          onError={handleNoImg}
-          className={EventsCss.eventsPlaceholder}
+      {shouldDisplayPopUp ? (
+        <EventsPopUp
+          img={eventsArr[popUpIdx].img}
+          name={eventsArr[popUpIdx].name}
+          desc={eventsArr[popUpIdx].desc}
+          guidlines={eventsArr[popUpIdx].guidelines}
+          contact={eventsArr[popUpIdx].contact}
+          closePopUp={closePopUp}
         />
       ) : (
         <></>
       )}
-
-      <div className={EventsCss.btn}>
-        {/* <Button btn_title="Guidelines" /> */}
-        <a href={ruleBookPdf}>Guidelines</a>
-      </div>
     </section>
   );
 });

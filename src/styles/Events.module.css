@@ -8,43 +8,39 @@
   overflow: visible;
 }
 
+.eventsCarCont {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .eventsCar {
   position: relative;
-  width: 100vw;
+  width: 80vw;
 }
 
-.btn {
-  /* position: absolute; */
+.eventsArr {
+  width: 1vw;
+  transition: all 200ms ease;
+}
+
+.eventsArr img {
+  object-fit: contain;
   width: 100%;
-  /* top: 92%; */
-  display: flex;
-  justify-content: center;
-  color: white;
-  font-family: "Mulish", sans-serif;
-  z-index: 5;
-  margin-top: 3rem;
 }
 
-.btn a {
-  padding: 8px 18px;
-  border: 1px solid #fedb7e;
-  border-radius: 15px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
+.eventsLeftArr {
+  transform: rotate(180deg);
 }
 
-.btn a:hover {
-  background: linear-gradient(
-    94.75deg,
-    #d19a08 0%,
-    #fedb7e 16.49%,
-    #ebb935 43.37%,
-    #fcd776 74.96%,
-    #d19a08 100%
-  );
-  cursor: pointer;
-  color: black;
+.eventsRightArr:hover {
+  transform: translateX(4px);
+}
+
+.eventsLeftArr:hover {
+  transform: rotate(180deg) translateX(4px);
 }
 
 .eventsPlaceholder {

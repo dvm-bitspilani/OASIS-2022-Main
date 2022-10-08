@@ -41,22 +41,24 @@ const EventItem = (props) => {
     zIndex: `${props.len - Math.abs(props.idx - props.itrCount)}`,
   };
 
-  const mouseOverEvt = (evt) => {
-    if (props.idx === props.itrCount) {
-      evt.target.style.boxShadow = "0 0 10px #9f9874b3";
-    }
-  };
+  const mouseOverEvt = (evt) => {};
 
-  const mouseOutEvt = (evt) => {
-    evt.target.style.boxShadow = "none";
-  };
+  const mouseOutEvt = (evt) => {};
 
   const dispatchClick = () => {
     props.itrSet(props.itrCountAct + props.idx - props.itrCount);
   };
 
   return (
-    <div className={EventItemCss.eventItemCont} style={style}>
+    <div
+      className={`${EventItemCss.eventItemCont} ${
+        props.idx === props.itrCount ? EventItemCss.eventItemActiveCont : null
+      }`}
+      style={style}
+      onClick={() => {
+        props.openPopUp(props.idx);
+      }}
+    >
       <div className={EventItemCss.eventItemHeading}>{props.eventName}</div>
       <div
         className={EventItemCss.eventItemBody}
