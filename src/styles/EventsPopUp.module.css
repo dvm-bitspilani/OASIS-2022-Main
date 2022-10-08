@@ -1,0 +1,139 @@
+.popUpCont {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popUp {
+  height: 75vh;
+  width: 80vw;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #9f9874b3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+  background: rgba(0, 0, 0, 0.99);
+  backdrop-filter: blur(25px);
+  overflow: hidden;
+  position: relative;
+}
+
+.popUpImg {
+  height: 90%;
+  width: 30%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.popUpTextCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 90%;
+  width: 60%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+.popUpHeading {
+  font-size: 2rem;
+  font-weight: 500;
+  height: min-content;
+}
+
+.popUpSecCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+  width: 80%;
+}
+
+.popUpSec {
+  font-size: 0.9rem;
+  position: relative;
+  padding: 2px 0;
+}
+
+.popUpSec:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 2px;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(
+    94.75deg,
+    #d19a08 0%,
+    #fedb7e 16.49%,
+    #ebb935 43.37%,
+    #fcd776 74.96%,
+    #d19a08 100%
+  );
+  transition: all 200ms ease;
+}
+
+.popUpSecActive::after {
+  width: 100%;
+}
+
+.popUpText {
+  width: 85%;
+  font-size: 1.2rem;
+  overflow-x: scroll;
+}
+
+.popUpClose {
+  --width: 30px;
+  width: var(--width);
+  height: calc(var(--width) / 1.3);
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popUpClose::before,
+.popUpClose::after {
+  width: 100%;
+  height: 2px;
+  background: white;
+  content: "";
+  transform-origin: 0 50%;
+  transition: all 200ms ease;
+}
+
+.popUpClose::before {
+  transform: rotate(45deg);
+}
+
+.popUpClose::after {
+  transform: rotate(-45deg);
+}
+
+.popUpClose:hover::after,
+.popUpClose:hover::before {
+  background: linear-gradient(
+    94.75deg,
+    #d19a08 0%,
+    #fedb7e 16.49%,
+    #ebb935 43.37%,
+    #fcd776 74.96%,
+    #d19a08 100%
+  );
+}
