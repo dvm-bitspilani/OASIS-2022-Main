@@ -7,7 +7,6 @@ import Button from "./Button";
 import king from "../Assets/king.png";
 import logo from "../Assets/logo.png";
 import title from "../Assets/title.png";
-import rect from "../Assets/Lander/blackRect.png";
 import leftEye from "../Assets/lefteye.png";
 import windowImg from "../Assets/window.png";
 import rightEye from "../Assets/righteye.png";
