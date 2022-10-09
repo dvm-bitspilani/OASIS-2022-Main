@@ -1,40 +1,59 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import EventItemCss from "../styles/EventItem.module.css";
 import EventTriangleSvg from "../Assets/EventTriangle.svg";
 import EventIcon from "../Assets/Event.png";
 
 const EventItem = (props) => {
-  let [opacity, setOpacity] = useState("0");
+  const [opacity, setOpacity] = useState("0");
+  const [numItem, setNumItem] = useState(2);
+  const [radius, setRadius] = useState(40);
   const updateOpacity = () => {
-    if (Math.abs(props.idx - props.itrCount) <= 2) {
+    if (Math.abs(props.idx - props.itrCount) <= numItem) {
       setOpacity("1");
     } else {
       setOpacity("0");
     }
-    if (props.itrCount < 2) {
-      if (props.idx >= props.len - (2 - props.itrCount)) {
+    if (props.itrCount < numItem) {
+      if (props.idx >= props.len - (numItem - props.itrCount)) {
         setOpacity("1");
       }
     }
-    if (props.itrCount >= props.len - 2) {
-      if (props.idx <= 2 - props.len + props.itrCount) {
+    if (props.itrCount >= props.len - numItem) {
+      if (props.idx <= numItem - props.len + props.itrCount) {
         setOpacity("1");
       }
     }
   };
 
-  const handleNoImg = (evt) => {
-    evt.target.src = EventIcon;
+  const getNumItem = () => {
+    if (window.innerWidth > 1000) {
+      setNumItem(2);
+      setRadius(40);
+    } else if (window.innerWidth > 500) {
+      setNumItem(1);
+      setRadius(60);
+    } else {
+      setNumItem(0);
+      setRadius(50);
+    }
   };
+  const handleNoImg = (evt) => {
+    evt.target.style.backgroundImage = `url(${EventIcon})`;
+  };
+
+  useEffect(() => {
+    getNumItem();
+    window.addEventListener("resize", getNumItem);
+  }, []);
 
   useEffect(updateOpacity, [props.itrCount]);
 
   const style = {
     transform: `perspective(5000px) translate3d(${
-      43 *
+      radius *
       Math.sin((props.angle * Math.PI * (props.idx - props.itrCount)) / 180)
     }vw, 0, ${
-      43 *
+      radius *
       Math.cos((props.angle * Math.PI * (props.idx - props.itrCount)) / 180)
     }vw) rotate3d(0, 1, 0, ${props.angle * (props.idx - props.itrCountAct)}deg`,
     opacity: opacity,

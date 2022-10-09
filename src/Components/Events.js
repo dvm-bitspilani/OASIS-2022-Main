@@ -4,7 +4,6 @@ import EventItem from "./EventItem";
 import EventIcon from "../Assets/Event.png";
 import arrow from "../Assets/Arrow.svg";
 import EventsPopUp from "./EventsPopUp";
-import { doc } from "prettier";
 
 const Events = React.forwardRef((props, ref) => {
   const EVENT_URL =
@@ -16,6 +15,7 @@ const Events = React.forwardRef((props, ref) => {
   const [arrLength, setArrLength] = useState(0);
   const [shouldDisplayPopUp, setShouldDisplayPopUp] = useState(false);
   const [popUpIdx, setPopUpIdx] = useState(0);
+  const [windowOff, setWindowOff] = useState(window.scrollY);
   const eventTimer = useRef(null);
 
   const getEvents = async () => {
@@ -72,12 +72,13 @@ const Events = React.forwardRef((props, ref) => {
     clearTimeout(eventTimer.current);
     setShouldDisplayPopUp(true);
     setPopUpIdx(evtIdx);
-    document.body.style.overflowY = "hidden";
+    setWindowOff(window.scrollY);
+    document.body.style.overflow = "hidden";
   };
 
   const closePopUp = () => {
     setShouldDisplayPopUp(false);
-    document.body.style.overflowY = "scroll";
+    document.body.style.overflow = "unset";
     eventTimer.current = setTimeout(loopOver, 5000);
   };
 

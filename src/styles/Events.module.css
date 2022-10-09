@@ -1,5 +1,5 @@
 .eventSec {
-  background-color: black;
+  --width: 15vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,6 +44,39 @@
 }
 
 .eventsPlaceholder {
-  width: 22vw;
+  width: var(--width);
+  height: calc(var(--width) * 2);
   opacity: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .eventSec {
+    --width: 17vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .eventSec {
+    --width: 20vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .eventSec {
+    --width: 25vw;
+  }
+
+  .eventsArr {
+    display: none;
+  }
+
+  .eventsCar {
+    width: 20vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .eventSec {
+    --width: 60vw;
+  }
 }

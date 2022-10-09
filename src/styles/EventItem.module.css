@@ -1,15 +1,16 @@
 .eventItemCont {
+  --numItem: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
-  width: 15vw;
-  height: 55vh;
+  width: var(--width);
+  height: calc(var(--width) * 2);
   padding: 0 20px;
   position: absolute;
   top: 0;
-  left: calc(50% - 7.5vw);
+  left: calc(50% - var(--width) / 2);
   border-radius: 20px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -21,13 +22,13 @@
 .eventItemBody {
   position: relative;
   border-radius: 20px;
-  background-size: 110% 110%;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  width: 15vw;
+  background-position: bottom;
+  width: var(--width);
   height: 50vh;
   transition: all 200ms ease;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .eventItemCont:hover > .eventItemBody {
@@ -40,7 +41,7 @@
 }
 
 .eventItemHeading {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: white;
   font-weight: 500;
   margin-bottom: 20px;
@@ -58,7 +59,7 @@
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.6) 100%
+    rgba(0, 0, 0, 0.7) 100%
   );
   text-align: center;
   border-radius: 20px;
@@ -79,5 +80,11 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .eventItemHeading {
+    font-size: 1.2rem;
   }
 }

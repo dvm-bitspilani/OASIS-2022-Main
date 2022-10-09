@@ -5,6 +5,11 @@ const EventsPopUp = (props) => {
   const popUpRef = useRef();
   const [activeDesc, setActiveDesc] = useState("desc");
   const [activeText, setActiveText] = useState();
+
+  const popUpClick = (evt) => {
+    props.closePopUp();
+  };
+
   useEffect(() => {
     if (activeDesc === "desc") {
       setActiveText(props.desc);
@@ -14,9 +19,16 @@ const EventsPopUp = (props) => {
       setActiveText(props.contact);
     }
   });
+
   return (
-    <div className={EventsPopUpCss.popUpCont}>
-      <div className={EventsPopUpCss.popUp} ref={popUpRef}>
+    <div className={EventsPopUpCss.popUpCont} onClick={popUpClick}>
+      <div
+        className={EventsPopUpCss.popUp}
+        ref={popUpRef}
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
         <img
           className={EventsPopUpCss.popUpImg}
           src={props.img}

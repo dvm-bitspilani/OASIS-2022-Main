@@ -12,7 +12,7 @@
 }
 
 .popUp {
-  height: 75vh;
+  height: 40vw;
   width: 80vw;
   border-radius: 20px;
   box-shadow: 0 0 10px #9f9874b3;
@@ -106,6 +106,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  transform-origin: 100% 0;
 }
 
 .popUpClose::before,
@@ -136,4 +137,89 @@
     #fcd776 74.96%,
     #d19a08 100%
   );
+}
+
+@media screen and (max-width: 1000px) {
+  .popUpHeading {
+    font-size: 1.7rem;
+  }
+
+  .popUpSec {
+    font-size: 0.8rem;
+  }
+
+  .popUpText {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .popUp {
+    height: 60vh;
+  }
+
+  .popUpImg {
+    display: none;
+  }
+
+  .popUpTextCont {
+    width: 100%;
+  }
+
+  .popUpText {
+    width: 100%;
+  }
+
+  .popUpSecCont {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .popUp {
+    width: 90vw;
+    padding: 10px 20px;
+    border-radius: 15px;
+  }
+
+  .popUpClose {
+    transform: scale(0.8);
+    top: 30px;
+    right: 30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .popUp {
+    border-radius: 15px;
+    height: 90vh;
+  }
+
+  .popUpClose {
+    transform: scale(0.7);
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@keyframes revealSide {
+  from {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes revealUp {
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 }
