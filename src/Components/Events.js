@@ -31,7 +31,6 @@ const Events = React.forwardRef((props, ref) => {
           contact: event.contact,
         };
       });
-      console.log(evtArr);
       setEventsArr(evtArr);
     } catch (e) {
       console.log(e);

@@ -65,7 +65,13 @@ const EventItem = (props) => {
   const mouseOutEvt = (evt) => {};
 
   const dispatchClick = () => {
-    props.itrSet(props.itrCountAct + props.idx - props.itrCount);
+    let change = props.idx - props.itrCount;
+    console.log(change);
+    if (Math.abs(change) > props.len / 2) {
+      change =
+        (-1 * Math.abs(change) * ((change % 2) + (props.len % 2))) / change;
+    }
+    props.itrSet(props.itrCountAct + change);
   };
 
   return (
@@ -75,7 +81,9 @@ const EventItem = (props) => {
       }`}
       style={style}
       onClick={() => {
-        props.openPopUp(props.idx);
+        if (props.itrCount === props.idx) {
+          props.openPopUp(props.idx);
+        }
       }}
     >
       <div className={EventItemCss.eventItemHeading}>{props.eventName}</div>
