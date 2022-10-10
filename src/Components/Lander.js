@@ -1,5 +1,5 @@
 import React from "react";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import LanderCSS from "../styles/Lander.module.css";
 import LanderRing from "./LanderRing";
 import Button from "./Button";
@@ -20,7 +20,7 @@ const Lander = React.forwardRef((props, ref) => {
   const ringCount = Math.floor(4 + Math.random() * 3);
 
   return (
-    <div className={LanderCSS.landerWrapper} ref={ref}>
+    <div className={LanderCSS.landerWrapper} ref={ref} id='landerWrapper'>
       <img src={logo} alt="OASIS" className={LanderCSS.oasisLogo} />
       <img src={windowImg} alt="" className={LanderCSS.portalWindow} />
 
