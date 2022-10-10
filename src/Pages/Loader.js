@@ -1,5 +1,5 @@
 import React from "react";
-import vid from "../Assets/loader.mp4";
+import vid from "../Assets/loader.MP4";
 import LoaderCSS from "../styles/Loader.module.css";
 
 export default function Loader(props) {
