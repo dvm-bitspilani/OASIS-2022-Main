@@ -1,0 +1,119 @@
+.hamContainer {
+    position: absolute;
+    z-index: 1000;
+    cursor: pointer;
+    right: 3rem;
+    top: 3rem;
+}
+
+.ham {
+    width: 24px;
+    height: 2.4px;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.ham2 {
+    width: 24px;
+    margin-top: 0.3rem;
+    height: 2.4px;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+.info{
+    text-align: right;
+    margin-top: 1rem;
+    margin-right: 1rem; 
+    font-family: "Mulish";
+}
+.menu {
+    background-color: #000;
+    border-bottom: 2px solid #4E3800;
+    color: white;
+    display: flex;
+    position: relative;
+}
+i{
+    margin-left: 0.4rem;
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+}
+
+.left {
+    display: flex;
+    width: 80%;
+}
+
+.about {
+    background: rgba(39, 39, 39, 0.4);
+    border-radius: 14px;
+    margin: 3rem;
+    width: 40%;
+    border: 2px solid #4E3800;
+}
+.text{
+    margin: 2rem;
+    font-family: "Mulish";
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
+.map {
+    background: rgba(39, 39, 39, 0.4);
+    border-radius: 14px;
+    margin: 3rem;
+    width: 30%;
+    border: 2px solid #4E3800;
+}
+
+.heading {
+    background: linear-gradient(94.75deg, #D19A08 0%, #FEDB7E 27.6%, #EAC460 50%, #D19A08 66.15%, #D19A08 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: "Allura";
+    margin: 2rem;
+    font-size: 4rem;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    font-family: "Mulish";
+    justify-content: center;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.right>div{
+    margin-block: 0.7rem;
+}
+.bl{
+    position: absolute;
+    bottom: 0;
+    left: -17px;
+    width: 17%;
+}
+.br{
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    width: 17%;
+}
+.tl{
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 24%;
+}
+.tr{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 30%;
+}
