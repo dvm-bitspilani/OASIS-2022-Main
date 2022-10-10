@@ -9,6 +9,7 @@
   font-size: 1.1rem;
   width: 100%;
   z-index: 30;
+  position: relative;
   text-align: center;
   font-family: "Montserrat";
   background-color: rgb(12, 11, 11);
