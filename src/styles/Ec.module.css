@@ -46,7 +46,7 @@
   height: 100%;
   display: flex;
   align-items: center;
-  color:white;
+  color: white;
 }
 
 .caretClass {
@@ -95,7 +95,7 @@
 }
 
 .shiftLabelUp {
-  transform:scale(0.65) translateY(-100%)  ;
+  transform: scale(0.65) translateY(-100%);
   color: goldenrod !important;
 
   /* margin-bottom: 6px; */
@@ -185,22 +185,21 @@ a.ruleBook {
   color: #d19a08;
 }
 
-@media screen and (max-width:900px) {
-  .label{
-    font-size:15px;
+@media screen and (max-width: 900px) {
+  .label {
+    font-size: 15px;
     margin-bottom: 0;
   }
-  .inputContainer{
+  .inputContainer {
     height: 30px;
   }
-  .inputContainer input{
+  .inputContainer input {
     font-size: 15px;
   }
-  .dropDown > li{
+  .dropDown > li {
     font-size: 15px;
     /* height: 3px; */
   }
-  
 }
 
 @media screen and (max-width: 800px) {
@@ -218,14 +217,13 @@ a.ruleBook {
   .ruleBook:hover::after {
     width: 35%;
   }
-  .shiftLabelUp{
+  .shiftLabelUp {
     /* margin-bottom: 8px; */
   }
-  .inputContainer{
+  .inputContainer {
     height: 30px;
-    
   }
-  .formControl{
+  .formControl {
     margin-top: 5px;
   }
 }

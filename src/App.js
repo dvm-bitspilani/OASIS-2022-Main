@@ -4,18 +4,15 @@ import Home from "./Pages/Home";
 import ErrorPage from "./Pages/ErrorPage";
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />,
-      // errorElement: <ErrorPage />,
-    }
-  
+  {
+    path: "/",
+    element: <Home />,
+    // errorElement: <ErrorPage />,
+  },
 ]);
 
 function App() {
-  
-    return <RouterProvider router={router}/>;
-  
+  return <RouterProvider router={router} />;
 }
 
 export default App;

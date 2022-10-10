@@ -2,9 +2,10 @@ import RegistrationCSS from "../styles/Registration.module.css";
 import RegForm from "../Components/RegForm";
 import RegWelcome from "../Components/RegWelcome";
 import React, { useState } from "react";
-import wlbl from '../Assets/wavylinesBL.png'
-import wltl from '../Assets/wavylinesTL.png'
-import wlbr from '../Assets/wavylinesBR.png'
+import wlbl from "../Assets/wavylinesBL.png";
+import wltl from "../Assets/wavylinesTL.png";
+import wlbr from "../Assets/wavylinesBR.png";
+
 const Registration = (props) => {
   const [regClassName, setRegClassName] = useState(
     `${RegistrationCSS.regPage}`
@@ -48,10 +49,9 @@ const Registration = (props) => {
 
         {/* <RegWelcome /> */}
         <RegForm resetPage={backdropClickHandler} />
-        <img src={wlbl} className={RegistrationCSS.wlbl}/>
-        <img src={wltl} className={RegistrationCSS.wltl}/>
-        <img src={wlbr} className={RegistrationCSS.wlbr}/>
-
+        <img alt="" src={wlbl} className={RegistrationCSS.wlbl} />
+        <img alt="" src={wltl} className={RegistrationCSS.wltl} />
+        <img alt="" src={wlbr} className={RegistrationCSS.wlbr} />
       </div>
     </div>
   );

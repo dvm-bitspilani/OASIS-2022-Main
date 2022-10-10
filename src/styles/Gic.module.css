@@ -26,7 +26,7 @@
   display: flex;
   align-items: center;
   /* gap: var(--gender-options-gap); */
-  gap:13px;
+  gap: 13px;
   /* font-size: var(--span-font-size); */
   font-size: 15px;
   padding-left: 10px;
@@ -81,13 +81,14 @@
   gap: var(--gender-inter-gap);
   align-items: center;
 }
-.genderLabel{
-font-size: 18px;}
-@media screen and (max-width:900px) {
-  .genderLabel{
+.genderLabel {
+  font-size: 18px;
+}
+@media screen and (max-width: 900px) {
+  .genderLabel {
     font-size: 17px;
   }
-  .genderOptions{
+  .genderOptions {
     font-size: 16px;
   }
 }

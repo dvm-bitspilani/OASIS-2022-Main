@@ -7,13 +7,12 @@ import Events from "../Components/Events";
 import HomeCSS from "../styles/Home.module.css";
 import Loader from "./Loader";
 
-
 export default function Home() {
   window.scrollTo(0, 0);
   const [regState, setRegState] = useState({ open: false });
 
   useEffect(() => {
-    if(isLoaded) {
+    if (isLoaded) {
       if (regState.open) {
         document.querySelector("main").style.height = "100vh";
         document.querySelector("main").style.overflow = "hidden";
@@ -31,17 +30,30 @@ export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-     document.addEventListener('readystatechange', () => {
-      console.log('loaded')
-      if (document.readyState === 'complete') {
-        setTimeout(() => setIsLoaded(true),2000);
+    document.addEventListener("readystatechange", () => {
+      console.log("loaded");
+      if (document.readyState === "complete") {
+        setTimeout(() => setIsLoaded(true), 2000);
       }
-     })
+    });
   }, []);
 
   return (
-    <main className={HomeCSS.homePage} style={isLoaded === false ? {maxHeight: '100vh', overflowY: 'hidden'} : {height: 'auto', overflowY: 'auto'}}>
-      <Loader style={isLoaded === false ? {opacity: '1', zIndex: 1000} : {opacity: '0', zIndex: -1000}} />
+    <main
+      className={HomeCSS.homePage}
+      style={
+        isLoaded === false
+          ? { maxHeight: "100vh", overflowY: "hidden" }
+          : { height: "auto", overflowY: "auto" }
+      }
+    >
+      <Loader
+        style={
+          isLoaded === false
+            ? { opacity: "1", zIndex: 1000 }
+            : { opacity: "0", zIndex: -1000 }
+        }
+      />
       <Registration
         className={"RegistrationCSS.regPage"}
         id="reg"
