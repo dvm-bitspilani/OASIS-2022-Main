@@ -70,7 +70,9 @@ const EventsPopUp = (props) => {
           </div>
           <div
             className={EventsPopUpCss.popUpText}
-            dangerouslySetInnerHTML={{ __html: activeText || "NA" }}
+            dangerouslySetInnerHTML={{
+              __html: activeText || "NA",
+            }}
           ></div>
         </div>
         <div

@@ -14,6 +14,7 @@ import rightEye from "../Assets/righteye.png";
 import FaceBookIcon from "../Assets/Lander/FaceBookIcon";
 import YouTubeIcon from "../Assets/Lander/YouTubeIcon";
 import InstaGramIcon from "../Assets/Lander/InstaGramIcon";
+import Hamburger from "./Hamburger";
 
 const Lander = React.forwardRef((props, ref) => {
   const kingEl = useRef(null);
@@ -23,7 +24,7 @@ const Lander = React.forwardRef((props, ref) => {
     <div className={LanderCSS.landerWrapper} ref={ref} id='landerWrapper'>
       <img src={logo} alt="OASIS" className={LanderCSS.oasisLogo} />
       <img src={windowImg} alt="" className={LanderCSS.portalWindow} />
-
+      <Hamburger />
       <div className={LanderCSS.goldrings}>
         {[...Array(ringCount)].map((count, idx) => (
           <LanderRing

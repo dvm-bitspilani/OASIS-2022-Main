@@ -95,6 +95,11 @@
   overflow-x: scroll;
 }
 
+.popUpText * {
+  color: white !important;
+  background: none !important;
+}
+
 .popUpClose {
   --width: 30px;
   width: var(--width);

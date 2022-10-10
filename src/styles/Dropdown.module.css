@@ -111,7 +111,7 @@ span.caretDown {
   font-size: 17px;
   transform-origin: left;
   transition: 0.15s;
-  color:white;
+  color: white;
   display: flex;
   align-items: center;
 }
@@ -120,7 +120,6 @@ span.caretDown {
   transform: scale(0.65) translateY(-100%);
   margin-bottom: 8px;
   color: goldenrod !important;
-
 }
 
 .rotateUp {
@@ -141,23 +140,21 @@ span.caretDown {
   justify-content: center;
   align-items: center;
 }
-@media (max-width:900px) {
-  .collegeLabel{
+@media (max-width: 900px) {
+  .collegeLabel {
     font-size: 15px;
   }
-  .collegeInput{
+  .collegeInput {
     font-size: 15px;
   }
-  .formControl{
+  .formControl {
     height: 30px;
   }
-  
 }
 @media screen and (max-width: 800px) {
   .collegeLabel {
     font-size: 15px;
   }
-  
 }
 
 @media screen and (max-width: 760px) {

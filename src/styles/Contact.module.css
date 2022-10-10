@@ -113,7 +113,6 @@
 }
 
 @media screen and (max-width: 800px) {
-
   .eight {
     grid-template-columns: 1fr 1fr;
     gap: 45px;

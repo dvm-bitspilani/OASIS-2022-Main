@@ -32,6 +32,7 @@ section:last-child {
   font-family: "Mulish";
   margin-bottom: 100px;
   font-weight: 700;
+  z-index: 2;
   font-size: 2rem;
   letter-spacing: 0.02em;
   background: linear-gradient(

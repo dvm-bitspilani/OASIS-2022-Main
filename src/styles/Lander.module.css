@@ -111,7 +111,13 @@
   left: 50%;
   top: 60%;
   z-index: 4;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.72) 55%, rgba(0, 0, 0, .92) 80%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.72) 55%,
+    rgba(0, 0, 0, 0.92) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
   transform: translateX(-50%);
   filter: blur(44px);
 }

@@ -15,7 +15,7 @@ const Events = React.forwardRef((props, ref) => {
   const [arrLength, setArrLength] = useState(0);
   const [shouldDisplayPopUp, setShouldDisplayPopUp] = useState(false);
   const [popUpIdx, setPopUpIdx] = useState(0);
-  const [windowOff, setWindowOff] = useState(window.scrollY);
+  const [touchPosition, setTouchPosition] = useState(null);
   const eventTimer = useRef(null);
 
   const getEvents = async () => {
@@ -71,7 +71,6 @@ const Events = React.forwardRef((props, ref) => {
     clearTimeout(eventTimer.current);
     setShouldDisplayPopUp(true);
     setPopUpIdx(evtIdx);
-    setWindowOff(window.scrollY);
     document.body.style.overflow = "hidden";
   };
 
@@ -79,6 +78,29 @@ const Events = React.forwardRef((props, ref) => {
     setShouldDisplayPopUp(false);
     document.body.style.overflow = "unset";
     eventTimer.current = setTimeout(loopOver, 5000);
+  };
+
+  const handleTouchStart = (evt) => {
+    const touchDown = evt.touches[0].clientX;
+    setTouchPosition(touchDown);
+  };
+
+  const handleTouchMove = (evt) => {
+    const touchDown = touchPosition;
+
+    if (touchDown === null) {
+      return;
+    }
+
+    const currTouchDown = evt.touches[0].clientX;
+    const diff = currTouchDown - touchDown;
+
+    if (diff > 5) {
+      prev();
+    } else if (diff < -5) {
+      next();
+    }
+    setTouchPosition(null);
   };
 
   useEffect(() => {
@@ -109,7 +131,11 @@ const Events = React.forwardRef((props, ref) => {
         >
           <img src={arrow} alt="Right Arrrow" />
         </div>
-        <div className={EventsCss.eventsCar}>
+        <div
+          className={EventsCss.eventsCar}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+        >
           {eventsArr.map((event, idx) => {
             return (
               <EventItem
