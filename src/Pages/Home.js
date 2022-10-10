@@ -64,8 +64,8 @@ export default function Home() {
       <Events id="evt" />
       <Contact id="contact" />
       <div className={HomeCSS.love}>
-        <div class={HomeCSS.foot}>
-          Made with <i aria-hidden="true" class="fa fa-heart"></i> by DVM
+        <div className={HomeCSS.foot}>
+          Made with <i aria-hidden="true" className="fa fa-heart"></i> by DVM
         </div>
       </div>
     </main>

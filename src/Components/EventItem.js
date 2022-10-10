@@ -41,6 +41,16 @@ const EventItem = (props) => {
     evt.target.style.backgroundImage = `url(${EventIcon})`;
   };
 
+  const dispatchClick = () => {
+    let change = props.idx - props.itrCount;
+    console.log(change);
+    if (Math.abs(change) > props.len / 2) {
+      change =
+        (-1 * Math.abs(change) * ((change % 2) + (props.len % 2))) / change;
+    }
+    props.itrSet(props.itrCountAct + change);
+  };
+
   useEffect(() => {
     getNumItem();
     window.addEventListener("resize", getNumItem);
@@ -60,20 +70,6 @@ const EventItem = (props) => {
     zIndex: `${props.len - Math.abs(props.idx - props.itrCount)}`,
   };
 
-  const mouseOverEvt = (evt) => {};
-
-  const mouseOutEvt = (evt) => {};
-
-  const dispatchClick = () => {
-    let change = props.idx - props.itrCount;
-    console.log(change);
-    if (Math.abs(change) > props.len / 2) {
-      change =
-        (-1 * Math.abs(change) * ((change % 2) + (props.len % 2))) / change;
-    }
-    props.itrSet(props.itrCountAct + change);
-  };
-
   return (
     <div
       className={`${EventItemCss.eventItemCont} ${
@@ -90,17 +86,19 @@ const EventItem = (props) => {
       <div
         className={EventItemCss.eventItemBody}
         style={{ backgroundImage: `url(${props.eventImg})` }}
-        onMouseOver={mouseOverEvt}
-        onMouseOut={mouseOutEvt}
         onClick={dispatchClick}
       >
-        <div className={EventItemCss.eventItemClick}>
-          <img
-            src={EventTriangleSvg}
-            alt="Read More"
-            className={EventItemCss.eventItemClickTriag}
-          />
-        </div>
+        {props.idx === props.itrCount ? (
+          <div className={EventItemCss.eventItemClick}>
+            <img
+              src={EventTriangleSvg}
+              alt="Read More"
+              className={EventItemCss.eventItemClickTriag}
+            />
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
