@@ -7,48 +7,41 @@ const EventItem = (props) => {
   const [opacity, setOpacity] = useState("0");
   const [numItem, setNumItem] = useState(2);
   const [radius, setRadius] = useState(40);
+  const [diff, setDiff] = useState(0);
+
+  const getDiff = () => {
+    let newDiff = props.idx - props.itrCount;
+    if (newDiff > props.len / 2) {
+      newDiff = newDiff - props.len;
+    }
+    if (newDiff < (-1 * props.len) / 2) {
+      newDiff = props.len - Math.abs(newDiff);
+    }
+    setDiff(newDiff);
+  };
   const updateOpacity = () => {
-    if (Math.abs(props.idx - props.itrCount) <= numItem) {
+    if (Math.abs(diff) <= numItem) {
       setOpacity("1");
     } else {
       setOpacity("0");
-    }
-    if (props.itrCount < numItem) {
-      if (props.idx >= props.len - (numItem - props.itrCount)) {
-        setOpacity("1");
-      }
-    }
-    if (props.itrCount >= props.len - numItem) {
-      if (props.idx <= numItem - props.len + props.itrCount) {
-        setOpacity("1");
-      }
     }
   };
 
   const getNumItem = () => {
     if (window.innerWidth > 1000) {
       setNumItem(2);
-      setRadius(40);
+      setRadius(42);
     } else if (window.innerWidth > 500) {
       setNumItem(1);
       setRadius(60);
     } else {
-      setNumItem(0);
-      setRadius(50);
+      setNumItem(1);
+      setRadius(155);
     }
   };
-  const handleNoImg = (evt) => {
-    evt.target.style.backgroundImage = `url(${EventIcon})`;
-  };
-
   const dispatchClick = () => {
-    let change = props.idx - props.itrCount;
-    console.log(change);
-    if (Math.abs(change) > props.len / 2) {
-      change =
-        (-1 * Math.abs(change) * ((change % 2) + (props.len % 2))) / change;
-    }
-    props.itrSet(props.itrCountAct + change);
+    console.log(`DISPATCHING WITH: ${props.itrCountAct + diff} and ${diff}`);
+    props.itrSet(props.itrCountAct + diff);
   };
 
   useEffect(() => {
@@ -56,7 +49,13 @@ const EventItem = (props) => {
     window.addEventListener("resize", getNumItem);
   }, []);
 
-  useEffect(updateOpacity, [props.itrCount]);
+  useEffect(() => {
+    getDiff();
+  }, [props.itrCount]);
+
+  useEffect(() => {
+    updateOpacity();
+  }, [diff]);
 
   const style = {
     transform: `perspective(5000px) translate3d(${
@@ -65,9 +64,9 @@ const EventItem = (props) => {
     }vw, 0, ${
       radius *
       Math.cos((props.angle * Math.PI * (props.idx - props.itrCount)) / 180)
-    }vw) rotate3d(0, 1, 0, ${props.angle * (props.idx - props.itrCountAct)}deg`,
+    }vw) scale(${95 - Math.abs(diff * 8)}%)`,
     opacity: opacity,
-    zIndex: `${props.len - Math.abs(props.idx - props.itrCount)}`,
+    zIndex: `${props.len - Math.abs(diff)}`,
   };
 
   return (
@@ -77,8 +76,11 @@ const EventItem = (props) => {
       }`}
       style={style}
       onClick={() => {
+        console.log("RUNNING");
         if (props.itrCount === props.idx) {
           props.openPopUp(props.idx);
+        } else {
+          dispatchClick();
         }
       }}
     >
@@ -86,7 +88,6 @@ const EventItem = (props) => {
       <div
         className={EventItemCss.eventItemBody}
         style={{ backgroundImage: `url(${props.eventImg})` }}
-        onClick={dispatchClick}
       >
         {props.idx === props.itrCount ? (
           <div className={EventItemCss.eventItemClick}>
