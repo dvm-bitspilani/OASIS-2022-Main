@@ -137,7 +137,7 @@ return (
                 </div>
                 <div className={HamburgerCSS.map}>
                     <iframe src="https://maps.google.com/maps?q=BITS%Pilani%&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="80%" allowfullscreen></iframe>
-                    <div className={HamburgerCSS.info}>how to get to Pilani? <img src = {icon} className={HamburgerCSS.icon} /></div>
+                    <div className={HamburgerCSS.info}><a href="https://www.bits-pilani.ac.in/pilani/iconbits/HowtoReachPilani#:~:text=Pilani%20can%20be%20reached%20either,(ISBT)%20and%20Kashmiri%20gate." target="_blank" className={HamburgerCSS.anchor}>how to get to Pilani? <img src = {icon} className={HamburgerCSS.icon} /></a></div>
                 </div>
             </div>
             <div className={HamburgerCSS.right}>
