@@ -29,6 +29,7 @@
   height: 50vh;
   transition: all 200ms ease;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .eventItemCont:hover > .eventItemBody {

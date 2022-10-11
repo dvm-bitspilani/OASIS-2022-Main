@@ -77,7 +77,7 @@ const Events = React.forwardRef((props, ref) => {
   const closePopUp = () => {
     setShouldDisplayPopUp(false);
     document.body.style.overflow = "unset";
-    eventTimer.current = setTimeout(loopOver, 5000);
+    eventTimer.current = setTimeout(loopOver, 3000);
   };
 
   const handleTouchStart = (evt) => {
@@ -109,7 +109,7 @@ const Events = React.forwardRef((props, ref) => {
   }, []);
 
   useEffect(() => {
-    eventTimer.current = setTimeout(loopOver, 5000);
+    eventTimer.current = setTimeout(loopOver, 3000);
   }, [itrCount]);
 
   useEffect(() => {
@@ -140,7 +140,7 @@ const Events = React.forwardRef((props, ref) => {
             return (
               <EventItem
                 key={idx}
-                eventImg={event.img}
+                eventImg={event.img === "Nill" ? EventIcon : event.img}
                 eventName={event.name}
                 eventDesc={event.desc}
                 idx={idx}
@@ -172,7 +172,11 @@ const Events = React.forwardRef((props, ref) => {
       </div>
       {shouldDisplayPopUp ? (
         <EventsPopUp
-          img={eventsArr[popUpIdx].img}
+          img={
+            eventsArr[popUpIdx].img === "Nill"
+              ? EventIcon
+              : eventsArr[popUpIdx].img
+          }
           name={eventsArr[popUpIdx].name}
           desc={eventsArr[popUpIdx].desc}
           guidlines={eventsArr[popUpIdx].guidelines}
