@@ -33,7 +33,7 @@ const Contact = React.forwardRef((props, ref) => {
         tele: "tel:+918921977221",
       },
       {
-        image: "",
+        image: require("../Assets/ContactUs/karishma.png"),
         gender: "female",
         name: "Karishma K",
         dept: "Sponsorship and Marketing",

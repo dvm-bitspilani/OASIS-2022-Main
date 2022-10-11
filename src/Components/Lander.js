@@ -24,7 +24,7 @@ const Lander = React.forwardRef((props, ref) => {
     <div className={LanderCSS.landerWrapper} ref={ref} id='landerWrapper'>
       <img src={logo} alt="OASIS" className={LanderCSS.oasisLogo} />
       <img src={windowImg} alt="" className={LanderCSS.portalWindow} />
-      <Hamburger />
+      {/* <Hamburger /> */}
       <div className={LanderCSS.goldrings}>
         {[...Array(ringCount)].map((count, idx) => (
           <LanderRing

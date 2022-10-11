@@ -2,12 +2,17 @@ import EventsPopUpCss from "../styles/EventsPopUp.module.css";
 import { useEffect, useRef, useState } from "react";
 
 const EventsPopUp = (props) => {
-  const popUpRef = useRef();
+  const popUpCont = useRef(null);
+  const popUpTextCont = useRef(null);
   const [activeDesc, setActiveDesc] = useState("desc");
   const [activeText, setActiveText] = useState();
 
   const popUpClick = (evt) => {
-    props.closePopUp();
+    popUpTextCont.current.classList.add(EventsPopUpCss.popUpTextContClose);
+    popUpCont.current.classList.add(EventsPopUpCss.popUpContClose)
+    setTimeout(() => {
+      props.closePopUp();
+    }, 500);
   };
 
   useEffect(() => {
@@ -21,10 +26,13 @@ const EventsPopUp = (props) => {
   });
 
   return (
-    <div className={EventsPopUpCss.popUpCont} onClick={popUpClick}>
+    <div
+      className={EventsPopUpCss.popUpCont}
+      onClick={popUpClick}
+      ref={popUpCont}
+    >
       <div
         className={EventsPopUpCss.popUp}
-        ref={popUpRef}
         onClick={(e) => {
           e.stopPropagation();
         }}
@@ -34,7 +42,7 @@ const EventsPopUp = (props) => {
           src={props.img}
           alt="Event Image"
         />
-        <div className={EventsPopUpCss.popUpTextCont}>
+        <div className={EventsPopUpCss.popUpTextCont} ref={popUpTextCont}>
           <div className={EventsPopUpCss.popUpHeading}>{props.name}</div>
           <div className={EventsPopUpCss.popUpSecCont}>
             <div
@@ -75,10 +83,7 @@ const EventsPopUp = (props) => {
             }}
           ></div>
         </div>
-        <div
-          className={EventsPopUpCss.popUpClose}
-          onClick={props.closePopUp}
-        ></div>
+        <div className={EventsPopUpCss.popUpClose} onClick={popUpClick}></div>
       </div>
     </div>
   );
