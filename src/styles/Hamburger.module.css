@@ -44,7 +44,7 @@
 .info{
     text-align: right;
     margin-top: 1rem;
-    margin-right: 1rem; 
+    margin-right: 2rem; 
     font-family: "Mulish";
 }
 .menu {
@@ -54,6 +54,7 @@
     display: flex;
     z-index: 20;
     position: fixed;
+    width: 100vw;
 }
 i {
   margin-left: 0.4rem;
@@ -92,8 +93,10 @@ i {
 .map {
   background: rgba(39, 39, 39, 0.4);
   border-radius: 14px;
+  overflow: hidden;
   margin: 3rem;
   width: 30%;
+  backdrop-filter: blur(2px);
   border: 2px solid #4e3800;
 }
 
@@ -125,35 +128,55 @@ i {
     bottom: 0;
     left: -17px;
     width: 17%;
+    mix-blend-mode: hard-light;
 }
 .br{
     position: absolute;
     bottom: 0;
     right: 0px;
     width: 17%;
+    mix-blend-mode: hard-light;
 }
 .tl{
     position: absolute;
     top: 0;
     left: -10px;
     width: 24%;
+    mix-blend-mode: hard-light;
 }
-.tr{
+.icon{
+    position: absolute;
+    width: 18px;
+    right: 8px;
+}
+.mt{
     position: absolute;
     top: 0;
-    right: 0px;
-    width: 30%;
+    left: 850px;
+    width: 23%;
+    mix-blend-mode: hard-light;
+}
+.mb{
+    position: absolute;
+    bottom: 0;
+    left: 600px;
+    width: 14%;
+    mix-blend-mode: hard-light;
 }
 .hamFull{
     width: 100vw;
     height: 100vh;
     background: hsla(0, 0%, 0%, 0.675);
 }
-
+a{
+    text-decoration: none;
+    color: white;
+}
 .list::after{
     content: '';
     display: block;
     position: absolute;
+    border-radius: 24px;
     background: linear-gradient(94.75deg, #D19A08 0%, #FEDB7E 27.6%, #EAC460 50%, #D19A08 66.15%, #D19A08 100%);
     width: 150px;
     left: 180px;
@@ -181,7 +204,10 @@ i {
     .bl{
         display: none;
     }
-    .tr{
+    .mt{
+        display: none;
+    }
+    .mb{
         display: none;
     }
     .br{
@@ -191,3 +217,29 @@ i {
         width: 80%;
     }
 }
+@media (max-width: 1300px) {
+    .heading{
+        font-size: 3rem;
+    }
+}
+@media (max-width: 1050px) {
+    .heading{
+        font-size: 2.5rem;
+    }
+    .text{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .about{
+        display: none;
+    }
+    .map{
+        width: 60%;
+    }
+    .left{
+        width: 70%;
+    }
+}
+
