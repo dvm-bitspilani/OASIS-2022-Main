@@ -1,6 +1,5 @@
 import RegistrationCSS from "../styles/Registration.module.css";
 import RegForm from "../Components/RegForm";
-import RegWelcome from "../Components/RegWelcome";
 import React, { useState } from "react";
 import wlbl from "../Assets/wavylinesBL.png";
 import wltl from "../Assets/wavylinesTL.png";
@@ -46,8 +45,7 @@ const Registration = (props) => {
             fill="white"
           />
         </svg>
-
-        {/* <RegWelcome /> */}
+        
         <RegForm resetPage={backdropClickHandler} />
         <img alt="" src={wlbl} className={RegistrationCSS.wlbl} />
         <img alt="" src={wltl} className={RegistrationCSS.wltl} />
