@@ -65,7 +65,7 @@ export default function Home() {
       <Contact id="contact" />
       <div className={HomeCSS.love}>
         <div className={HomeCSS.foot}>
-          Made with <i aria-hidden="true" className="fa fa-heart"></i> by DVM
+          Made with <a href="https://bits-dvm.org/" target="_blank"><i aria-hidden="true" style={{margin: '0', cursor: 'pointer'}} className="fa fa-heart"></i></a> by DVM
         </div>
       </div>
     </main>
