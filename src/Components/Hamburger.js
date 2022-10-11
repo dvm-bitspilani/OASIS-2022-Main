@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import gsap, { Power4 } from "gsap";
 import { Timeline } from "gsap/gsap-core";
 import { useRef } from "react";
@@ -141,7 +142,7 @@ return (
                 </div>
             </div>
             <div className={HamburgerCSS.right}>
-                <div ref={el => (menu1 = el)} className={HamburgerCSS.list}>Developers</div>
+                <Link to='/developers' ref={el => (menu1 = el)} className={HamburgerCSS.list}>Developers</Link>
                 <div ref={el => (menu2 = el)} className={HamburgerCSS.list}>Events</div>
                 <div ref={el => (menu3 = el)} className={HamburgerCSS.list}>Videos</div>
                 <div ref={el => (menu4 = el)} className={HamburgerCSS.list}>Sponsors</div>

@@ -1,6 +1,6 @@
 :root {
-  --king_wid: 57%;
-  --title_wid: 28%;
+  --king_wid: 56%;
+  --title_wid: 27%;
   --vh: 1vh;
   overflow-x: hidden;
 }
@@ -35,7 +35,7 @@
 
 /* king */
 .kingBodyWrapper {
-  top: -8%;
+  top: 0;
   position: absolute;
   left: 50%;
   width: var(--king_wid);
@@ -52,7 +52,7 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 43.5%;
+  top: 36.75%;
   transform: translateX(-0.85%);
 }
 
