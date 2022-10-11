@@ -6,9 +6,11 @@ import HamburgerCSS from "../styles/Hamburger.module.css";
 import { doc } from "prettier";
 import bl from "../Assets/blHam.png";
 import br from "../Assets/brHam.png";
+import mb from "../Assets/mb.png";
+import mt from "../Assets/mt.png";
 import tr from "../Assets/trHam.png";
 import tl from "../Assets/tlHam.png";
-
+import icon from "../Assets/info.png"
 export default function Hamburger() {
     const [showMenu, setShowMenu] = React.useState(false)
     // const menuItem = useRef(null)
@@ -125,8 +127,9 @@ return (
         <div ref={el => (menuDiv = el)} id="menu" className={HamburgerCSS.menu}>
             <img src={bl} className={HamburgerCSS.bl}></img>
             <img src={br} className={HamburgerCSS.br}></img>
+            <img src={mt} className={HamburgerCSS.mt}></img>
+            <img src={mb} className={HamburgerCSS.mb}></img>
             <img src={tl} className={HamburgerCSS.tl}></img>
-            <img src={tr} className={HamburgerCSS.tr}></img>
             <div className={HamburgerCSS.left}>
                 <div className={HamburgerCSS.about}>
                     <div ref={el => (div1 = el)} className={HamburgerCSS.heading}>The 50th Oasis</div>
@@ -134,7 +137,7 @@ return (
                 </div>
                 <div className={HamburgerCSS.map}>
                     <iframe src="https://maps.google.com/maps?q=BITS%Pilani%&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="80%" allowfullscreen></iframe>
-                    <div className={HamburgerCSS.info}>how to get to Pilani? <i class="fa-solid fa-circle-info"></i></div>
+                    <div className={HamburgerCSS.info}>how to get to Pilani? <img src = {icon} className={HamburgerCSS.icon} /></div>
                 </div>
             </div>
             <div className={HamburgerCSS.right}>
