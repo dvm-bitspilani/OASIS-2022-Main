@@ -7,6 +7,7 @@ import DropdownControl from "./DropdownControl";
 import EventsControl from "./EventsControl";
 import Button from "./Button";
 import InstrucBook from "../Assets/reg_guidelines.pdf";
+import Alert from "./Alert";
 
 const RegForm = (props) => {
   const BOSM_END_POINT = "https://www.bitsbosm.org/2022/registrations";
@@ -31,7 +32,8 @@ const RegForm = (props) => {
   const [validate, setValidate] = useState(false);
   const [checkboxChoreo, setCheckboxChoreo] = useState("");
   const [checkboxHos, setCheckboxHos] = useState("");
-
+  const [popup, setPopup] = useState(false);
+  const [message, setMessage] = useState("");
   const recaptchaRef = useRef(null);
 
   const [collegeList, setCollegeList] = useState([]);
@@ -115,10 +117,8 @@ const RegForm = (props) => {
 
       let res = await fetch(`${OASIS_END_POINT_POST}`, options);
       let res_json = await res.json();
-      alert(res_json.message);
-      if (res.ok) {
-        props.resetPage();
-      }
+      setMessage(res_json.message)
+      setPopup(true)
     } catch (e) {}
   };
 
@@ -155,6 +155,10 @@ const RegForm = (props) => {
       }
     });
   };
+  function handleClose(){
+      setPopup(false)
+      props.resetPage()
+  }
 
   const ruleBook = () => {
     const file = new Blob("../Assets/rulebook.pdf", {
@@ -167,6 +171,7 @@ const RegForm = (props) => {
 
   return (
     <div className={RegFormCSS.regFormBox}>
+    <Alert message = {message} show={popup} handleClose = {handleClose}/>
       <div className={RegFormCSS.heading}>REGISTRATION</div>
       <form
         className={RegFormCSS.regForm}
