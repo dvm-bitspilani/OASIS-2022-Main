@@ -2,6 +2,7 @@ import React from "react";
 import { useRef } from "react";
 import LanderCSS from "../styles/Lander.module.css";
 import LanderRing from "./LanderRing";
+import StrangeShard from "./StrangeShard";
 import Button from "./Button";
 
 import king from "../Assets/king.png";
@@ -19,6 +20,7 @@ import Hamburger from "./Hamburger";
 const Lander = React.forwardRef((props, ref) => {
   const kingEl = useRef(null);
   const ringCount = Math.floor(4 + Math.random() * 3);
+  const shardCount = Math.floor(100 + Math.random() * 20);
 
   return (
     <div className={LanderCSS.landerWrapper} ref={ref} id='landerWrapper'>
@@ -35,6 +37,12 @@ const Lander = React.forwardRef((props, ref) => {
             initAngle={idx * 10}
             idx={idx}
           />
+        ))}
+      </div>
+
+      <div>
+        {[...Array(shardCount)].map((count, idx) => (
+          <StrangeShard key={idx} />
         ))}
       </div>
 

@@ -2,13 +2,13 @@
   top: 0;
   left: 50vw;
   z-index: 1;
-  width: 12px;
+  width: 5px;
   height: 1px;
   border-radius: 1px;
   position: absolute;
   background-color: var(--bgCol);
   box-shadow: 0 0 2px 1px var(--bgCol);
-  animation: shardMove 2.5s ease-out infinite var(--delay);
+  animation: shardMove 5s ease-out infinite var(--delay);
 }
 
 @keyframes shardMove {
