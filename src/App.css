@@ -49,6 +49,10 @@ section:last-child {
   text-fill-color: transparent;
 }
 
+.fa {
+  margin: none;
+}
+
 @media screen and (max-width: 800px) {
   section {
     margin: 130px 0;

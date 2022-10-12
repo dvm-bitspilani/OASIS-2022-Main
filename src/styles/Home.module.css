@@ -16,7 +16,7 @@
   color: wheat;
 }
 
-.foot > i {
+.foot > a > i {
   color: red;
 }
 
