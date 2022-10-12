@@ -101,7 +101,7 @@ const EventsControl = (props) => {
   return (
     <div className={EcCSS.formControl}>
       <div className={EcCSS.inputContainer}>
-        <span className={`${EcCSS.label} ${labelClass}`}>Events</span>
+        <span className={`${EcCSS.label} ${labelClass}`}>Events * </span>
         <span className={EcCSS.caretClass}>
           <i
             className={`fa-solid fa-caret-down fa-xl ${EcCSS.caretClass} ${caretClass}`}

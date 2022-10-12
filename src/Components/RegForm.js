@@ -183,19 +183,19 @@ const RegForm = (props) => {
           <div className={RegFormCSS.leftSide}>
             <div className={RegFormCSS.textInputContainer}>
               <TextInputControl
-                label={"Name"}
+                label={"Name *"}
                 type={"text"}
                 setValue={setName}
                 info={"name"}
               />
               <TextInputControl
-                label={"Email Id"}
+                label={"Email Id *"}
                 type={"email"}
                 setValue={setEmail}
                 info={"email"}
               />
               <TextInputControl
-                label={"Phone No."}
+                label={"Phone No. *"}
                 type={"text"}
                 setValue={setPhone}
                 info={"phone"}
@@ -228,7 +228,7 @@ const RegForm = (props) => {
             <div className={RegFormCSS.sportsContainer}>
               <EventsControl
                 setValue={setEvents}
-                label={"Events"}
+                label={"Events *"}
                 listData={eventsList}
                 info={"events"}
                 setEventsIds={setEventsIds}
@@ -237,19 +237,19 @@ const RegForm = (props) => {
 
             <DropdownControl
               setValue={setCollege}
-              label={"College"}
+              label={"College *"}
               listData={collegeList}
               pattern=""
               info={"college"}
             />
             <DropdownControl
               setValue={setYear}
-              label={"Year Of Study"}
+              label={"Year Of Study *"}
               listData={yearList}
               info={"year"}
             />
             <TextInputControl
-              label={"City"}
+              label={"City *"}
               type={"text"}
               info={"name"}
               setValue={setLocation}

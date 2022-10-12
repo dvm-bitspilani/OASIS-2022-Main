@@ -25,7 +25,9 @@
     color: #ebb935;
 }
 .message{
-    margin-inline: 3rem;
+    margin-inline: 3rem;    
+    font-size: 1.4rem;
+    font-weight: bold;
     font-family: "Mulish";
     margin-bottom: 6rem;
 }
@@ -37,5 +39,6 @@
     }
     .message{
         margin-inline: 1rem;
+        font-size: 1.2rem;
     }
 }

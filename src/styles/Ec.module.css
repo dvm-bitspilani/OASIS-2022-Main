@@ -51,6 +51,8 @@
 
 .caretClass {
   height: 100%;
+  position: relative;
+  z-index: 1;
   width: 40px;
   transform: scale(0.76);
   display: flex;
@@ -217,9 +219,9 @@ a.ruleBook {
   .ruleBook:hover::after {
     width: 35%;
   }
-  .shiftLabelUp {
+  /* .shiftLabelUp {
     /* margin-bottom: 8px; */
-  }
+  /* }  */
   .inputContainer {
     height: 30px;
   }
