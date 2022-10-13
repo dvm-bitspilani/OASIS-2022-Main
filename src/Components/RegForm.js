@@ -117,8 +117,8 @@ const RegForm = (props) => {
 
       let res = await fetch(`${OASIS_END_POINT_POST}`, options);
       let res_json = await res.json();
-      setMessage(res_json.message)
-      setPopup(true)
+      setMessage(res_json.message);
+      setPopup(true);
     } catch (e) {}
   };
 
@@ -155,9 +155,9 @@ const RegForm = (props) => {
       }
     });
   };
-  function handleClose(){
-      setPopup(false)
-      props.resetPage()
+  function handleClose() {
+    setPopup(false);
+    props.resetPage();
   }
 
   const ruleBook = () => {
@@ -171,7 +171,7 @@ const RegForm = (props) => {
 
   return (
     <div className={RegFormCSS.regFormBox}>
-    <Alert message = {message} show={popup} handleClose = {handleClose}/>
+      <Alert message={message} show={popup} handleClose={handleClose} />
       <div className={RegFormCSS.heading}>REGISTRATION</div>
       <form
         className={RegFormCSS.regForm}
@@ -263,6 +263,9 @@ const RegForm = (props) => {
         </div> */}
         <div className={RegFormCSS.regFormBtns}>
           <Button type="submit" form="reg-form" btn_title="Register Now" />
+          <div className={RegFormCSS.compulsoryText}>
+            All fields marked * are compulsory.
+          </div>
           <a href={InstrucBook} target="_blank" className={RegFormCSS.Instruc}>
             How to Register?
           </a>
