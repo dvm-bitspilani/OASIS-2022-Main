@@ -24,6 +24,7 @@
 .eventsArr {
   width: 1vw;
   transition: all 200ms ease;
+  z-index: 30;
 }
 
 .eventsArr img {

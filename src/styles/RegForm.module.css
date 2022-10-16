@@ -34,7 +34,18 @@
   font-weight: 500;
   grid-column: 1/-1;
   grid-row: 1 / span 1;
-  color: #d19a08;
+  background: linear-gradient(
+          94.75deg,
+          #d19a08 0%,
+          #fedb7e 27.6%,
+          #eac460 50%,
+          #d19a08 66.15%,
+          #d19a08 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .regForm {

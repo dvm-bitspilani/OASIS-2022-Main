@@ -5,7 +5,7 @@ import EventIcon from "../Assets/Event.png";
 import arrow from "../Assets/Arrow.svg";
 import EventsPopUp from "./EventsPopUp";
 
-const Events = React.forwardRef((props, ref) => {
+const Events = (props) => {
   const EVENT_URL =
     "https://bits-oasis.org/2022/main/registrations/events_details";
   const [eventsArr, setEventsArr] = useState([]);
@@ -40,6 +40,7 @@ const Events = React.forwardRef((props, ref) => {
 
   const loopOver = () => {
     setItrCount((itrCount) => {
+      console.log("LOOPING")
       return itrCount + 1;
     });
   };
@@ -47,6 +48,7 @@ const Events = React.forwardRef((props, ref) => {
   const next = () => {
     clearTimeout(eventTimer.current);
     setItrCount((itrCount) => {
+      console.log("NEXT")
       return itrCount + 1;
     });
   };
@@ -54,6 +56,7 @@ const Events = React.forwardRef((props, ref) => {
   const prev = () => {
     clearTimeout(eventTimer.current);
     setItrCount((itrCount) => {
+      console.log("PREV")
       return itrCount - 1;
     });
   };
@@ -105,7 +108,7 @@ const Events = React.forwardRef((props, ref) => {
 
   useEffect(() => {
     getEvents();
-    clearInterval(eventTimer.current);
+    clearTimeout(eventTimer.current);
   }, []);
 
   useEffect(() => {
@@ -122,7 +125,7 @@ const Events = React.forwardRef((props, ref) => {
   }, [eventsArr]);
 
   return (
-    <section className={EventsCss.eventSec} ref={ref}>
+    <section className={EventsCss.eventSec} >
       <div className="secHead">KERNEL EVENTS</div>
       <div className={EventsCss.eventsCarCont}>
         <div
@@ -188,6 +191,6 @@ const Events = React.forwardRef((props, ref) => {
       )}
     </section>
   );
-});
+}
 
 export default Events;

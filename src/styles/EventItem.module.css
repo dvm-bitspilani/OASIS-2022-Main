@@ -27,18 +27,20 @@
   background-position: bottom;
   width: var(--width);
   height: 50vh;
-  transition: all 200ms ease;
+  transition: all 2s ease;
   overflow: hidden;
   pointer-events: none;
+  box-shadow: none;
 }
 
 .eventItemCont:hover > .eventItemBody {
   transform: scale(1.008);
 }
 
-.eventItemActiveCont:hover > .eventItemBody {
+.eventItemActiveCont > .eventItemBody {
   transform: scale(1.02);
-  box-shadow: 0 0 10px #9f9874b3;
+  box-shadow: 0 5px 20px -15px rgba(255, 174, 0, 0.75);
+  animation: glow 2.9s ease infinite;
 }
 
 .eventItemHeading {
@@ -87,5 +89,17 @@
 @media screen and (max-width: 1200px) {
   .eventItemHeading {
     font-size: 1.2rem;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 5px 20px -15px rgba(255, 174, 0, 0.75);
+  }
+  55% {
+    box-shadow: 0 5px 20px -5px rgba(255, 174, 0, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 174, 0, 0.75);
   }
 }
