@@ -66,9 +66,9 @@ export default function Home() {
         regState={regState.open}
         changeRegState={changeRegState}
       />
-      <Lander changeRegState={changeRegState} id="lander" />
-      <Events id="evt" />
-      <Contact id="contact" />
+      <Lander changeRegState={changeRegState} />
+      <Events />
+      <Contact />
       <div className={HomeCSS.love}>
         <div className={HomeCSS.foot}>
           Made with <a href="https://bits-dvm.org/" target="_blank"><i aria-hidden="true" style={{margin: '0', cursor: 'pointer'}} className="fa fa-heart"></i></a> by DVM
