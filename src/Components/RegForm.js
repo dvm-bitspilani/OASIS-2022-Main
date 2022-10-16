@@ -7,6 +7,7 @@ import DropdownControl from "./DropdownControl";
 import EventsControl from "./EventsControl";
 import Button from "./Button";
 import InstrucBook from "../Assets/reg_guidelines.pdf";
+import Alert from "./Alert";
 
 const RegForm = (props) => {
   const BOSM_END_POINT = "https://www.bitsbosm.org/2022/registrations";
@@ -31,7 +32,8 @@ const RegForm = (props) => {
   const [validate, setValidate] = useState(false);
   const [checkboxChoreo, setCheckboxChoreo] = useState("");
   const [checkboxHos, setCheckboxHos] = useState("");
-
+  const [popup, setPopup] = useState(false);
+  const [message, setMessage] = useState("");
   const recaptchaRef = useRef(null);
 
   const [collegeList, setCollegeList] = useState([]);
@@ -115,10 +117,8 @@ const RegForm = (props) => {
 
       let res = await fetch(`${OASIS_END_POINT_POST}`, options);
       let res_json = await res.json();
-      alert(res_json.message);
-      if (res.ok) {
-        props.resetPage();
-      }
+      setMessage(res_json.message);
+      setPopup(true);
     } catch (e) {}
   };
 
@@ -155,6 +155,10 @@ const RegForm = (props) => {
       }
     });
   };
+  function handleClose() {
+    setPopup(false);
+    props.resetPage();
+  }
 
   const ruleBook = () => {
     const file = new Blob("../Assets/rulebook.pdf", {
@@ -167,6 +171,7 @@ const RegForm = (props) => {
 
   return (
     <div className={RegFormCSS.regFormBox}>
+      <Alert message={message} show={popup} handleClose={handleClose} />
       <div className={RegFormCSS.heading}>REGISTRATION</div>
       <form
         className={RegFormCSS.regForm}
@@ -178,19 +183,19 @@ const RegForm = (props) => {
           <div className={RegFormCSS.leftSide}>
             <div className={RegFormCSS.textInputContainer}>
               <TextInputControl
-                label={"Name"}
+                label={"Name *"}
                 type={"text"}
                 setValue={setName}
                 info={"name"}
               />
               <TextInputControl
-                label={"Email Id"}
+                label={"Email Id *"}
                 type={"email"}
                 setValue={setEmail}
                 info={"email"}
               />
               <TextInputControl
-                label={"Phone No."}
+                label={"Phone No. *"}
                 type={"text"}
                 setValue={setPhone}
                 info={"phone"}
@@ -209,12 +214,12 @@ const RegForm = (props) => {
                 <div
                   className={`${RegFormCSS.checkbox} ${checkboxChoreo}`}
                 ></div>
-                <label>Are you a Choreographer/Mentor?</label>
+                <label>Are you a Choreographer/Mentor? (Optional)</label>
               </div>
               <div className={RegFormCSS.checkboxContainer} onClick={hosChange}>
                 <div className={`${RegFormCSS.checkbox} ${checkboxHos}`}></div>
 
-                <label>Are you the Head of a Society?</label>
+                <label>Are you the Head of a Society? (Optional)</label>
               </div>
             </div>
           </div>
@@ -223,7 +228,7 @@ const RegForm = (props) => {
             <div className={RegFormCSS.sportsContainer}>
               <EventsControl
                 setValue={setEvents}
-                label={"Events"}
+                label={"Events *"}
                 listData={eventsList}
                 info={"events"}
                 setEventsIds={setEventsIds}
@@ -232,19 +237,19 @@ const RegForm = (props) => {
 
             <DropdownControl
               setValue={setCollege}
-              label={"College"}
+              label={"College *"}
               listData={collegeList}
               pattern=""
               info={"college"}
             />
             <DropdownControl
               setValue={setYear}
-              label={"Year Of Study"}
+              label={"Year Of Study *"}
               listData={yearList}
               info={"year"}
             />
             <TextInputControl
-              label={"City"}
+              label={"City *"}
               type={"text"}
               info={"name"}
               setValue={setLocation}
@@ -258,6 +263,9 @@ const RegForm = (props) => {
         </div> */}
         <div className={RegFormCSS.regFormBtns}>
           <Button type="submit" form="reg-form" btn_title="Register Now" />
+          <div className={RegFormCSS.compulsoryText}>
+            All fields marked * are compulsory.
+          </div>
           <a href={InstrucBook} target="_blank" className={RegFormCSS.Instruc}>
             How to Register?
           </a>

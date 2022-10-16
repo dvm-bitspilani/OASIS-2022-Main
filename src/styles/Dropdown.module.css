@@ -133,7 +133,7 @@ span.caretDown {
 }
 
 span.caretDown {
-  z-index: 4;
+  z-index: 1;
   height: 100%;
   width: 40px;
   display: flex;

@@ -11,7 +11,7 @@ const GenderInputControl = (props) => {
 
   return (
     <div className={GicCSS.formControl}>
-      <div className={GicCSS.genderLabel}>Gender</div>
+      <div className={GicCSS.genderLabel}>Gender *</div>
       <div className={GicCSS.genderOptions}>
         <div
           className={GicCSS.genderContent}
