@@ -9,7 +9,7 @@
 }
 
 video {
-  width: 17%;
+  width: 13%;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -18,12 +18,12 @@ video {
 
 @media screen and (max-width: 800px) {
   video {
-    width: 30%;
+    width: 25%;
   }
 }
 
 @media screen and (max-width: 450px) {
   video {
-    width: 50%;
+    width: 45%;
   }
 }

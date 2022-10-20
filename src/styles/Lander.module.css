@@ -22,15 +22,76 @@
   z-index: 2;
 }
 
+/* portal window */
 .portalWindow {
   width: 59vw;
-  object-fit: cover;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 50%;
   transform: translateX(-50%) translateY(-2%);
   transform-origin: 50% 0;
   z-index: 2;
+  overflow: hidden;
+  /* border-bottom-left-radius: 29.5vw;
+  border-bottom-right-radius: 29.5vw; */
+  clip-path: circle(29vw at 50% 0);
+}
+
+.portalWindowImg {
+  width: 100%;
+  object-fit: cover;
+}
+
+.portalWindowClouds {
+  position: absolute;
+  width: 40%;
+}
+
+.windowCloud1 {
+  top: 5%;
+  /* right: -27%; */
+  animation: cloud1Anim 130s ease infinite;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+.windowCloud2 {
+  bottom: 15%;
+  /* left: -10%; */
+  width: 60%;
+  animation: cloud2Anim 110s ease infinite;
+}
+
+.windowCloud3 {
+  top: 10%;
+  /* left: 100%; */
+  animation: cloud2Anim 150s ease infinite;
+}
+
+@keyframes cloud1Anim {
+  0% {
+    right: -27%;
+  }
+  100% {
+    right: 85%;
+  }
+}
+
+@keyframes cloud2Anim {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 85%;
+  }
+}
+
+@keyframes cloud3Anim {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 /* king */
@@ -213,6 +274,7 @@
   .portalWindow {
     width: 65vw;
     height: auto;
+    clip-path: circle(31.5vw at 50% 0);
   }
 
   .kingContainer {
@@ -282,8 +344,35 @@
 
   .portalWindow {
     width: 130vw;
+    clip-path: circle(65vw at 50% 0);
   }
 
+  @keyframes cloud1Anim {
+    0% {
+      right: -20%;
+    }
+    100% {
+      right: 85%;
+    }
+  }
+  
+  @keyframes cloud2Anim {
+    0% {
+      left: -10%;
+    }
+    100% {
+      left: 85%;
+    }
+  }
+  
+  @keyframes cloud3Anim {
+    0% {
+      left: -25%;
+    }
+    100% {
+      left: 105%;
+    }
+  }
   .goldringsImg {
     width: 125%;
   }
