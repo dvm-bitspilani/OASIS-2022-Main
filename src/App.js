@@ -3,6 +3,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Pages/Home";
 import ErrorPage from "./Pages/ErrorPage";
 import Developers from "./Pages/Developers";
+import ReactGA from "react-ga";
+
+const TRACKING_ID = "G-39PJMR8EV2"
+ReactGA.initialize(TRACKING_ID)
 
 const router = createBrowserRouter([
   {

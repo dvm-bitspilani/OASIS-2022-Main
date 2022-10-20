@@ -24,7 +24,7 @@ import Clouds from "./Clouds";
 
 const Lander = React.forwardRef((props, ref) => {
   const kingEl = useRef(null);
-  const ringCount = Math.floor(4 + Math.random() * 3);
+  const ringCount = Math.floor(2 + Math.random() * 3);
   const shardCount = Math.floor(100 + Math.random() * 20);
 
   return (
@@ -47,7 +47,7 @@ const Lander = React.forwardRef((props, ref) => {
             stretch={idx % 4}
             initAngle={idx * 10}
             idx={idx}
-          />
+          />  
         ))}
       </div>
 

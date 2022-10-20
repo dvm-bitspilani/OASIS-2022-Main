@@ -214,12 +214,12 @@ const RegForm = (props) => {
                 <div
                   className={`${RegFormCSS.checkbox} ${checkboxChoreo}`}
                 ></div>
-                <label>Are you a Choreographer/Mentor?</label>
+                <label>Are you a Choreographer/Mentor? (Optional)</label>
               </div>
               <div className={RegFormCSS.checkboxContainer} onClick={hosChange}>
                 <div className={`${RegFormCSS.checkbox} ${checkboxHos}`}></div>
 
-                <label>Are you the Head of a Society?</label>
+                <label>Are you the Head of a Society? (Optional)</label>
               </div>
             </div>
           </div>

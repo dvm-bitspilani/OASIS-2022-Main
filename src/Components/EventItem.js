@@ -36,11 +36,10 @@ const EventItem = (props) => {
       setRadius(60);
     } else {
       setNumItem(1);
-      setRadius(155);
+      setRadius(145);
     }
   };
   const dispatchClick = () => {
-    console.log(`DISPATCHING WITH: ${props.itrCountAct + diff} and ${diff}`);
     props.itrSet(props.itrCountAct + diff);
   };
 
@@ -67,6 +66,7 @@ const EventItem = (props) => {
     }vw) scale(${95 - Math.abs(diff * 8)}%)`,
     opacity: opacity,
     zIndex: `${props.len - Math.abs(diff)}`,
+    cursor: `${diff === 0 ? `pointer` : `auto`}`,
   };
 
   return (
@@ -76,10 +76,9 @@ const EventItem = (props) => {
       }`}
       style={style}
       onClick={() => {
-        console.log("RUNNING");
         if (props.itrCount === props.idx) {
           props.openPopUp(props.idx);
-        } else {
+        } else if (Math.abs(diff) <= numItem) {
           dispatchClick();
         }
       }}
