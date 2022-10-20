@@ -30,16 +30,23 @@
   left: 50%;
   transform: translateX(-50%) translateY(-2%);
   transform-origin: 50% 0;
-  z-index: 2;
+  z-index: 3;
   overflow: hidden;
-  /* border-bottom-left-radius: 29.5vw;
-  border-bottom-right-radius: 29.5vw; */
-  clip-path: circle(29vw at 50% 0);
+  clip-path: ellipse(29vw 27.85vw at 50% -2%);
+}
+
+.portalWindowImg1 {
+  width: 100%;
+  object-fit: cover;
 }
 
 .portalWindowImg {
-  width: 100%;
-  object-fit: cover;
+  width: 59vw;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-2%);
+  transform-origin: 50% 0;
 }
 
 .portalWindowClouds {
@@ -48,23 +55,23 @@
 }
 
 .windowCloud1 {
-  top: 5%;
+  bottom: 10%;
   /* right: -27%; */
-  animation: cloud1Anim 130s ease infinite;
+  animation: cloud1Anim 250s ease infinite;
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 .windowCloud2 {
-  bottom: 15%;
+  bottom: 10%;
   /* left: -10%; */
   width: 60%;
-  animation: cloud2Anim 110s ease infinite;
+  animation: cloud2Anim 220s ease infinite;
 }
 
 .windowCloud3 {
-  top: 10%;
+  bottom: 10%;
   /* left: 100%; */
-  animation: cloud2Anim 150s ease infinite;
+  animation: cloud2Anim 300s ease infinite;
 }
 
 @keyframes cloud1Anim {
@@ -274,7 +281,11 @@
   .portalWindow {
     width: 65vw;
     height: auto;
-    clip-path: circle(31.5vw at 50% 0);
+    clip-path: ellipse(32vw 30.8vw at 50% -2%);
+  }
+
+  .portalWindowImg {
+    width: 65vw;
   }
 
   .kingContainer {
@@ -344,7 +355,11 @@
 
   .portalWindow {
     width: 130vw;
-    clip-path: circle(65vw at 50% 0);
+    clip-path: ellipse(64.5vw 61.5vw at 50% -2%);
+  }
+
+  .portalWindowImg {
+    width: 130vw;
   }
 
   @keyframes cloud1Anim {

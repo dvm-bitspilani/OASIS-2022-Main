@@ -32,11 +32,13 @@ const Lander = React.forwardRef((props, ref) => {
       {/* <Clouds /> */}
       <img src={logo} alt="OASIS" className={LanderCSS.oasisLogo} />
       <div className={LanderCSS.portalWindow}>
-        <img src={windowImg} alt="" className={LanderCSS.portalWindowImg} />
+        <img src={windowImg} alt="" className={LanderCSS.portalWindowImg1} />
         <img src={cloud1} alt=""  className={`${LanderCSS.portalWindowClouds} ${LanderCSS.windowCloud1}`} />
         <img src={cloud2} alt=""  className={`${LanderCSS.portalWindowClouds} ${LanderCSS.windowCloud2}`} />
         <img src={cloud3} alt=""  className={`${LanderCSS.portalWindowClouds} ${LanderCSS.windowCloud3}`} />
       </div>
+      
+      <img src={windowImg} alt="" className={LanderCSS.portalWindowImg} />
       {/* <Hamburger /> */}
       <div className={LanderCSS.goldrings}>
         {[...Array(ringCount)].map((count, idx) => (
