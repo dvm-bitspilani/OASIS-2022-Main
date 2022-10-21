@@ -57,7 +57,7 @@
 .windowCloud1 {
   bottom: 10%;
   /* right: -27%; */
-  animation: cloud1Anim 250s ease infinite;
+  animation: cloud1Anim 250s ease -50s infinite;
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
@@ -65,13 +65,13 @@
   bottom: 10%;
   /* left: -10%; */
   width: 60%;
-  animation: cloud2Anim 220s ease infinite;
+  animation: cloud2Anim 220s ease -30s infinite;
 }
 
 .windowCloud3 {
   bottom: 10%;
   /* left: 100%; */
-  animation: cloud2Anim 300s ease infinite;
+  animation: cloud2Anim 300s ease -70s infinite;
 }
 
 @keyframes cloud1Anim {
