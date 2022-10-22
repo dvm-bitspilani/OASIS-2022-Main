@@ -1,0 +1,53 @@
+.cloudsWrapper {
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.cloud {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.cloudR {
+    animation: cloud-r 5s ease-in-out;
+    mask-mode: alpha;
+    mask-image: image(url("../Assets/Mask.svg"));
+}
+
+.cloudL {
+    animation: cloud-l 5s ease-in-out;
+    mask-mode: alpha;
+    mask-image: image(url("../Assets/Mask.svg"));
+}
+
+@keyframes cloud-l {
+    0% {
+        transform: translate(-100%, 100%);
+    }
+    /* 50% {
+        transform: translate(0, 0);
+    } */
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes cloud-r {
+    0% {
+        transform: translate(100%, -100%);
+    }
+    /* 50% {
+        transform: translate(0, 0);
+    } */
+    100% {
+        transform: translate(0, 0);
+    }
+}

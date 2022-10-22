@@ -6,9 +6,15 @@ import Contact from "../Components/Contact";
 import Events from "../Components/Events";
 import HomeCSS from "../styles/Home.module.css";
 import Loader from "./Loader";
+import ReactGA from "react-ga";
+
+
 
 export default function Home() {
   window.scrollTo(0, 0);
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname)
+  }, []);
   const [regState, setRegState] = useState({ open: false });
 
   useEffect(() => {
