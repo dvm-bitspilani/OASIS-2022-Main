@@ -59,7 +59,8 @@ const RegForm = (props) => {
       availColleges = collegeListJson.data;
 
       let eventsListJson = await eventsRes.json();
-      availEvents = eventsListJson[0].events;
+      availEvents = [];
+	  eventsListJson.forEach(events => {availEvents.push(...events.events)});
       // console.log([...availEvents]);
 
       // collegeList=[...availColleges]

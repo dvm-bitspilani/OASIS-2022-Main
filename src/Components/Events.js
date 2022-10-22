@@ -40,7 +40,6 @@ const Events = (props) => {
 
   const loopOver = () => {
     setItrCount((itrCount) => {
-      console.log("LOOPING")
       return itrCount + 1;
     });
   };
@@ -48,7 +47,6 @@ const Events = (props) => {
   const next = () => {
     clearTimeout(eventTimer.current);
     setItrCount((itrCount) => {
-      console.log("NEXT")
       return itrCount + 1;
     });
   };
@@ -56,7 +54,6 @@ const Events = (props) => {
   const prev = () => {
     clearTimeout(eventTimer.current);
     setItrCount((itrCount) => {
-      console.log("PREV")
       return itrCount - 1;
     });
   };
@@ -125,7 +122,7 @@ const Events = (props) => {
   }, [eventsArr]);
 
   return (
-    <section className={EventsCss.eventSec} >
+    <section className={EventsCss.eventSec}>
       <div className="secHead">KERNEL EVENTS</div>
       <div className={EventsCss.eventsCarCont}>
         <div
@@ -191,6 +188,6 @@ const Events = (props) => {
       )}
     </section>
   );
-}
+};
 
 export default Events;
