@@ -25,7 +25,7 @@
 }
 
 .collegeInput:hover {
-  cursor: pointer;
+  cursor: text;
 }
 
 .collegeLabel {
@@ -36,7 +36,8 @@
 .collegeList {
   list-style: none;
   position: absolute;
-  bottom: 0;
+  /* bottom: 0; */
+  top:calc(100% + 2px);
   width: 100%;
   height: 0;
   z-index: 5;
@@ -51,7 +52,8 @@ span.caretDown {
 
 .openList {
   transition: 0.3s;
-  bottom: -120px;
+  /* bottom: -120px; */
+
   height: 120px;
   border-top: none;
   border-right: none;
@@ -86,7 +88,7 @@ span.caretDown {
 }
 
 .closeList {
-  bottom: 2px;
+  /* bottom: 2px; */
   height: 0;
   transition: 0.2s;
 }
@@ -175,6 +177,6 @@ span.caretDown {
 
   .openList {
     height: 90px;
-    bottom: -90px;
+    /* bottom: -90px; */
   }
 }
