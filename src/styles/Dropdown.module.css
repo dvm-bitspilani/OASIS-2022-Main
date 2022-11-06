@@ -51,21 +51,20 @@ span.caretDown {
 
 .openList {
   transition: 0.3s;
-  bottom: -140px;
-  height: 140px;
+  bottom: -120px;
+  height: 120px;
   border-top: none;
   border-right: none;
 }
 
 .collegeList > li {
-  padding: 5px 0;
-  display: flex;
   width: 100%;
-  margin: 1px 0px;
-  background-color: rgba(1, 1, 1, 0.779);
-  align-items: center;
-  padding-left: 8px;
+  padding: 4px 5px;
+  background-color: rgb(13, 13, 13);
+  font-size: 16px;
+  margin-bottom: 1px;
   display: flex;
+  align-items: center;
 }
 
 .collegeList > li:hover {
@@ -132,14 +131,18 @@ span.caretDown {
   transform: rotate(0);
 }
 
-span.caretDown {
+.caretClass{
   z-index: 1;
-  height: 100%;
-  width: 40px;
+  /* height: 100%; */
+  /* width: 40px; */
   display: flex;
   justify-content: center;
   align-items: center;
+  scale:0.8;
 }
+
+
+
 @media (max-width: 900px) {
   .collegeLabel {
     font-size: 15px;

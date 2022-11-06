@@ -85,7 +85,7 @@ const DropdownControl = (props) => {
       </span>
       <span className={DropdownCSS.caretDown}>
         <i
-          className={`fa-solid fa-caret-down  ${caretClass}`}
+          className={`fa-solid fa-caret-down ${DropdownCSS.caretClass} ${caretClass}`}
           onClick={handleControlClick}
         ></i>
       </span>
