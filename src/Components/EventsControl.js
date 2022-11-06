@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { act } from "react-dom/test-utils";
 import EcCSS from "../styles/Ec.module.css";
-import ruleBookPdf from "../Assets/rulebook.pdf";
 
 const EventsControl = (props) => {
   const inputRef = useRef();

@@ -5,13 +5,13 @@ import { Timeline } from "gsap/gsap-core";
 import { useRef } from "react";
 import HamburgerCSS from "../styles/Hamburger.module.css";
 import { doc } from "prettier";
-import bl from "../Assets/blHam.png";
-import br from "../Assets/brHam.png";
-import mb from "../Assets/mb.png";
-import mt from "../Assets/mt.png";
-import tr from "../Assets/trHam.png";
-import tl from "../Assets/tlHam.png";
-import icon from "../Assets/info.png";
+import bl from "../Assets/Hamburger/bottomLeft.png";
+import br from "../Assets/Hamburger/bottomRight.png";
+import mb from "../Assets/Hamburger/midBottom.png";
+import mt from "../Assets/Hamburger/midTop.png";
+import tr from "../Assets/Hamburger/topRight.png";
+import tl from "../Assets/Hamburger/topLeft.png";
+import icon from "../Assets/Hamburger/info.png";
 export default function Hamburger() {
   const [showMenu, setShowMenu] = React.useState(false);
   // const menuItem = useRef(null)

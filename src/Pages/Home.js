@@ -44,7 +44,7 @@ export default function Home() {
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
-      document.querySelector("body").style.display = "none";
+      // document.querySelector("body").style.display = "none";
     });
   }, []);
 

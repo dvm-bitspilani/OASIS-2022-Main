@@ -1,6 +1,6 @@
 import RingCss from "../styles/LanderRings.module.css";
-import YellowRingImg from "../Assets/ringsYellow.png";
-import OrangeRingImg from "../Assets/ringsOrange.png";
+import YellowRingImg from "../Assets/PortalRings/ringsYellow.png";
+import OrangeRingImg from "../Assets/PortalRings/ringsOrange.png";
 
 const LanderRing = (props) => {
   return (

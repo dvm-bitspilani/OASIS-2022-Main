@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import EventItemCss from "../styles/EventItem.module.css";
-import EventTriangleSvg from "../Assets/EventTriangle.svg";
-import EventIcon from "../Assets/Event.png";
+import EventTriangleSvg from "../Assets/Events/EventTriangle.svg";
 
 const EventItem = (props) => {
   const [opacity, setOpacity] = useState("0");

@@ -6,7 +6,7 @@ import GenderInputControl from "./GenderInputControl";
 import DropdownControl from "./DropdownControl";
 import EventsControl from "./EventsControl";
 import Button from "./Button";
-import InstrucBook from "../Assets/reg_guidelines.pdf";
+import InstrucBook from "../Assets/Registration/reg_guidelines.pdf";
 import Alert from "./Alert";
 
 const RegForm = (props) => {
@@ -164,7 +164,7 @@ const RegForm = (props) => {
   }
 
   const ruleBook = () => {
-    const file = new Blob("../Assets/rulebook.pdf", {
+    const file = new Blob("../Assets/Registration/rulebook.pdf", {
       type: "application/pdf",
     });
     const fileURL = URL.createObjectURL(file);

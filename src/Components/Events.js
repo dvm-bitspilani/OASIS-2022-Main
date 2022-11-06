@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import EventsCss from "../styles/Events.module.css";
 import EventItem from "./EventItem";
-import EventIcon from "../Assets/Event.png";
-import arrow from "../Assets/Arrow.svg";
+import EventIcon from "../Assets/Events/Event.png";
+import arrow from "../Assets/Events/Arrow.svg";
 import EventsPopUp from "./EventsPopUp";
 
 const Events = (props) => {

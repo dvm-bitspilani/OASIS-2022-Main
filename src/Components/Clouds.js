@@ -1,7 +1,7 @@
 import React from "react";
 import CloudsCSS from "../styles/Clouds.module.css";
-import cloudR from "../Assets/cloud-right.png";
-import cloudL from "../Assets/cloud-left.png";
+import cloudR from "../Assets/TransitionClouds/cloud-right.png";
+import cloudL from "../Assets/TransitionClouds/cloud-left.png";
 
 export default function Clouds() {
   return (

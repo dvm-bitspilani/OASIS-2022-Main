@@ -5,16 +5,16 @@ import LanderRing from "./LanderRing";
 import StrangeShard from "./StrangeShard";
 import Button from "./Button";
 
-import king from "../Assets/king.png";
+import king from "../Assets/Lander/king.png";
 import logo from "../Assets/logo.png";
-import title from "../Assets/title.png";
-import leftEye from "../Assets/lefteye.png";
-import windowImg from "../Assets/window.png";
-import rightEye from "../Assets/righteye.png";
+import title from "../Assets/Lander/title.png";
+import windowImg from "../Assets/Lander/window.png";
+import leftEye from "../Assets/Lander/Eyes/lefteye.png";
+import rightEye from "../Assets/Lander/Eyes/righteye.png";
 
-import cloud1 from "../Assets/Lander/window-clouds-1.png";
-import cloud2 from "../Assets/Lander/window-clouds-2.png";
-import cloud3 from "../Assets/Lander/window-clouds-3.png";
+import cloud1 from '../Assets/Lander/PortalClouds/window-clouds-1.png'
+import cloud2 from '../Assets/Lander/PortalClouds/window-clouds-2.png'
+import cloud3 from '../Assets/Lander/PortalClouds/window-clouds-3.png'
 
 import FaceBookIcon from "../Assets/Lander/FaceBookIcon";
 import YouTubeIcon from "../Assets/Lander/YouTubeIcon";
