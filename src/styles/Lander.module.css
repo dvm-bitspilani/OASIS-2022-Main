@@ -7,7 +7,7 @@
 
 .landerWrapper {
   width: 100vw;
-  min-height: calc(100*var(--vh));
+  min-height: calc(100 * var(--vh));
   background: url(../Assets/background.png) no-repeat center;
   overflow-y: visible;
   background-size: cover;
@@ -18,7 +18,7 @@
   position: absolute;
   width: 3.5%;
   left: 2vw;
-  top: calc(2*var(--vh));
+  top: calc(2 * var(--vh));
   z-index: 2;
 }
 
@@ -175,7 +175,7 @@
 .titleBgGrad {
   position: absolute;
   width: 50vw;
-  height: calc(40*var(--vh));
+  height: calc(40 * var(--vh));
   left: 50%;
   top: 60%;
   z-index: 4;
@@ -219,7 +219,7 @@
 /* icons */
 .bottomWrapper {
   position: absolute;
-  bottom: calc(2% + 1*var(--vh));
+  bottom: calc(2% + 1 * var(--vh));
   display: flex;
   justify-content: flex-end;
   padding: 0 1.5vw;
@@ -321,7 +321,7 @@
   .titleBgGrad {
     width: 70vw;
     top: 64%;
-    height: calc(15*var(--vh));
+    height: calc(15 * var(--vh));
   }
 }
 
@@ -329,7 +329,7 @@
   :root {
     --king_wid: 125%;
     --title_wid: 75%;
-    --vh: .92vh;
+    --vh: 0.92vh;
   }
 
   .landerWrapper {
@@ -370,7 +370,7 @@
       right: 85%;
     }
   }
-  
+
   @keyframes cloud2Anim {
     0% {
       left: -10%;
@@ -379,7 +379,7 @@
       left: 85%;
     }
   }
-  
+
   @keyframes cloud3Anim {
     0% {
       left: -25%;
@@ -401,11 +401,18 @@
   }
 
   .titleBgGrad {
-      width: 100vw;
-      top: 55%;
-      height: calc(20*var(--vh));
-      z-index: 4;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 1) 100%)
+    width: 100vw;
+    top: 55%;
+    height: calc(20 * var(--vh));
+    z-index: 4;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0) 55%,
+      rgba(0, 0, 0, 1) 70%,
+      rgba(0, 0, 0, 1) 90%,
+      rgba(0, 0, 0, 1) 100%
+    );
   }
 
   .registerWrapper {

@@ -1,162 +1,161 @@
 .devContainer {
-    padding: 0 60px;
-    display: flex;
-    color: white;
-    flex-direction: column;
-    align-items: center;
-    /* background-color: black; */
-    overflow-x: hidden;
-    margin: 40px 0;
-  }
-  
-  .devHead {
-    font-family: "Mulish";
-    margin-bottom: 60px;
-    font-weight: 700;
-    font-size: 2rem;
-    letter-spacing: 0.02em;
-    background: linear-gradient(
-      94.75deg,
-      #d19a08 0%,
-      #fedb7e 27.6%,
-      #eac460 50%,
-      #d19a08 66.15%,
-      #d19a08 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+  padding: 0 60px;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: black; */
+  overflow-x: hidden;
+  margin: 40px 0;
+}
 
-  #dev-secHead {
-    margin-bottom: 30px;
-  }
-  
-  .devBody {
-    gap: 45px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .devCard {
-    display: flex;
-    position: relative;
-    padding: 30px 20px;
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #141414;
-    border: 1px solid rgba(251, 251, 251, 0.08);
-    box-shadow: 0px 0.608379px 14.6011px 0.608379px rgba(0, 0, 0, 0.15);
-    padding-bottom: calc(30px + 1rem + 20px) !important;
-    /* backdrop-filter: blur(12.1676px); */
-    border-radius: 20px;
-  
-    /* IMPORTANT */
-    transform: scale(0.85);
-  }
-  
-  .devImageCont {
-    padding: 2px;
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-    overflow: hidden;
-    background-image: linear-gradient(
-      94.75deg,
-      #d19a08 0%,
-      #fedb7e 16.49%,
-      #ebb935 43.37%,
-      #fcd776 74.96%,
-      #d19a08 100%
-    );
-  }
-  
-  .devImage {
-    width: 166px;
-    height: 166px;
-    /* padding-top: 10px; */
-    background-color: black;
-    border-radius: 50%;
-  }
-  
-  .devName {
-    font-family: "Mulish";
-    margin: 1rem 0 0.5rem 0;
-    font-weight: 700;
-    font-size: 1.2rem;
-  }
-  
-  .devDept {
-    font-family: "Mulish";
-    font-weight: 500;
-    max-width: 80%;
-    font-size: 0.8rem;
-  }
-  
-  .devLinks {
-    width: 50%;
-    display: flex;
-    position: absolute;
-    bottom: 1rem;
-    justify-content: space-around;
-  }
-  
+.devHead {
+  font-family: "Mulish";
+  margin-bottom: 60px;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+  background: linear-gradient(
+    94.75deg,
+    #d19a08 0%,
+    #fedb7e 27.6%,
+    #eac460 50%,
+    #d19a08 66.15%,
+    #d19a08 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#dev-secHead {
+  margin-bottom: 30px;
+}
+
+.devBody {
+  gap: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.devCard {
+  display: flex;
+  position: relative;
+  padding: 30px 20px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #141414;
+  border: 1px solid rgba(251, 251, 251, 0.08);
+  box-shadow: 0px 0.608379px 14.6011px 0.608379px rgba(0, 0, 0, 0.15);
+  padding-bottom: calc(30px + 1rem + 20px) !important;
+  /* backdrop-filter: blur(12.1676px); */
+  border-radius: 20px;
+
+  /* IMPORTANT */
+  transform: scale(0.85);
+}
+
+.devImageCont {
+  padding: 2px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-image: linear-gradient(
+    94.75deg,
+    #d19a08 0%,
+    #fedb7e 16.49%,
+    #ebb935 43.37%,
+    #fcd776 74.96%,
+    #d19a08 100%
+  );
+}
+
+.devImage {
+  width: 166px;
+  height: 166px;
+  /* padding-top: 10px; */
+  background-color: black;
+  border-radius: 50%;
+}
+
+.devName {
+  font-family: "Mulish";
+  margin: 1rem 0 0.5rem 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.devDept {
+  font-family: "Mulish";
+  font-weight: 500;
+  max-width: 80%;
+  font-size: 0.8rem;
+}
+
+.devLinks {
+  width: 50%;
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  justify-content: space-around;
+}
+
+.fifteen {
+  display: grid;
+  column-gap: 3rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  max-width: 100vw;
+}
+
+@media screen and (max-width: 1200px) {
   .fifteen {
-    display: grid;
-    column-gap: 3rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     max-width: 100vw;
   }
-  
-  @media screen and (max-width: 1200px) {
-    .fifteen {
-      max-width: 100vw;
-    }
+}
+
+@media screen and (max-width: 800px) {
+  .fifteen {
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
   }
-  
-  @media screen and (max-width: 800px) {
-    .fifteen {
-      grid-template-columns: 1fr 1fr;
-      gap: 45px;
-    }
-  
-    .devCard {
-      transform: none;
-    }
-  
-    .devName {
-      margin: 1.5rem 0 1rem 0;
-    }
-  
-    .devLinks {
-      margin-top: 1.5rem;
-    }
+
+  .devCard {
+    transform: none;
   }
-  
-  @media screen and (max-width: 450px) {
-    .fifteen {
-      gap: 0;
-    }
-  
-    .devBody {
-      gap: 0;
-    }
-  
-    .devCard {
-      margin-top: -30px;
-      padding: 20px 5px;
-      transform: scale(0.75);
-    }
-  
-    .devImageCont {
-      transform: scale(0.8);
-    }
-  
-    .fifteen {
-      margin-top: -30px;
-    }
+
+  .devName {
+    margin: 1.5rem 0 1rem 0;
   }
-  
+
+  .devLinks {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .fifteen {
+    gap: 0;
+  }
+
+  .devBody {
+    gap: 0;
+  }
+
+  .devCard {
+    margin-top: -30px;
+    padding: 20px 5px;
+    transform: scale(0.75);
+  }
+
+  .devImageCont {
+    transform: scale(0.8);
+  }
+
+  .fifteen {
+    margin-top: -30px;
+  }
+}

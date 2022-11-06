@@ -8,12 +8,11 @@ import HomeCSS from "../styles/Home.module.css";
 import Loader from "./Loader";
 import ReactGA from "react-ga";
 
-
-
 export default function Home() {
   window.scrollTo(0, 0);
-  useEffect(()=>{
-    ReactGA.pageview(window.location.pathname)
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
   }, []);
   const [regState, setRegState] = useState({ open: false });
 
@@ -34,13 +33,18 @@ export default function Home() {
   };
 
   const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
     document.addEventListener("readystatechange", () => {
       console.log("loaded");
       if (document.readyState === "complete") {
         setTimeout(() => setIsLoaded(true), 2000);
       }
+    });
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      document.querySelector("body").style.display = "none";
     });
   }, []);
 
@@ -71,7 +75,15 @@ export default function Home() {
       <Contact />
       <div className={HomeCSS.love}>
         <div className={HomeCSS.foot}>
-          Made with <a href="https://bits-dvm.org/" target="_blank"><i aria-hidden="true" style={{margin: '0', cursor: 'pointer'}} className="fa fa-heart"></i></a> by DVM
+          Made with{" "}
+          <a href="https://bits-dvm.org/" target="_blank">
+            <i
+              aria-hidden="true"
+              style={{ margin: "0", cursor: "pointer" }}
+              className="fa fa-heart"
+            ></i>
+          </a>{" "}
+          by DVM
         </div>
       </div>
     </main>

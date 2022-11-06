@@ -1,44 +1,43 @@
-.popup{
-    position: fixed;
-    width: 40vw;
-    left: 30%;
-    top: 30%;
-    background-color: rgba(19, 16, 16, 0.727);
-    z-index: 2;
-    backdrop-filter: blur(5px);
-    border: 1px solid #524916;
-    box-shadow: 0 0 5px #9f9874b3;
-    border-radius: 12px;
+.popup {
+  position: fixed;
+  width: 40vw;
+  left: 30%;
+  top: 30%;
+  background-color: rgba(19, 16, 16, 0.727);
+  z-index: 2;
+  backdrop-filter: blur(5px);
+  border: 1px solid #524916;
+  box-shadow: 0 0 5px #9f9874b3;
+  border-radius: 12px;
 }
-.exit{
-    display: flex;
-    justify-content: right;
-    margin: 3rem;
-    font-size: 2rem;
-
+.exit {
+  display: flex;
+  justify-content: right;
+  margin: 3rem;
+  font-size: 2rem;
 }
-.exit > i{
-    cursor: pointer;
-    transition: all 0.3s;
+.exit > i {
+  cursor: pointer;
+  transition: all 0.3s;
 }
-.exit > i:hover{
-    color: #ebb935;
+.exit > i:hover {
+  color: #ebb935;
 }
-.message{
-    margin-inline: 3rem;    
-    font-size: 1.4rem;
-    font-weight: bold;
-    font-family: "Mulish";
-    margin-bottom: 6rem;
+.message {
+  margin-inline: 3rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: "Mulish";
+  margin-bottom: 6rem;
 }
 @media (max-width: 800px) {
-    .popup{
-        left: 10%;
-        width: 80vw;
-        height: 50vh;
-    }
-    .message{
-        margin-inline: 1rem;
-        font-size: 1.2rem;
-    }
+  .popup {
+    left: 10%;
+    width: 80vw;
+    height: 50vh;
+  }
+  .message {
+    margin-inline: 1rem;
+    font-size: 1.2rem;
+  }
 }

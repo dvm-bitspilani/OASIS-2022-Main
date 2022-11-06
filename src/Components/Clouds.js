@@ -1,13 +1,16 @@
-import React from 'react'
-import CloudsCSS from '../styles/Clouds.module.css'
-import cloudR from '../Assets/clouds-r.png'
-import cloudL from '../Assets/clouds-l.png'
+import React from "react";
+import CloudsCSS from "../styles/Clouds.module.css";
+import cloudR from "../Assets/cloud-right.png";
+import cloudL from "../Assets/cloud-left.png";
 
 export default function Clouds() {
   return (
     <div className={CloudsCSS.cloudsWrapper}>
-        <img className={`${CloudsCSS.cloudR} ${CloudsCSS.cloud}`} src={cloudR} alt="" />
-        <img className={`${CloudsCSS.cloudL} ${CloudsCSS.cloud}`} src={cloudL} alt="" />
+      <img className={`${CloudsCSS.cloudR1} ${CloudsCSS.cloud}`} src={cloudR} />
+      <img className={`${CloudsCSS.cloudR2} ${CloudsCSS.cloud}`} src={cloudR} />
+
+      <img className={`${CloudsCSS.cloudL1} ${CloudsCSS.cloud}`} src={cloudL} />
+      <img className={`${CloudsCSS.cloudL2} ${CloudsCSS.cloud}`} src={cloudL} />
     </div>
-  )
+  );
 }

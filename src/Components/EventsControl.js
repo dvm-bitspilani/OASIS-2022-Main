@@ -15,7 +15,7 @@ const EventsControl = (props) => {
 
   const [eventsList, setEventList] = useState([]);
   const [selectedEvents, setSelectedEvents] = useState([]);
-  const [heightMod,setHeightMod]=useState()
+  const [heightMod, setHeightMod] = useState();
 
   function inputContainerClick(e) {
     setActive(true);
@@ -25,34 +25,31 @@ const EventsControl = (props) => {
     setTimeout(() => {
       setSearchTerm("");
     }, 200);
-    let rootStyle = document.querySelector(":root").style
+    let rootStyle = document.querySelector(":root").style;
 
-    rootStyle.setProperty("--dropDownHeight",`120px`)
+    rootStyle.setProperty("--dropDownHeight", `120px`);
 
     setActive(false);
   }
 
   function handleInputChange(e) {
     setSearchTerm(e.target.value);
-    let dynamicLength = eventsList
-            .filter((data) => {
-              if (e.target.value === "") {
-                return data;
-              } else if (
-                data.name.toLowerCase().includes(e.target.value.toLowerCase())
-              ) {
-                return data;
-              }
-            }).length
-    let rootStyle = document.querySelector(":root").style
+    let dynamicLength = eventsList.filter((data) => {
+      if (e.target.value === "") {
+        return data;
+      } else if (
+        data.name.toLowerCase().includes(e.target.value.toLowerCase())
+      ) {
+        return data;
+      }
+    }).length;
+    let rootStyle = document.querySelector(":root").style;
     // console.log(rootStyle)
-    if(dynamicLength <=5){
-      rootStyle.setProperty("--dropDownHeight",`${dynamicLength*25}px`)
+    if (dynamicLength <= 5) {
+      rootStyle.setProperty("--dropDownHeight", `${dynamicLength * 25}px`);
+    } else {
+      rootStyle.setProperty("--dropDownHeight", `120px`);
     }
-    else{
-      rootStyle.setProperty("--dropDownHeight",`120px`)
-    }
-
   }
 
   function handleEventSelection(e) {
@@ -73,7 +70,7 @@ const EventsControl = (props) => {
     setEventList([...updatedList]);
     setSelectedEvents((prevList) => [...prevList, ...selectedEventList]);
 
-    console.log([...updatedList].length)
+    console.log([...updatedList].length);
 
     // if([...updatedList].length <=5){
     //   // setHeightMod({hei})
@@ -135,21 +132,19 @@ const EventsControl = (props) => {
 
   useEffect(() => {
     // console.log("triggere")
-    let rootStyle = document.querySelector(":root").style
+    let rootStyle = document.querySelector(":root").style;
     // console.log(rootStyle)
-    if(eventsList.length <=5){
-      rootStyle.setProperty("--dropDownHeight",`${eventsList.length*25}px`)
+    if (eventsList.length <= 5) {
+      rootStyle.setProperty("--dropDownHeight", `${eventsList.length * 25}px`);
+    } else {
+      rootStyle.setProperty("--dropDownHeight", `120px`);
     }
-    else{
-      rootStyle.setProperty("--dropDownHeight",`120px`)
-    }
-
-  },[eventsList.length])
+  }, [eventsList.length]);
   return (
     <div className={EcCSS.formControl}>
       <div className={EcCSS.inputContainer}>
         <span className={`${EcCSS.label} ${labelClass}`}>Events * </span>
-        <span >
+        <span>
           <i
             className={`fa-solid fa-caret-down ${EcCSS.caretClass} ${caretClass}`}
           ></i>

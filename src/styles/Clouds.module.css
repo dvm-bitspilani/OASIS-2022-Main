@@ -1,53 +1,67 @@
 .cloudsWrapper {
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
-    position: relative;
-    /* overflow: hidden; */
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  position: relative;
+  /* overflow: hidden; */
 }
 
 .cloud {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  mask-mode: alpha;
+  object-fit: cover;
+  position: absolute;
+  mask-image: image(url("../Assets/Mask.svg"));
+  animation: cloud-left 4s cubic-bezier(0.31, 0.62, 0.31, 0.96);
 }
 
-.cloudR {
-    animation: cloud-r 5s ease-in-out;
-    mask-mode: alpha;
-    mask-image: image(url("../Assets/Mask.svg"));
+.cloudL1 {
+  top: -10vh;
+  left: -38vw;
 }
 
-.cloudL {
-    animation: cloud-l 5s ease-in-out;
-    mask-mode: alpha;
-    mask-image: image(url("../Assets/Mask.svg"));
+.cloudL2 {
+  top: 32vh;
+  left: -30vw;
 }
 
-@keyframes cloud-l {
-    0% {
-        transform: translate(-100%, 100%);
-    }
-    /* 50% {
+.cloudR1 {
+  top: -10vh;
+  right: 5vw;
+  /* display: none; */
+  animation: cloud-right 4s cubic-bezier(0.31, 0.62, 0.31, 0.96);
+}
+
+.cloudR2 {
+  top: 30vh;
+  right: -15vw;
+  animation: cloud-right 4s cubic-bezier(0.31, 0.62, 0.31, 0.96);
+}
+
+@keyframes cloud-left {
+  0% {
+    transform: translate(-100%, 100%);
+  }
+  /* 50% {
         transform: translate(0, 0);
     } */
-    100% {
-        transform: translate(0, 0);
-    }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
-@keyframes cloud-r {
-    0% {
-        transform: translate(100%, -100%);
-    }
-    /* 50% {
+@keyframes cloud-right {
+  0% {
+    transform: translate(100%, -100%);
+  }
+  /* 50% {
         transform: translate(0, 0);
     } */
-    100% {
-        transform: translate(0, 0);
-    }
+  100% {
+    transform: translate(0, 0);
+  }
 }

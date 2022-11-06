@@ -9,7 +9,7 @@ const EventsPopUp = (props) => {
 
   const popUpClick = (evt) => {
     popUpTextCont.current.classList.add(EventsPopUpCss.popUpTextContClose);
-    popUpCont.current.classList.add(EventsPopUpCss.popUpContClose)
+    popUpCont.current.classList.add(EventsPopUpCss.popUpContClose);
     setTimeout(() => {
       props.closePopUp();
     }, 500);

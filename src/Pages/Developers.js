@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import PhoneIcon from "../Assets/ContactUs/PhoneIcon";
 import MailIcon from "../Assets/ContactUs/MailIcon";
 import MaleAvatar from "../Assets/ContactUs/MaleAvatar";
@@ -13,105 +13,105 @@ const Developers = React.forwardRef((props, ref) => {
         name: "Anshal Shukla",
         dept: "Front-end Developer",
         github: "https://github.com/CoderVaibhavS",
-        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/"
+        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/",
       },
       {
         image: require("../Assets/ContactUs/anshal.png"),
         name: "Anshal Shukla",
         dept: "Front-end Developer",
         github: "https://github.com/CoderVaibhavS",
-        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/"
+        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/",
       },
       {
         image: require("../Assets/ContactUs/anshal.png"),
         name: "Anshal Shukla",
         dept: "Front-end Developer",
         github: "https://github.com/CoderVaibhavS",
-        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/"
+        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/",
       },
       {
         image: require("../Assets/ContactUs/anshal.png"),
         name: "Anshal Shukla",
         dept: "Front-end Developer",
         github: "https://github.com/CoderVaibhavS",
-        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/"
+        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/",
       },
       {
         image: require("../Assets/ContactUs/anshal.png"),
         name: "Anshal Shukla",
         dept: "Front-end Developer",
         github: "https://github.com/CoderVaibhavS",
-        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/"
+        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/",
       },
       {
         image: require("../Assets/ContactUs/anshal.png"),
         name: "Anshal Shukla",
         dept: "Front-end Developer",
         github: "https://github.com/CoderVaibhavS",
-        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/"
+        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/",
       },
       {
         image: require("../Assets/ContactUs/anshal.png"),
         name: "Anshal Shukla",
         dept: "Front-end Developer",
         github: "https://github.com/CoderVaibhavS",
-        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/"
+        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/",
       },
       {
         image: require("../Assets/ContactUs/anshal.png"),
         name: "Anshal Shukla",
         dept: "Front-end Developer",
         github: "https://github.com/CoderVaibhavS",
-        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/"
+        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/",
       },
       {
         image: require("../Assets/ContactUs/anshal.png"),
         name: "Anshal Shukla",
         dept: "Front-end Developer",
         github: "https://github.com/CoderVaibhavS",
-        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/"
+        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/",
       },
       {
         image: require("../Assets/ContactUs/anshal.png"),
         name: "Anshal Shukla",
         dept: "Front-end Developer",
         github: "https://github.com/CoderVaibhavS",
-        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/"
+        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/",
       },
       {
         image: require("../Assets/ContactUs/anshal.png"),
         name: "Anshal Shukla",
         dept: "Front-end Developer",
         github: "https://github.com/CoderVaibhavS",
-        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/"
+        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/",
       },
       {
         image: require("../Assets/ContactUs/anshal.png"),
         name: "Anshal Shukla",
         dept: "Front-end Developer",
         github: "https://github.com/CoderVaibhavS",
-        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/"
+        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/",
       },
       {
         image: require("../Assets/ContactUs/anshal.png"),
         name: "Anshal Shukla",
         dept: "Front-end Developer",
         github: "https://github.com/CoderVaibhavS",
-        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/"
+        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/",
       },
       {
         image: require("../Assets/ContactUs/anshal.png"),
         name: "Anshal Shukla",
         dept: "Front-end Developer",
         github: "https://github.com/CoderVaibhavS",
-        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/"
+        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/",
       },
       {
         image: require("../Assets/ContactUs/anshal.png"),
         name: "Anshal Shukla",
         dept: "Front-end Developer",
         github: "https://github.com/CoderVaibhavS",
-        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/"
+        linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/",
       },
     ];
 
@@ -120,11 +120,11 @@ const Developers = React.forwardRef((props, ref) => {
       <div key={a} className={devCSS.devCard}>
         <div className={devCSS.devImageCont}>
           <div className={devCSS.devImage}>
-              <img
-                src={data[a].image}
-                alt={data[a].name}
-                className={devCSS.devImage}
-              />
+            <img
+              src={data[a].image}
+              alt={data[a].name}
+              className={devCSS.devImage}
+            />
           </div>
         </div>
         <div className={devCSS.devName}>{data[a].name}</div>
@@ -139,7 +139,9 @@ const Developers = React.forwardRef((props, ref) => {
 
   return (
     <section className={devCSS.devContainer} ref={ref}>
-      <h2 className={"secHead"} id="dev-secHead">Developers</h2>
+      <h2 className={"secHead"} id="dev-secHead">
+        Developers
+      </h2>
       <div className={devCSS.devBody}>
         <div className={devCSS.fifteen}>{fifteen}</div>
       </div>

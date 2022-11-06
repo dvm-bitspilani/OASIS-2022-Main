@@ -45,7 +45,7 @@ const Registration = (props) => {
             fill="white"
           />
         </svg>
-        
+
         <RegForm resetPage={backdropClickHandler} />
         <img alt="" src={wlbl} className={RegistrationCSS.wlbl} />
         <img alt="" src={wltl} className={RegistrationCSS.wltl} />

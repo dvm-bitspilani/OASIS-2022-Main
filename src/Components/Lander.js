@@ -12,9 +12,9 @@ import leftEye from "../Assets/lefteye.png";
 import windowImg from "../Assets/window.png";
 import rightEye from "../Assets/righteye.png";
 
-import cloud1 from '../Assets/Lander/window-clouds-1.png'
-import cloud2 from '../Assets/Lander/window-clouds-2.png'
-import cloud3 from '../Assets/Lander/window-clouds-3.png'
+import cloud1 from "../Assets/Lander/window-clouds-1.png";
+import cloud2 from "../Assets/Lander/window-clouds-2.png";
+import cloud3 from "../Assets/Lander/window-clouds-3.png";
 
 import FaceBookIcon from "../Assets/Lander/FaceBookIcon";
 import YouTubeIcon from "../Assets/Lander/YouTubeIcon";
@@ -28,16 +28,28 @@ const Lander = React.forwardRef((props, ref) => {
   const shardCount = Math.floor(100 + Math.random() * 20);
 
   return (
-    <div className={LanderCSS.landerWrapper} ref={ref} id='landerWrapper'>
+    <div className={LanderCSS.landerWrapper} ref={ref} id="landerWrapper">
       {/* <Clouds /> */}
       <img src={logo} alt="OASIS" className={LanderCSS.oasisLogo} />
       <div className={LanderCSS.portalWindow}>
         <img src={windowImg} alt="" className={LanderCSS.portalWindowImg1} />
-        <img src={cloud1} alt=""  className={`${LanderCSS.portalWindowClouds} ${LanderCSS.windowCloud1}`} />
-        <img src={cloud2} alt=""  className={`${LanderCSS.portalWindowClouds} ${LanderCSS.windowCloud2}`} />
-        <img src={cloud3} alt=""  className={`${LanderCSS.portalWindowClouds} ${LanderCSS.windowCloud3}`} />
+        <img
+          src={cloud1}
+          alt=""
+          className={`${LanderCSS.portalWindowClouds} ${LanderCSS.windowCloud1}`}
+        />
+        <img
+          src={cloud2}
+          alt=""
+          className={`${LanderCSS.portalWindowClouds} ${LanderCSS.windowCloud2}`}
+        />
+        <img
+          src={cloud3}
+          alt=""
+          className={`${LanderCSS.portalWindowClouds} ${LanderCSS.windowCloud3}`}
+        />
       </div>
-      
+
       <img src={windowImg} alt="" className={LanderCSS.portalWindowImg} />
       {/* <Hamburger /> */}
       <div className={LanderCSS.goldrings}>
@@ -49,7 +61,7 @@ const Lander = React.forwardRef((props, ref) => {
             stretch={idx % 4}
             initAngle={idx * 10}
             idx={idx}
-          />  
+          />
         ))}
       </div>
 
