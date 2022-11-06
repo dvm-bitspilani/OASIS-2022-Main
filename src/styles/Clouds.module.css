@@ -3,7 +3,6 @@
   height: 100vh;
   z-index: 100;
   position: relative;
-  /* overflow: hidden; */
 }
 
 .cloud {
@@ -21,47 +20,73 @@
 
 .cloudL1 {
   top: -10vh;
-  left: -38vw;
+  left: -40vw;
 }
 
 .cloudL2 {
-  top: 32vh;
-  left: -30vw;
+  top: 35vh;
+  left: -35vw;
+}
+
+.cloudL3 {
+  top: -10vh;
+  right: 5vw;
 }
 
 .cloudR1 {
-  top: -10vh;
-  right: 5vw;
-  /* display: none; */
+  top: -15vh;
+  right: -32vw;
   animation: cloud-right 4s cubic-bezier(0.31, 0.62, 0.31, 0.96);
 }
 
 .cloudR2 {
   top: 30vh;
-  right: -15vw;
+  right: 0vw;
+  animation: cloud-right 4s cubic-bezier(0.31, 0.62, 0.31, 0.96);
+}
+
+.cloudR3 {
+  top: 34vh;
+  right: -40vw;
   animation: cloud-right 4s cubic-bezier(0.31, 0.62, 0.31, 0.96);
 }
 
 @keyframes cloud-left {
   0% {
     transform: translate(-100%, 100%);
+    opacity: 0.4;
   }
-  /* 50% {
-        transform: translate(0, 0);
-    } */
+
+  40%{
+    opacity: 0.7;
+  }
+
+  60%{
+    opacity: 0.8;
+  }
+
   100% {
     transform: translate(0, 0);
+    opacity: 1;
   }
 }
 
 @keyframes cloud-right {
   0% {
     transform: translate(100%, -100%);
+    opacity: 0.4;
   }
-  /* 50% {
-        transform: translate(0, 0);
-    } */
+
+  40%{
+    opacity: 0.7;
+  }
+
+  60%{
+    opacity: 0.8;
+  }
+
   100% {
     transform: translate(0, 0);
+    opacity: 1;
   }
 }
