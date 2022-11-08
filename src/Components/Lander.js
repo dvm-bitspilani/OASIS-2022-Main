@@ -26,9 +26,11 @@ const Lander = React.forwardRef((props, ref) => {
   const kingEl = useRef(null);
   const ringCount = Math.floor(2 + Math.random() * 3);
   const shardCount = Math.floor(100 + Math.random() * 20);
-
+  
   return (
     <div className={LanderCSS.landerWrapper} ref={ref} id="landerWrapper">
+    
+  <Hamburger />
       {/* <Clouds /> */}
       <img src={logo} alt="OASIS" className={LanderCSS.oasisLogo} />
       <div className={LanderCSS.portalWindow}>
@@ -49,9 +51,8 @@ const Lander = React.forwardRef((props, ref) => {
           className={`${LanderCSS.portalWindowClouds} ${LanderCSS.windowCloud3}`}
         />
       </div>
-
       <img src={windowImg} alt="" className={LanderCSS.portalWindowImg} />
-      {/* <Hamburger /> */}
+      
       <div className={LanderCSS.goldrings}>
         {[...Array(ringCount)].map((count, idx) => (
           <LanderRing

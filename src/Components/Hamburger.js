@@ -160,12 +160,7 @@ export default function Hamburger() {
               The 50th Oasis
             </div>
             <div ref={(el) => (div2 = el)} className={HamburgerCSS.text}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              at ipsum suscipit, tempor justo ut, efficitur lectus. Suspendisse
-              non magna orci. Suspendisse potenti. Morbi consequat, nisl a
-              fermentum lobortis, nisl ante ornare felis, sed accumsan metus
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              at ipsum suscipit,
+              The 50th Edition of Oasis is set to happen with the theme "Demesne of The Lost Gold". We welcome you to this great festival set to happen from 19th to 23rd November, 2022.
             </div>
           </div>
           <div className={HamburgerCSS.map}>
@@ -188,22 +183,25 @@ export default function Hamburger() {
           </div>
         </div>
         <div className={HamburgerCSS.right}>
-          <Link
+          {/* <Link
             to="/developers"
             ref={(el) => (menu1 = el)}
             className={HamburgerCSS.list}
           >
             Developers
-          </Link>
-          <div ref={(el) => (menu2 = el)} className={HamburgerCSS.list}>
-            Events
-          </div>
-          <div ref={(el) => (menu3 = el)} className={HamburgerCSS.list}>
-            Videos
-          </div>
-          <div ref={(el) => (menu4 = el)} className={HamburgerCSS.list}>
+          </Link> */}
+          <Link
+            to="/sponsors"
+            ref={(el) => (menu2 = el)}
+            className={HamburgerCSS.list}>
             Sponsors
-          </div>
+          </Link>
+          {/* <Link ref={(el) => (menu3 = el)} className={HamburgerCSS.list}>
+            Events
+          </Link> */}
+          {/* <Link ref={(el) => (menu3 = el)} className={HamburgerCSS.list}>
+            Videos
+          </Link> */}
         </div>
       </div>
     </div>
