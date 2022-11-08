@@ -51,10 +51,10 @@ span.caretDown {
 }
 
 .openList {
-  transition: 0.3s;
+  /* transition: 0.1s; */
   /* bottom: -120px; */
 
-  height: 120px;
+  height: var(--collegeDropdownHeight);
   border-top: none;
   border-right: none;
 }

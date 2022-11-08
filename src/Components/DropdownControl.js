@@ -12,10 +12,22 @@ const DropdownControl = (props) => {
     [caretClass, setCaretClass] = useState(null),
     [searchTerm, setSearchTerm] = useState(""),
     [requiredInp, setRequired] = useState(),
-    [eventList, setEventList] = useState();
+    [eventList, setEventList] = useState(),
+    [dynamicLength, setDynamicLength] = useState();
 
   let pattern = new RegExp(),
     patterns = [];
+
+  useEffect(() => {
+    let rootStyle = document.querySelector(":root").style;
+    let length = dynamicLength;
+
+    if (length <= 5) {
+      rootStyle.setProperty("--collegeDropdownHeight", `${length * 25}px`);
+    } else {
+      rootStyle.setProperty("--collegeDropdownHeight", `120px`);
+    }
+  }, [dynamicLength]);
 
   useEffect(() => {
     if (props.info !== "events") setRequired(`required`);
@@ -24,7 +36,6 @@ const DropdownControl = (props) => {
   useEffect(() => {
     if (props.info === "college") {
       patterns = props.listData.map((data) => data.name.trim()).join("|");
-      // inputRef.current.pattern = patterns;
     }
 
     if (props.info === "year") {
@@ -54,7 +65,11 @@ const DropdownControl = (props) => {
   }
 
   const handleBlur = () => {
-    setSearchTerm("");
+    setTimeout(() => {
+      setSearchTerm("");
+
+      setDynamicLength(6);
+    }, 100);
     setTimeout(() => {
       setListClass(DropdownCSS.closeList);
       setActive(false);
@@ -76,6 +91,15 @@ const DropdownControl = (props) => {
 
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
+    setDynamicLength(
+      props.listData.filter((data) => {
+        if (e.target.value === "") return data;
+        else if (data.name.toLowerCase().includes(e.target.value.toLowerCase()))
+          return data;
+
+        return 0;
+      }).length
+    );
   };
 
   return (

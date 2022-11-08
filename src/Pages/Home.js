@@ -70,8 +70,10 @@ export default function Home() {
         regState={regState.open}
         changeRegState={changeRegState}
       />
+
       <Lander changeRegState={changeRegState} />
       <Events />
+
       <Contact />
       <div className={HomeCSS.love}>
         <div className={HomeCSS.foot}>
