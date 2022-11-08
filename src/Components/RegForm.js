@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import RegFormCSS from "../styles/RegForm.module.css";
 import { useState } from "react";
 import TextInputControl from "./TextInputControl";
@@ -10,10 +10,9 @@ import InstrucBook from "../Assets/Registration/reg_guidelines.pdf";
 import Alert from "./Alert";
 
 const RegForm = (props) => {
-  const BOSM_END_POINT = "https://www.bitsbosm.org/2022/registrations";
+  // const BOSM_END_POINT = "https://www.bitsbosm.org/2022/registrations";
   const OASIS_END_POINT = "https://bits-oasis.org/2022/main/registrations";
-  const OASIS_END_POINT_POST =
-    "https://bits-oasis.org/2022/main/registrations/Register/";
+  const OASIS_END_POINT_POST = "https://bits-oasis.org/2022/main/registrations/Register/";
 
   let availColleges = [];
   let availEvents = [];
@@ -29,12 +28,12 @@ const RegForm = (props) => {
   const [year_of_study, setYear] = useState("");
   const [events_ids, setEventsIds] = useState([]);
   const [events, setEvents] = useState([]);
-  const [validate, setValidate] = useState(false);
+  // const [validate, setValidate] = useState(false);
   const [checkboxChoreo, setCheckboxChoreo] = useState("");
   const [checkboxHos, setCheckboxHos] = useState("");
   const [popup, setPopup] = useState(false);
   const [message, setMessage] = useState("");
-  const recaptchaRef = useRef(null);
+  // const recaptchaRef = useRef(null);
 
   const [collegeList, setCollegeList] = useState([]);
   const [eventsList, setEventsList] = useState([]);
@@ -125,17 +124,17 @@ const RegForm = (props) => {
     } catch (e) {}
   };
 
-  const handleEventCross = (e) => {
-    //  console.log(e.target)
-    if (e.target.tagName.toLowerCase() === "i") {
-      // console.log('i')
-      let item = e.target.parentNode.parentNode.textContent;
-      // console.log(item)
-    }
-    if (e.target.tagName.toLowerCase() === "div") {
-      // console.log('div')
-    }
-  };
+  // const handleEventCross = (e) => {
+  //   //  console.log(e.target)
+  //   if (e.target.tagName.toLowerCase() === "i") {
+  //     // console.log('i')
+  //     let item = e.target.parentNode.parentNode.textContent;
+  //     // console.log(item)
+  //   }
+  //   if (e.target.tagName.toLowerCase() === "div") {
+  //     // console.log('div')
+  //   }
+  // };
   // console.log(collegeList)
 
   const choreoChange = (e) => {
@@ -163,14 +162,14 @@ const RegForm = (props) => {
     props.resetPage();
   }
 
-  const ruleBook = () => {
-    const file = new Blob("../Assets/Registration/rulebook.pdf", {
-      type: "application/pdf",
-    });
-    const fileURL = URL.createObjectURL(file);
-    const pdfWindow = window.open();
-    pdfWindow.location.href = fileURL;
-  };
+  // const ruleBook = () => {
+  //   const file = new Blob("../Assets/Registration/rulebook.pdf", {
+  //     type: "application/pdf",
+  //   });
+  //   const fileURL = URL.createObjectURL(file);
+  //   const pdfWindow = window.open();
+  //   pdfWindow.location.href = fileURL;
+  // };
 
   return (
     <div className={RegFormCSS.regFormBox}>

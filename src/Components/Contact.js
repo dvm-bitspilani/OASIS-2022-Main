@@ -84,8 +84,8 @@ const Contact = React.forwardRef((props, ref) => {
             className={ContactCSS.contactImage}
           /> */}
           <div className={ContactCSS.contactImage}>
-            {data[a].image == "" ? (
-              data[a].gender == "male" ? (
+            {data[a].image === "" ? (
+              data[a].gender === "male" ? (
                 <MaleAvatar />
               ) : (
                 <FemaleAvatar />

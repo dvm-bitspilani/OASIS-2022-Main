@@ -1,15 +1,13 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import gsap, { Power4 } from "gsap";
-import { Timeline } from "gsap/gsap-core";
 import { useRef } from "react";
 import HamburgerCSS from "../styles/Hamburger.module.css";
-import { doc } from "prettier";
 import bl from "../Assets/Hamburger/bottomLeft.png";
 import br from "../Assets/Hamburger/bottomRight.png";
 import mb from "../Assets/Hamburger/midBottom.png";
 import mt from "../Assets/Hamburger/midTop.png";
-import tr from "../Assets/Hamburger/topRight.png";
+// import tr from "../Assets/Hamburger/topRight.png";
 import tl from "../Assets/Hamburger/topLeft.png";
 import icon from "../Assets/Hamburger/info.png";
 export default function Hamburger() {
