@@ -56,48 +56,48 @@
 
 .windowCloud1 {
   bottom: 10%;
-  /* right: -27%; */
+  /* right: 82%; */
   animation: cloud1Anim 250s ease -50s infinite;
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 .windowCloud2 {
   bottom: 10%;
-  /* left: -10%; */
+  /* left: -8%; */
   width: 60%;
   animation: cloud2Anim 220s ease -30s infinite;
 }
 
 .windowCloud3 {
   bottom: 10%;
-  /* left: 100%; */
-  animation: cloud2Anim 300s ease -70s infinite;
+  /* left: 83%; */
+  animation: cloud2Anim 300s ease 0s infinite;
 }
 
 @keyframes cloud1Anim {
   0% {
-    right: -27%;
+    right: -22%;
   }
   100% {
-    right: 85%;
+    right: 82%;
   }
 }
 
 @keyframes cloud2Anim {
   0% {
-    left: -10%;
+    left: -8%;
   }
   100% {
-    left: 85%;
+    left: 77%;
   }
 }
 
 @keyframes cloud3Anim {
   0% {
-    left: -25%;
+    left: -13%;
   }
   100% {
-    left: 100%;
+    left: 83%;
   }
 }
 
@@ -367,27 +367,27 @@
       right: -20%;
     }
     100% {
-      right: 85%;
+      right: 79%;
     }
   }
 
-  @keyframes cloud2Anim {
+  /* @keyframes cloud2Anim {
     0% {
       left: -10%;
     }
     100% {
       left: 85%;
     }
-  }
+  } */
 
-  @keyframes cloud3Anim {
+  /* @keyframes cloud3Anim {
     0% {
       left: -25%;
     }
     100% {
       left: 105%;
     }
-  }
+  } */
   .goldringsImg {
     width: 125%;
   }

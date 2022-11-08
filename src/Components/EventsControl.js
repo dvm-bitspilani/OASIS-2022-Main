@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { act } from "react-dom/test-utils";
 import EcCSS from "../styles/Ec.module.css";
 
 const EventsControl = (props) => {
   const inputRef = useRef();
-  const isMounted = useRef(false);
+  // const isMounted = useRef(false);
   const [active, setActive] = useState(null);
   const [labelClass, setLabelClass] = useState(null);
   const [dropDownClass, setDropDownClass] = useState(null);
