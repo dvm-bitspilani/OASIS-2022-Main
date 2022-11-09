@@ -8,6 +8,7 @@ import EventsControl from "./EventsControl";
 import Button from "./Button";
 import InstrucBook from "../Assets/Registration/reg_guidelines.pdf";
 import Alert from "./Alert";
+import Wheel from "./Wheel";
 
 const RegForm = (props) => {
   // const BOSM_END_POINT = "https://www.bitsbosm.org/2022/registrations";

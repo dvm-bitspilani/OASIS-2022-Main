@@ -21,6 +21,7 @@ import YouTubeIcon from "../Assets/Lander/YouTubeIcon";
 import InstaGramIcon from "../Assets/Lander/InstaGramIcon";
 import Hamburger from "./Hamburger";
 import Clouds from "./Clouds";
+import Wheel from "./Wheel";
 
 const Lander = React.forwardRef((props, ref) => {
   const kingEl = useRef(null);
@@ -119,7 +120,6 @@ const Lander = React.forwardRef((props, ref) => {
           </a>
         </div>
       </div>
-
       <div className={LanderCSS.landerTransition}></div>
     </div>
   );
