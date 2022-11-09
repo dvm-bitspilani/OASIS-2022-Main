@@ -7,7 +7,7 @@
 
 .landerWrapper {
   width: 100vw;
-  min-height: calc(100*var(--vh));
+  min-height: calc(100 * var(--vh));
   background: url(../Assets/Lander/background.png) no-repeat center;
   overflow-y: visible;
   background-size: cover;

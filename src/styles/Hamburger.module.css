@@ -5,21 +5,25 @@
   right: 3rem;
   top: 3rem;
 }
+
 .hamContainer:hover .ham {
   background-color: #ebb935;
 }
+
 .hamContainer:hover .ham2 {
   background-color: #ebb935;
 }
+
 .hamContainer:hover .ham3 {
   background-color: #ebb935;
 }
+
 .ham {
   width: 24px;
   height: 2.4px;
+  cursor: pointer;
   border-radius: 50px;
   background-color: rgb(255, 255, 255);
-  cursor: pointer;
   transition: all 200ms ease-in-out;
 }
 
@@ -28,25 +32,27 @@
   margin-top: 0.3rem;
   height: 2.4px;
   border-radius: 50px;
-  background-color: rgb(255, 255, 255);
   cursor: pointer;
+  background-color: rgb(255, 255, 255);
   transition: all 200ms ease-in-out;
 }
+
 .ham3 {
   width: 24px;
   margin-top: 0.3rem;
   height: 2.4px;
   border-radius: 50px;
-  background-color: rgb(255, 255, 255);
   cursor: pointer;
+  background-color: rgb(255, 255, 255);
   transition: all 200ms ease-in-out;
 }
+
 .info {
   text-align: right;
-  margin-top: 1rem;
-  margin-right: 2rem;
   font-family: "Mulish";
+  margin: 1rem 2rem;
 }
+
 .menu {
   background-color: #000;
   border-bottom: 2px solid #4e3800;
@@ -55,7 +61,9 @@
   z-index: 20;
   position: fixed;
   width: 100vw;
+  min-height: 85vh;
 }
+
 i {
   margin-left: 0.4rem;
 }
@@ -78,22 +86,25 @@ i {
 .about {
   background: rgba(39, 39, 39, 0.4);
   border-radius: 14px;
-  margin: 3rem;
+  margin: 4rem 3rem;
+  padding: 2rem 1rem;
   backdrop-filter: blur(2px);
   width: 40%;
   border: 2px solid #4e3800;
 }
+
 .text {
   margin: 2rem;
   font-family: "Mulish";
   font-size: 1.2rem;
   line-height: 1.4rem;
 }
+
 .map {
   background: rgba(39, 39, 39, 0.4);
   border-radius: 14px;
   overflow: hidden;
-  margin: 3rem;
+  margin: 4rem 3rem;
   width: 30%;
   backdrop-filter: blur(2px);
   border: 2px solid #4e3800;
@@ -116,6 +127,7 @@ i {
   margin: 2rem;
   font-size: 4rem;
 }
+
 .right {
   display: flex;
   flex-direction: column;
@@ -124,10 +136,12 @@ i {
   text-align: center;
   font-size: 1.4rem;
 }
+
 .right > div {
   margin-block: 0.7rem;
   cursor: pointer;
 }
+
 .right > a {
   margin-block: 0.7rem;
   cursor: pointer;
@@ -140,6 +154,7 @@ i {
   width: 17%;
   mix-blend-mode: hard-light;
 }
+
 .br {
   position: absolute;
   bottom: 0;
@@ -147,6 +162,7 @@ i {
   width: 17%;
   mix-blend-mode: hard-light;
 }
+
 .tl {
   position: absolute;
   top: 0;
@@ -154,11 +170,13 @@ i {
   width: 24%;
   mix-blend-mode: hard-light;
 }
+
 .icon {
   position: absolute;
   width: 18px;
   right: 8px;
 }
+
 .mt {
   position: absolute;
   top: 0;
@@ -166,6 +184,7 @@ i {
   width: 23%;
   mix-blend-mode: hard-light;
 }
+
 .mb {
   position: absolute;
   bottom: 0;
@@ -173,15 +192,18 @@ i {
   width: 14%;
   mix-blend-mode: hard-light;
 }
+
 .hamFull {
   width: 100vw;
   height: 100vh;
   background: hsla(0, 0%, 0%, 0.675);
 }
+
 a {
   text-decoration: none;
   color: white;
 }
+
 .list::after {
   content: "";
   display: block;
@@ -212,37 +234,47 @@ a {
   .left {
     display: none;
   }
+
   .right {
     margin-inline: auto;
   }
+
   .menu {
     width: 100vw;
   }
+
   .bl {
     display: none;
   }
+
   .mt {
     display: none;
   }
+
   .mb {
     display: none;
   }
+
   .br {
     width: 60%;
   }
+
   .tl {
     width: 80%;
   }
 }
+
 @media (max-width: 1300px) {
   .heading {
     font-size: 3rem;
   }
 }
+
 @media (max-width: 1050px) {
   .heading {
     font-size: 2.5rem;
   }
+
   .text {
     font-size: 1rem;
   }
@@ -252,9 +284,11 @@ a {
   .about {
     display: none;
   }
+
   .map {
     width: 60%;
   }
+
   .left {
     width: 70%;
   }

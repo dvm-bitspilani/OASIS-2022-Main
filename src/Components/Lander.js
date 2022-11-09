@@ -12,9 +12,9 @@ import windowImg from "../Assets/Lander/window.png";
 import leftEye from "../Assets/Lander/Eyes/lefteye.png";
 import rightEye from "../Assets/Lander/Eyes/righteye.png";
 
-import cloud1 from '../Assets/Lander/PortalClouds/window-clouds-1.png'
-import cloud2 from '../Assets/Lander/PortalClouds/window-clouds-2.png'
-import cloud3 from '../Assets/Lander/PortalClouds/window-clouds-3.png'
+import cloud1 from "../Assets/Lander/PortalClouds/window-clouds-1.png";
+import cloud2 from "../Assets/Lander/PortalClouds/window-clouds-2.png";
+import cloud3 from "../Assets/Lander/PortalClouds/window-clouds-3.png";
 
 import FaceBookIcon from "../Assets/Lander/FaceBookIcon";
 import YouTubeIcon from "../Assets/Lander/YouTubeIcon";
@@ -26,11 +26,10 @@ const Lander = React.forwardRef((props, ref) => {
   const kingEl = useRef(null);
   const ringCount = Math.floor(2 + Math.random() * 3);
   const shardCount = Math.floor(100 + Math.random() * 20);
-  
+
   return (
     <div className={LanderCSS.landerWrapper} ref={ref} id="landerWrapper">
-    
-  <Hamburger />
+      <Hamburger />
       {/* <Clouds /> */}
       <img src={logo} alt="OASIS" className={LanderCSS.oasisLogo} />
       <div className={LanderCSS.portalWindow}>
@@ -52,7 +51,7 @@ const Lander = React.forwardRef((props, ref) => {
         />
       </div>
       <img src={windowImg} alt="" className={LanderCSS.portalWindowImg} />
-      
+
       <div className={LanderCSS.goldrings}>
         {[...Array(ringCount)].map((count, idx) => (
           <LanderRing

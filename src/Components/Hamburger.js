@@ -1,19 +1,19 @@
+import { useRef } from "react";
+import gsap, { Power4 } from "gsap";
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import gsap, { Power4 } from "gsap";
-import { useRef } from "react";
 import HamburgerCSS from "../styles/Hamburger.module.css";
+
 import bl from "../Assets/Hamburger/bottomLeft.png";
 import br from "../Assets/Hamburger/bottomRight.png";
 import mb from "../Assets/Hamburger/midBottom.png";
 import mt from "../Assets/Hamburger/midTop.png";
-// import tr from "../Assets/Hamburger/topRight.png";
 import tl from "../Assets/Hamburger/topLeft.png";
 import icon from "../Assets/Hamburger/info.png";
+
 export default function Hamburger() {
   const [showMenu, setShowMenu] = React.useState(false);
-  // const menuItem = useRef(null)
-  // let menuItems = gsap.utils.toArray('.menuItems')
+
   let menuDiv = useRef(null);
   let menu1 = useRef(null);
   let menu2 = useRef(null);
@@ -33,6 +33,7 @@ export default function Hamburger() {
       ease: Power4.easeInOut,
     });
   };
+
   const removeText = (node, node2, node3, node4) => {
     gsap.to([node, node2, node3, node4], {
       duration: 1,
@@ -43,6 +44,7 @@ export default function Hamburger() {
       ease: Power4.easeInOut,
     });
   };
+
   const staggerDivs = (node, node2) => {
     gsap.to([node, node2], {
       duration: 1,
@@ -53,6 +55,7 @@ export default function Hamburger() {
       ease: Power4.easeInOut,
     });
   };
+
   const removeDivs = (node, node2) => {
     gsap.to([node, node2], {
       duration: 1,
@@ -63,35 +66,42 @@ export default function Hamburger() {
       ease: Power4.easeInOut,
     });
   };
+
   function toggleMenu() {
-    setShowMenu((showMenu) => !showMenu);
-    // staggerText(menu1, menu2, menu3)
-    // if (showMenu) {
-    //     removeText(menu1, menu2, menu3)
-    // }
-    // tl.staggerFrom('.menuItem', 1.5, {y:"100%", opacity: 1, ease: Power4.easeOut }, 0.15, "+1.4")
+    setShowMenu(!showMenu);
+
+    document.querySelector("html").style.overflowY = showMenu
+      ? "scroll"
+      : "hidden";
+
+    console.log(showMenu);
   }
+
   useEffect(() => {
     let ham = document.getElementById("ham");
     let ham2 = document.getElementById("ham2");
     let ham3 = document.getElementById("ham3");
+
     if (showMenu) {
       container.style.width = "100vw";
       container.style.height = "100vh";
-      // menu.style.transform = "translateY(0%)"
+
       gsap.to(menuDiv, {
         duration: 1,
         opacity: 1,
         ease: "power3.inOut",
       });
+
       gsap.to(menuDiv, {
         duration: 0,
         height: 550,
         ease: "power3.inOut",
       });
+
       staggerReveal(menuDiv);
       staggerDivs(div1, div2);
       staggerText(menu1, menu2, menu3, menu4);
+
       ham.style.transform = "rotate(45deg) translate(5px, 5px)";
       ham2.style.opacity = "0";
       ham3.style.transform = "rotate(-45deg) translate(5px, -5px)";
@@ -99,25 +109,30 @@ export default function Hamburger() {
       ham.style.transform = "rotate(0deg)";
       ham2.style.opacity = "1";
       ham3.style.transform = "rotate(0deg)";
+
       gsap.to(menuDiv, {
         duration: 0.8,
         opacity: 0,
         ease: "power3.inOut",
       });
+
       gsap.to(menuDiv, {
         duration: 0.8,
         height: 0,
         ease: "power3.inOut",
       });
+
       removeDivs(div1, div2);
       removeText(menu1, menu2, menu3, menu4);
       staggerHide(menuDiv);
+
       setTimeout(() => {
         container.style.width = "0vw";
         container.style.height = "0vh";
       }, 800);
     }
   }, [showMenu]);
+
   const staggerReveal = (node) => {
     gsap.from(node, {
       duration: 0.8,
@@ -127,6 +142,7 @@ export default function Hamburger() {
       ease: "power3.inOut",
     });
   };
+
   const staggerHide = (node) => {
     gsap.to(node, {
       duration: 0.8,
@@ -146,6 +162,7 @@ export default function Hamburger() {
           <div className={HamburgerCSS.ham3} id="ham3"></div>
         </div>
       </div>
+
       <div ref={(el) => (menuDiv = el)} id="menu" className={HamburgerCSS.menu}>
         <img src={bl} className={HamburgerCSS.bl}></img>
         <img src={br} className={HamburgerCSS.br}></img>
@@ -158,9 +175,12 @@ export default function Hamburger() {
               The 50th Oasis
             </div>
             <div ref={(el) => (div2 = el)} className={HamburgerCSS.text}>
-              The 50th Edition of Oasis is set to happen with the theme "Demesne of The Lost Gold". We welcome you to this great festival set to happen from 19th to 23rd November, 2022.
+              The 50th Edition of Oasis is set to happen with the theme "Demesne
+              of The Lost Gold". We welcome you to this great festival set to
+              happen from 19th to 23rd November, 2022.
             </div>
           </div>
+
           <div className={HamburgerCSS.map}>
             <iframe
               src="https://maps.google.com/maps?q=BITS%Pilani%&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
@@ -168,13 +188,15 @@ export default function Hamburger() {
               height="80%"
               allowfullscreen
             ></iframe>
+
             <div className={HamburgerCSS.info}>
               <a
                 href="https://www.bits-pilani.ac.in/pilani/iconbits/HowtoReachPilani#:~:text=Pilani%20can%20be%20reached%20either,(ISBT)%20and%20Kashmiri%20gate."
                 target="_blank"
+                rel="noreferrer"
                 className={HamburgerCSS.anchor}
               >
-                how to get to Pilani?{" "}
+                how to get to Pilani? &nbsp;
                 <img src={icon} className={HamburgerCSS.icon} />
               </a>
             </div>
@@ -191,7 +213,8 @@ export default function Hamburger() {
           <Link
             to="/sponsors"
             ref={(el) => (menu2 = el)}
-            className={HamburgerCSS.list}>
+            className={HamburgerCSS.list}
+          >
             Sponsors
           </Link>
           {/* <Link ref={(el) => (menu3 = el)} className={HamburgerCSS.list}>

@@ -22,8 +22,8 @@ const router = createBrowserRouter([
   },
   {
     path: "/sponsors",
-    element: <Sponsors/>
-  }
+    element: <Sponsors />,
+  },
 ]);
 
 function App() {
