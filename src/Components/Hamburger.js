@@ -164,11 +164,11 @@ export default function Hamburger() {
       </div>
 
       <div ref={(el) => (menuDiv = el)} id="menu" className={HamburgerCSS.menu}>
-        <img src={bl} className={HamburgerCSS.bl}></img>
-        <img src={br} className={HamburgerCSS.br}></img>
-        <img src={mt} className={HamburgerCSS.mt}></img>
-        <img src={mb} className={HamburgerCSS.mb}></img>
-        <img src={tl} className={HamburgerCSS.tl}></img>
+        <img alt="" src={bl} className={HamburgerCSS.bl}></img>
+        <img alt="" src={br} className={HamburgerCSS.br}></img>
+        <img alt="" src={mt} className={HamburgerCSS.mt}></img>
+        <img alt="" src={mb} className={HamburgerCSS.mb}></img>
+        <img alt="" src={tl} className={HamburgerCSS.tl}></img>
         <div className={HamburgerCSS.left}>
           <div className={HamburgerCSS.about}>
             <div ref={(el) => (div1 = el)} className={HamburgerCSS.heading}>
@@ -184,9 +184,10 @@ export default function Hamburger() {
           <div className={HamburgerCSS.map}>
             <iframe
               src="https://maps.google.com/maps?q=BITS%Pilani%&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+              title="pilani on map"
               width="100%"
               height="80%"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
 
             <div className={HamburgerCSS.info}>
@@ -197,7 +198,7 @@ export default function Hamburger() {
                 className={HamburgerCSS.anchor}
               >
                 how to get to Pilani? &nbsp;
-                <img src={icon} className={HamburgerCSS.icon} />
+                <img alt="" src={icon} className={HamburgerCSS.icon} />
               </a>
             </div>
           </div>

@@ -269,7 +269,12 @@ const RegForm = (props) => {
           <div className={RegFormCSS.compulsoryText}>
             All fields marked * are compulsory.
           </div>
-          <a href={InstrucBook} target="_blank" className={RegFormCSS.Instruc}>
+          <a
+            href={InstrucBook}
+            rel="noreferrer"
+            target="_blank"
+            className={RegFormCSS.Instruc}
+          >
             How to Register?
           </a>
         </div>

@@ -293,3 +293,10 @@ a {
     width: 70%;
   }
 }
+
+@media screen and (max-height: 650px) {
+  .hamContainer {
+    top: 2.4rem;
+    right: 2.4rem;
+  }
+}

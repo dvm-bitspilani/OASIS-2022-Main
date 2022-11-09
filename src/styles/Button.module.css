@@ -30,6 +30,12 @@
   box-shadow: 0 0 15px #9f9874b3;
 }
 
+@media screen and (min-width: 1500px) {
+  .btn {
+    transform: scale(1.1);
+  }
+}
+
 @media screen and (max-width: 450px) {
   .btn {
     font-size: 0.8rem;

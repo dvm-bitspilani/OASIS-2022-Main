@@ -37,11 +37,7 @@ const EventsPopUp = (props) => {
           e.stopPropagation();
         }}
       >
-        <img
-          className={EventsPopUpCss.popUpImg}
-          src={props.img}
-          alt="Event Image"
-        />
+        <img className={EventsPopUpCss.popUpImg} src={props.img} alt="EVENT" />
         <div className={EventsPopUpCss.popUpTextCont} ref={popUpTextCont}>
           <div className={EventsPopUpCss.popUpHeading}>{props.name}</div>
           <div className={EventsPopUpCss.popUpSecCont}>

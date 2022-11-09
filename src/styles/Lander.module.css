@@ -78,6 +78,7 @@
   0% {
     right: -22%;
   }
+
   100% {
     right: 82%;
   }
@@ -87,6 +88,7 @@
   0% {
     left: -8%;
   }
+
   100% {
     left: 77%;
   }
@@ -96,6 +98,7 @@
   0% {
     left: -13%;
   }
+
   100% {
     left: 83%;
   }
@@ -211,10 +214,12 @@
   color: black;
 }
 
+
 .registerWrapper div:hover {
   cursor: pointer;
   color: white;
-} */
+}
+ */
 
 /* icons */
 .bottomWrapper {
@@ -238,6 +243,7 @@
   right: 2%;
   width: 10%;
   justify-content: space-evenly;
+  gap: 0.6rem;
   z-index: 5;
 }
 
@@ -270,6 +276,12 @@
     rgba(0, 0, 0, 0.8) 70%,
     rgba(0, 0, 0, 0) 100%
   );
+}
+
+@media screen and (min-width: 1500px) {
+  .iconWrapper {
+    transform: scale(1.3);
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -316,6 +328,10 @@
 
   .registerWrapper {
     top: 87%;
+  }
+
+  .bottomWrapper {
+    bottom: 9.5%;
   }
 
   .titleBgGrad {
@@ -366,28 +382,12 @@
     0% {
       right: -20%;
     }
+
     100% {
       right: 79%;
     }
   }
 
-  /* @keyframes cloud2Anim {
-    0% {
-      left: -10%;
-    }
-    100% {
-      left: 85%;
-    }
-  } */
-
-  /* @keyframes cloud3Anim {
-    0% {
-      left: -25%;
-    }
-    100% {
-      left: 105%;
-    }
-  } */
   .goldringsImg {
     width: 125%;
   }
@@ -416,15 +416,55 @@
   }
 
   .registerWrapper {
-    font-size: 0.8rem;
-    top: 83%;
+    top: 78vh;
+  }
+  .registerWrapper button{
+
+    font-size: 0.85rem !important;
+  }
+
+  .bottomWrapper {
+    top: 92vh;
+    padding: 0 2rem;
   }
 
   .iconWrapper {
+    gap: 5px;
     width: 30%;
+    transform: scale(1.03) translateX(0.6rem);
   }
 
   .iconWrapper svg {
     width: 16px;
   }
+}
+
+@media screen and (min-width: 1200px) and (min-height: 1020px) {
+  .oasisTitle {
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+
+  .registerWrapper > div,
+  .iconWrapper svg {
+    transform: scale(1.2);
+  }
+}
+
+@media screen and (max-height: 650px) {
+  :root {
+    --king_wid: 110%;
+  }
+
+  .oasisTitle {
+    transform: translate(-50%, -1rem) scale(0.8);
+  }
+
+  .iconWrapper{
+    transform: scale(0.9) translateX(1rem);
+  }
+
+  .registerWrapper{
+    top: 76vh;
+  }
+
 }

@@ -78,7 +78,7 @@ export default function Home() {
       <div className={HomeCSS.love}>
         <div className={HomeCSS.foot}>
           Made with{" "}
-          <a href="https://bits-dvm.org/" target="_blank">
+          <a href="https://bits-dvm.org/" rel="noreferrer" target="_blank">
             <i
               aria-hidden="true"
               style={{ margin: "0", cursor: "pointer" }}
