@@ -265,10 +265,10 @@
 .landerTransition {
   z-index: 4;
   width: 100vw;
-  height: 20rem;
+  height: 15rem;
   position: absolute;
   margin: -10rem 0 -2rem 0;
-  /* border: 2px solid red; */
+  bottom: 0;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
@@ -285,38 +285,109 @@
   );
 }
 
-@media screen and (min-width: 1500px) {
-  .iconWrapper {
-    transform: scale(1.3);
+@media screen and (min-width: 1200px) {
+  .landerTransition {
+    height: 22rem;
+    bottom: -6rem;
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 1200px) and (max-width: 1300px) {
   :root {
-    --king_wid: 60%;
-    --title_wid: 38%;
+    --king_wid: 48%;
+    --title_wid: 20%;
+  }
+
+  .landerTransition{
+    height: 15rem;
   }
 
   .portalWindow {
-    width: 65vw;
+    width: 50vw;
     height: auto;
     clip-path: ellipse(32vw 30.8vw at 50% -2%);
   }
 
   .portalWindowImg {
-    width: 65vw;
+    width: 50vw;
   }
 
-  .kingContainer {
-    top: 10%;
+  .kingBodyWrapper {
+    top: 1vh;
   }
 
   .oasisTitle {
-    top: 60%;
+    top: 62vh;
   }
 
+  .registerWrapper {
+    top: 87vh;
+  }
+
+  .registerWrapper button,
+  .iconWrapper svg {
+    transform: scale(0.95);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-height: 1000px) {
+  .landerTransition {
+    height: 23rem;
+    bottom: 0;
+  }
+
+  :root {
+    --king_wid: 80%;
+  }
+
+  .titleBgGrad,
+  .oasisTitle {
+    top: 70vh;
+  }
+}
+
+@media screen and (min-width: 1400px) {
   .iconWrapper {
-    width: 15%;
+    transform: scale(1.1);
+  }
+
+  .landerTransition {
+    height: 28rem;
+    bottom: -8rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --king_wid: 50%;
+    --title_wid: 24%;
+  }
+
+  .portalWindow {
+    width: 60vw;
+    height: auto;
+    clip-path: ellipse(32vw 30.8vw at 50% -2%);
+  }
+
+  .portalWindowImg {
+    width: 60vw;
+  }
+
+  .kingBodyWrapper {
+    top: 10vh;
+  }
+
+  .oasisTitle {
+    top: 65vh;
+  }
+
+  .registerWrapper {
+    top: 85vh;
+  }
+
+  .registerWrapper button,
+  .iconWrapper svg {
+    transform: scale(0.89);
   }
 }
 
@@ -363,12 +434,19 @@
 
   .landerTransition {
     bottom: 0;
+    height: 20rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .iconWrapper{
+  .iconWrapper {
     gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 650px) and (min-width: 500px) {
+  .landerTransition {
+    height: 24rem;
   }
 }
 
@@ -382,10 +460,6 @@
   .landerWrapper {
     background: url(../Assets/Lander/phoneLanderBg.png) no-repeat center center;
     background-size: cover;
-  }
-
-  .landerTransition {
-    bottom: 0;
   }
 
   .oasisTitle {
@@ -479,7 +553,7 @@
   }
 }
 
-@media screen and (max-height: 650px) {
+@media screen and (max-height: 650px) and (max-width: 650px) {
   :root {
     --king_wid: 110%;
   }
@@ -499,6 +573,12 @@
 
   .registerWrapper {
     top: 76vh;
+  }
+}
+
+@media screen and (max-width: 810px) and (min-width: 780px) {
+  .landerTransition {
+    height: 28rem;
   }
 }
 
@@ -535,6 +615,10 @@
 @media screen and (max-width: 800px) and (min-width: 750px) and (max-height: 900px) {
   .bottomWrapper {
     bottom: 5vh;
+  }
+
+  .landerTransition {
+    height: 16rem;
   }
 
   .registerWrapper {

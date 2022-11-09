@@ -35,7 +35,6 @@ export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
     document.addEventListener("readystatechange", () => {
-      console.log("loaded");
       if (document.readyState === "complete") {
         setTimeout(() => setIsLoaded(true), 2000);
       }

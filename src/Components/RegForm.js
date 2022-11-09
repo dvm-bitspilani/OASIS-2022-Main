@@ -63,13 +63,8 @@ const RegForm = (props) => {
       eventsListJson.forEach((events) => {
         availEvents.push(...events.events);
       });
-      // console.log([...availEvents]);
-
-      // collegeList=[...availColleges]
       setEventsList([...availEvents]);
       setCollegeList([...availColleges]);
-
-      // setDynamicEventsList([...availEvents])
     } catch (e) {
       alert("Failure in getting Data");
       console.log(e);
@@ -78,7 +73,6 @@ const RegForm = (props) => {
 
   useEffect(() => {
     getElems();
-    console.log("events req");
   }, []);
 
   const handleSubmit = async (e) => {
@@ -124,19 +118,6 @@ const RegForm = (props) => {
       setPopup(true);
     } catch (e) {}
   };
-
-  // const handleEventCross = (e) => {
-  //   //  console.log(e.target)
-  //   if (e.target.tagName.toLowerCase() === "i") {
-  //     // console.log('i')
-  //     let item = e.target.parentNode.parentNode.textContent;
-  //     // console.log(item)
-  //   }
-  //   if (e.target.tagName.toLowerCase() === "div") {
-  //     // console.log('div')
-  //   }
-  // };
-  // console.log(collegeList)
 
   const choreoChange = (e) => {
     setChoreo((prev) => !prev);

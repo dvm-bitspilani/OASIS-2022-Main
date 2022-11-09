@@ -295,8 +295,8 @@ a {
 }
 
 @media (max-width: 450px) {
-  .hamContainer{
-  transform: scale(0.9);
+  .hamContainer {
+    transform: scale(0.9);
   }
 }
 

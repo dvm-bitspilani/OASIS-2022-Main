@@ -73,8 +73,6 @@ export default function Hamburger() {
     document.querySelector("html").style.overflowY = showMenu
       ? "scroll"
       : "hidden";
-
-    console.log(showMenu);
   }
 
   useEffect(() => {
