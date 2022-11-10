@@ -216,10 +216,18 @@ export default function Hamburger() {
           >
             Sponsors
           </Link>
-          <Link to="/events" ref={(el) => (menu3 = el)} className={HamburgerCSS.list}>
+          <Link
+            to="/events"
+            ref={(el) => (menu3 = el)}
+            className={HamburgerCSS.list}
+          >
             Events
           </Link>
-          <Link to="/videos" ref={(el) => (menu4 = el)} className={HamburgerCSS.list}>
+          <Link
+            to="/videos"
+            ref={(el) => (menu4 = el)}
+            className={HamburgerCSS.list}
+          >
             Videos
           </Link>
         </div>
