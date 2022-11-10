@@ -1,39 +1,40 @@
 .scrollIcon {
-    width: 2em;
-    height: 4em;
-    border: .3em solid #eff;
-    border-radius: 2em;
-    position: relative;
+  width: 2em;
+  height: 4em;
+  border: 0.3em solid #eff;
+  border-radius: 2em;
+  position: relative;
 }
-.wheelContainer{
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 6;
-    justify-content: center;
+.wheelContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 6;
+  justify-content: center;
 }
-.wheel{
-    position: absolute;
-    width: .6em;
-    height: .6em;
-    background-color: #eff;
-    left: 50%;
-    top: 15%;
-    transform: translate(-50%, 0);
-    border-radius: .6em;
-    animation: wheel 2s ease-in-out infinite;
+.wheel {
+  position: absolute;
+  width: 0.6em;
+  height: 0.6em;
+  background-color: #eff;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, 0);
+  border-radius: 0.6em;
+  animation: wheel 2s ease-in-out infinite;
 }
 
 @keyframes wheel {
-    0%{
-        transform: translate(-50%,0);
-        opacity: 0;
-    }
-    20%{
-        opacity: 1;
-    }
-    90%, 100%{
-        transform: translate(-50%, 150%);
-        opacity: 0;
-    }
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90%,
+  100% {
+    transform: translate(-50%, 150%);
+    opacity: 0;
+  }
 }

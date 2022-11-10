@@ -59,15 +59,11 @@
 }
 
 .regFormFields {
-  grid-column-gap: 17%;
-  grid-row-gap: 10%;
-  /* height: 90%; */
+  gap: 0 6rem;
   display: grid;
-  /* column-gap: 3.5rem; */
-  /* max-width: 450px; */
   grid-template-columns: 1fr 1fr;
-  /* column-gap: 2rem; */
   grid-template-rows: 1fr;
+  margin: 1rem 0;
   height: 85%;
 }
 
@@ -76,6 +72,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.7rem;
 }
 
 .Instruc,
@@ -96,6 +93,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
+  margin: 1rem 0;
   padding: 3px 0;
   transform-origin: 50% 100%;
   transition: all 200ms ease;
@@ -110,7 +108,7 @@
   content: "";
   position: absolute;
   width: 100%;
-  min-height: 1px;
+  height: 1px;
   background: linear-gradient(
     94.75deg,
     #d19a08 0%,
@@ -121,8 +119,9 @@
   );
   bottom: 0;
   left: 0;
-  transition: all 200ms ease;
+  transition: all 200ms;
 }
+
 .Instruc:hover:after {
   bottom: -2px;
 }
@@ -145,8 +144,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  /* grid-column: 1/span 1;
-    grid-row:2/span 1; */
 }
 
 .sportsListContainer {
@@ -187,12 +184,9 @@
 
 button.submitForm {
   padding: 12px 25px;
-  /* margin-bottom:200px ; */
-  /* letter-spacing: 1px; */
   font-weight: bold;
   position: relative;
   border: 1px solid #fedb7e;
-  /* background-color: #d19a08; */
   border-radius: 17px;
   background: linear-gradient(
     94.75deg,
@@ -203,9 +197,7 @@ button.submitForm {
     #d19a08 100%
   );
   background-position: left;
-
   margin: auto auto;
-  /* background: none; */
   color: Black;
   font-size: 1.1rem;
   grid-row: 3/-1;
@@ -229,15 +221,6 @@ button.submitForm {
 }
 
 button.submitForm:hover {
-  /* background: linear-gradient(
-      94.75deg,
-      #d19a08 0%,
-      #fedb7e 16.49%,
-      #ebb935 43.37%,
-      #fcd776 74.96%,
-      #d19a08 100%
-  
-    ); */
   background-position: right;
   cursor: pointer;
   color: white;
@@ -253,7 +236,8 @@ button.submitForm:hover {
 /* .genderInputContainer{
   grid-column: 1/ span 1;
   grid-row:2/span 1
-} */
+}
+ */
 .rightSide {
   grid-column: 2/-1;
   grid-row: 1 / span 1;
@@ -277,6 +261,11 @@ button.submitForm:hover {
   align-items: center;
   font-size: 16px;
   padding-left: 10px;
+}
+
+.checkboxContainer,
+.checkboxContainer * {
+  cursor: pointer;
 }
 
 .checkboxKePapa {
@@ -323,6 +312,7 @@ button.submitForm:hover {
   border-radius: 50%;
   position: relative;
 }
+
 .checkboxContainer div::after{
   content: '';
   position: absolute;
@@ -335,14 +325,13 @@ button.submitForm:hover {
   border-radius: 50%;
 
 
-} */
+}
+ */
 
 .compulsoryText {
-  font-size: 0.5rem;
-  position: relative;
-  /* bottom: -0px; */
   left: 0;
-  margin: 0.4rem 0;
+  font-size: 0.6rem;
+  position: relative;
   color: rgb(255, 132, 0);
 }
 
@@ -359,7 +348,8 @@ button.submitForm:hover {
 
   /* .regForm {
       width: 70%;
-    } */
+    }
+     */
   .regForm {
     gap: 10%;
     width: 90%;
@@ -400,7 +390,8 @@ button.submitForm:hover {
       border-radius: 0rem 0rem 1.8rem 1.8rem;
       border-top: none;
       position: relative;
-    } */
+    }
+     */
   .regForm {
     overflow-y: scroll;
     box-sizing: border-box;
@@ -433,9 +424,11 @@ button.submitForm:hover {
   /* .leftSide{
       grid-row: 1/span 1;
     }
+    
     .rightSide{
       grid-row: 2/span 1;
-    } */
+    }
+     */
   .submitForm {
     /* grid-row: 3/span 1; */
     margin: 0 auto;

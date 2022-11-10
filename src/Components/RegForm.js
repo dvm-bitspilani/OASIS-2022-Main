@@ -241,11 +241,7 @@ const RegForm = (props) => {
             />
           </div>
         </div>
-        {/* <div className={RegFormCSS.buttonContainer}>
-          <button type="submit" className={RegFormCSS.submitForm}>
-            Register Now
-          </button>
-        </div> */}
+        
         <div className={RegFormCSS.regFormBtns}>
           <Button type="submit" form="reg-form" btn_title="Register Now" />
           <div className={RegFormCSS.compulsoryText}>
