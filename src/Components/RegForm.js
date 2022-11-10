@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import RegFormCSS from "../styles/RegForm.module.css";
 import { useState } from "react";
 import TextInputControl from "./TextInputControl";
@@ -6,11 +6,12 @@ import GenderInputControl from "./GenderInputControl";
 import DropdownControl from "./DropdownControl";
 import EventsControl from "./EventsControl";
 import Button from "./Button";
-import InstrucBook from "../Assets/reg_guidelines.pdf";
+import InstrucBook from "../Assets/Registration/reg_guidelines.pdf";
 import Alert from "./Alert";
+import Wheel from "./Wheel";
 
 const RegForm = (props) => {
-  const BOSM_END_POINT = "https://www.bitsbosm.org/2022/registrations";
+  // const BOSM_END_POINT = "https://www.bitsbosm.org/2022/registrations";
   const OASIS_END_POINT = "https://bits-oasis.org/2022/main/registrations";
   const OASIS_END_POINT_POST =
     "https://bits-oasis.org/2022/main/registrations/Register/";
@@ -29,12 +30,12 @@ const RegForm = (props) => {
   const [year_of_study, setYear] = useState("");
   const [events_ids, setEventsIds] = useState([]);
   const [events, setEvents] = useState([]);
-  const [validate, setValidate] = useState(false);
+  // const [validate, setValidate] = useState(false);
   const [checkboxChoreo, setCheckboxChoreo] = useState("");
   const [checkboxHos, setCheckboxHos] = useState("");
   const [popup, setPopup] = useState(false);
   const [message, setMessage] = useState("");
-  const recaptchaRef = useRef(null);
+  // const recaptchaRef = useRef(null);
 
   const [collegeList, setCollegeList] = useState([]);
   const [eventsList, setEventsList] = useState([]);
@@ -63,13 +64,8 @@ const RegForm = (props) => {
       eventsListJson.forEach((events) => {
         availEvents.push(...events.events);
       });
-      // console.log([...availEvents]);
-
-      // collegeList=[...availColleges]
       setEventsList([...availEvents]);
       setCollegeList([...availColleges]);
-
-      // setDynamicEventsList([...availEvents])
     } catch (e) {
       alert("Failure in getting Data");
       console.log(e);
@@ -78,7 +74,6 @@ const RegForm = (props) => {
 
   useEffect(() => {
     getElems();
-    console.log("events req");
   }, []);
 
   const handleSubmit = async (e) => {
@@ -125,19 +120,6 @@ const RegForm = (props) => {
     } catch (e) {}
   };
 
-  const handleEventCross = (e) => {
-    //  console.log(e.target)
-    if (e.target.tagName.toLowerCase() === "i") {
-      // console.log('i')
-      let item = e.target.parentNode.parentNode.textContent;
-      // console.log(item)
-    }
-    if (e.target.tagName.toLowerCase() === "div") {
-      // console.log('div')
-    }
-  };
-  // console.log(collegeList)
-
   const choreoChange = (e) => {
     setChoreo((prev) => !prev);
     setCheckboxChoreo((prev) => {
@@ -163,14 +145,14 @@ const RegForm = (props) => {
     props.resetPage();
   }
 
-  const ruleBook = () => {
-    const file = new Blob("../Assets/rulebook.pdf", {
-      type: "application/pdf",
-    });
-    const fileURL = URL.createObjectURL(file);
-    const pdfWindow = window.open();
-    pdfWindow.location.href = fileURL;
-  };
+  // const ruleBook = () => {
+  //   const file = new Blob("../Assets/Registration/rulebook.pdf", {
+  //     type: "application/pdf",
+  //   });
+  //   const fileURL = URL.createObjectURL(file);
+  //   const pdfWindow = window.open();
+  //   pdfWindow.location.href = fileURL;
+  // };
 
   return (
     <div className={RegFormCSS.regFormBox}>
@@ -259,17 +241,18 @@ const RegForm = (props) => {
             />
           </div>
         </div>
-        {/* <div className={RegFormCSS.buttonContainer}>
-          <button type="submit" className={RegFormCSS.submitForm}>
-            Register Now
-          </button>
-        </div> */}
+        
         <div className={RegFormCSS.regFormBtns}>
           <Button type="submit" form="reg-form" btn_title="Register Now" />
           <div className={RegFormCSS.compulsoryText}>
             All fields marked * are compulsory.
           </div>
-          <a href={InstrucBook} target="_blank" className={RegFormCSS.Instruc}>
+          <a
+            href={InstrucBook}
+            rel="noreferrer"
+            target="_blank"
+            className={RegFormCSS.Instruc}
+          >
             How to Register?
           </a>
         </div>

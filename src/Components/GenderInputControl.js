@@ -6,7 +6,6 @@ const GenderInputControl = (props) => {
 
   useEffect(() => {
     props.setValue(selected);
-    console.log("set");
   }, [selected]);
 
   return (

@@ -18,9 +18,7 @@ export default function ErrorPage() {
       id="error-page"
     >
       <h2>OOPS!</h2>
-      <span style={{ color: "red" }}>
-        Sorry, an unexpected error has occurred.
-      </span>
+      <span style={{ color: "red" }}>Sorry, this is under development.</span>
       <i>{error.statusText || error.message}</i>
     </main>
   );

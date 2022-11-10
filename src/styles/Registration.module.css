@@ -1,5 +1,5 @@
 .regPage {
-  z-index: 10;
+  z-index: 40;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -60,19 +60,19 @@
   /* grid-template-columns: 1fr 1fr; */
   overflow: hidden;
 }
-.wlbl {
+.bottomLeft {
   position: absolute;
   bottom: 0;
   left: 0;
   transform: scale(0.8) translate(-13%, 15%);
 }
-.wltl {
+.topLeft {
   position: absolute;
   top: 0;
   left: 0;
   transform: scale(0.8) translate(-20%, -13%);
 }
-.wlbr {
+.bottomRight {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -80,23 +80,23 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .wlbl {
+  .bottomLeft {
     transform: scale(0.7) translate(-22%, 22%);
   }
-  .wltl {
+  .topLeft {
     transform: scale(0.7) translate(-30%, -21%);
   }
-  .wlbr {
+  .bottomRight {
     transform: scale(0.7) translate(21%, 21.5%);
   }
 }
 /* @media screen and (max-width:900px) {
-  .wlbl{
+  .bottomLeft{
     
   }
 }
 @media screen and (max-width:800px) {
-  .wlbl{
+  .bottomLeft{
     
   }
 } */
@@ -113,13 +113,13 @@
     /* transform: translateY(-1%); */
     box-shadow: none;
   }
-  .wlbl {
+  .bottomLeft {
     display: none;
   }
-  .wlbr {
+  .bottomRight {
     display: none;
   }
-  .wltl {
+  .topLeft {
     transform: scale(0.83) translate(-47%, -11%);
   }
 

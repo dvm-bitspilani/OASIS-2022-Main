@@ -15,11 +15,9 @@ const TextInputControl = (props) => {
     } else {
       setInterval(() => {
         if (inputRef.current === document.activeElement) {
-          // handleControlClick()
           if (!active) {
             setActive(true);
           }
-          // console.log('click')
         }
       }, 50);
 

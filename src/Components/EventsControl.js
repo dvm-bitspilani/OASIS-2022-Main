@@ -1,11 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { act } from "react-dom/test-utils";
 import EcCSS from "../styles/Ec.module.css";
-import ruleBookPdf from "../Assets/rulebook.pdf";
 
 const EventsControl = (props) => {
   const inputRef = useRef();
-  const isMounted = useRef(false);
+  // const isMounted = useRef(false);
   const [active, setActive] = useState(null);
   const [labelClass, setLabelClass] = useState(null);
   const [dropDownClass, setDropDownClass] = useState(null);
@@ -44,7 +42,6 @@ const EventsControl = (props) => {
       }
     }).length;
     let rootStyle = document.querySelector(":root").style;
-    // console.log(rootStyle)
     if (dynamicLength <= 5) {
       rootStyle.setProperty("--dropDownHeight", `${dynamicLength * 25}px`);
     } else {
@@ -55,7 +52,6 @@ const EventsControl = (props) => {
   function handleEventSelection(e) {
     let eventSelected = e.target;
     let eventId = e.target.getAttribute("idno");
-    console.log(eventId);
 
     let updatedList = eventsList.filter((events) => {
       if (events.id.toString() !== eventId) {
@@ -69,13 +65,6 @@ const EventsControl = (props) => {
     });
     setEventList([...updatedList]);
     setSelectedEvents((prevList) => [...prevList, ...selectedEventList]);
-
-    console.log([...updatedList].length);
-
-    // if([...updatedList].length <=5){
-    //   // setHeightMod({hei})
-    //   setHeightMod(EcCSS.heightMod)
-    // }
   }
 
   function handleEventDeselect(e) {
@@ -131,9 +120,7 @@ const EventsControl = (props) => {
   }, [props.listData]);
 
   useEffect(() => {
-    // console.log("triggere")
     let rootStyle = document.querySelector(":root").style;
-    // console.log(rootStyle)
     if (eventsList.length <= 5) {
       rootStyle.setProperty("--dropDownHeight", `${eventsList.length * 25}px`);
     } else {

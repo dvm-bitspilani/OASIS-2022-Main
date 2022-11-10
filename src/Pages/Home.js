@@ -35,7 +35,6 @@ export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
     document.addEventListener("readystatechange", () => {
-      console.log("loaded");
       if (document.readyState === "complete") {
         setTimeout(() => setIsLoaded(true), 2000);
       }
@@ -44,7 +43,7 @@ export default function Home() {
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
-      document.querySelector("body").style.display = "none";
+      // document.querySelector("body").style.display = "none";
     });
   }, []);
 
@@ -70,13 +69,15 @@ export default function Home() {
         regState={regState.open}
         changeRegState={changeRegState}
       />
+
       <Lander changeRegState={changeRegState} />
       <Events />
+
       <Contact />
       <div className={HomeCSS.love}>
         <div className={HomeCSS.foot}>
           Made with{" "}
-          <a href="https://bits-dvm.org/" target="_blank">
+          <a href="https://bits-dvm.org/" rel="noreferrer" target="_blank">
             <i
               aria-hidden="true"
               style={{ margin: "0", cursor: "pointer" }}

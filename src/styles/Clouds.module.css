@@ -14,7 +14,7 @@
   mask-mode: alpha;
   object-fit: cover;
   position: absolute;
-  mask-image: image(url("../Assets/Mask.svg"));
+  /* mask-image: image(url("../Assets/Mask.svg")); */
   animation: cloud-left 4s cubic-bezier(0.31, 0.62, 0.31, 0.96);
 }
 
@@ -57,11 +57,11 @@
     opacity: 0.4;
   }
 
-  40%{
+  40% {
     opacity: 0.7;
   }
 
-  60%{
+  60% {
     opacity: 0.8;
   }
 
@@ -77,11 +77,11 @@
     opacity: 0.4;
   }
 
-  40%{
+  40% {
     opacity: 0.7;
   }
 
-  60%{
+  60% {
     opacity: 0.8;
   }
 

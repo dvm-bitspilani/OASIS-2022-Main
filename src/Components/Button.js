@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import ButtonCSS from "../styles/Button.module.css";
 
 const Button = (props) => {

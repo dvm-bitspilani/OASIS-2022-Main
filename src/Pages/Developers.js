@@ -1,8 +1,6 @@
 import React from "react";
 import PhoneIcon from "../Assets/ContactUs/PhoneIcon";
 import MailIcon from "../Assets/ContactUs/MailIcon";
-import MaleAvatar from "../Assets/ContactUs/MaleAvatar";
-import FemaleAvatar from "../Assets/ContactUs/FemaleAvatar";
 import devCSS from "../styles/Developers.module.css";
 
 const Developers = React.forwardRef((props, ref) => {

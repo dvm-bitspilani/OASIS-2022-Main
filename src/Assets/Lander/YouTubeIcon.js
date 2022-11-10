@@ -3,12 +3,12 @@ import React from "react";
 function YouTubeIcon() {
   return (
     <svg
-      width="37"
-      height="37"
+      width="30"
+      height="30"
       viewBox="0 0 49 49"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      style={{ transform: "scale(1.25)", marginLeft: "2px" }}
+      style={{ transform: "scale(1.4)", marginLeft: "4px" }}
     >
       <g clipPath="url(#clip0_985_608)">
         <path

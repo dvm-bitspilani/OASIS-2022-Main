@@ -5,6 +5,7 @@ import ErrorPage from "./Pages/ErrorPage";
 import Developers from "./Pages/Developers";
 import ReactGA from "react-ga";
 import Clouds from "./Components/Clouds";
+import Sponsors from "./Pages/Sponsors";
 
 const TRACKING_ID = "G-39PJMR8EV2";
 ReactGA.initialize(TRACKING_ID);
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/clouds",
     element: <Clouds />,
+  },
+  {
+    path: "/sponsors",
+    element: <Sponsors />,
   },
 ]);
 
