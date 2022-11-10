@@ -60,7 +60,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 350px) {
   .goldringsImg {
     --width: 201vw;
   }
