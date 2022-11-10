@@ -350,6 +350,9 @@ button.submitForm:hover {
   .regForm {
     gap: 12%;
   }
+  .heading{
+    font-size: 1.6rem;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -377,6 +380,9 @@ button.submitForm:hover {
   .rightSide {
     gap: 1.5rem;
   }
+  .heading{
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -391,6 +397,9 @@ button.submitForm:hover {
   .regForm {
     gap: 8%;
     padding: 2.7rem 1.8rem;
+  }
+  .heading{
+    font-size: 1.4rem;
   }
 }
 
@@ -448,6 +457,9 @@ button.submitForm:hover {
 
   .regForm::-webkit-scrollbar {
     display: none;
+  }
+  .heading{
+    font-size: 1.3rem;
   }
 }
 
