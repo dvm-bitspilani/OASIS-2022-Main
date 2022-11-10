@@ -34,14 +34,12 @@
   font-weight: 500;
   grid-column: 1/-1;
   grid-row: 1 / span 1;
-  background: linear-gradient(
-    94.75deg,
-    #d19a08 0%,
-    #fedb7e 27.6%,
-    #eac460 50%,
-    #d19a08 66.15%,
-    #d19a08 100%
-  );
+  background: linear-gradient(94.75deg,
+      #d19a08 0%,
+      #fedb7e 27.6%,
+      #eac460 50%,
+      #d19a08 66.15%,
+      #d19a08 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -80,14 +78,12 @@
   /* margin-top: 0.3rem; */
   text-decoration: none;
   font-size: 0.9rem;
-  background: linear-gradient(
-    94.75deg,
-    #d19a08 0%,
-    #fedb7e 27.6%,
-    #eac460 50%,
-    #d19a08 66.15%,
-    #d19a08 100%
-  );
+  background: linear-gradient(94.75deg,
+      #d19a08 0%,
+      #fedb7e 27.6%,
+      #eac460 50%,
+      #d19a08 66.15%,
+      #d19a08 100%);
   background-clip: text;
   text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -109,14 +105,12 @@
   position: absolute;
   width: 100%;
   height: 1px;
-  background: linear-gradient(
-    94.75deg,
-    #d19a08 0%,
-    #fedb7e 27.6%,
-    #eac460 50%,
-    #d19a08 66.15%,
-    #d19a08 100%
-  );
+  background: linear-gradient(94.75deg,
+      #d19a08 0%,
+      #fedb7e 27.6%,
+      #eac460 50%,
+      #d19a08 66.15%,
+      #d19a08 100%);
   bottom: 0;
   left: 0;
   transition: all 200ms;
@@ -162,7 +156,7 @@
   align-items: flex-start;
 }
 
-.sportsListContainer > li {
+.sportsListContainer>li {
   gap: 10px;
   display: flex;
   color: white;
@@ -176,7 +170,7 @@
   position: relative;
 }
 
-.eventCrossIcon > i {
+.eventCrossIcon>i {
   height: 100%;
   z-index: -1;
   transform: scale(1);
@@ -188,14 +182,12 @@ button.submitForm {
   position: relative;
   border: 1px solid #fedb7e;
   border-radius: 17px;
-  background: linear-gradient(
-    94.75deg,
-    #d19a08 0%,
-    #fedb7e 16.49%,
-    #ebb935 43.37%,
-    #fcd776 74.96%,
-    #d19a08 100%
-  );
+  background: linear-gradient(94.75deg,
+      #d19a08 0%,
+      #fedb7e 16.49%,
+      #ebb935 43.37%,
+      #fcd776 74.96%,
+      #d19a08 100%);
   background-position: left;
   margin: auto auto;
   color: Black;
@@ -335,11 +327,40 @@ button.submitForm:hover {
   color: rgb(255, 132, 0);
 }
 
+.hidePrompt {
+  opacity: 0;
+}
+
+.showPrompt {
+  opacity: 1;
+  animation: prompt 2s infinite;
+  color: #d19a08;
+}
+
+@keyframes prompt {
+  0% {
+    transform: translate(0, -15px);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(0, 10px);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translate(0, -15px);
+  }
+}
+
+
+
 @media screen and (max-width: 1100px) {
   .regForm {
     gap: 12%;
   }
-  .heading{
+
+  .heading {
     font-size: 1.6rem;
   }
 }
@@ -370,7 +391,8 @@ button.submitForm:hover {
   .rightSide {
     gap: 1.5rem;
   }
-  .heading{
+
+  .heading {
     font-size: 1.5rem;
   }
 }
@@ -388,12 +410,14 @@ button.submitForm:hover {
     gap: 8%;
     padding: 2.7rem 1.8rem;
   }
-  .heading{
+
+  .heading {
     font-size: 1.4rem;
   }
 }
 
 @media screen and (max-width: 760px) {
+
   /* .regFormBox {
       border: 2px solid #524916;
       border-radius: 0rem 0rem 1.8rem 1.8rem;
@@ -451,7 +475,8 @@ button.submitForm:hover {
   .regForm::-webkit-scrollbar {
     display: none;
   }
-  .heading{
+
+  .heading {
     font-size: 1.3rem;
   }
 }
