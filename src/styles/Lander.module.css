@@ -552,6 +552,17 @@
   }
 }
 
+
+@media screen and (min-width: 1200px) and (max-width: 1300px) {
+  .portalWindow, .portalWindowImg {
+    --width: 51vw;
+  }
+
+  .portalWindow {
+    clip-path: ellipse(24.7vw 23.6vw at 50% -2%);
+  }
+}
+
 @media screen and (min-width: 1200px) and (min-height: 1020px) {
   .oasisTitle {
     transform: translate(-50%, -50%) scale(1.4);
@@ -560,6 +571,16 @@
   .registerWrapper > div,
   .iconWrapper svg {
     transform: scale(1.2);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .portalWindow, .portalWindowImg {
+    --width: 61vw;
+  }
+
+  .portalWindow {
+    clip-path: ellipse(29.7vw 28.6vw at 50% -2%);
   }
 }
 
