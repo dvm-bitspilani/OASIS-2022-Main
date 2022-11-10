@@ -14,7 +14,7 @@ import { doc } from "prettier";
 
 const OPTIONS = {
   root:document.getElementById("regFormBox"),
-  threshold:0.3,
+  threshold:0.8,
 
 }
 
