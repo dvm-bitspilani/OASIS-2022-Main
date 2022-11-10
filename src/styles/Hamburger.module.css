@@ -1,11 +1,13 @@
+.container{
+  display: none !important;
+}
+
 .hamContainer {
   position: fixed;
   z-index: 300;
   cursor: pointer;
   right: 3rem;
   top: 3rem;
-
-  display: none !important;
 }
 
 .hamContainer:hover .ham {

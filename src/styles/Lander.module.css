@@ -551,9 +551,9 @@
   }
 }
 
-
 @media screen and (min-width: 1200px) and (max-width: 1300px) {
-  .portalWindow, .portalWindowImg {
+  .portalWindow,
+  .portalWindowImg {
     --width: 51vw;
   }
 
@@ -574,7 +574,8 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .portalWindow, .portalWindowImg {
+  .portalWindow,
+  .portalWindowImg {
     --width: 61vw;
   }
 
