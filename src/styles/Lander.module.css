@@ -486,7 +486,6 @@
 
   .portalWindow {
     width: 130vw;
-    
   }
 
   .portalWindowImg {
@@ -673,7 +672,7 @@
   .portalWindowImg {
     width: 200vw;
   }
-  
+
   .portalWindow {
     clip-path: ellipse(98vw 98vw at 50% -2%) !important;
   }
