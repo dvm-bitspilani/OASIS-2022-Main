@@ -86,7 +86,7 @@ export default function Hamburger() {
 
       gsap.to(menuDiv, {
         duration: 1,
-        opacity: 1,
+        opacity: 1, 
         ease: "power3.inOut",
       });
 
