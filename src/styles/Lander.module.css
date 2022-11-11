@@ -615,6 +615,17 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .portalWindow,
+  .portalWindowImg {
+    width: 130vw;
+  }
+
+  .portalWindow {
+    clip-path: ellipse(63vw 62.7vw at 50% -2%);
+  }
+}
+
 @media screen and (max-width: 800px) and (min-width: 750px) and (max-height: 900px) {
   .bottomWrapper {
     bottom: 5vh;
@@ -651,6 +662,7 @@
     width: 2.5rem;
   }
 }
+
 
 @media screen and (max-width: 350px) {
   :root {

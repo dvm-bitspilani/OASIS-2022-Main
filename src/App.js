@@ -17,13 +17,13 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/clouds",
-    element: <Clouds />,
-  },
-  {
-    path: "/sponsors",
+    path: "/sponsors/",
     element: <Sponsors />,
   },
+  // {
+  //   path: '/developers/',
+  //   element: <Developers />
+  // }
 ]);
 
 function App() {
