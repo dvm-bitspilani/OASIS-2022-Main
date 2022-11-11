@@ -8,6 +8,14 @@ import EventsControl from "./EventsControl";
 import Button from "./Button";
 import InstrucBook from "../Assets/Registration/reg_guidelines.pdf";
 import Alert from "./Alert";
+import Wheel from "./Wheel";
+import { useInView } from "react-intersection-observer";
+import { doc } from "prettier";
+
+const OPTIONS = {
+  root: document.getElementById("regFormBox"),
+  threshold: 0.8,
+};
 
 const RegForm = (props) => {
   // const BOSM_END_POINT = "https://www.bitsbosm.org/2022/registrations";
@@ -153,8 +161,27 @@ const RegForm = (props) => {
   //   pdfWindow.location.href = fileURL;
   // };
 
+  const { ref, inView, entry } = useInView(OPTIONS);
+  const [promptClass, setPromptClass] = useState(RegFormCSS.hidePrompt);
+
+  useEffect(() => {
+    console.log(inView);
+    console.log(entry);
+    scrollPromptToggle();
+  }, [inView]);
+
+  function scrollPromptToggle() {
+    // console.log("toggled")
+    if (inView) {
+      console.log("hello");
+      setPromptClass(RegFormCSS.hidePrompt);
+    } else {
+      setPromptClass(RegFormCSS.showPrompt);
+    }
+  }
+
   return (
-    <div className={RegFormCSS.regFormBox}>
+    <div className={RegFormCSS.regFormBox} id="regFormBox">
       <Alert message={message} show={popup} handleClose={handleClose} />
       <div className={RegFormCSS.heading}>REGISTRATION</div>
       <form
@@ -240,12 +267,11 @@ const RegForm = (props) => {
             />
           </div>
         </div>
-        {/* <div className={RegFormCSS.buttonContainer}>
-          <button type="submit" className={RegFormCSS.submitForm}>
-            Register Now
-          </button>
-        </div> */}
-        <div className={RegFormCSS.regFormBtns}>
+
+        <div className={RegFormCSS.regFormBtns} ref={ref}>
+          <div className={RegFormCSS.promptCaret}>
+            <i className={`fa-solid fa-caret-down ${promptClass}`}></i>
+          </div>
           <Button type="submit" form="reg-form" btn_title="Register Now" />
           <div className={RegFormCSS.compulsoryText}>
             All fields marked * are compulsory.

@@ -202,13 +202,13 @@ export default function Hamburger() {
           </div>
         </div>
         <div className={HamburgerCSS.right}>
-          {/* <Link
+          <Link
             to="/developers"
             ref={(el) => (menu1 = el)}
             className={HamburgerCSS.list}
           >
             Developers
-          </Link> */}
+          </Link>
           <Link
             to="/sponsors"
             ref={(el) => (menu2 = el)}
@@ -216,12 +216,20 @@ export default function Hamburger() {
           >
             Sponsors
           </Link>
-          {/* <Link ref={(el) => (menu3 = el)} className={HamburgerCSS.list}>
+          <Link
+            to="/events"
+            ref={(el) => (menu3 = el)}
+            className={HamburgerCSS.list}
+          >
             Events
-          </Link> */}
-          {/* <Link ref={(el) => (menu3 = el)} className={HamburgerCSS.list}>
+          </Link>
+          <Link
+            to="/videos"
+            ref={(el) => (menu4 = el)}
+            className={HamburgerCSS.list}
+          >
             Videos
-          </Link> */}
+          </Link>
         </div>
       </div>
     </div>
