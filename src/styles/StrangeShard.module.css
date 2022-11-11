@@ -29,6 +29,7 @@
 
 @media screen and (max-width: 1000px) {
   .shard {
+    display: none;
     width: 3px;
   }
 }
