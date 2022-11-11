@@ -15,7 +15,7 @@
   right: 4%;
   width: 20px;
   position: absolute;
-  cursor: pointer;
+  /* cursor: pointer */
 }
 
 .close:hover path {

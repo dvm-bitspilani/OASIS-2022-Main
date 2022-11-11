@@ -6,6 +6,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: url('./Assets/cursor.svg'), auto !important;
 }
 
 body {
@@ -13,6 +14,7 @@ body {
   background: black url(Assets/wallsbg.png) repeat center center;
   background-size: 100%;
   height: max-content;
+  cursor: url('./Assets/cursor.svg'), auto !important;
 }
 
 img {

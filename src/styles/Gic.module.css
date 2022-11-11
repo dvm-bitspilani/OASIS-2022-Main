@@ -39,7 +39,7 @@
 }
 
 .genderContent:hover {
-  cursor: pointer;
+  /* cursor: pointer */
 }
 
 .genderIcon {

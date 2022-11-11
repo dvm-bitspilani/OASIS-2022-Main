@@ -41,7 +41,7 @@ const Lander = React.forwardRef((props, ref) => {
       id="landerWrapper"
       /* onMouseMove={handleMouseMove} */
     >
-      <Hamburger />
+      {/* <Hamburger /> */}
       {/* <Clouds /> */}
       <img src={logo} alt="OASIS" className={LanderCSS.oasisLogo} />
       <div className={LanderCSS.portalWindow}>

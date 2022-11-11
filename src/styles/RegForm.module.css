@@ -222,7 +222,7 @@ button.submitForm {
 
 button.submitForm:hover {
   background-position: right;
-  cursor: pointer;
+  /* cursor: pointer */
   color: white;
 }
 
@@ -265,7 +265,7 @@ button.submitForm:hover {
 
 .checkboxContainer,
 .checkboxContainer * {
-  cursor: pointer;
+  /* cursor: pointer */
 }
 
 .checkboxKePapa {

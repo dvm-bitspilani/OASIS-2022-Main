@@ -255,7 +255,7 @@
 
 .iconWrapper svg {
   width: 20px;
-  cursor: pointer;
+  /* cursor: pointer */
   height: fit-content;
   transform: scale(1.2);
 }
