@@ -1,5 +1,4 @@
-import React from "react";
-import { useRef } from "react";
+import React, { createRef, useRef } from "react";
 import LanderCSS from "../styles/Lander.module.css";
 import LanderRing from "./LanderRing";
 import StrangeShard from "./StrangeShard";
@@ -23,12 +22,24 @@ import Hamburger from "./Hamburger";
 import Clouds from "./Clouds";
 
 const Lander = React.forwardRef((props, ref) => {
+  /* const mouseX = createRef(0);
+   * const mouseY = createRef(0); */
   const kingEl = useRef(null);
   const ringCount = Math.floor(2 + Math.random() * 3);
   const shardCount = Math.floor(100 + Math.random() * 20);
 
+  /* const handleMouseMove = (e) => {
+   *   mouseX.current = e.screenX;
+   *   mouseY.current = e.screenY;
+   * };
+   */
   return (
-    <div className={LanderCSS.landerWrapper} ref={ref} id="landerWrapper">
+    <div
+      className={LanderCSS.landerWrapper}
+      ref={ref}
+      id="landerWrapper"
+      /* onMouseMove={handleMouseMove} */
+    >
       <Hamburger />
       {/* <Clouds /> */}
       <img src={logo} alt="OASIS" className={LanderCSS.oasisLogo} />

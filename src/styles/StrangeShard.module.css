@@ -2,18 +2,18 @@
   top: 0;
   left: 50vw;
   z-index: 1;
-  width: 5px;
-  height: 1px;
+  width: 3px;
+  height: 3px;
   border-radius: 1px;
   position: absolute;
   background-color: var(--bgCol);
   box-shadow: 0 0 2px 1px var(--bgCol);
-  animation: shardMove 5s ease-out infinite var(--delay);
+  animation: shardMove 20s ease-out infinite var(--delay);
 }
 
 @keyframes shardMove {
   0% {
-    transform: translate(0, 0) rotate(var(--rot));
+    transform: translate(var(--offXStart), var(--offYStart));
     opacity: 1;
   }
 
@@ -22,7 +22,7 @@
   }
 
   100% {
-    transform: translate(var(--offX), var(--offY)) rotate(var(--rot));
+    transform: translate(var(--offXEnd), var(--offYEnd));
     opacity: 0;
   }
 }
