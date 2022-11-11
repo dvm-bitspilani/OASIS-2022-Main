@@ -47,6 +47,7 @@
   left: 50%;
   transform: translateX(-50%) translateY(-2%);
   transform-origin: 50% 0;
+  z-index: 2;
 }
 
 .portalWindowClouds {
@@ -55,21 +56,21 @@
 }
 
 .windowCloud1 {
-  bottom: 4%;
+  bottom: 10%;
   /* right: 82%; */
   animation: cloud1Anim 250s ease -50s infinite;
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 .windowCloud2 {
-  bottom: 8%;
+  bottom: 10%;
   /* left: -8%; */
   width: 60%;
   animation: cloud2Anim 220s ease -30s infinite;
 }
 
 .windowCloud3 {
-  bottom: 7%;
+  bottom: 10%;
   /* left: 83%; */
   animation: cloud2Anim 300s ease 0s infinite;
 }
@@ -338,10 +339,6 @@
     bottom: 0;
   }
 
-  .portalWindow {
-    width: 51vw;
-  }
-
   :root {
     --king_wid: 80%;
   }
@@ -370,7 +367,7 @@
   }
 
   .portalWindow {
-    width: 61vw;
+    width: 60vw;
     height: auto;
     clip-path: ellipse(32vw 30.8vw at 50% -2%);
   }
@@ -405,11 +402,7 @@
 
   .portalWindow,
   .portalWindowImg {
-    width: 131vw;
-  }
-
-  .portalWindow {
-    clip-path: ellipse(64.5vw 61.5vw at 50% -2%);
+    width: 130vw;
   }
 
   .oasisLogo {
@@ -486,6 +479,7 @@
 
   .portalWindow {
     width: 130vw;
+    clip-path: ellipse(64.5vw 61.5vw at 50% -2%);
   }
 
   .portalWindowImg {
@@ -551,17 +545,6 @@
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1300px) {
-  .portalWindow,
-  .portalWindowImg {
-    --width: 51vw;
-  }
-
-  .portalWindow {
-    clip-path: ellipse(24.7vw 23.6vw at 50% -2%);
-  }
-}
-
 @media screen and (min-width: 1200px) and (min-height: 1020px) {
   .oasisTitle {
     transform: translate(-50%, -50%) scale(1.4);
@@ -570,17 +553,6 @@
   .registerWrapper > div,
   .iconWrapper svg {
     transform: scale(1.2);
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .portalWindow,
-  .portalWindowImg {
-    --width: 61vw;
-  }
-
-  .portalWindow {
-    clip-path: ellipse(29.7vw 28.6vw at 50% -2%);
   }
 }
 
@@ -670,10 +642,6 @@
     width: 100vw;
   }
 
-  .portalWindow {
-    clip-path: ellipse(48.7vw 47.8vw at 50% -2%);
-  }
-
   .titleBgGrad,
   .oasisTitle {
     top: 65vh;
@@ -693,10 +661,6 @@
   .portalWindow,
   .portalWindowImg {
     width: 200vw;
-  }
-
-  .portalWindow {
-    clip-path: ellipse(98vw 98vw at 50% -2%) !important;
   }
 
   .kingBodyWrapper {
