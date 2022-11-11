@@ -132,19 +132,24 @@ export default function Hamburger() {
   }, [showMenu]);
 
   const staggerReveal = (node) => {
-    gsap.from(node, {
+    gsap.to(node, {
       duration: 0.8,
-      height: 0,
+      height: "30vh",
+      y:0,
       transformOrigin: "right top",
-      skewY: 10,
       ease: "power3.inOut",
     });
+    gsap.from(node, {
+      duration: 0.8,
+      skewY: 10,
+    })
   };
 
   const staggerHide = (node) => {
     gsap.to(node, {
       duration: 0.8,
       height: 0,
+      y:-600,
       skewY: 0,
       transformOrigin: "right bottom",
       ease: "power3.inOut",
