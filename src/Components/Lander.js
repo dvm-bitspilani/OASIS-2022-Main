@@ -1,4 +1,4 @@
-import React, { createRef, useRef } from "react";
+import React, { useState, createRef, useEffect } from "react";
 import LanderCSS from "../styles/Lander.module.css";
 import LanderRing from "./LanderRing";
 import StrangeShard from "./StrangeShard";
@@ -22,26 +22,51 @@ import Hamburger from "./Hamburger";
 import Clouds from "./Clouds";
 import Wheel from "./Wheel";
 
-const Lander = React.forwardRef((props, ref) => {
-  /* const mouseX = createRef(0);
-   * const mouseY = createRef(0); */
-  const kingEl = useRef(null);
-  const ringCount = Math.floor(2 + Math.random() * 3);
-  const shardCount = Math.floor(100 + Math.random() * 20);
+const Lander = (props) => {
+  const [mouseX, setMouseX] = useState(0);
+  const [mouseY, setMouseY] = useState(0);
+  const kingEl = createRef();
+  const [ringCount, setRingCount] = useState(Math.floor(2 + Math.random() * 3));
+  const [sizeClass, setSizeClass] = useState(2);
+  const [shardCount, setShardCount] = useState(
+    Math.floor(100 + Math.random() * 20)
+  );
+  const [width, setWidth] = useState(0);
+  const [portalWidth, setPortalWidth] = useState(0);
 
-  /* const handleMouseMove = (e) => {
-   *   mouseX.current = e.screenX;
-   *   mouseY.current = e.screenY;
-   * };
-   */
+  const setShards = () => {
+    setShardCount(Math.floor(50 * sizeClass + Math.random() * 20));
+    setWidth(sizeClass === 2 ? 195 : 240);
+    setPortalWidth(sizeClass === 2 ? 37 : 50);
+  };
+
+  const getSizeClass = () => {
+    if (window.innerWidth > 800 && sizeClass !== 2) {
+      setSizeClass(2);
+      setShards();
+    } else if (window.innerWidth > 400 && sizeClass !== 1) {
+      setSizeClass(1);
+      setShards();
+    } else if (sizeClass !== 0) {
+      setSizeClass(0);
+      setShards();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", getSizeClass);
+    getSizeClass();
+    setShards();
+  }, []);
+
+  const handleMouseMove = (e) => {
+    setMouseX(e.screenX);
+    setMouseY(e.screenY);
+  };
+
   return (
-    <div
-      className={LanderCSS.landerWrapper}
-      ref={ref}
-      id="landerWrapper"
-      /* onMouseMove={handleMouseMove} */
-    >
-      {/* <Hamburger /> */}
+    <div className={LanderCSS.landerWrapper} id="landerWrapper">
+      <Hamburger />
       {/* <Clouds /> */}
       <img src={logo} alt="OASIS" className={LanderCSS.oasisLogo} />
       <div className={LanderCSS.portalWindow}>
@@ -78,9 +103,13 @@ const Lander = React.forwardRef((props, ref) => {
       </div>
 
       <div>
-        {[...Array(shardCount)].map((count, idx) => (
-          <StrangeShard key={idx} />
-        ))}
+        {shardCount > 0 ? (
+          [...Array(shardCount)].map((count, idx) => (
+            <StrangeShard key={idx} width={width} portalWidth={portalWidth} />
+          ))
+        ) : (
+          <></>
+        )}
       </div>
 
       <div className={LanderCSS.kingBodyWrapper}>
@@ -134,6 +163,6 @@ const Lander = React.forwardRef((props, ref) => {
       <div className={LanderCSS.landerTransition}></div>
     </div>
   );
-});
+};
 
 export default Lander;

@@ -7,23 +7,27 @@ const StrangeShard = (props) => {
   const mul = Math.random() > 0.5 ? 1 : -1;
   const offXStart = mul * offXStartMod;
   const offYStart = Math.sqrt(
-    Math.abs(Math.pow(45, 2) - Math.pow(offXStartMod, 2))
+    Math.abs(Math.pow(props.width, 2) - Math.pow(offXStartMod, 2))
   );
   // let offYStartMax = Math.sqrt(Math.pow(50, 2) - Math.pow(offXStart, 2));
   // if (window.innerWidth <= 800) {
   //   offYStartMax = 50;
   // }
   const deg = Math.atan(offYStart / offXStart) * (180 / Math.PI);
-  const delay = Math.random() * 20;
+  const delay = Math.random() * 26;
   const dist = Math.random() * 30;
   const angle = 90 + Math.random() * 15;
   const oppSide = Math.sqrt(
-    Math.pow(37, 2) + Math.pow(dist, 2) - 2 * 37 * dist * Math.cos(angle)
+    Math.pow(props.portalWidth, 2) +
+      Math.pow(dist, 2) -
+      2 * props.portalWidth * dist * Math.cos(angle)
   );
   const offAngle =
     Math.acos(
-      (Math.pow(37, 2) + Math.pow(oppSide, 2) - Math.pow(dist, 2)) /
-        (2 * 37 * oppSide)
+      (Math.pow(props.portalWidth, 2) +
+        Math.pow(oppSide, 2) -
+        Math.pow(dist, 2)) /
+        (2 * props.portalWidth * oppSide)
     ) - deg;
   const cols = ["#D19A08", "#FEDB7E", "#EBB935", "#FCD776", "#D19A08"];
   const colIdx = Math.floor(Math.random() * cols.length);
@@ -50,9 +54,16 @@ const StrangeShard = (props) => {
       ref={elementRef}
       style={{
         "--offXStart": `${offXStart}vw`,
-        "--offYStart": `${offYStart}vw`,
+        "--offYStart": `${Math.min(
+          (offYStart * window.innerHeight) / window.innerWidth,
+          90
+        )}vh`,
         "--offXEnd": `${oppSide * Math.cos(offAngle)}vw`,
-        "--offYEnd": `${oppSide * Math.sin(offAngle)}vw`,
+        "--offYEnd": `${Math.max(
+          (oppSide * Math.sin(offAngle) * window.innerHeight) /
+            window.innerWidth,
+          0
+        )}vh`,
         "--delay": `${delay}s`,
         "--bgCol": col,
       }}

@@ -8,7 +8,7 @@
   position: absolute;
   background-color: var(--bgCol);
   box-shadow: 0 0 2px 1px var(--bgCol);
-  animation: shardMove 20s ease-out infinite var(--delay);
+  animation: shardMove 27s ease-out infinite var(--delay);
 }
 
 @keyframes shardMove {
@@ -29,6 +29,6 @@
 
 @media screen and (max-width: 1000px) {
   .shard {
-    width: 8px;
+    width: 3px;
   }
 }
