@@ -66,7 +66,7 @@ const Lander = (props) => {
 
   return (
     <div className={LanderCSS.landerWrapper} id="landerWrapper">
-      <Hamburger />
+      {/* <Hamburger /> */}
       {/* <Clouds /> */}
       <img src={logo} alt="OASIS" className={LanderCSS.oasisLogo} />
       <div className={LanderCSS.portalWindow}>
