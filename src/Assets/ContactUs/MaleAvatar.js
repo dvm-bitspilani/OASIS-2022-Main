@@ -285,11 +285,11 @@ function MaleAvatar() {
           y2="13.946"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#D19A08" />
-          <stop offset="0.276042" stopColor="#FEDB7E" />
-          <stop offset="0.5" stopColor="#EAC460" />
-          <stop offset="0.661458" stopColor="#D19A08" />
-          <stop offset="1" stopColor="#D19A08" />
+          <stop stop-color="#D19A08" />
+          <stop offset="0.276042" stop-color="#FEDB7E" />
+          <stop offset="0.5" stop-color="#EAC460" />
+          <stop offset="0.661458" stop-color="#D19A08" />
+          <stop offset="1" stop-color="#D19A08" />
         </linearGradient>
       </defs>
     </svg>

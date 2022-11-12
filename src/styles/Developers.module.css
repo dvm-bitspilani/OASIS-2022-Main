@@ -16,6 +16,7 @@
   transform: translateX(-50%) translateY(-50%);
   display: flex;
   justify-content: center;
+  /* z-index: 10; */
 }
 
 .dvmlogo img {
@@ -24,6 +25,10 @@
 
 .hoverTxt {
   position: absolute;
+}
+
+.hoverTxt img {
+  width: 100%;
 }
 
 #hoverTxt1 {
@@ -127,4 +132,101 @@
 #back {
   top: 71%;
   left: 22%;
+}
+
+.model {
+  position: absolute;
+  width: 75vw;
+  height: 90vh;
+  /* width: 100vw;
+  height: 100vh; */
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#frontModel {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .devLetters {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .devLetters {
+    width: 70vw;
+  }
+
+  .devLetter {
+    height: 75%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .devLetters {
+    width: 75vw;
+  }
+
+  .devLetter {
+    height: 65%;
+  }
+
+  .hoverTxt {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .dvmlogo img {
+    width: 30vw;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .devLetters {
+    width: 80vw;
+  }
+
+  .devLetter {
+    height: 55%;
+  }
+
+  .devContainer {
+    padding: 40px 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .devLetter {
+    height: 45%;
+  }
+
+  .dvmlogo img {
+    width: 40vw;
+  }
+
+  .hoverTxt {
+    width: 60%;
+  }
+
+  #hoverTxt1 {
+    top: 10%;
+  }
+
+  #hoverTxt1 {
+    bottom: 10%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .devLetters {
+    width: 85vw;
+  }
+
+  .devLetter {
+    height: 35%;
+  }
 }

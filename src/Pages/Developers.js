@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import devCSS from "../styles/Developers.module.css";
 
 import Front from '../Assets/Developers/Front'
@@ -25,34 +25,124 @@ import vector4 from '../Assets/Developers/vector4.svg'
 import vector5 from '../Assets/Developers/vector5.svg'
 import vector6 from '../Assets/Developers/vector6.svg'
 import vector7 from '../Assets/Developers/vector7.svg'
+import DevelopersModel from "../Components/DevelopersModel";
 
 const Developers = () => {
-  // for (let a = 0; a < 15; a++) {
-  //   fifteen[a] = (
-  //     <div key={a} className={devCSS.devCard} id="devCard" dataSpeed={a}>
-  //       <div className={devCSS.devImageCont}>
-  //         <div className={devCSS.devImage}>
-  //           <img
-  //             src={data[a].image}
-  //             alt={data[a].name}
-  //             className={devCSS.devImage}
-  //           />
-  //         </div>
-  //       </div>
-  //       <div className={devCSS.devName}>{data[a].name}</div>
-  //       <div className={devCSS.devDept}>{data[a].dept}</div>
-  //       <div className={devCSS.devLinks}>
-  //         <PhoneIcon tele={data[a].github} />
-  //         <MailIcon mail={data[a].linkedin} />
-  //       </div>
-  //     </div>
-  //   );
-  // }
+  const front = [
+    {
+      'img': require("../Assets/ContactUs/anshal.png"),
+      'name' : 'Jay Goyal',
+      'github': 'https://github.com/jay-goyal',
+      'linkedin': 'https://www.linkedin.com/in/jay-goyal-41395b224/',
+      'behance': ''
+    },
+    {
+      'img': require("../Assets/ContactUs/anshal.png"),
+      'name' : 'Vaibhav Singla',
+      'github': 'https://github.com/CoderVaibhavS',
+      'linkedin': 'https://www.linkedin.com/in/vaibhav-singla-8128321b3/',
+      'behance': ''
+    },
+    {
+      'img': require("../Assets/ContactUs/anshal.png"),
+      'name' : 'Prateek Kashyap',
+      'github': 'https://github.com/bit-by-bits',
+      'linkedin': 'https://www.linkedin.com/in/bit-by-bits/',
+      'behance': ''
+    },
+    {
+      'img': require("../Assets/ContactUs/anshal.png"),
+      'name' : 'Shwetabh Niket',
+      'github': 'https://www.github.com/nIMblEt06',
+      'linkedin': 'https://www.linkedin.com/in/niketshwetabh',
+      'behance': ''
+    },
+    {
+      'img': require("../Assets/ContactUs/anshal.png"),
+      'name' : 'Aaradhya Kulshreshta',
+      'github': 'https://github.com/aaradhyakul',
+      'linkedin': 'https://www.linkedin.com/in/aaradhya-kulshrestha-20bab8223',
+      'behance': ''
+    }
+  ]
 
-  const lettersRef = useRef([]);
+  const design = [
+    {
+      'img': require("../Assets/ContactUs/anshal.png"),
+      'name' : 'Shivang Rai',
+      'github': '',
+      'linkedin': 'https://www.linkedin.com/in/shivang-rai-36a0481bb/',
+      'behance': 'https://www.behance.net/shivangrai2'
+    },
+    {
+      'img': require("../Assets/ContactUs/anshal.png"),
+      'name' : 'Satwik Rath',
+      'github': '',
+      'linkedin': 'https://www.linkedin.com/in/satwik-rath-70034421b/',
+      'behance': 'https://www.behance.net/satwikrath'
+    },
+    {
+      'img': require("../Assets/ContactUs/anshal.png"),
+      'name' : 'Sejal Agarwal',
+      'github': '',
+      'linkedin': 'https://www.linkedin.com/in/sejal-agarwal-618176228/',
+      'behance': 'https://www.behance.net/sejalagarwal12'
+    },
+    {
+      'img': require("../Assets/ContactUs/anshal.png"),
+      'name' : 'Swaha Pati',
+      'github': '',
+      'linkedin': 'http://www.linkedin.com/in/swahapati',
+      'behance': 'https://www.behance.net/patiswaha'
+    },
+    {
+      'img': require("../Assets/ContactUs/anshal.png"),
+      'name' : 'Aditya Patil',
+      'github': '',
+      'linkedin': 'https://www.linkedin.com/in/aditya-patil-aa2431230',
+      'behance': 'https://www.behance.net/AnAvUser'
+    }
+  ]
+
+  const back = [
+    {
+      'img': require("../Assets/ContactUs/anshal.png"),
+      'name' : 'Harsh Singh',
+      'github': 'https://github.com/DankMemes4President',
+      'linkedin': 'https://www.linkedin.com/in/harsh-singh-049838227',
+      'behance': ''
+    },
+    {
+      'img': require("../Assets/ContactUs/anshal.png"),
+      'name' : 'Prakhar Gurunani',
+      'github': 'https://github.com/FirePing32/',
+      'linkedin': 'https://linkedin.com/in/prakhargurunani/',
+      'behance': ''
+    },
+    {
+      'img': require("../Assets/ContactUs/anshal.png"),
+      'name' : 'Maanas Singh',
+      'github': 'https://github.com/Maanas-23',
+      'linkedin': 'https://www.linkedin.com/in/maanas23',
+      'behance': ''
+    },
+    {
+      'img': require("../Assets/ContactUs/anshal.png"),
+      'name' : 'Utkarsh Sharma',
+      'github': 'https://github.com/utkarsh314',
+      'linkedin': 'https://www.linkedin.com/in/utkarsh314/',
+      'behance': ''
+    },
+    {
+      'img': require("../Assets/ContactUs/anshal.png"),
+      'name' : 'Harshith Vasireddy',
+      'github': 'https://github.com/ode',
+      'linkedin': '',
+      'behance': ''
+    }
+  ]
 
   useEffect(() => {
-    console.log(document.querySelectorAll('.devLetter'))
   }, [document.querySelectorAll('.devLetter'), document.querySelectorAll('.vector')])
 
 
@@ -62,7 +152,6 @@ const Developers = () => {
       i++;
       const speed = (div.getAttribute('dataSpeed'))*.01;
       const left = 0;
-      // const left = e.pageX*speed / 10;
       const top = e.pageY*speed / 1.2;
       div.style.transform = `translateX(${left}px) translateY(${top}px)`;
     })
@@ -87,6 +176,13 @@ const Developers = () => {
       div.style.transform = `translateX(${x}px) translateY(${y}px)`;
     })
   }
+
+  // const openFront = () => {
+  //   document.querySelector('#openFront').style.display = 'block'
+  // }
+  const [openFront, setOpenFront] = useState(0);
+  const [openDesign, setOpenDesign] = useState(0);
+  const [openBack, setOpenBack] = useState(0);
 
   document.addEventListener('mousemove', parallax);
 
@@ -124,11 +220,23 @@ const Developers = () => {
         </div>
 
         <div className={devCSS.devIcons}>
-          <div className={`${devCSS.devIcon} devIcon`} id={devCSS.front} dataSpeed={-2}><Front /></div>
-          <div className={`${devCSS.devIcon} devIcon`} id={devCSS.design} dataSpeed={1}><Design /></div>
-          <div className={`${devCSS.devIcon} devIcon`} id={devCSS.back} dataSpeed={-1}><Back /></div>
+          <div className={`${devCSS.devIcon} devIcon`} id={devCSS.front} onMouseOver={() => setOpenFront(1)} dataSpeed={-2}><Front /></div>
+          <div className={`${devCSS.devIcon} devIcon`} id={devCSS.design} onMouseOver={() => setOpenDesign(1)} dataSpeed={1}><Design /></div>
+          <div className={`${devCSS.devIcon} devIcon`} id={devCSS.back} onMouseOver={() => setOpenBack(1)} dataSpeed={-1}><Back /></div>
         </div>
       </div>
+
+      {openFront ? <div className={devCSS.model} id="frontModel">
+        <DevelopersModel setOpen={setOpenFront} team="Front-end Team" devs={front} />
+      </div> : <div></div>}
+
+      {openDesign ? <div className={devCSS.model} id="designModel">
+        <DevelopersModel setOpen={setOpenDesign} team="UI/UX Team" devs={design} />
+      </div> : <div></div>}
+
+      {openBack ? <div className={devCSS.model} id="backModel">
+        <DevelopersModel setOpen={setOpenBack} team="Back-end Team" devs={back} />
+      </div> : <div></div>}
     </div>
   );
 };

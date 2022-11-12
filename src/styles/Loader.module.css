@@ -6,6 +6,7 @@
   left: 0;
   background: black;
   transition: 0.5s;
+  cursor: none !important;
 }
 
 video {
@@ -14,6 +15,7 @@ video {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  cursor: none !important;
 }
 
 @media screen and (max-width: 800px) {
