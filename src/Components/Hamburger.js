@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import gsap, { Power4 } from "gsap";
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import HamburgerCSS from "../styles/Hamburger.module.css";
 
 import bl from "../Assets/Hamburger/bottomLeft.png";
@@ -13,7 +13,7 @@ import icon from "../Assets/Hamburger/info.png";
 
 export default function Hamburger() {
   const [showMenu, setShowMenu] = React.useState(false);
-
+  const navigate = useNavigate();
   let menuDiv = useRef(null);
   let menu1 = useRef(null);
   let menu2 = useRef(null);
@@ -156,6 +156,19 @@ export default function Hamburger() {
     });
   };
 
+  function spons(){
+    navigate('/sponsors')
+  }
+  function devs(){
+    navigate('/developers')
+  }
+  function videos(){
+    navigate('/videos')
+  }
+  function events(){
+    navigate('/events')
+  }
+
   return (
     <div ref={(el) => (container = el)} className={HamburgerCSS.container}>
       <div className={HamburgerCSS.hamContainer}>
@@ -207,34 +220,34 @@ export default function Hamburger() {
           </div>
         </div>
         <div className={HamburgerCSS.right}>
-          <Link
-            to="/developers"
+          <a
+            onClick={devs}
             ref={(el) => (menu1 = el)}
             className={HamburgerCSS.list}
           >
             Developers
-          </Link>
-          <Link
-            to="/sponsors"
+          </a>
+          <a
+            onClick={spons}
             ref={(el) => (menu2 = el)}
             className={HamburgerCSS.list}
           >
             Sponsors
-          </Link>
-          <Link
-            to="/events"
+          </a>
+          <a
+            onClick={events}
             ref={(el) => (menu3 = el)}
             className={HamburgerCSS.list}
           >
             Events
-          </Link>
-          <Link
-            to="/videos"
+          </a>
+          <a
+            onClick={videos}
             ref={(el) => (menu4 = el)}
             className={HamburgerCSS.list}
           >
             Videos
-          </Link>
+          </a>
         </div>
       </div>
     </div>
