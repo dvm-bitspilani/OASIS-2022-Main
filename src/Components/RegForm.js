@@ -18,7 +18,6 @@ const OPTIONS = {
 };
 
 const RegForm = (props) => {
-  // const BOSM_END_POINT = "https://www.bitsbosm.org/2022/registrations";
   const OASIS_END_POINT = "https://bits-oasis.org/2022/main/registrations";
   const OASIS_END_POINT_POST =
     "https://bits-oasis.org/2022/main/registrations/Register/";
@@ -37,12 +36,10 @@ const RegForm = (props) => {
   const [year_of_study, setYear] = useState("");
   const [events_ids, setEventsIds] = useState([]);
   const [events, setEvents] = useState([]);
-  // const [validate, setValidate] = useState(false);
   const [checkboxChoreo, setCheckboxChoreo] = useState("");
   const [checkboxHos, setCheckboxHos] = useState("");
   const [popup, setPopup] = useState(false);
   const [message, setMessage] = useState("");
-  // const recaptchaRef = useRef(null);
 
   const [collegeList, setCollegeList] = useState([]);
   const [eventsList, setEventsList] = useState([]);
@@ -92,7 +89,7 @@ const RegForm = (props) => {
       return;
     }
 
-    // const captchaToken = recaptchaRef.current.executeAsync();
+
 
     try {
       const data = {
@@ -124,7 +121,7 @@ const RegForm = (props) => {
       let res_json = await res.json();
       setMessage(res_json.message);
       setPopup(true);
-    } catch (e) {}
+    } catch (e) { }
   };
 
   const choreoChange = (e) => {
@@ -152,28 +149,18 @@ const RegForm = (props) => {
     props.resetPage();
   }
 
-  // const ruleBook = () => {
-  //   const file = new Blob("../Assets/Registration/rulebook.pdf", {
-  //     type: "application/pdf",
-  //   });
-  //   const fileURL = URL.createObjectURL(file);
-  //   const pdfWindow = window.open();
-  //   pdfWindow.location.href = fileURL;
-  // };
 
   const { ref, inView, entry } = useInView(OPTIONS);
   const [promptClass, setPromptClass] = useState(RegFormCSS.hidePrompt);
 
   useEffect(() => {
-    console.log(inView);
-    console.log(entry);
+
     scrollPromptToggle();
   }, [inView]);
 
   function scrollPromptToggle() {
-    // console.log("toggled")
+
     if (inView) {
-      console.log("hello");
       setPromptClass(RegFormCSS.hidePrompt);
     } else {
       setPromptClass(RegFormCSS.showPrompt);
@@ -286,25 +273,6 @@ const RegForm = (props) => {
           </a>
         </div>
 
-        {/* <TextInputControl
-          label={"Head Of Society"}
-          type={"text"}
-          setValue={setHeadOfSociety}
-        />
-        <TextInputControl
-          label={"Choreographer"}
-          type={"text"}
-          setValue={setChoreo}
-        /> */}
-
-        {/* <Button btn_title='Register' type="submit" /> */}
-
-        {/* <ReCAPTCHA
-          ref={recaptchaRef}
-          size="invisible"
-          sitekey={`${process.env.REACT_APP_SITE_KEY}`}
-        /> */}
-        {/* <div className={RegFormCSS.bottomPadding}></div> */}
       </form>
     </div>
   );

@@ -19,6 +19,7 @@ export default function Hamburger() {
   let menu2 = useRef(null);
   let menu3 = useRef(null);
   let menu4 = useRef(null);
+  let menu5 = useRef(null);
   let div1 = useRef(null);
   let div2 = useRef(null);
   let container = useRef(null);
@@ -98,7 +99,7 @@ export default function Hamburger() {
 
       staggerReveal(menuDiv);
       staggerDivs(div1, div2);
-      staggerText(menu1, menu2, menu3, menu4);
+      staggerText(menu1, menu2, menu3, menu4,menu5);
 
       ham.style.transform = "rotate(45deg) translate(5px, 5px)";
       ham2.style.opacity = "0";
@@ -121,7 +122,7 @@ export default function Hamburger() {
       });
 
       removeDivs(div1, div2);
-      removeText(menu1, menu2, menu3, menu4);
+      removeText(menu1, menu2, menu3, menu4,menu5);
       staggerHide(menuDiv);
 
       setTimeout(() => {
@@ -167,6 +168,9 @@ export default function Hamburger() {
   }
   function events(){
     navigate('/events')
+  }
+  function eclipse(){
+    navigate('/eclipse')
   }
 
   return (
@@ -247,6 +251,13 @@ export default function Hamburger() {
             className={HamburgerCSS.list}
           >
             Videos
+          </a>
+          <a
+            onClick={eclipse}
+            ref={(el) => (menu5 = el)}
+            className={HamburgerCSS.list}
+          >
+            Eclipse
           </a>
         </div>
       </div>
