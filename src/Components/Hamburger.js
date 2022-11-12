@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import gsap, { Power4 } from "gsap";
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import HamburgerCSS from "../styles/Hamburger.module.css";
 
 import bl from "../Assets/Hamburger/bottomLeft.png";
@@ -13,18 +13,19 @@ import icon from "../Assets/Hamburger/info.png";
 
 export default function Hamburger() {
   const [showMenu, setShowMenu] = React.useState(false);
-
+  const navigate = useNavigate();
   let menuDiv = useRef(null);
   let menu1 = useRef(null);
   let menu2 = useRef(null);
   let menu3 = useRef(null);
   let menu4 = useRef(null);
+  let menu5 = useRef(null);
   let div1 = useRef(null);
   let div2 = useRef(null);
   let container = useRef(null);
 
-  const staggerText = (node, node2, node3, node4) => {
-    gsap.to([node, node2, node3, node4], {
+  const staggerText = (node, node2, node3, node4, node5) => {
+    gsap.to([node, node2, node3, node4, node5], {
       duration: 1,
       y: 0,
       opacity: 1,
@@ -34,8 +35,8 @@ export default function Hamburger() {
     });
   };
 
-  const removeText = (node, node2, node3, node4) => {
-    gsap.to([node, node2, node3, node4], {
+  const removeText = (node, node2, node3, node4, node5) => {
+    gsap.to([node, node2, node3, node4, node5], {
       duration: 1,
       y: 100,
       opacity: 0,
@@ -78,7 +79,6 @@ export default function Hamburger() {
   useEffect(() => {
     let ham = document.getElementById("ham");
     let ham2 = document.getElementById("ham2");
-    let ham3 = document.getElementById("ham3");
 
     if (showMenu) {
       container.style.width = "100vw";
@@ -86,7 +86,7 @@ export default function Hamburger() {
 
       gsap.to(menuDiv, {
         duration: 1,
-        opacity: 1,
+        opacity: 1, 
         ease: "power3.inOut",
       });
 
@@ -98,15 +98,14 @@ export default function Hamburger() {
 
       staggerReveal(menuDiv);
       staggerDivs(div1, div2);
-      staggerText(menu1, menu2, menu3, menu4);
+      staggerText(menu1, menu2, menu3, menu4,menu5);
 
-      ham.style.transform = "rotate(45deg) translate(5px, 5px)";
-      ham2.style.opacity = "0";
-      ham3.style.transform = "rotate(-45deg) translate(5px, -5px)";
+      ham.style.transform = "rotate(0deg) translate(-7px, 8px)";
+      ham2.style.transform = "rotate(0deg) translate(-7px, -8px)";
     } else {
-      ham.style.transform = "rotate(0deg)";
-      ham2.style.opacity = "1";
-      ham3.style.transform = "rotate(0deg)";
+      
+      ham.style.transform = "rotate(-45deg) translate(-7px, 2px)";
+      ham2.style.transform = "rotate(-45deg) translate(-2px, -10px)";
 
       gsap.to(menuDiv, {
         duration: 0.8,
@@ -121,7 +120,7 @@ export default function Hamburger() {
       });
 
       removeDivs(div1, div2);
-      removeText(menu1, menu2, menu3, menu4);
+      removeText(menu1, menu2, menu3, menu4, menu5);
       staggerHide(menuDiv);
 
       setTimeout(() => {
@@ -132,24 +131,45 @@ export default function Hamburger() {
   }, [showMenu]);
 
   const staggerReveal = (node) => {
-    gsap.from(node, {
+    gsap.to(node, {
       duration: 0.8,
-      height: 0,
+      height: "30vh",
+      y:0,
       transformOrigin: "right top",
-      skewY: 10,
       ease: "power3.inOut",
     });
+    gsap.from(node, {
+      duration: 0.8,
+      skewY: 10,
+    })
   };
 
   const staggerHide = (node) => {
     gsap.to(node, {
       duration: 0.8,
       height: 0,
+      y:-600,
       skewY: 0,
       transformOrigin: "right bottom",
       ease: "power3.inOut",
     });
   };
+
+  function spons(){
+    navigate('/sponsors')
+  }
+  function devs(){
+    navigate('/developers')
+  }
+  function videos(){
+    navigate('/videos')
+  }
+  function events(){
+    navigate('/events')
+  }
+  function eclipse(){
+    navigate('/eclipse')
+  }
 
   return (
     <div ref={(el) => (container = el)} className={HamburgerCSS.container}>
@@ -157,7 +177,6 @@ export default function Hamburger() {
         <div className={HamburgerCSS.hamBox} onClick={toggleMenu}>
           <div className={HamburgerCSS.ham} id="ham"></div>
           <div className={HamburgerCSS.ham2} id="ham2"></div>
-          <div className={HamburgerCSS.ham3} id="ham3"></div>
         </div>
       </div>
 
@@ -202,34 +221,41 @@ export default function Hamburger() {
           </div>
         </div>
         <div className={HamburgerCSS.right}>
-          <Link
-            to="/developers"
+          <a
+            onClick={devs}
             ref={(el) => (menu1 = el)}
             className={HamburgerCSS.list}
           >
             Developers
-          </Link>
-          <Link
-            to="/sponsors"
+          </a>
+          <a
+            onClick={spons}
             ref={(el) => (menu2 = el)}
             className={HamburgerCSS.list}
           >
             Sponsors
-          </Link>
-          <Link
-            to="/events"
+          </a>
+          <a
+            onClick={events}
             ref={(el) => (menu3 = el)}
             className={HamburgerCSS.list}
           >
             Events
-          </Link>
-          <Link
-            to="/videos"
+          </a>
+          <a
+            onClick={videos}
             ref={(el) => (menu4 = el)}
             className={HamburgerCSS.list}
           >
             Videos
-          </Link>
+          </a>
+          <a
+            onClick={eclipse}
+            ref={(el) => (menu5 = el)}
+            className={HamburgerCSS.list}
+          >
+            Eclipse
+          </a>
         </div>
       </div>
     </div>
