@@ -24,8 +24,8 @@ export default function Hamburger() {
   let div2 = useRef(null);
   let container = useRef(null);
 
-  const staggerText = (node, node2, node3, node4) => {
-    gsap.to([node, node2, node3, node4], {
+  const staggerText = (node, node2, node3, node4, node5) => {
+    gsap.to([node, node2, node3, node4, node5], {
       duration: 1,
       y: 0,
       opacity: 1,
@@ -35,8 +35,8 @@ export default function Hamburger() {
     });
   };
 
-  const removeText = (node, node2, node3, node4) => {
-    gsap.to([node, node2, node3, node4], {
+  const removeText = (node, node2, node3, node4, node5) => {
+    gsap.to([node, node2, node3, node4, node5], {
       duration: 1,
       y: 100,
       opacity: 0,
@@ -79,7 +79,6 @@ export default function Hamburger() {
   useEffect(() => {
     let ham = document.getElementById("ham");
     let ham2 = document.getElementById("ham2");
-    let ham3 = document.getElementById("ham3");
 
     if (showMenu) {
       container.style.width = "100vw";
@@ -101,13 +100,12 @@ export default function Hamburger() {
       staggerDivs(div1, div2);
       staggerText(menu1, menu2, menu3, menu4,menu5);
 
-      ham.style.transform = "rotate(45deg) translate(5px, 5px)";
-      ham2.style.opacity = "0";
-      ham3.style.transform = "rotate(-45deg) translate(5px, -5px)";
+      ham.style.transform = "rotate(0deg) translate(-7px, 8px)";
+      ham2.style.transform = "rotate(0deg) translate(-7px, -8px)";
     } else {
-      ham.style.transform = "rotate(0deg)";
-      ham2.style.opacity = "1";
-      ham3.style.transform = "rotate(0deg)";
+      
+      ham.style.transform = "rotate(-45deg) translate(-7px, 2px)";
+      ham2.style.transform = "rotate(-45deg) translate(-2px, -10px)";
 
       gsap.to(menuDiv, {
         duration: 0.8,
@@ -122,7 +120,7 @@ export default function Hamburger() {
       });
 
       removeDivs(div1, div2);
-      removeText(menu1, menu2, menu3, menu4,menu5);
+      removeText(menu1, menu2, menu3, menu4, menu5);
       staggerHide(menuDiv);
 
       setTimeout(() => {
@@ -179,7 +177,6 @@ export default function Hamburger() {
         <div className={HamburgerCSS.hamBox} onClick={toggleMenu}>
           <div className={HamburgerCSS.ham} id="ham"></div>
           <div className={HamburgerCSS.ham2} id="ham2"></div>
-          <div className={HamburgerCSS.ham3} id="ham3"></div>
         </div>
       </div>
 
