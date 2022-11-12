@@ -9,14 +9,14 @@ import dvmlogo from '../Assets/Developers/dvm_logo.png'
 import hoverTxt1 from '../Assets/Developers/hoverTxt1.png'
 import hoverTxt2 from '../Assets/Developers/hoverTxt2.png'
 
-import D from '../Assets/Developers/D.svg'
-import E from '../Assets/Developers/E.svg'
-import V from '../Assets/Developers/V.svg'
-import L from '../Assets/Developers/L.svg'
-import P from '../Assets/Developers/P.svg'
-import O from '../Assets/Developers/O.svg'
-import R from '../Assets/Developers/R.svg'
-import S from '../Assets/Developers/S.svg'
+import D from '../Assets/Developers/D.js'
+import E from '../Assets/Developers/E.js'
+import V from '../Assets/Developers/V.js'
+import L from '../Assets/Developers/L.js'
+import P from '../Assets/Developers/P.js'
+import O from '../Assets/Developers/O.js'
+import R from '../Assets/Developers/R.js'
+import S from '../Assets/Developers/S.js'
 
 import vector1 from '../Assets/Developers/vector1.svg'
 import vector2 from '../Assets/Developers/vector2.svg'
@@ -197,16 +197,16 @@ const Developers = () => {
 
       <div className={devCSS.developers}>
         <div className={devCSS.devLetters}>
-          <img className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter1} dataSpeed={1} src={D} alt="" />
-          <img className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter2} dataSpeed={-1} src={E} alt="" />
-          <img className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter3} dataSpeed={2} src={V} alt="" />
-          <img className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter4} dataSpeed={-2} src={E} alt="" />
-          <img className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter5} dataSpeed={2} src={L} alt="" />
-          <img className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter6} dataSpeed={-2} src={O} alt="" />
-          <img className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter7} dataSpeed={1} src={P} alt="" />
-          <img className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter8} dataSpeed={2} src={E} alt="" />
-          <img className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter9} dataSpeed={-1} src={R} alt="" />
-          <img className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter10} dataSpeed={1}  src={S} alt="" />
+          <div className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter1} dataSpeed={1}><D/></div>
+          <div className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter2} dataSpeed={-1}><E/></div>
+          <div className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter3} dataSpeed={2}><V/></div>
+          <div className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter4} dataSpeed={-2}><E/></div>
+          <div className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter5} dataSpeed={2}><L/></div>
+          <div className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter6} dataSpeed={-2}><O/></div>
+          <div className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter7} dataSpeed={1}><P/></div>
+          <div className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter8} dataSpeed={2}><E/></div>
+          <div className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter9} dataSpeed={-1}><R/></div>
+          <div className={`${devCSS.devLetter} devLetter`} id={devCSS.devLetter10} dataSpeed={1} ><S/></div>
         </div>
 
         <div className={devCSS.vectors}>
@@ -220,9 +220,9 @@ const Developers = () => {
         </div>
 
         <div className={devCSS.devIcons}>
-          <div className={`${devCSS.devIcon} devIcon`} id={devCSS.front} onMouseOver={() => setOpenFront(1)} dataSpeed={-2}><Front /></div>
-          <div className={`${devCSS.devIcon} devIcon`} id={devCSS.design} onMouseOver={() => setOpenDesign(1)} dataSpeed={1}><Design /></div>
-          <div className={`${devCSS.devIcon} devIcon`} id={devCSS.back} onMouseOver={() => setOpenBack(1)} dataSpeed={-1}><Back /></div>
+          <div className={`${devCSS.devIcon} devIcon`} id={devCSS.front} onClick={() => setOpenFront(1)} dataSpeed={-2}><Front /></div>
+          <div className={`${devCSS.devIcon} devIcon`} id={devCSS.design} onClick={() => setOpenDesign(1)} dataSpeed={1}><Design /></div>
+          <div className={`${devCSS.devIcon} devIcon`} id={devCSS.back} onClick={() => setOpenBack(1)} dataSpeed={-1}><Back /></div>
         </div>
       </div>
 
