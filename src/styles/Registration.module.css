@@ -19,7 +19,7 @@
 }
 
 .close:hover path {
-  fill: url(#paint0_linear_737_546);
+  fill: #9f9874b3;
 }
 
 .removePage {
@@ -60,18 +60,21 @@
   /* grid-template-columns: 1fr 1fr; */
   overflow: hidden;
 }
+
 .bottomLeft {
   position: absolute;
   bottom: 0;
   left: 0;
   transform: scale(0.8) translate(-13%, 15%);
 }
+
 .topLeft {
   position: absolute;
   top: 0;
   left: 0;
   transform: scale(0.8) translate(-20%, -13%);
 }
+
 .bottomRight {
   position: absolute;
   right: 0;
@@ -83,13 +86,16 @@
   .bottomLeft {
     transform: scale(0.7) translate(-22%, 22%);
   }
+
   .topLeft {
     transform: scale(0.7) translate(-30%, -21%);
   }
+
   .bottomRight {
     transform: scale(0.7) translate(21%, 21.5%);
   }
 }
+
 /* @media screen and (max-width:900px) {
   .bottomLeft{
     
@@ -113,12 +119,15 @@
     /* transform: translateY(-1%); */
     box-shadow: none;
   }
+
   .bottomLeft {
     display: none;
   }
+
   .bottomRight {
     display: none;
   }
+
   .topLeft {
     transform: scale(0.83) translate(-47%, -11%);
   }
@@ -135,11 +144,13 @@
     width: 84%;
   }
 }
+
 @media screen and (max-width: 420px) {
   .formContainer {
     width: 90%;
   }
 }
+
 /* .formContainer{
   width: 90%;
 } */

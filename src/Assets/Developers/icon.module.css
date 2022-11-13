@@ -1,14 +1,14 @@
 .front {
-    animation: pulse 3s ease 0s infinite;
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: pulse 3s ease 0s infinite;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 .design {
-    animation: pulse 3s ease 3s infinite;
+  animation: pulse 3s ease 3s infinite;
 }
 
 .back {
-    animation: pulse 3s ease 6s infinite;
+  animation: pulse 3s ease 6s infinite;
 }
 
 svg {
@@ -16,14 +16,14 @@ svg {
 }
 
 @keyframes pulse {
-    0% {
-        filter: saturate(0.2);
-    }
+  0% {
+    filter: saturate(0.2);
+  }
 
-    65% {
-        filter: saturate(1);
-    }
-    100% {
-        filter: saturate(0.2);
-    }
+  65% {
+    filter: saturate(1);
+  }
+  100% {
+    filter: saturate(0.2);
+  }
 }

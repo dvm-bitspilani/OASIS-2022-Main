@@ -663,7 +663,6 @@
   }
 }
 
-
 @media screen and (max-width: 350px) {
   :root {
     --title_wid: 60vw;

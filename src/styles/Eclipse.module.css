@@ -6,6 +6,7 @@
 
 .eclipseBackdrop {
     background-color: rgba(0, 0, 0, 0.498);
+
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -23,7 +24,10 @@
     border-radius: 1rem;
     position: relative;
     color: white;
-    box-shadow: 0 0 20px 0 rgba(255, 150, 3, 0.564);
+    box-shadow: 0 0 10px #9f9874b3;
+    background: hsla(0, 0%, 0%, 0.675);
+
+
     /* padding: 2rem 10%; */
     padding-bottom: 3.5rem;
     overflow: hidden;
@@ -115,20 +119,20 @@
 
 .closePage {
     position: absolute;
-    right: 40px;
-    top: 60px;
+    right: 30px;
+    top: 33px;
     border: none;
-    z-index: 5;
+    z-index: 6;
     background: none;
+    transform: scale(0.7);
 }
 
-.closePage>i {
-    color: gold;
+.closePage:hover path {
+    fill: goldenrod;
 }
 
-.closePage:hover {
-    color: goldenrod;
-}
+
+
 
 @media (max-width:1250px) {
     .games {
@@ -158,7 +162,8 @@
     }
 
     .closePage {
-        top: 60px;
+        top: 30px;
+        transform: scale(0.65);
     }
 
 }
@@ -197,7 +202,8 @@
     }
 
     .closePage {
-        top: 54px;
+        top: 26px;
+        transform: scale(0.6);
     }
 
 
@@ -241,7 +247,8 @@
     }
 
     .closePage {
-        top: 49px;
+        top: 18px;
+
     }
 }
 
@@ -277,7 +284,7 @@
     }
 
     .closePage {
-        top: 45px;
+        top: 18px;
     }
 }
 
@@ -287,8 +294,8 @@
     }
 
     .closePage {
-        transform: scale(0.8);
-        right: 25px;
+        transform: scale(0.54);
+        right: -10px;
     }
 
 

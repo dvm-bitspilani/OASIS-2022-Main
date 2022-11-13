@@ -86,7 +86,7 @@ export default function Hamburger() {
 
       gsap.to(menuDiv, {
         duration: 1,
-        opacity: 1, 
+        opacity: 1,
         ease: "power3.inOut",
       });
 
@@ -134,21 +134,21 @@ export default function Hamburger() {
     gsap.to(node, {
       duration: 0.8,
       height: "30vh",
-      y:0,
+      y: 0,
       transformOrigin: "right top",
       ease: "power3.inOut",
     });
     gsap.from(node, {
       duration: 0.8,
       skewY: 10,
-    })
+    });
   };
 
   const staggerHide = (node) => {
     gsap.to(node, {
       duration: 0.8,
       height: 0,
-      y:-600,
+      y: -600,
       skewY: 0,
       transformOrigin: "right bottom",
       ease: "power3.inOut",
