@@ -19,8 +19,6 @@ import FaceBookIcon from "../Assets/Lander/FaceBookIcon";
 import YouTubeIcon from "../Assets/Lander/YouTubeIcon";
 import InstaGramIcon from "../Assets/Lander/InstaGramIcon";
 import Hamburger from "./Hamburger";
-import Clouds from "./Clouds";
-import Wheel from "./Wheel";
 
 const Lander = (props) => {
   const [mouseX, setMouseX] = useState(0);
@@ -67,7 +65,6 @@ const Lander = (props) => {
   return (
     <div className={LanderCSS.landerWrapper} id="landerWrapper">
       <Hamburger />
-      {/* <Clouds /> */}
       <img src={logo} alt="OASIS" className={LanderCSS.oasisLogo} />
       <div className={LanderCSS.portalWindow}>
         <img src={windowImg} alt="" className={LanderCSS.portalWindowImg1} />
