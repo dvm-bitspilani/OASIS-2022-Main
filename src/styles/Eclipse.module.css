@@ -119,11 +119,11 @@
 
 .closePage {
     position: absolute;
-    right: 40px;
-    top: 53px;
+    right: 30px;
+    top: 33px;
     border: none;
     z-index: 6;
-    /* background: none; */
+    background: none;
     transform: scale(0.7);
 }
 
@@ -162,7 +162,7 @@
     }
 
     .closePage {
-        top: 52px;
+        top: 30px;
         transform: scale(0.65);
     }
 
@@ -202,7 +202,7 @@
     }
 
     .closePage {
-        top: 46px;
+        top: 26px;
         transform: scale(0.6);
     }
 
@@ -247,7 +247,7 @@
     }
 
     .closePage {
-        top: 42px;
+        top: 18px;
 
     }
 }
@@ -284,7 +284,7 @@
     }
 
     .closePage {
-        top: 39px;
+        top: 18px;
     }
 }
 
@@ -295,7 +295,7 @@
 
     .closePage {
         transform: scale(0.54);
-        right: 21px;
+        right: -10px;
     }
 
 
