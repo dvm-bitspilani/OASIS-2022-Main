@@ -165,6 +165,13 @@
   }
 }
 
+@media screen and (max-width: 850px) {
+  .model {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .devLetters {
     width: 75vw;
