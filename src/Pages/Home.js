@@ -7,6 +7,7 @@ import Events from "../Components/Events";
 import HomeCSS from "../styles/Home.module.css";
 import Loader from "./Loader";
 import ReactGA from "react-ga";
+import Videos from "../Components/Video";
 
 export default function Home() {
   window.scrollTo(0, 0);
@@ -72,7 +73,7 @@ export default function Home() {
 
       <Lander changeRegState={changeRegState} />
       <Events />
-
+      {/* <Videos /> */}
       <Contact />
       <div className={HomeCSS.love}>
         <div className={HomeCSS.foot}>

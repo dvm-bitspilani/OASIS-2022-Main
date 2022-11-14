@@ -26,8 +26,8 @@ const router = createBrowserRouter([
     element: <Developers />
   },
   {
-    path:"/eclipse",
-    element:<Eclipse/>
+    path: "/eclipse",
+    element: <Eclipse />
   }
 ]);
 

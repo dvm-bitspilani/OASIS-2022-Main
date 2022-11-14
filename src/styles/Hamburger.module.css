@@ -3,28 +3,31 @@
 }
 
 .hamContainer {
-  position: fixed;
+  position: absolute;
   z-index: 300;
   border: 2px solid #D19A08E5;
   border-radius: 50%;
+  background: none;
   padding: 1rem;
   width: 3rem;
+  /* cursor: pointer; */
   height: 3rem;
   /* cursor: pointer */
-  right: 3rem;
-  top: 3rem;
+  left: 90vw;
+  top: 2rem;
+  transition: all 0.9s ease;
+}
+
+.hamContainer:hover {
+  background: linear-gradient(94.75deg, rgba(209, 154, 8, 0.9) 0%, rgba(254, 219, 126, 0.9) 27.6%, rgba(234, 196, 96, 0.9) 50%, rgba(209, 154, 8, 0.9) 66.15%, rgba(209, 154, 8, 0.9) 100%);
 }
 
 .hamContainer:hover .ham {
-  background-color: #ebb935;
+  background: #000000;
 }
 
 .hamContainer:hover .ham2 {
-  background-color: #ebb935;
-}
-
-.hamContainer:hover .ham3 {
-  background-color: #ebb935;
+  background: #090909;
 }
 
 .ham {
@@ -36,7 +39,7 @@
   /* cursor: pointer */
   border-radius: 50px;
   background-color: rgb(255, 255, 255);
-  transition: all 200ms ease-in-out;
+  transition: all 200ms ease-out;
 }
 
 .ham2 {
@@ -73,7 +76,7 @@ i {
 }
 
 .container {
-  position: fixed;
+  position: absolute;
   z-index: 25;
   background: hsla(0, 0%, 0%, 0.675);
   transform-origin: center;
@@ -305,7 +308,7 @@ a {
 @media screen and (max-width: 650px) {
   .hamContainer {
     top: 2.4rem;
-    right: 2.4rem;
+    left: 80vw;
   }
 }
 @media screen and (max-width: 1400px) {

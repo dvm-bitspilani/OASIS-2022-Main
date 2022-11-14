@@ -1,0 +1,23 @@
+.title {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  background: linear-gradient(94.75deg, #D19A08 0%, #FEDB7E 27.6%, #EAC460 50%, #D19A08 66.15%, #D19A08 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@media (max-width: 800px) {
+  .heading {
+    font-size: 1.4rem;
+  }
+}
