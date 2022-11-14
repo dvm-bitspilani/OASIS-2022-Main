@@ -1,6 +1,5 @@
 .front {
   animation: pulse 3s ease 0s infinite;
-  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 .design {
@@ -13,6 +12,12 @@
 
 svg {
     width: 100%;
+}
+
+.front:hover, .design:hover, .back:hover {
+  transform: scale(1.1);
+  filter: saturate(0.2);
+  animation: transform;
 }
 
 @keyframes pulse {
