@@ -1,0 +1,6 @@
+.container{
+    display: flex;
+    margin-top: 2rem;
+    width: max-content;
+    overflow: hidden;
+}

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import devModelCSS from '../styles/DevelopersModel.module.css'
-import shivang from '../Assets/Developers/shivang.png'
 import Github from '../Assets/Developers/Github'
 import Linkedin from '../Assets/Developers/Linkedin'
 import Behance from '../Assets/Developers/Behance'
@@ -34,7 +33,7 @@ export default function DeveloperCard(props) {
 
   return (
     <div className={devModelCSS.devCard} id="devCard" onMouseOver={onMouseOver} onMouseOut={onMouseOut}>
-        <img src={shivang} alt="" />
+        <img src={props.dev.img} alt="" />
         <div className={devModelCSS.devCardGrad}></div>
         <div className={devModelCSS.devCardCont} id="devCardCont">
           <div className={devModelCSS.devCardName}>{props.dev.name}</div>

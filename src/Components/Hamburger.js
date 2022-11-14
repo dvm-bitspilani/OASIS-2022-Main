@@ -19,13 +19,13 @@ export default function Hamburger() {
   let menu2 = useRef(null);
   let menu3 = useRef(null);
   let menu4 = useRef(null);
-  let menu5 = useRef(null);
+  // let  = useRef(null);
   let div1 = useRef(null);
   let div2 = useRef(null);
   let container = useRef(null);
 
-  const staggerText = (node, node2, node3, node4, node5) => {
-    gsap.to([node, node2, node3, node4, node5], {
+  const staggerText = (node, node2, node3) => {
+    gsap.to([node, node2, node3], {
       duration: 1,
       y: 0,
       opacity: 1,
@@ -35,8 +35,8 @@ export default function Hamburger() {
     });
   };
 
-  const removeText = (node, node2, node3, node4, node5) => {
-    gsap.to([node, node2, node3, node4, node5], {
+  const removeText = (node, node2, node3) => {
+    gsap.to([node, node2, node3], {
       duration: 1,
       y: 100,
       opacity: 0,
@@ -98,14 +98,14 @@ export default function Hamburger() {
 
       staggerReveal(menuDiv);
       staggerDivs(div1, div2);
-      staggerText(menu1, menu2, menu3, menu4,menu5);
+      staggerText(menu1, menu2, menu3,);
 
-      ham.style.transform = "rotate(0deg) translate(-7px, 8px)";
-      ham2.style.transform = "rotate(0deg) translate(-7px, -8px)";
+      ham.style.transform = "rotate(0deg) translate(-7px, 10px)";
+      ham2.style.transform = "rotate(0deg) translate(-7px, -5px)";
     } else {
       
-      ham.style.transform = "rotate(-45deg) translate(-7px, 2px)";
-      ham2.style.transform = "rotate(-45deg) translate(-2px, -10px)";
+      ham.style.transform = "rotate(-45deg) translate(-6px, 2px)";
+      ham2.style.transform = "rotate(-45deg) translate(-5px, -10px)";
 
       gsap.to(menuDiv, {
         duration: 0.8,
@@ -120,7 +120,7 @@ export default function Hamburger() {
       });
 
       removeDivs(div1, div2);
-      removeText(menu1, menu2, menu3, menu4, menu5);
+      removeText(menu1, menu2, menu3, );
       staggerHide(menuDiv);
 
       setTimeout(() => {
@@ -161,9 +161,6 @@ export default function Hamburger() {
   function devs(){
     navigate('/developers')
   }
-  function videos(){
-    navigate('/videos')
-  }
   function events(){
     navigate('/events')
   }
@@ -173,11 +170,9 @@ export default function Hamburger() {
 
   return (
     <div ref={(el) => (container = el)} className={HamburgerCSS.container}>
-      <div className={HamburgerCSS.hamContainer}>
-        <div className={HamburgerCSS.hamBox} onClick={toggleMenu}>
+      <div className={HamburgerCSS.hamContainer} onClick={toggleMenu} >
           <div className={HamburgerCSS.ham} id="ham"></div>
           <div className={HamburgerCSS.ham2} id="ham2"></div>
-        </div>
       </div>
 
       <div ref={(el) => (menuDiv = el)} id="menu" className={HamburgerCSS.menu}>
@@ -236,22 +231,8 @@ export default function Hamburger() {
             Sponsors
           </a>
           <a
-            onClick={events}
-            ref={(el) => (menu3 = el)}
-            className={HamburgerCSS.list}
-          >
-            Events
-          </a>
-          <a
-            onClick={videos}
-            ref={(el) => (menu4 = el)}
-            className={HamburgerCSS.list}
-          >
-            Videos
-          </a>
-          <a
             onClick={eclipse}
-            ref={(el) => (menu5 = el)}
+            ref={(el) => (menu3 = el)}
             className={HamburgerCSS.list}
           >
             Eclipse

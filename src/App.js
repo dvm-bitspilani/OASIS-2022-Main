@@ -21,13 +21,13 @@ const router = createBrowserRouter([
     path: "/sponsors/",
     element: <Sponsors />,
   },
-  // {
-  //   path: '/developers/',
-  //   element: <Developers />
-  // },
   {
-    path:"/eclipse",
-    element:<Eclipse/>
+    path: '/developers/',
+    element: <Developers />
+  },
+  {
+    path: "/eclipse",
+    element: <Eclipse />
   }
 ]);
 

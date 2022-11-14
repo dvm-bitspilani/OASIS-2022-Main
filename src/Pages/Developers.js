@@ -30,117 +30,117 @@ import DevelopersModel from "../Components/DevelopersModel";
 const Developers = () => {
   const front = [
     {
-      img: require("../Assets/ContactUs/anshal.png"),
-      name: "Jay Goyal",
-      github: "https://github.com/jay-goyal",
-      linkedin: "https://www.linkedin.com/in/jay-goyal-41395b224/",
-      behance: "",
+      'img': require("../Assets/Developers/DevImages/jay.jpg"),
+      'name' : 'Jay Goyal',
+      'github': 'https://github.com/jay-goyal',
+      'linkedin': 'https://www.linkedin.com/in/jay-goyal-41395b224/',
+      'behance': ''
     },
     {
-      img: require("../Assets/ContactUs/anshal.png"),
-      name: "Vaibhav Singla",
-      github: "https://github.com/CoderVaibhavS",
-      linkedin: "https://www.linkedin.com/in/vaibhav-singla-8128321b3/",
-      behance: "",
+      'img': require("../Assets/Developers/DevImages/vaibhav.jpg"),
+      'name' : 'Vaibhav Singla',
+      'github': 'https://github.com/CoderVaibhavS',
+      'linkedin': 'https://www.linkedin.com/in/vaibhav-singla-8128321b3/',
+      'behance': ''
     },
     {
-      img: require("../Assets/ContactUs/anshal.png"),
-      name: "Prateek Kashyap",
-      github: "https://github.com/bit-by-bits",
-      linkedin: "https://www.linkedin.com/in/bit-by-bits/",
-      behance: "",
+      'img': require("../Assets/Developers/DevImages/prateek.png"),
+      'name' : 'Prateek Kashyap',
+      'github': 'https://github.com/bit-by-bits',
+      'linkedin': 'https://www.linkedin.com/in/bit-by-bits/',
+      'behance': ''
     },
     {
-      img: require("../Assets/ContactUs/anshal.png"),
-      name: "Shwetabh Niket",
-      github: "https://www.github.com/nIMblEt06",
-      linkedin: "https://www.linkedin.com/in/niketshwetabh",
-      behance: "",
+      'img': require("../Assets/Developers/DevImages/shwetabh.jpeg"),
+      'name' : 'Shwetabh Niket',
+      'github': 'https://www.github.com/nIMblEt06',
+      'linkedin': 'https://www.linkedin.com/in/niketshwetabh',
+      'behance': ''
     },
     {
-      img: require("../Assets/ContactUs/anshal.png"),
-      name: "Aaradhya Kulshreshta",
-      github: "https://github.com/aaradhyakul",
-      linkedin: "https://www.linkedin.com/in/aaradhya-kulshrestha-20bab8223",
-      behance: "",
-    },
-  ];
+      'img': require("../Assets/Developers/DevImages/aaradhya.jpg"),
+      'name' : 'Aaradhya Kulshreshta',
+      'github': 'https://github.com/aaradhyakul',
+      'linkedin': 'https://www.linkedin.com/in/aaradhya-kulshrestha-20bab8223',
+      'behance': ''
+    }
+  ]
 
   const design = [
     {
-      img: require("../Assets/ContactUs/anshal.png"),
-      name: "Shivang Rai",
-      github: "",
-      linkedin: "https://www.linkedin.com/in/shivang-rai-36a0481bb/",
-      behance: "https://www.behance.net/shivangrai2",
+      'img': require("../Assets/Developers/DevImages/shivang.png"),
+      'name' : 'Shivang Rai',
+      'github': '',
+      'linkedin': 'https://www.linkedin.com/in/shivang-rai-36a0481bb/',
+      'behance': 'https://www.behance.net/shivangrai2'
     },
     {
-      img: require("../Assets/ContactUs/anshal.png"),
-      name: "Satwik Rath",
-      github: "",
-      linkedin: "https://www.linkedin.com/in/satwik-rath-70034421b/",
-      behance: "https://www.behance.net/satwikrath",
+      'img': require("../Assets/Developers/DevImages/satwik.JPG"),
+      'name' : 'Satwik Rath',
+      'github': '',
+      'linkedin': 'https://www.linkedin.com/in/satwik-rath-70034421b/',
+      'behance': 'https://www.behance.net/satwikrath'
     },
     {
-      img: require("../Assets/ContactUs/anshal.png"),
-      name: "Sejal Agarwal",
-      github: "",
-      linkedin: "https://www.linkedin.com/in/sejal-agarwal-618176228/",
-      behance: "https://www.behance.net/sejalagarwal12",
+      'img': require("../Assets/Developers/DevImages/sejal.jpg"),
+      'name' : 'Sejal Agarwal',
+      'github': '',
+      'linkedin': 'https://www.linkedin.com/in/sejal-agarwal-618176228/',
+      'behance': 'https://www.behance.net/sejalagarwal12'
     },
     {
-      img: require("../Assets/ContactUs/anshal.png"),
-      name: "Swaha Pati",
-      github: "",
-      linkedin: "http://www.linkedin.com/in/swahapati",
-      behance: "https://www.behance.net/patiswaha",
+      'img': require("../Assets/Developers/DevImages/swaha.jpeg"),
+      'name' : 'Swaha Pati',
+      'github': '',
+      'linkedin': 'http://www.linkedin.com/in/swahapati',
+      'behance': 'https://www.behance.net/patiswaha'
     },
     {
-      img: require("../Assets/ContactUs/anshal.png"),
-      name: "Aditya Patil",
-      github: "",
-      linkedin: "https://www.linkedin.com/in/aditya-patil-aa2431230",
-      behance: "https://www.behance.net/AnAvUser",
-    },
-  ];
+      'img': require("../Assets/Developers/DevImages/aditya.jpg"),
+      'name' : 'Aditya Patil',
+      'github': '',
+      'linkedin': 'https://www.linkedin.com/in/aditya-patil-aa2431230',
+      'behance': 'https://www.behance.net/AnAvUser'
+    }
+  ]
 
   const back = [
     {
-      img: require("../Assets/ContactUs/anshal.png"),
-      name: "Harsh Singh",
-      github: "https://github.com/DankMemes4President",
-      linkedin: "https://www.linkedin.com/in/harsh-singh-049838227",
-      behance: "",
+      'img': require("../Assets/Developers/DevImages/harsh.jpg"),
+      'name' : 'Harsh Singh',
+      'github': 'https://github.com/DankMemes4President',
+      'linkedin': 'https://www.linkedin.com/in/harsh-singh-049838227',
+      'behance': ''
     },
     {
-      img: require("../Assets/ContactUs/anshal.png"),
-      name: "Prakhar Gurunani",
-      github: "https://github.com/FirePing32/",
-      linkedin: "https://linkedin.com/in/prakhargurunani/",
-      behance: "",
+      'img': require("../Assets/Developers/DevImages/prakhar.jpeg"),
+      'name' : 'Prakhar Gurunani',
+      'github': 'https://github.com/FirePing32/',
+      'linkedin': 'https://linkedin.com/in/prakhargurunani/',
+      'behance': ''
     },
     {
-      img: require("../Assets/ContactUs/anshal.png"),
-      name: "Maanas Singh",
-      github: "https://github.com/Maanas-23",
-      linkedin: "https://www.linkedin.com/in/maanas23",
-      behance: "",
+      'img': require("../Assets/Developers/DevImages/maanas.jpg"),
+      'name' : 'Maanas Singh',
+      'github': 'https://github.com/Maanas-23',
+      'linkedin': 'https://www.linkedin.com/in/maanas23',
+      'behance': ''
     },
     {
-      img: require("../Assets/ContactUs/anshal.png"),
-      name: "Utkarsh Sharma",
-      github: "https://github.com/utkarsh314",
-      linkedin: "https://www.linkedin.com/in/utkarsh314/",
-      behance: "",
+      'img': require("../Assets/Developers/DevImages/utkarsh.jpg"),
+      'name' : 'Utkarsh Sharma',
+      'github': 'https://github.com/utkarsh314',
+      'linkedin': 'https://www.linkedin.com/in/utkarsh314/',
+      'behance': ''
     },
     {
-      img: require("../Assets/ContactUs/anshal.png"),
-      name: "Harshith Vasireddy",
-      github: "https://github.com/ode",
-      linkedin: "",
-      behance: "",
-    },
-  ];
+      'img': require("../Assets/Developers/DevImages/harshith.jpg"),
+      'name' : 'Harshith Vasireddy',
+      'github': 'https://github.com/ode',
+      'linkedin': '',
+      'behance': ''
+    }
+  ]
 
   useEffect(() => {}, [
     document.querySelectorAll(".devLetter"),
@@ -177,10 +177,6 @@ const Developers = () => {
       div.style.transform = `translateX(${x}px) translateY(${y}px)`;
     });
   };
-
-  // const openFront = () => {
-  //   document.querySelector('#openFront').style.display = 'block'
-  // }
 
   const [openFront, setOpenFront] = useState(0);
   const [openDesign, setOpenDesign] = useState(0);

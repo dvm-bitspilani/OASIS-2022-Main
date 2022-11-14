@@ -77,6 +77,7 @@ const Events = (props) => {
   const closePopUp = () => {
     setShouldDisplayPopUp(false);
     document.body.style.overflow = "unset";
+    clearTimeout(eventTimer.current);
     eventTimer.current = setTimeout(loopOver, 3000);
   };
 
@@ -109,6 +110,7 @@ const Events = (props) => {
   }, []);
 
   useEffect(() => {
+    clearTimeout(eventTimer.current);
     eventTimer.current = setTimeout(loopOver, 3000);
   }, [itrCount]);
 
@@ -119,6 +121,7 @@ const Events = (props) => {
       setAngle(0);
     }
     setArrLength(eventsArr.length);
+    setItrCount(eventsArr.length * 10);
   }, [eventsArr]);
 
   return (

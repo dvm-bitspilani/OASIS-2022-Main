@@ -15,6 +15,7 @@ export default function DevelopersModel(props) {
 
   return (
     <div className={devModelCSS.devModelBody} ref={ref}>
+      <div className={devModelCSS.devModelCont}>
         <h2 className={`${devModelCSS.modelHead} secHead`}>{props.team}</h2>
         <svg
           className={`${RegistrationCSS.close} ${devModelCSS.close}`}
@@ -37,6 +38,7 @@ export default function DevelopersModel(props) {
             <DeveloperCard dev={props.devs[2]} />
             <DeveloperCard dev={props.devs[3]} />
             <DeveloperCard dev={props.devs[4]} />
+        </div>
         </div>
     </div>
   )
