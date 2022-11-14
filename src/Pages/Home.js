@@ -33,12 +33,24 @@ export default function Home() {
   };
 
   const [isLoaded, setIsLoaded] = useState(false);
+
+
+  const readyStateHandler = () => {
+    console.log("hander called")
+
+    if (document.readyState === "complete") {
+      setTimeout(() => setIsLoaded(true), 2000);
+      console.log("timeout called")
+    }
+  }
+
   useEffect(() => {
-    document.addEventListener("readystatechange", () => {
-      if (document.readyState === "complete") {
-        setTimeout(() => setIsLoaded(true), 2000);
-      }
-    });
+    document.addEventListener("readystatechange", readyStateHandler);
+
+    return () => {
+      document.removeEventListener("readystatechange", readyStateHandler)
+      console.log("cleanup called")
+    }
   }, []);
 
   useEffect(() => {
