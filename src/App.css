@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +10,7 @@
   cursor: url("./Assets/cursor.svg"), auto !important;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -24,6 +25,12 @@ body {
 img {
   pointer-events: none;
   -webkit-user-drag: none;
+}
+
+iframe {
+  width: 30rem !important;
+  height: 16rem;
+  margin: 0 !important;
 }
 
 section {
@@ -41,18 +48,15 @@ section:last-child {
   z-index: 2;
   font-size: 2rem;
   letter-spacing: 0.02em;
-  background: linear-gradient(
-    94.75deg,
-    #d19a08 0%,
-    #fedb7e 27.6%,
-    #eac460 50%,
-    #d19a08 66.15%,
-    #d19a08 100%
-  );
+  background: linear-gradient(94.75deg,
+      #d19a08 0%,
+      #fedb7e 27.6%,
+      #eac460 50%,
+      #d19a08 66.15%,
+      #d19a08 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 
 .fa {
@@ -85,4 +89,34 @@ section:last-child {
 *::-webkit-scrollbar-thumb {
   box-shadow: inset 0 0 0 10px;
   background-color: #d19a08;
+}
+
+.carousel-root {
+  margin-top: 3rem;
+}
+
+.carousel .slider-wrapper {
+  overflow: visible !important;
+  width: 40% !important;
+}
+.carousel-slider{
+  overflow: visible !important;
+}
+
+.control-dots{
+  bottom: -3rem !important;
+}
+.dot.selected{
+  background-color: #d19a08 !important;
+}
+@media (max-width:800px) {
+  .carousel .slider-wrapper {
+    overflow: hidden !important;
+    width: 100% !important;
+  }
+  iframe {
+    width: 18rem !important;
+    height: 13rem;
+    margin: 0 !important;
+  }
 }

@@ -3,4 +3,20 @@
     margin-top: 2rem;
     width: max-content;
     overflow: hidden;
+    align-items: center;
+    transition: all 0.6s ease-in;
+    transform: translateX(-6rem);
+}
+
+.controls{
+    color: white;
+    display: flex;
+    font-weight: 600;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.controls>div{
+    padding: 1rem;
+    font-family: "Montserrat";
+    font-size: 3rem;
 }
