@@ -308,7 +308,7 @@
   .portalWindow {
     width: 50vw;
     height: auto;
-    clip-path: ellipse(32vw 30.8vw at 50% -2%);
+    clip-path: ellipse(24.5vw 24vw at 50% -2%);
   }
 
   .portalWindowImg {
@@ -369,7 +369,7 @@
   .portalWindow {
     width: 60vw;
     height: auto;
-    clip-path: ellipse(32vw 30.8vw at 50% -2%);
+    clip-path: ellipse(29vw 28.8vw at 50% -2%);
   }
 
   .portalWindowImg {
@@ -403,6 +403,10 @@
   .portalWindow,
   .portalWindowImg {
     width: 130vw;
+  }
+
+  .portalWindow {
+    clip-path: ellipse(64.5vw 61.5vw at 50% -2%);
   }
 
   .oasisLogo {
@@ -554,6 +558,14 @@
   .iconWrapper svg {
     transform: scale(1.2);
   }
+
+  .portalWindow, .portalWindowImg {
+    width: 51vw;
+  }
+
+  .portalWindow {
+    clip-path: ellipse(25.7vw 25.2vw at 50% -2%);
+  }
 }
 
 @media screen and (max-height: 650px) and (max-width: 650px) {
@@ -653,6 +665,10 @@
     width: 100vw;
   }
 
+  .portalWindow {
+    clip-path: ellipse(48.6vw 48.2vw at 50% -2%);
+  }
+
   .titleBgGrad,
   .oasisTitle {
     top: 65vh;
@@ -672,6 +688,10 @@
   .portalWindow,
   .portalWindowImg {
     width: 200vw;
+  }
+
+  .portalWindow {
+    clip-path: ellipse(99vw 98.7vw at 50% -2%);
   }
 
   .kingBodyWrapper {
