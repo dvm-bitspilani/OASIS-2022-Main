@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useLocation } from 'react-router';
 import Lander from "../Components/Lander";
 import Registration from "./Registration";
 import { useState } from "react";
@@ -8,7 +9,9 @@ import HomeCSS from "../styles/Home.module.css";
 import Loader from "./Loader";
 import ReactGA from "react-ga";
 
+
 export default function Home() {
+  const [x, setX] = useState(0);
   window.scrollTo(0, 0);
 
   useEffect(() => {
@@ -47,6 +50,13 @@ export default function Home() {
     });
   }, []);
 
+  const location = useLocation()
+
+  useEffect(
+    () => {console.log('route has been changed');
+    setIsLoaded(!isLoaded)},
+    [location.pathname]
+  )
   return (
     <main
       className={HomeCSS.homePage}
