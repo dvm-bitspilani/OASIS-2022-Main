@@ -106,7 +106,6 @@ const Events = (props) => {
 
   useEffect(() => {
     getEvents();
-    setItrCount(eventsArr.length * 10 - 1);
     clearTimeout(eventTimer.current);
   }, []);
 
@@ -122,6 +121,7 @@ const Events = (props) => {
       setAngle(0);
     }
     setArrLength(eventsArr.length);
+    setItrCount(eventsArr.length * 10);
   }, [eventsArr]);
 
   return (
