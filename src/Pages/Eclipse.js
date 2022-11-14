@@ -7,6 +7,7 @@ import EclipseHeading from '../Assets/Eclipse/eclipseHeading.png'
 import codMobile from '../Assets/Eclipse/codmobile.png'
 import valo from '../Assets/Eclipse/valo.png'
 import cr from '../Assets/Eclipse/clashroyale.png'
+import Button from '../Components/Button'
 
 import { useNavigate } from 'react-router-dom'
 
@@ -52,18 +53,20 @@ const Eclipse = () => {
           <div className={EclipseCSS.container1}>
             <div>COD Mobile</div>
             <div className={EclipseCSS.imgContainer}><img src={codMobile}></img></div>
-            <button className={EclipseCSS.registerBtn}>REGISTER</button>
+            <Button btn_title={"REGISTER"} />
+
           </div>
           <div className={EclipseCSS.container2}>
             <div>Valorant</div>
             <div className={EclipseCSS.imgContainer}><img src={valo}></img></div>
-            <button className={EclipseCSS.registerBtn}>REGISTER</button>
+            <Button btn_title={"REGISTER"} />
+
 
           </div>
           <div className={EclipseCSS.container3}>
             <div>Clash Royale</div>
             <div className={EclipseCSS.imgContainer}><img src={cr}></img></div>
-            <button className={EclipseCSS.registerBtn}>REGISTER</button>
+            <Button btn_title={"REGISTER"} />
 
           </div>
         </div>

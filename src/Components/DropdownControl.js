@@ -78,6 +78,8 @@ const DropdownControl = (props) => {
         setLabelClass();
       }
     }, 250);
+
+
   };
 
   const handleCollegeSelection = (e) => {
@@ -100,6 +102,11 @@ const DropdownControl = (props) => {
         return 0;
       }).length
     );
+
+    if (props.info === "year") {
+      props.setValue(inputRef.current.value)
+    }
+
   };
 
   return (
