@@ -84,7 +84,7 @@ export default function Home() {
 
       <Lander changeRegState={changeRegState} />
       <Events />
-      {/* <Videos /> */}
+      <Videos />
       <Contact />
       <div className={HomeCSS.love}>
         <div className={HomeCSS.foot}>
