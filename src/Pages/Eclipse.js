@@ -18,6 +18,7 @@ const Eclipse = () => {
     navigate('/')
   }
 
+
   return (
     <div className={EclipseCSS.eclipseBackdrop}>
       <div className={EclipseCSS.eclipsePage}>
@@ -53,20 +54,26 @@ const Eclipse = () => {
           <div className={EclipseCSS.container1}>
             <div>COD Mobile</div>
             <div className={EclipseCSS.imgContainer}><img src={codMobile}></img></div>
-            <Button btn_title={"REGISTER"} />
+            <a href="https://unstop.com/creative-cultural-event/oasis-eclipse-call-of-duty-mobile-birla-institute-of-technology-science-bits-pilani-491181">
+              <Button btn_title={"REGISTER"} />
+            </a>
 
           </div>
           <div className={EclipseCSS.container2}>
             <div>Valorant</div>
             <div className={EclipseCSS.imgContainer}><img src={valo}></img></div>
-            <Button btn_title={"REGISTER"} />
+            <a href="https://unstop.com/creative-cultural-event/oasis-eclipse-valorant-birla-institute-of-technology-science-bits-pilani-490984">
+              <Button btn_title={"REGISTER"} />
+            </a>
 
 
           </div>
           <div className={EclipseCSS.container3}>
             <div>Clash Royale</div>
             <div className={EclipseCSS.imgContainer}><img src={cr}></img></div>
-            <Button btn_title={"REGISTER"} />
+            <a href="https://unstop.com/creative-cultural-event/oasis-eclipse-clash-royale-birla-institute-of-technology-science-bits-pilani-491190">
+              <Button btn_title={"REGISTER"} />
+            </a>
 
           </div>
         </div>

@@ -12,7 +12,6 @@ import Videos from "../Components/Video";
 
 
 export default function Home() {
-  const [x, setX] = useState(0);
   window.scrollTo(0, 0);
 
   useEffect(() => {
@@ -38,23 +37,12 @@ export default function Home() {
 
   const [isLoaded, setIsLoaded] = useState(false);
 
-
-  const readyStateHandler = () => {
-    console.log("hander called")
-
-    if (document.readyState === "complete") {
-      setTimeout(() => setIsLoaded(true), 2000);
-      console.log("timeout called")
-    }
-  }
-
   useEffect(() => {
-    document.addEventListener("readystatechange", readyStateHandler);
-
-    return () => {
-      document.removeEventListener("readystatechange", readyStateHandler)
-      console.log("cleanup called")
-    }
+    document.addEventListener("readystatechange", () => {
+      if (document.readyState === "complete") {
+        setTimeout(() => setIsLoaded(true), 2000);
+      }
+    });
   }, []);
 
   useEffect(() => {
@@ -63,20 +51,21 @@ export default function Home() {
     });
   }, []);
 
-  const location = useLocation()
+  const location = useLocation();
 
-  useEffect(
-    () => {console.log('route has been changed');
-    setIsLoaded(!isLoaded)},
-    [location.pathname]
-  )
+  useEffect(() => {
+        if (document.readyState === "complete") {
+          setTimeout(() => setIsLoaded(true), 2000);
+        }
+  }, [location.pathname])
+
   return (
     <main
       className={HomeCSS.homePage}
       style={
         isLoaded === false
           ? { maxHeight: "100vh", overflowY: "hidden" }
-          : { height: "auto", overflowY: "auto" }
+          : { height: "100vh", overflowY: "auto" }
       }
     >
       <Loader
