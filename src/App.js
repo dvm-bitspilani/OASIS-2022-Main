@@ -7,6 +7,7 @@ import ReactGA from "react-ga";
 import Clouds from "./Components/Clouds";
 import Sponsors from "./Pages/Sponsors";
 import Eclipse from "./Pages/Eclipse";
+import Media from "./Pages/Media";
 
 const TRACKING_ID = "G-39PJMR8EV2";
 ReactGA.initialize(TRACKING_ID);
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: '/developers/',
     element: <Developers />
+  },
+  {
+    path: '/mediaPartners/',
+    element: <Media/>
   },
   {
     path: "/eclipse",

@@ -24,8 +24,8 @@ export default function Hamburger() {
   let div2 = useRef(null);
   let container = useRef(null);
 
-  const staggerText = (node, node2, node3) => {
-    gsap.to([node, node2, node3], {
+  const staggerText = (node, node2, node3, node4) => {
+    gsap.to([node, node2, node3, node4], {
       duration: 1,
       y: 0,
       opacity: 1,
@@ -35,8 +35,8 @@ export default function Hamburger() {
     });
   };
 
-  const removeText = (node, node2, node3) => {
-    gsap.to([node, node2, node3], {
+  const removeText = (node, node2, node3, node4) => {
+    gsap.to([node, node2, node3, node4], {
       duration: 1,
       y: 100,
       opacity: 0,
@@ -98,7 +98,7 @@ export default function Hamburger() {
 
       staggerReveal(menuDiv);
       staggerDivs(div1, div2);
-      staggerText(menu1, menu2, menu3,);
+      staggerText(menu1, menu2, menu3, menu4);
 
       ham.style.transform = "rotate(0deg) translate(-7px, 10px)";
       ham2.style.transform = "rotate(0deg) translate(-7px, -5px)";
@@ -120,7 +120,7 @@ export default function Hamburger() {
       });
 
       removeDivs(div1, div2);
-      removeText(menu1, menu2, menu3, );
+      removeText(menu1, menu2, menu3, menu4 );
       staggerHide(menuDiv);
 
       setTimeout(() => {
@@ -161,8 +161,8 @@ export default function Hamburger() {
   function devs(){
     navigate('/developers')
   }
-  function events(){
-    navigate('/events')
+  function media(){
+    navigate('/mediaPartners')
   }
   function eclipse(){
     navigate('/eclipse')
@@ -236,6 +236,13 @@ export default function Hamburger() {
             className={HamburgerCSS.list}
           >
             Eclipse
+          </a>
+          <a
+            onClick={media}
+            ref={(el) => (menu4 = el)}
+            className={HamburgerCSS.list}
+          >
+            Media Partners
           </a>
         </div>
       </div>
