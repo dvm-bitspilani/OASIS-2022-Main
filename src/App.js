@@ -8,6 +8,7 @@ import Clouds from "./Components/Clouds";
 import Sponsors from "./Pages/Sponsors";
 import Eclipse from "./Pages/Eclipse";
 import Media from "./Pages/Media";
+import Wallmag from "./Pages/Wallmag";
 
 const TRACKING_ID = "G-39PJMR8EV2";
 ReactGA.initialize(TRACKING_ID);
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/eclipse",
     element: <Eclipse />
+  },
+  {
+    path: "/wallmag",
+    element: <Wallmag />
   }
 ]);
 
