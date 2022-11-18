@@ -41,6 +41,10 @@ section:last-child {
   margin-bottom: 2rem;
 }
 
+canvas {
+  z-index: inherit;
+}
+
 .secHead {
   font-family: "Mulish";
   margin-bottom: 100px;

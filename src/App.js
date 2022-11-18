@@ -23,8 +23,8 @@ const router = createBrowserRouter([
     element: <Sponsors />,
   },
   {
-    path: '/developers/',
-    element: <Developers />
+    path: "/developers/",
+    element: <Developers />,
   },
   {
     path: '/mediaPartners/',

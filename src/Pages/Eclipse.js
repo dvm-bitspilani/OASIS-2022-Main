@@ -9,32 +9,31 @@ import valo from '../Assets/Eclipse/valo.png'
 import cr from '../Assets/Eclipse/clashroyale.png'
 import Button from '../Components/Button'
 
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 const Eclipse = () => {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const closeClickHandler = () => {
-    navigate('/')
-  }
+    navigate("/");
+  };
 
 
   return (
     <div className={EclipseCSS.eclipseBackdrop}>
+      <div style={{ zIndex: 1000 }}>
+        <MouseTrail {...trailProps} />
+      </div>
       <div className={EclipseCSS.eclipsePage}>
         {/* <button className={EclipseCSS.closePage} onClick={closeClickHandler}>
 
           <i className='fa-solid fa-xmark fa-xl'></i>
         </button> */}
 
-
         <div className={EclipseCSS.heading}>
-          <img src={EclipseHeading} ></img>
+          <img src={EclipseHeading}></img>
           <div className={EclipseCSS.closePage}>
-
             <svg
               onClick={closeClickHandler}
-
               width="32"
               height="32"
               viewBox="0 0 32 32"
@@ -47,10 +46,8 @@ const Eclipse = () => {
               />
             </svg>
           </div>
-
         </div>
         <div className={EclipseCSS.games}>
-
           <div className={EclipseCSS.container1}>
             <div>COD Mobile</div>
             <div className={EclipseCSS.imgContainer}><img src={codMobile}></img></div>
@@ -82,7 +79,7 @@ const Eclipse = () => {
         <img src={wlbr} className={EclipseCSS.wlbr}></img>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Eclipse
+export default Eclipse;

@@ -9,15 +9,23 @@ import HomeCSS from "../styles/Home.module.css";
 import Loader from "./Loader";
 import ReactGA from "react-ga";
 import Videos from "../Components/Video";
+import { MouseTrail } from "@stichiboi/react-elegant-mouse-trail";
 
 
 export default function Home() {
   window.scrollTo(0, 0);
+  const [regState, setRegState] = useState({ open: false });
+
+  const trailProps = {
+    lineDuration: 15,
+    lineWidthStart: 10,
+    strokeColor: "#EBB935",
+    lag: 0,
+  };
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
   }, []);
-  const [regState, setRegState] = useState({ open: false });
 
   useEffect(() => {
     if (isLoaded) {
@@ -68,6 +76,9 @@ export default function Home() {
           : { height: "100vh", overflowY: "auto" }
       }
     >
+      <div style={{ zIndex: 1000 }}>
+        <MouseTrail {...trailProps} />
+      </div>
       <Loader
         style={
           isLoaded === false

@@ -155,11 +155,11 @@ export default function Hamburger() {
     });
   };
 
-  function spons(){
-    navigate('/sponsors')
+  function spons() {
+    navigate("/sponsors");
   }
-  function devs(){
-    navigate('/developers')
+  function devs() {
+    navigate("/developers");
   }
   function media(){
     navigate('/mediaPartners')
