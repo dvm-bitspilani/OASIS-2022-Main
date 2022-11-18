@@ -1,11 +1,11 @@
 export const partners = [
     {
-        "Name": "Devendra Rath- Studento",
+        "Name": "Devendra Rath, Studento",
         "Link": "https:\/\/www.youtube.com\/@Studento",
         "Logo": "../Partners/studento.jpg"
     },
     {
-        "Name": "Rashmi Sharma AIIMS",
+        "Name": "Rashmi Sharma, AIIMS",
         "Link": "https:\/\/www.youtube.com\/@RASHMIAIIMSDELHI1722",
         "Logo": "../Partners/rashmi.jpeg"
     },
@@ -16,7 +16,7 @@ export const partners = [
         "Logo": "../Partners/shweta.jpg"
     },
     {
-        "Name": "Yatharth gairola",
+        "Name": "Yatharth Gairola",
         "Link": "https:\/\/www.youtube.com\/@yatharthgairola",
         "Logo": "../Partners/yatharth.jpg"
     },
@@ -57,7 +57,7 @@ export const partners = [
         "Logo": "../Partners/vichar.jpg"
     },
     {
-        "Name": "the memescasm",
+        "Name": "The Memescasm",
         "Link": "http:\/\/www.instagram.com\/thememescasm",
         "Logo": "../Partners/memescasm.jpg"
     },
