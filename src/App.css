@@ -126,7 +126,7 @@ canvas {
 .card {
   width: 32rem !important;
   height: 26rem !important;
-  /* background: url("./Assets/dummyImage.png") center center no-repeat; */
+  background: url("./Assets/dummyImage.png") center center no-repeat;
   margin-left: 8rem;
   margin-top: 3rem;
 }
