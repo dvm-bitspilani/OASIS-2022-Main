@@ -9,6 +9,8 @@ import leftArrow from "../Assets/arrowLeft.png"
 import dummyImage from "../Assets/dummyImage.png"
 
 export default function Carousel() {
+    const small = window.matchMedia('(max-width:800px)')
+    console.log(small);
     const [cards, setCards] = useState(initialState)
     const slides = cards.map((card, index) => {
         return <div className="card">
@@ -33,10 +35,10 @@ export default function Carousel() {
             </div>
         )
     }
+    
+    
 
-
-
-    const settings = {
+    let settings = {
         infinite: true,
         lazyload: true,
         speed: 300,
@@ -45,8 +47,20 @@ export default function Carousel() {
         centerPadding: 0,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
+
+        // responsive: [{
+        //     breakpoint: 800,
+        //     settings: {
+        //         slidesToShow: 1
+        //     }
+
+        // }]
         // beforeChange: (current, next) => setImageIndex([next, next+1])
     }
+    if(small.matches){
+        settings.slidesToShow = 1;
+    }
+
     return (
         <div className="Carousel">
             <div className={VideoCSS.title}>

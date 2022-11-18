@@ -117,7 +117,7 @@ canvas {
 @media (max-width:800px) {
   iframe {
     width: 18rem !important;
-    height: 13rem;
+    height: 13rem !important;
     margin: 0 !important;
   }
 }
@@ -154,7 +154,14 @@ canvas {
   }
 
   .card {
-      width: 18rem;
-      height: 16rem;
+      width: 18rem !important;
+      height: 16rem !important;
+      margin-left: 4rem;
+  }
+  .arrow.prev{
+    left: 30vw;
+  }
+  .arrow.next{
+    right: 30vw;
   }
 }
