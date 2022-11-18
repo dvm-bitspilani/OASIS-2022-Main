@@ -8,7 +8,7 @@ import Events from "../Components/Events";
 import HomeCSS from "../styles/Home.module.css";
 import Loader from "./Loader";
 import ReactGA from "react-ga";
-import Videos from "../Components/Video";
+import Carousel from "../Components/Carousel";
 import { MouseTrail } from "@stichiboi/react-elegant-mouse-trail";
 
 
@@ -95,7 +95,7 @@ export default function Home() {
 
       <Lander changeRegState={changeRegState} />
       <Events />
-      <Videos />
+      <Carousel/>
       <Contact />
       <div className={HomeCSS.love}>
         <div className={HomeCSS.foot}>
