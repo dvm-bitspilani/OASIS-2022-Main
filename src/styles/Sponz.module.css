@@ -52,6 +52,7 @@
 .brandImage{
   width: 15rem;
   margin-block: 2rem;
+  margin-inline: auto;
 }
 .brandImage>img{
   width: 100%;
@@ -83,5 +84,8 @@
   }
   .brandName{
     font-weight: 500;
+  }
+  .title{
+    font-size: 1.8rem;
   }
 }
