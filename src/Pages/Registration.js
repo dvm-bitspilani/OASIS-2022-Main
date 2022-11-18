@@ -1,6 +1,7 @@
 import RegistrationCSS from "../styles/Registration.module.css";
 import RegForm from "../Components/RegForm";
 import React, { useState } from "react";
+import { MouseTrail } from "@stichiboi/react-elegant-mouse-trail";
 import bottomLeft from "../Assets/Registration/wavylinesBottomLeft.png";
 import topLeft from "../Assets/Registration/wavylinesTopLeft.png";
 import bottomRight from "../Assets/Registration/wavylinesBottomRight.png";
@@ -25,8 +26,18 @@ const Registration = (props) => {
     e.stopPropagation();
   };
 
+  const trailProps = {
+    lineDuration: 15,
+    lineWidthStart: 10,
+    strokeColor: "#EBB935",
+    lag: 0,
+  };
+
   let regPageContent = (
     <div className={regClassName} onClick={backdropClickHandler}>
+      <div style={{ zIndex: 1000 }}>
+        <MouseTrail {...trailProps} />
+      </div>
       <div
         className={RegistrationCSS.formContainer}
         onClick={innerClickHandler}

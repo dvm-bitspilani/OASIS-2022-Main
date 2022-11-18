@@ -65,9 +65,8 @@ const RegForm = (props) => {
 
       let eventsListJson = await eventsRes.json();
       availEvents = [];
-      eventsListJson.forEach((events) => {
-        availEvents.push(...events.events);
-      });
+      availEvents.push(...eventsListJson[0].events);
+      availEvents.push(...eventsListJson[1].events);
       setEventsList([...availEvents]);
       setCollegeList([...availColleges]);
     } catch (e) {
@@ -88,8 +87,6 @@ const RegForm = (props) => {
 
       return;
     }
-
-
 
     try {
       const data = {
@@ -121,7 +118,7 @@ const RegForm = (props) => {
       let res_json = await res.json();
       setMessage(res_json.message);
       setPopup(true);
-    } catch (e) { }
+    } catch (e) {}
   };
 
   const choreoChange = (e) => {
@@ -149,17 +146,14 @@ const RegForm = (props) => {
     props.resetPage();
   }
 
-
   const { ref, inView, entry } = useInView(OPTIONS);
   const [promptClass, setPromptClass] = useState(RegFormCSS.hidePrompt);
 
   useEffect(() => {
-
     scrollPromptToggle();
   }, [inView]);
 
   function scrollPromptToggle() {
-
     if (inView) {
       setPromptClass(RegFormCSS.hidePrompt);
     } else {
@@ -272,7 +266,6 @@ const RegForm = (props) => {
             How to Register?
           </a>
         </div>
-
       </form>
     </div>
   );

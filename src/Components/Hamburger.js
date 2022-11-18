@@ -19,13 +19,13 @@ export default function Hamburger() {
   let menu2 = useRef(null);
   let menu3 = useRef(null);
   let menu4 = useRef(null);
-  // let  = useRef(null);
+  let menu5 = useRef(null);
   let div1 = useRef(null);
   let div2 = useRef(null);
   let container = useRef(null);
 
-  const staggerText = (node, node2, node3, node4) => {
-    gsap.to([node, node2, node3, node4], {
+  const staggerText = (node, node2, node3, node4, node5) => {
+    gsap.to([node, node2, node3, node4, node5], {
       duration: 1,
       y: 0,
       opacity: 1,
@@ -35,8 +35,8 @@ export default function Hamburger() {
     });
   };
 
-  const removeText = (node, node2, node3, node4) => {
-    gsap.to([node, node2, node3, node4], {
+  const removeText = (node, node2, node3, node4, node5) => {
+    gsap.to([node, node2, node3, node4, node5], {
       duration: 1,
       y: 100,
       opacity: 0,
@@ -98,7 +98,7 @@ export default function Hamburger() {
 
       staggerReveal(menuDiv);
       staggerDivs(div1, div2);
-      staggerText(menu1, menu2, menu3, menu4);
+      staggerText(menu1, menu2, menu3, menu4, menu5);
 
       ham.style.transform = "rotate(0deg) translate(-7px, 10px)";
       ham2.style.transform = "rotate(0deg) translate(-7px, -5px)";
@@ -120,7 +120,7 @@ export default function Hamburger() {
       });
 
       removeDivs(div1, div2);
-      removeText(menu1, menu2, menu3, menu4 );
+      removeText(menu1, menu2, menu3, menu4, menu5);
       staggerHide(menuDiv);
 
       setTimeout(() => {
@@ -170,6 +170,10 @@ export default function Hamburger() {
   function eclipse(){
     document.querySelector("html").style.overflowY = "scroll"
     navigate('/eclipse')
+  }
+  function wallmag(){
+    document.querySelector("html").style.overflowY = "scroll"
+    navigate('/wallmag')
   }
 
   return (
@@ -247,6 +251,13 @@ export default function Hamburger() {
             className={HamburgerCSS.list}
           >
             Media Partners
+          </a>
+          <a
+            onClick={wallmag}
+            ref={(el) => (menu5 = el)}
+            className={HamburgerCSS.list}
+          >
+            WallMag
           </a>
         </div>
       </div>

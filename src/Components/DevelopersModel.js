@@ -1,17 +1,17 @@
-import React, { useEffect, useRef, useState } from 'react'
-import devModelCSS from '../styles/DevelopersModel.module.css'
-import RegistrationCSS from '../styles/Registration.module.css'
-import DeveloperCard from './DeveloperCard'
+import React, { useEffect, useRef, useState } from "react";
+import devModelCSS from "../styles/DevelopersModel.module.css";
+import RegistrationCSS from "../styles/Registration.module.css";
+import DeveloperCard from "./DeveloperCard";
 
 export default function DevelopersModel(props) {
   const [clicked, setClicked] = useState(0);
   const ref = useRef(null);
 
   useEffect(() => {
-    if(clicked) {
+    if (clicked) {
       props.setOpen(0);
     }
-  }, [clicked])
+  }, [clicked]);
 
   return (
     <div className={devModelCSS.devModelBody} ref={ref}>
@@ -33,13 +33,13 @@ export default function DevelopersModel(props) {
         </svg>
 
         <div className={devModelCSS.modelContainer}>
-            <DeveloperCard dev={props.devs[0]} />
-            <DeveloperCard dev={props.devs[1]} />
-            <DeveloperCard dev={props.devs[2]} />
-            <DeveloperCard dev={props.devs[3]} />
-            <DeveloperCard dev={props.devs[4]} />
+          <DeveloperCard dev={props.devs[0]} />
+          <DeveloperCard dev={props.devs[1]} />
+          <DeveloperCard dev={props.devs[2]} />
+          <DeveloperCard dev={props.devs[3]} />
+          <DeveloperCard dev={props.devs[4]} />
         </div>
-        </div>
+      </div>
     </div>
-  )
+  );
 }

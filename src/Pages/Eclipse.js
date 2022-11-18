@@ -1,40 +1,46 @@
-import React from 'react'
-import EclipseCSS from '../styles/Eclipse.module.css'
-import wlbl from '../Assets/Registration/wavylinesBottomLeft.png'
-import wlbr from '../Assets/Registration/wavylinesBottomRight.png'
-import wltl from '../Assets/Registration/wavylinesTopLeft.png'
-import EclipseHeading from '../Assets/Eclipse/eclipseHeading.png'
-import codMobile from '../Assets/Eclipse/codmobile.png'
-import valo from '../Assets/Eclipse/valo.png'
-import cr from '../Assets/Eclipse/clashroyale.png'
-import Button from '../Components/Button'
+import React from "react";
+import EclipseCSS from "../styles/Eclipse.module.css";
+import wlbl from "../Assets/Registration/wavylinesBottomLeft.png";
+import wlbr from "../Assets/Registration/wavylinesBottomRight.png";
+import wltl from "../Assets/Registration/wavylinesTopLeft.png";
+import EclipseHeading from "../Assets/Eclipse/eclipseHeading.png";
+import codMobile from "../Assets/Eclipse/codmobile.png";
+import valo from "../Assets/Eclipse/valo.png";
+import cr from "../Assets/Eclipse/clashroyale.png";
+import Button from "../Components/Button";
+import { MouseTrail } from "@stichiboi/react-elegant-mouse-trail";
 
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 const Eclipse = () => {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const closeClickHandler = () => {
-    navigate('/')
-  }
+    navigate("/");
+  };
 
+  const trailProps = {
+    lineDuration: 15,
+    lineWidthStart: 10,
+    strokeColor: "#EBB935",
+    lag: 0,
+  };
 
   return (
     <div className={EclipseCSS.eclipseBackdrop}>
+      <div style={{ zIndex: 1000 }}>
+        <MouseTrail {...trailProps} />
+      </div>
       <div className={EclipseCSS.eclipsePage}>
         {/* <button className={EclipseCSS.closePage} onClick={closeClickHandler}>
 
           <i className='fa-solid fa-xmark fa-xl'></i>
         </button> */}
 
-
         <div className={EclipseCSS.heading}>
-          <img src={EclipseHeading} ></img>
+          <img src={EclipseHeading}></img>
           <div className={EclipseCSS.closePage}>
-
             <svg
               onClick={closeClickHandler}
-
               width="32"
               height="32"
               viewBox="0 0 32 32"
@@ -47,34 +53,34 @@ const Eclipse = () => {
               />
             </svg>
           </div>
-
         </div>
         <div className={EclipseCSS.games}>
-
           <div className={EclipseCSS.container1}>
             <div>COD Mobile</div>
-            <div className={EclipseCSS.imgContainer}><img src={codMobile}></img></div>
+            <div className={EclipseCSS.imgContainer}>
+              <img src={codMobile}></img>
+            </div>
             <a href="https://unstop.com/creative-cultural-event/oasis-eclipse-call-of-duty-mobile-birla-institute-of-technology-science-bits-pilani-491181">
               <Button btn_title={"REGISTER"} />
             </a>
-
           </div>
           <div className={EclipseCSS.container2}>
             <div>Valorant</div>
-            <div className={EclipseCSS.imgContainer}><img src={valo}></img></div>
+            <div className={EclipseCSS.imgContainer}>
+              <img src={valo}></img>
+            </div>
             <a href="https://unstop.com/creative-cultural-event/oasis-eclipse-valorant-birla-institute-of-technology-science-bits-pilani-490984">
               <Button btn_title={"REGISTER"} />
             </a>
-
-
           </div>
           <div className={EclipseCSS.container3}>
             <div>Clash Royale</div>
-            <div className={EclipseCSS.imgContainer}><img src={cr}></img></div>
+            <div className={EclipseCSS.imgContainer}>
+              <img src={cr}></img>
+            </div>
             <a href="https://unstop.com/creative-cultural-event/oasis-eclipse-clash-royale-birla-institute-of-technology-science-bits-pilani-491190">
               <Button btn_title={"REGISTER"} />
             </a>
-
           </div>
         </div>
         <img src={wlbl} className={EclipseCSS.wlbl}></img>
@@ -82,7 +88,7 @@ const Eclipse = () => {
         <img src={wlbr} className={EclipseCSS.wlbr}></img>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Eclipse
+export default Eclipse;

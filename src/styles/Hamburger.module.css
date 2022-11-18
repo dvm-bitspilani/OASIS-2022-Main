@@ -1,7 +1,7 @@
 .hamContainer {
   position: absolute;
   z-index: 300;
-  border: 2px solid #D19A08E5;
+  border: 2px solid #d19a08e5;
   border-radius: 50%;
   background: none;
   padding: 1rem;
@@ -29,8 +29,15 @@
 .ham {
   width: 24px;
   height: 1.8px;
-  background: linear-gradient(94.75deg, rgba(209, 154, 8, 0.9) 0%, rgba(254, 219, 126, 0.9) 27.6%, rgba(234, 196, 96, 0.9) 50%, rgba(209, 154, 8, 0.9) 66.15%, rgba(209, 154, 8, 0.9) 100%);
-  
+  background: linear-gradient(
+    94.75deg,
+    rgba(209, 154, 8, 0.9) 0%,
+    rgba(254, 219, 126, 0.9) 27.6%,
+    rgba(234, 196, 96, 0.9) 50%,
+    rgba(209, 154, 8, 0.9) 66.15%,
+    rgba(209, 154, 8, 0.9) 100%
+  );
+
   transform: rotate(-45deg);
   /* cursor: pointer */
   border-radius: 50px;
@@ -40,7 +47,14 @@
 
 .ham2 {
   width: 24px;
-  background: linear-gradient(94.75deg, rgba(209, 154, 8, 0.9) 0%, rgba(254, 219, 126, 0.9) 27.6%, rgba(234, 196, 96, 0.9) 50%, rgba(209, 154, 8, 0.9) 66.15%, rgba(209, 154, 8, 0.9) 100%);
+  background: linear-gradient(
+    94.75deg,
+    rgba(209, 154, 8, 0.9) 0%,
+    rgba(254, 219, 126, 0.9) 27.6%,
+    rgba(234, 196, 96, 0.9) 50%,
+    rgba(209, 154, 8, 0.9) 66.15%,
+    rgba(209, 154, 8, 0.9) 100%
+  );
   transform: rotate(-45deg);
   margin-top: 0.3rem;
   height: 1.8px;
@@ -114,12 +128,14 @@ i {
 }
 
 .heading {
-  background: linear-gradient(94.75deg,
-      #d19a08 0%,
-      #fedb7e 27.6%,
-      #eac460 50%,
-      #d19a08 66.15%,
-      #d19a08 100%);
+  background: linear-gradient(
+    94.75deg,
+    #d19a08 0%,
+    #fedb7e 27.6%,
+    #eac460 50%,
+    #d19a08 66.15%,
+    #d19a08 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -137,12 +153,12 @@ i {
   font-size: 1.4rem;
 }
 
-.right>div {
+.right > div {
   margin-block: 0.7rem;
   /* cursor: pointer */
 }
 
-.right>a {
+.right > a {
   margin-block: 0.7rem;
   /* cursor: pointer */
 }
@@ -213,12 +229,14 @@ a {
   display: block;
   position: absolute;
   border-radius: 24px;
-  background: linear-gradient(94.75deg,
-      #d19a08 0%,
-      #fedb7e 27.6%,
-      #eac460 50%,
-      #d19a08 66.15%,
-      #d19a08 100%);
+  background: linear-gradient(
+    94.75deg,
+    #d19a08 0%,
+    #fedb7e 27.6%,
+    #eac460 50%,
+    #d19a08 66.15%,
+    #d19a08 100%
+  );
   width: 150px;
   left: 180px;
   top: 15px;
@@ -309,18 +327,18 @@ a {
   }
 }
 @media screen and (max-width: 1400px) {
-  .heading{
+  .heading {
     font-size: 3rem;
   }
-  .text{
+  .text {
     font-size: 1rem;
   }
 }
 @media screen and (max-width: 1100px) {
-  .heading{
+  .heading {
     font-size: 2.3rem;
   }
-  .text{
+  .text {
     font-size: 1rem;
   }
 }

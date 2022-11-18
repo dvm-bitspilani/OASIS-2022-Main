@@ -11,10 +11,12 @@
 }
 
 svg {
-    width: 100%;
+  width: 100%;
 }
 
-.front:hover, .design:hover, .back:hover {
+.front:hover,
+.design:hover,
+.back:hover {
   transform: scale(1.1);
   filter: saturate(0.2);
   animation: transform;

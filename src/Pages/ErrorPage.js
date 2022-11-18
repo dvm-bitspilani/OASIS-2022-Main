@@ -1,7 +1,15 @@
 import { useRouteError } from "react-router-dom";
+import { MouseTrail } from "@stichiboi/react-elegant-mouse-trail";
 
 export default function ErrorPage() {
   const error = useRouteError();
+
+  const trailProps = {
+    lineDuration: 15,
+    lineWidthStart: 10,
+    strokeColor: "#EBB935",
+    lag: 0,
+  };
 
   return (
     <main
@@ -17,6 +25,9 @@ export default function ErrorPage() {
       }}
       id="error-page"
     >
+      <div style={{ zIndex: 1000 }}>
+        <MouseTrail {...trailProps} />
+      </div>
       <h2>OOPS!</h2>
       <span style={{ color: "red" }}>Sorry, this is under development.</span>
       <i>{error.statusText || error.message}</i>
