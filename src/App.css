@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 * {
   margin: 0;
@@ -28,8 +30,8 @@ img {
 }
 
 iframe {
-  width: 30rem !important;
-  height: 16rem;
+  width: 32rem !important;
+  height: 21rem;
   margin: 0 !important;
 }
 
@@ -91,32 +93,64 @@ section:last-child {
   background-color: #d19a08;
 }
 
-.carousel-root {
-  margin-top: 3rem;
+.flex{
+  display: flex;
+}
+.arrow{
+  position: absolute;
+  bottom: -5rem;
+}
+.arrow>img{
+  width: 1.2rem;
+}
+.arrow.prev{
+  left: 45vw;
+}
+.arrow.next{
+  right: 45vw;
 }
 
-.carousel .slider-wrapper {
-  overflow: visible !important;
-  width: 40% !important;
-}
-.carousel-slider{
-  overflow: visible !important;
-}
-
-.control-dots{
-  bottom: -3rem !important;
-}
-.dot.selected{
-  background-color: #d19a08 !important;
-}
 @media (max-width:800px) {
-  .carousel .slider-wrapper {
-    overflow: hidden !important;
-    width: 100% !important;
-  }
   iframe {
     width: 18rem !important;
     height: 13rem;
     margin: 0 !important;
+  }
+}
+
+/* VideoCard */
+.card {
+  width: 32rem !important;
+  height: 26rem !important;
+  /* background: url("./Assets/dummyImage.png") center center no-repeat; */
+  margin-left: 8rem;
+  margin-top: 3rem;
+}
+
+
+.container {
+  overflow: hidden;
+}
+
+.text {
+  font-family: "Montserrat";
+  background: linear-gradient(94.75deg, #D19A08 0%, #FEDB7E 16.49%, #EBB935 43.37%, #FCD776 74.96%, #D19A08 100%);
+  opacity: 0.9;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.6rem;
+  padding-block: 1rem;
+  height: 4rem;
+}
+
+@media (max-width: 800px) {
+  .text {
+      height: 3rem;
+      font-size: 1rem;
+  }
+
+  .card {
+      width: 18rem;
+      height: 16rem;
   }
 }

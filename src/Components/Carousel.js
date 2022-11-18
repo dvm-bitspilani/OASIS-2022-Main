@@ -1,38 +1,62 @@
-// import React, { useEffect, useRef, useState } from 'react'
-// import { initialState } from '../vidData'
-// import CaroCSS from "../styles/Carousel.module.css"
-// import VideoCard from './VideoCard';
+import "../App.css"
+import { useEffect, useState } from "react"
+import { initialState } from '../vidData'
+import Slider from "react-slick"
+import VideoCSS from "../styles/Video.module.css";
+import rightArrow from "../Assets/arrowRight.png"
+import CardCSS from "../styles/Card.module.css";
+import leftArrow from "../Assets/arrowLeft.png"
+import dummyImage from "../Assets/dummyImage.png"
 
-// function Carousel() {
+export default function Carousel() {
+    const [cards, setCards] = useState(initialState)
+    const slides = cards.map((card, index) => {
+        return <div className="card">
+            <div className="container">
+                {card.src}
+            </div>
+            <div className="text">{card.text}</div>
+        </div>
+    })
 
-//   const [cards, setCards] = useState(initialState);
-//   let container = useRef(null)
-  
+    const NextArrow = ({ onClick }) => {
+        return (
+            <div className="arrow next" onClick={onClick}>
+                <img src={rightArrow} />
+            </div>
+        )
+    }
+    const PrevArrow = ({ onClick }) => {
+        return (
+            <div className="arrow prev" onClick={onClick}>
+                <img src={leftArrow} />
+            </div>
+        )
+    }
 
-//   function panLeft() {
-//     container.style.transform = `translateX(40rem)`
-//     let idx = 0;
-//     cards.forEach(card => {
-//       if (card.active) {
-//         idx = card.idx;
-//       }
-//     });
-//   }
-//   function panRight() {
-//     container.style.transform = `translateX(-52rem)`
-//   }
 
-//   return (
-//     <div>
-//       <div ref={(el) => (container = el)} className={CaroCSS.container}>
-//         {slides}
-//       </div>
-//       <div className={CaroCSS.controls}>
-//         <div onClick={panLeft}>&lt;</div>
-//         <div onClick={panRight}>&gt;</div>
-//       </div>
-//     </div>
-//   )
-// }
 
-// export default Carousel
+    const settings = {
+        infinite: true,
+        lazyload: true,
+        speed: 300,
+        slidesToShow: 2,
+        centerMode: true,
+        centerPadding: 0,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
+        // beforeChange: (current, next) => setImageIndex([next, next+1])
+    }
+    return (
+        <div className="Carousel">
+            <div className={VideoCSS.title}>
+                <h2 className={VideoCSS.heading}>VIDEOS</h2>
+            </div>
+           
+                <Slider {...settings}>
+                    {slides}
+                </Slider>
+              
+        </div>
+    )
+}

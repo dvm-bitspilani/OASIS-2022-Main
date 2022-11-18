@@ -156,15 +156,19 @@ export default function Hamburger() {
   };
 
   function spons(){
+    document.querySelector("html").style.overflowY = "scroll"
     navigate('/sponsors')
   }
   function devs(){
+    document.querySelector("html").style.overflowY = "scroll"
     navigate('/developers')
   }
   function media(){
+    document.querySelector("html").style.overflowY = "scroll"
     navigate('/mediaPartners')
   }
   function eclipse(){
+    document.querySelector("html").style.overflowY = "scroll"
     navigate('/eclipse')
   }
 
