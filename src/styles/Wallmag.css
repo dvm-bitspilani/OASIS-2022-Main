@@ -69,9 +69,8 @@ h1, h2, h3 {
 .c-button {
     width: 0; 
     height: 0; 
-
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
     border-top: 20px solid white;
     margin-left: 30px;
     margin-right: 30px;

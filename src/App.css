@@ -45,6 +45,23 @@ canvas {
   z-index: inherit !important;
 }
 
+.backBtn {
+  position: absolute;
+  top: 5vh;
+  left: 3vw;
+}
+
+.backBtn svg {
+  width: 40px;
+  height: 35px;
+  stroke: white;
+  fill: white;
+}
+
+.backBtn svg:hover {
+  fill: goldenrod
+}
+
 .secHead {
   font-family: "Mulish";
   margin-bottom: 100px;
@@ -103,6 +120,7 @@ canvas {
   overflow: visible !important;
   width: 40% !important;
 }
+
 .carousel-slider{
   overflow: visible !important;
 }
@@ -110,17 +128,40 @@ canvas {
 .control-dots{
   bottom: -3rem !important;
 }
+
 .dot.selected{
   background-color: #d19a08 !important;
 }
+
 @media (max-width:800px) {
   .carousel .slider-wrapper {
     overflow: hidden !important;
     width: 100% !important;
   }
+
   iframe {
     width: 18rem !important;
     height: 13rem;
     margin: 0 !important;
+  }
+
+  .backBtn {
+    top: 4vh;
+  }
+
+  .backBtn svg {
+    width: 35px;
+    height: 30px;
+  }
+}
+
+@media (max-width:600px) {
+  .backBtn {
+    top: 4vh;
+  }
+
+  .backBtn svg {
+    width: 30px;
+    height: 25px;
   }
 }

@@ -21,8 +21,6 @@ import InstaGramIcon from "../Assets/Lander/InstaGramIcon";
 import Hamburger from "./Hamburger";
 
 const Lander = (props) => {
-  const [mouseX, setMouseX] = useState(0);
-  const [mouseY, setMouseY] = useState(0);
   const kingEl = createRef();
   const [ringCount, setRingCount] = useState(Math.floor(2 + Math.random() * 3));
   const [sizeClass, setSizeClass] = useState(2);
@@ -56,11 +54,6 @@ const Lander = (props) => {
     getSizeClass();
     setShards();
   }, []);
-
-  const handleMouseMove = (e) => {
-    setMouseX(e.screenX);
-    setMouseY(e.screenY);
-  };
 
   return (
     <div className={LanderCSS.landerWrapper} id="landerWrapper">
