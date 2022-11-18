@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import CardCSS from "../styles/Card.module.css";
-import dummy from "../Assets/dummyImage.png"
+// import dummy from "../Assets/dummyImage.png"
 function VideoCard(props) {
   const { idx, src, text, pos } = props;
   let card = useRef(null)
