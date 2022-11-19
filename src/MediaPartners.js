@@ -72,5 +72,30 @@ export const partners = [
         "Link": "https:\/\/www.youtube.com\/@thetablaguy",
         // "Logo": "../Partners/rashmi.jpeg"
     },
+    {
+        "Name": "Blog Adda",
+        "Link": "https://www.blogadda.com/",
+        "Logo": "../Partners/blogadda.png"
+    },
+    {
+        "Name": "The Half-ticket shows",
+        "Link": "https://www.youtube.com/@TheHalfTicketShows/featured",
+        // "Logo": "../Partners/blogadda.png"
+    },
+    {
+        "Name": "Dainik Bhaskar ",
+        // "Link": "https://www.blogadda.com/",
+        // "Logo": "../Partners/blogadda.png"
+    },
+    {
+        "Name": "Monke Entertainment",
+        // "Link": "https://www.blogadda.com/",
+        // "Logo": "../Partners/blogadda.png"
+    },
+    {
+        "Name": "Business Digest Magazine",
+        // "Link": "https://www.blogadda.com/",
+        // "Logo": "../Partners/blogadda.png"
+    },
 
 ]
