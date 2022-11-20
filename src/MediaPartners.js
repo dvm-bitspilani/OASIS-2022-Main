@@ -79,7 +79,7 @@ export const partners = [
   {
     Name: "The Half Ticket Shows",
     Link: "https://www.youtube.com/@TheHalfTicketShows/featured",
-    "Logo": "../Partners/halfTicket.png"
+    "Logo": "../Partners/halfTicket.jpeg"
   },
   {
     Name: "Dainik Bhaskar ",
