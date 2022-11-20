@@ -9,7 +9,14 @@
 }
 
 .heading {
-  background: linear-gradient(94.75deg, #D19A08 0%, #FEDB7E 27.6%, #EAC460 50%, #D19A08 66.15%, #D19A08 100%);
+  background: linear-gradient(
+    94.75deg,
+    #d19a08 0%,
+    #fedb7e 27.6%,
+    #eac460 50%,
+    #d19a08 66.15%,
+    #d19a08 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useLocation } from 'react-router';
+import { useLocation } from "react-router";
 import Lander from "../Components/Lander";
 import Registration from "./Registration";
 import { useState } from "react";
@@ -10,7 +10,6 @@ import Loader from "./Loader";
 import ReactGA from "react-ga";
 import Carousel from "../Components/Carousel";
 import { MouseTrail } from "@stichiboi/react-elegant-mouse-trail";
-
 
 export default function Home() {
   window.scrollTo(0, 0);
@@ -62,10 +61,10 @@ export default function Home() {
   const location = useLocation();
 
   useEffect(() => {
-        if (document.readyState === "complete") {
-          setTimeout(() => setIsLoaded(true), 2000);
-        }
-  }, [location.pathname])
+    if (document.readyState === "complete") {
+      setTimeout(() => setIsLoaded(true), 2000);
+    }
+  }, [location.pathname]);
 
   return (
     <main
@@ -95,7 +94,7 @@ export default function Home() {
 
       <Lander changeRegState={changeRegState} />
       <Events />
-      <Carousel/>
+      <Carousel />
       <Contact />
       <div className={HomeCSS.love}>
         <div className={HomeCSS.foot}>

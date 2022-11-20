@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from "react";
 import CardCSS from "../styles/Card.module.css";
 // import dummy from "../Assets/dummyImage.png"
 function VideoCard(props) {
   const { idx, src, text, pos } = props;
-  let card = useRef(null)
+  let card = useRef(null);
 
   // useEffect(() => {
   //   if (!active) {
@@ -13,13 +13,11 @@ function VideoCard(props) {
   // }, [])
 
   return (
-    <div ref={el => card = el} className={CardCSS.card}>
-      <div className={CardCSS.container}>
-        {src}
-      </div>
+    <div ref={(el) => (card = el)} className={CardCSS.card}>
+      <div className={CardCSS.container}>{src}</div>
       <div className={CardCSS.text}>{text}</div>
     </div>
-  )
+  );
 }
 
-export default VideoCard
+export default VideoCard;

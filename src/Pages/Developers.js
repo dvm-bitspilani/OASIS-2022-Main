@@ -30,9 +30,8 @@ import vector7 from "../Assets/Developers/vector7.svg";
 import DevelopersModel from "../Components/DevelopersModel";
 
 const Developers = () => {
-  
-  const navigate = useNavigate()
-  const navigateBack = () => navigate('/');
+  const navigate = useNavigate();
+  const navigateBack = () => navigate("/");
 
   const front = [
     {
@@ -200,7 +199,8 @@ const Developers = () => {
   return (
     <div className={devCSS.devContainer}>
       <div className="backBtn">
-      <svg onClick={navigateBack}
+        <svg
+          onClick={navigateBack}
           version="1.1"
           id="Capa_1"
           viewBox="0 0 486.975 486.975"

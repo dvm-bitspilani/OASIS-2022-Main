@@ -19,7 +19,6 @@ export default function WallMagArticle(props) {
       // console.log("Final Link", finalLink);
       return finalLink;
     }
-    
   };
 
   return (

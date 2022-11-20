@@ -103,7 +103,6 @@ export default function Hamburger() {
       ham.style.transform = "rotate(0deg) translate(-7px, 10px)";
       ham2.style.transform = "rotate(0deg) translate(-7px, -5px)";
     } else {
-      
       ham.style.transform = "rotate(-45deg) translate(-6px, 2px)";
       ham2.style.transform = "rotate(-45deg) translate(-5px, -10px)";
 
@@ -155,32 +154,32 @@ export default function Hamburger() {
     });
   };
 
-  function spons(){
-    document.querySelector("html").style.overflowY = "scroll"
-    navigate('/sponsors')
+  function spons() {
+    document.querySelector("html").style.overflowY = "scroll";
+    navigate("/sponsors");
   }
-  function devs(){
-    document.querySelector("html").style.overflowY = "scroll"
-    navigate('/developers')
+  function devs() {
+    document.querySelector("html").style.overflowY = "scroll";
+    navigate("/developers");
   }
-  function media(){
-    document.querySelector("html").style.overflowY = "scroll"
-    navigate('/mediaPartners')
+  function media() {
+    document.querySelector("html").style.overflowY = "scroll";
+    navigate("/mediaPartners");
   }
-  function eclipse(){
-    document.querySelector("html").style.overflowY = "scroll"
-    navigate('/eclipse')
+  function eclipse() {
+    document.querySelector("html").style.overflowY = "scroll";
+    navigate("/eclipse");
   }
-  function wallmag(){
-    document.querySelector("html").style.overflowY = "scroll"
-    navigate('/wallmag')
+  function wallmag() {
+    document.querySelector("html").style.overflowY = "scroll";
+    navigate("/wallmag");
   }
 
   return (
     <div ref={(el) => (container = el)} className={HamburgerCSS.container}>
-      <div className={HamburgerCSS.hamContainer} onClick={toggleMenu} >
-          <div className={HamburgerCSS.ham} id="ham"></div>
-          <div className={HamburgerCSS.ham2} id="ham2"></div>
+      <div className={HamburgerCSS.hamContainer} onClick={toggleMenu}>
+        <div className={HamburgerCSS.ham} id="ham"></div>
+        <div className={HamburgerCSS.ham2} id="ham2"></div>
       </div>
 
       <div ref={(el) => (menuDiv = el)} id="menu" className={HamburgerCSS.menu}>

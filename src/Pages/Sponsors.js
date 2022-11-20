@@ -6,15 +6,15 @@ import { sponsors } from "../SponsorList";
 import { useNavigate } from "react-router-dom";
 
 function Sponsors() {
-
-  const navigate = useNavigate()
-  const navigateBack = () => navigate('/');
+  const navigate = useNavigate();
+  const navigateBack = () => navigate("/");
 
   const cards = sponsors.map((sponsor) => {
     return (
       <SponsCard name={sponsor.name} title={sponsor.title} img={sponsor.Logo} />
     );
   });
+
   const trailProps = {
     lineDuration: 15,
     lineWidthStart: 10,
@@ -25,7 +25,8 @@ function Sponsors() {
   return (
     <div className={SponzCSS.container}>
       <div className="backBtn">
-      <svg onClick={navigateBack}
+        <svg
+          onClick={navigateBack}
           version="1.1"
           id="Capa_1"
           viewBox="0 0 486.975 486.975"

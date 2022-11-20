@@ -559,7 +559,8 @@
     transform: scale(1.2);
   }
 
-  .portalWindow, .portalWindowImg {
+  .portalWindow,
+  .portalWindowImg {
     width: 51vw;
   }
 

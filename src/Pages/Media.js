@@ -6,8 +6,8 @@ import { partners } from "../MediaPartners.js";
 import { useNavigate } from "react-router-dom";
 
 function Partners() {
-  const navigate = useNavigate()
-  const navigateBack = () => navigate('/');
+  const navigate = useNavigate();
+  const navigateBack = () => navigate("/");
   const cards = partners.map((partner) => {
     return (
       <MediaCard name={partner.Name} link={partner.Link} img={partner.Logo} />
@@ -23,7 +23,8 @@ function Partners() {
   return (
     <div className={SponzCSS.container}>
       <div className="backBtn">
-      <svg onClick={navigateBack}
+        <svg
+          onClick={navigateBack}
           version="1.1"
           id="Capa_1"
           viewBox="0 0 486.975 486.975"

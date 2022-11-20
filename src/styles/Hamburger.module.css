@@ -15,7 +15,14 @@
 }
 
 .hamContainer:hover {
-  background: linear-gradient(94.75deg, rgba(209, 154, 8, 0.9) 0%, rgba(254, 219, 126, 0.9) 27.6%, rgba(234, 196, 96, 0.9) 50%, rgba(209, 154, 8, 0.9) 66.15%, rgba(209, 154, 8, 0.9) 100%);
+  background: linear-gradient(
+    94.75deg,
+    rgba(209, 154, 8, 0.9) 0%,
+    rgba(254, 219, 126, 0.9) 27.6%,
+    rgba(234, 196, 96, 0.9) 50%,
+    rgba(209, 154, 8, 0.9) 66.15%,
+    rgba(209, 154, 8, 0.9) 100%
+  );
 }
 
 .hamContainer:hover .ham {

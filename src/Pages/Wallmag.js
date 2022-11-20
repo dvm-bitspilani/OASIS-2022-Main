@@ -7,8 +7,8 @@ import { useNavigate } from "react-router-dom";
 export default function MyComponent() {
   const articles = require("../JSON/artcles.json");
 
-  const navigate = useNavigate()
-  const navigateBack = () => navigate('/');
+  const navigate = useNavigate();
+  const navigateBack = () => navigate("/");
 
   const trailProps = {
     lineDuration: 15,
@@ -20,7 +20,8 @@ export default function MyComponent() {
   return (
     <div className="root-wallmag">
       <div className="backBtn">
-      <svg onClick={navigateBack}
+        <svg
+          onClick={navigateBack}
           version="1.1"
           id="Capa_1"
           viewBox="0 0 486.975 486.975"
@@ -36,7 +37,7 @@ export default function MyComponent() {
           </g>
         </svg>
       </div>
-        <div style={{ zIndex: 1000 }}>
+      <div style={{ zIndex: 1000 }}>
         <MouseTrail {...trailProps} />
       </div>
       <div className="hpc-heading">

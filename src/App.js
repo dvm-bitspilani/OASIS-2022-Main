@@ -28,17 +28,17 @@ const router = createBrowserRouter([
     element: <Developers />,
   },
   {
-    path: '/mediaPartners/',
-    element: <Media/>
+    path: "/mediaPartners/",
+    element: <Media />,
   },
   {
     path: "/eclipse",
-    element: <Eclipse />
+    element: <Eclipse />,
   },
   {
     path: "/wallmag",
-    element: <Wallmag />
-  }
+    element: <Wallmag />,
+  },
 ]);
 
 function App() {

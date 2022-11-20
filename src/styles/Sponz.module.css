@@ -34,7 +34,7 @@
   margin-inline: 2rem;
   color: rgb(209, 209, 209);
 }
-.card{
+.card {
   color: #fff;
   font-family: "Mulish";
   display: flex;
@@ -43,32 +43,32 @@
   margin-top: 5rem;
   margin-inline: auto;
 }
-.cardTitle{
+.cardTitle {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.4rem;
   text-align: center;
 }
-.brandImage{
+.brandImage {
   width: 15rem;
   margin-block: 2rem;
   margin-inline: auto;
 }
-.brandImage>img{
+.brandImage > img {
   width: 100%;
 }
-.container{
+.container {
   padding-bottom: 3rem;
 }
-.brandName{
+.brandName {
   text-align: center;
   margin-top: 0.8rem;
   font-size: 1.2rem;
 }
-.brand{
+.brand {
   transition: all 0.3s ease;
 }
-.brand:hover{
+.brand:hover {
   scale: 1.2;
 }
 
@@ -76,16 +76,16 @@
   .heading {
     font-size: 1.4rem;
   }
-  .cardTitle{
+  .cardTitle {
     font-size: 1rem;
   }
-  .brandImage{
+  .brandImage {
     width: 10rem;
   }
-  .brandName{
+  .brandName {
     font-weight: 500;
   }
-  .title{
+  .title {
     font-size: 1.8rem;
   }
 }
