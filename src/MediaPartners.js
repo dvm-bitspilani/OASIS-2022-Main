@@ -62,14 +62,14 @@ export const partners = [
     Logo: "../Partners/memescasm.jpg",
   },
   {
-    Name: "Anish Dhadhich",
-    Link: "https://www.youtube.com/c/AnishDadhich",
-    // "Logo": "../Partners/rashmi.jpeg"
+    Name: "Anish Dadhich",
+    Link: "https://www.instagram.com/anishdadhichh/?hl=en",
+    "Logo": "../Partners/anish.jpeg"
   },
   {
     Name: "The Tabla Guy",
     Link: "https://www.youtube.com/@thetablaguy",
-    // "Logo": "../Partners/rashmi.jpeg"
+    "Logo": "../Partners/tabla.jpeg"
   },
   {
     Name: "Blog Adda",
@@ -77,23 +77,18 @@ export const partners = [
     Logo: "../Partners/blogadda.png",
   },
   {
-    Name: "The Half-ticket shows",
+    Name: "The Half Ticket Shows",
     Link: "https://www.youtube.com/@TheHalfTicketShows/featured",
-    // "Logo": "../Partners/blogadda.png"
+    "Logo": "../Partners/halfTicket.png"
   },
   {
     Name: "Dainik Bhaskar ",
     // "Link": "https://www.blogadda.com/",
-    // "Logo": "../Partners/blogadda.png"
-  },
-  {
-    Name: "Monke Entertainment",
-    // "Link": "https://www.blogadda.com/",
-    // "Logo": "../Partners/blogadda.png"
+    "Logo": "../Partners/bhaskar.jpeg"
   },
   {
     Name: "Business Digest Magazine",
     // "Link": "https://www.blogadda.com/",
-    // "Logo": "../Partners/blogadda.png"
+    "Logo": "../Partners/business.jpeg"
   },
 ];

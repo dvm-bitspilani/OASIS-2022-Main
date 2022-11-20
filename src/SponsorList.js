@@ -95,6 +95,11 @@ export const sponsors = [
     // Logo: "../Sponsors/epig.png",
   },
   {
+    name: "Monk Entertainment",
+    title: "Entertainment Partner",
+    Logo: "../Sponsors/MONKELOGO.png",
+  },
+  {
     name: "Kangaro",
     title: "Official Stationary Partner",
     // Logo: "../Sponsors/kang.png",
