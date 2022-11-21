@@ -27,7 +27,7 @@ export const sponsors = [
   {
     name: "TATA Steel ",
     title: "Official Partner of OASIS",
-    /* Logo: "../Sponsors/tata.png", */
+    Logo: "../Sponsors/tata.png",
   },
   {
     name: "AITSPL Broadband ",
@@ -52,7 +52,7 @@ export const sponsors = [
   {
     name: "Irusu ",
     title: "Associate Technology Partner ",
-    // Logo: "../Sponsors/irusu.png",
+    Logo: "../Sponsors/irusu.jpeg",
   },
   {
     name: "Tortoise ",
@@ -95,14 +95,9 @@ export const sponsors = [
     Logo: "../Sponsors/epig.jpg",
   },
   {
-    name: "Monk Entertainment",
-    title: "Entertainment Partner",
-    Logo: "../Sponsors/MONKELOGO.png",
-  },
-  {
     name: "Kangaro",
     title: "Official Stationary Partner",
-    // Logo: "../Sponsors/kang.png",
+    Logo: "../Sponsors/kang.jpg",
   },
   {
     name: "Toreto",
