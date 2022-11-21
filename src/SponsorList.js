@@ -25,9 +25,9 @@ export const sponsors = [
     Logo: "../Sponsors/Sparx.png",
   },
   {
-    name: "TATA Motors ",
+    name: "TATA Steel ",
     title: "Official Partner of OASIS",
-    Logo: "../Sponsors/tata.png",
+    /* Logo: "../Sponsors/tata.png", */
   },
   {
     name: "AITSPL Broadband ",
@@ -82,17 +82,17 @@ export const sponsors = [
   {
     name: "Raw Pressery",
     title: "Official Refreshments Partner",
-    // Logo: "../Sponsors/rp.png",
+    Logo: "../Sponsors/rp.png",
   },
   {
     name: "Zebronics",
     title: "Official Audio Partner",
-    // Logo: "../Sponsors/zebro.png",
+    Logo: "../Sponsors/zebronics.png",
   },
   {
     name: "Epigamia",
     title: "Official Milkshake Partner",
-    // Logo: "../Sponsors/epig.png",
+    Logo: "../Sponsors/epig.jpg",
   },
   {
     name: "Monk Entertainment",
@@ -107,11 +107,11 @@ export const sponsors = [
   {
     name: "Toreto",
     title: "Official Sound Partner",
-    // Logo: "../Sponsors/tor.png",
+    Logo: "../Sponsors/toreto.jpg",
   },
   {
     name: "Vivek Maths",
     title: "Official EdTech Partner",
-    // Logo: "../Sponsors/vm.png",
+    Logo: "../Sponsors/vm.png",
   },
 ];
