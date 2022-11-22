@@ -6,6 +6,7 @@ import { sponsors } from "../SponsorList";
 import { useNavigate } from "react-router-dom";
 
 function Sponsors() {
+  document.title = "OASIS'22 | Sponsors"
   const navigate = useNavigate();
   const navigateBack = () => navigate("/");
 

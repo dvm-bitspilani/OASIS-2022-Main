@@ -13,7 +13,9 @@ import { MouseTrail } from "@stichiboi/react-elegant-mouse-trail";
 import { useNavigate } from "react-router-dom";
 
 const Eclipse = () => {
+  document.title = "OASIS'22 | Eclipse"
   const navigate = useNavigate();
+  
   const closeClickHandler = () => {
     navigate("/");
   };

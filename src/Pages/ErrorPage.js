@@ -3,6 +3,7 @@ import { MouseTrail } from "@stichiboi/react-elegant-mouse-trail";
 
 export default function ErrorPage() {
   const error = useRouteError();
+  document.title = "ERROR"
 
   const trailProps = {
     lineDuration: 15,

@@ -5,6 +5,7 @@ import WallMagArticle from "../Components/WallmagArticle";
 import { useNavigate } from "react-router-dom";
 
 export default function MyComponent() {
+  document.title = "OASIS'22 | WallMag"
   const articles = require("../JSON/artcles.json");
 
   const navigate = useNavigate();

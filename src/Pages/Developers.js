@@ -30,6 +30,7 @@ import vector7 from "../Assets/Developers/vector7.svg";
 import DevelopersModel from "../Components/DevelopersModel";
 
 const Developers = () => {
+  document.title = "OASIS'22 | Developers"
   const navigate = useNavigate();
   const navigateBack = () => navigate("/");
 
