@@ -47,7 +47,7 @@ export const sponsors = [
   {
     name: "Gustora ",
     title: "Official Pasta Partner",
-    // Logo: "../Sponsors/gust.png",
+    Logo: "../Sponsors/gust.jpg",
   },
   {
     name: "Irusu ",
@@ -67,7 +67,7 @@ export const sponsors = [
   {
     name: "SayF",
     title: "Official Savings Partner",
-    // Logo: "../Sponsors/sayf.png",
+    Logo: "../Sponsors/sayf.png",
   },
   {
     name: "Tikkl",
@@ -114,4 +114,9 @@ export const sponsors = [
     title: "Official EdTech Partner",
     Logo: "../Sponsors/vm.png",
   },
+  {
+    name: "Indian Hip Hop",
+    title: 'Official Partner',
+    Logo: '../Sponsors/hiphop.jpg'
+  }
 ];

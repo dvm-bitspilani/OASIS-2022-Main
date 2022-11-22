@@ -64,12 +64,12 @@ export const partners = [
   {
     Name: "Anish Dadhich",
     Link: "https://www.instagram.com/anishdadhichh/?hl=en",
-    Logo: "../Partners/anish.jpeg",
+    Logo: "../Partners/anish.jpeg"
   },
   {
     Name: "The Tabla Guy",
     Link: "https://www.youtube.com/@thetablaguy",
-    Logo: "../Partners/tabla.jpeg",
+    Logo: "../Partners/tabla.jpeg"
   },
   {
     Name: "Blog Adda",
@@ -79,42 +79,20 @@ export const partners = [
   {
     Name: "The Half Ticket Shows",
     Link: "https://www.youtube.com/@TheHalfTicketShows/featured",
-    Logo: "../Partners/halfTicket.jpeg",
+    Logo: "../Partners/halfTicket.jpeg"
   },
   {
-    Name: "Zee News",
-    Logo: "../Partners/zee.png",
-  },
-  {
-    Name: "A1 TV",
-    Logo: "../Partners/A1.png",
-  },
-  {
-    Name: "Jan TV",
-    Logo: "../Partners/jantv.png",
-  },
-  {
-    Name: "News 18",
-    Logo: "../Partners/news18.png",
-  },
-  {
-    Name: "Sahara Samay",
-    Logo: "../Partners/sahara.jpg",
-  },
-  {
-    Name: "First India",
-    Logo: "../Partners/1st.png",
-  },
-  {
-    Name: "Dainik Bhaskar",
-    Logo: "../Partners/bhaskar.jpeg",
-  },
-  {
-    Name: "Rajasthan Patrika",
-    Logo: "../Partners/patrika.jpg",
+    Name: "Dainik Bhaskar ",
+    // "Link": "https://www.blogadda.com/",
+    Logo: "../Partners/bhaskar.jpeg"
   },
   {
     Name: "Business Digest Magazine",
-    Logo: "../Partners/business.jpeg",
+    // "Link": "https://www.blogadda.com/",
+    Logo: "../Partners/business.jpeg"
   },
+  {
+    Name: "The Indian Music Diaries",
+    Logo: "../Partners/musicdiaries.jpg"
+  }
 ];
