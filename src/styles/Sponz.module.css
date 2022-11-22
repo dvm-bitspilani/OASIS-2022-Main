@@ -22,6 +22,7 @@
   margin-inline: auto;
   width: fit-content;
 }
+
 .heading {
   font-family: "Mulish";
   font-weight: 700;
@@ -34,6 +35,7 @@
   margin-inline: 2rem;
   color: rgb(209, 209, 209);
 }
+
 .card {
   color: #fff;
   font-family: "Mulish";
@@ -43,31 +45,39 @@
   margin-top: 5rem;
   margin-inline: auto;
 }
+
 .cardTitle {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.4rem;
   text-align: center;
 }
+
 .brandImage {
   width: 15rem;
   margin-block: 2rem;
   margin-inline: auto;
 }
+
 .brandImage > img {
   width: 100%;
+  border-radius: 5px;
 }
+
 .container {
   padding-bottom: 3rem;
 }
+
 .brandName {
   text-align: center;
   margin-top: 0.8rem;
   font-size: 1.2rem;
 }
+
 .brand {
   transition: all 0.3s ease;
 }
+
 .brand:hover {
   scale: 1.2;
 }
@@ -76,15 +86,19 @@
   .heading {
     font-size: 1.4rem;
   }
+
   .cardTitle {
     font-size: 1rem;
   }
+
   .brandImage {
     width: 10rem;
   }
+
   .brandName {
     font-weight: 500;
   }
+
   .title {
     font-size: 1.8rem;
   }

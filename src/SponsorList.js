@@ -80,6 +80,11 @@ export const sponsors = [
     Logo: "../Sponsors/pranic.png",
   },
   {
+    name: "Monk-E Entertainment",
+    title: "Official Media Sponsor",
+    Logo: "../Sponsors/monke.png",
+  },
+  {
     name: "Raw Pressery",
     title: "Official Refreshments Partner",
     Logo: "../Sponsors/rp.png",
