@@ -96,6 +96,7 @@ const RegForm = (props) => {
       <Alert message={message} show={popup} handleClose={handleClose} />
       <div className={RegFormCSS.heading}>REGISTRATION</div>
       <p className="portfolio-form-note">Interactive demo · use fictional details. Nothing is sent or saved. Events and colleges are representative examples.</p>
+      <p className="portfolio-form-note">Sample identity: Demo Visitor · visitor@example.test · 9000000000 · Pilani.</p>
       <form
         className={RegFormCSS.regForm}
         onSubmit={handleSubmit}

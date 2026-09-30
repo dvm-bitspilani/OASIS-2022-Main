@@ -12,7 +12,7 @@
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
     "check": "node --test tests/*.test.mjs && npm run build",
-    "deploy": "npm run build && wrangler pages deploy dist --project-name dvm-portfolio-oasis-2022 --branch main"
+    "deploy": "npm run build && CLOUDFLARE_ACCOUNT_ID=e6ad8a6f22a88b57a02e176325692373 wrangler pages deploy dist --project-name dvm-portfolio-oasis-2022 --branch main"
   },
   "dependencies": {
     "@fontsource/allura": "5.3.0",
