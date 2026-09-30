@@ -8,7 +8,7 @@
 .landerWrapper {
   width: 100vw;
   min-height: calc(100 * var(--vh));
-  background: url(../Assets/Lander/background.png) no-repeat center;
+  background: url(../Assets/Lander/background.webp) no-repeat center;
   overflow-y: visible;
   background-size: cover;
   position: relative;
@@ -465,7 +465,7 @@
   }
 
   .landerWrapper {
-    background: url(../Assets/Lander/phoneLanderBg.png) no-repeat center center;
+    background: url(../Assets/Lander/phoneLanderBg.webp) no-repeat center center;
     background-size: cover;
   }
 

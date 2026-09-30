@@ -1,0 +1,26 @@
+{
+  "baseline_sha": "95ad61bf87b70d532d22313ba8441e678b52eb8e",
+  "baseline_asset_bytes": 32890632,
+  "baseline_asset_files": 148,
+  "baseline_audit": {
+    "critical": 5,
+    "high": 35,
+    "moderate": 20,
+    "low": 15,
+    "total": 75
+  },
+  "asset_bytes": 3815755,
+  "asset_files": 149,
+  "output_bytes": 4357754,
+  "output_files": 145,
+  "javascript_bytes": 649765,
+  "javascript_gzip_bytes": 206179,
+  "audit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  }
+}

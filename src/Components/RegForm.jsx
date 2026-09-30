@@ -1,0 +1,205 @@
+import React, { useEffect } from "react";
+import RegFormCSS from "../styles/RegForm.module.css";
+import { useState } from "react";
+import TextInputControl from "./TextInputControl";
+import GenderInputControl from "./GenderInputControl";
+import DropdownControl from "./DropdownControl";
+import EventsControl from "./EventsControl";
+import Button from "./Button";
+import InstrucBook from "../Assets/Registration/reg_guidelines.pdf";
+import Alert from "./Alert";
+import Wheel from "./Wheel";
+import { useInView } from "react-intersection-observer";
+import { demoColleges, demoEvents, submitDemoRegistration } from "../demo/services";
+
+const OPTIONS = {
+  root: null,
+  threshold: 0.8,
+};
+
+const RegForm = (props) => {
+  const [name, setName] = useState("");
+  const [email_id, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [gender, setGender] = useState("");
+  const [college_id, setCollege] = useState(null);
+  const [location, setLocation] = useState("");
+  const [head_of_society, setHeadOfSociety] = useState(false);
+  const [choreographer, setChoreo] = useState(false);
+  const [year_of_study, setYear] = useState("");
+  const [events_ids, setEventsIds] = useState([]);
+  const [events, setEvents] = useState([]);
+  const [checkboxChoreo, setCheckboxChoreo] = useState("");
+  const [checkboxHos, setCheckboxHos] = useState("");
+  const [popup, setPopup] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const collegeList = demoColleges;
+  const eventsList = demoEvents;
+  const yearList = [
+    { name: "1" },
+    { name: "2" },
+    { name: "3" },
+    { name: "4" },
+    { name: "5" },
+  ];
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const result = submitDemoRegistration({ name, email_id, phone, gender, college_id, city: location, year: year_of_study, events: events_ids });
+    setMessage(result.message);
+    setPopup(true);
+  };
+
+  const choreoChange = (e) => {
+    setChoreo((prev) => !prev);
+    setCheckboxChoreo((prev) => {
+      if (prev === "") {
+        setCheckboxChoreo(RegFormCSS.checked);
+      } else {
+        setCheckboxChoreo("");
+      }
+    });
+  };
+  const hosChange = (e) => {
+    setHeadOfSociety((prev) => !prev);
+    setCheckboxHos((prev) => {
+      if (prev === "") {
+        setCheckboxHos(RegFormCSS.checked);
+      } else {
+        setCheckboxHos("");
+      }
+    });
+  };
+  function handleClose() {
+    setPopup(false);
+    props.resetPage();
+  }
+
+  const { ref, inView, entry } = useInView(OPTIONS);
+  const [promptClass, setPromptClass] = useState(RegFormCSS.hidePrompt);
+
+  useEffect(() => {
+    scrollPromptToggle();
+  }, [inView]);
+
+  function scrollPromptToggle() {
+    if (inView) {
+      setPromptClass(RegFormCSS.hidePrompt);
+    } else {
+      setPromptClass(RegFormCSS.showPrompt);
+    }
+  }
+
+  return (
+    <div className={RegFormCSS.regFormBox} id="regFormBox">
+      <Alert message={message} show={popup} handleClose={handleClose} />
+      <div className={RegFormCSS.heading}>REGISTRATION</div>
+      <p className="portfolio-form-note">Interactive demo · use fictional details. Nothing is sent or saved. Events and colleges are representative examples.</p>
+      <form
+        className={RegFormCSS.regForm}
+        onSubmit={handleSubmit}
+        method="post"
+        id="reg-form"
+      >
+        <div className={RegFormCSS.regFormFields}>
+          <div className={RegFormCSS.leftSide}>
+            <div className={RegFormCSS.textInputContainer}>
+              <TextInputControl
+                label={"Name *"}
+                type={"text"}
+                setValue={setName}
+                info={"name"}
+              />
+              <TextInputControl
+                label={"Email Id *"}
+                type={"email"}
+                setValue={setEmail}
+                info={"email"}
+              />
+              <TextInputControl
+                label={"Phone No. *"}
+                type={"tel"}
+                setValue={setPhone}
+                info={"phone"}
+                pattern={"[1-9]{1}[0-9]{9}"}
+              />
+            </div>
+
+            <div className={RegFormCSS.genderInputContainer}>
+              <GenderInputControl setValue={setGender} />
+            </div>
+            <div className={RegFormCSS.checkboxKePapa}>
+              <div
+                className={RegFormCSS.checkboxContainer}
+                onClick={choreoChange}
+              >
+                <div
+                  className={`${RegFormCSS.checkbox} ${checkboxChoreo}`}
+                ></div>
+                <label>Are you a Choreographer/Mentor? (Optional)</label>
+              </div>
+              <div className={RegFormCSS.checkboxContainer} onClick={hosChange}>
+                <div className={`${RegFormCSS.checkbox} ${checkboxHos}`}></div>
+
+                <label>Are you the Head of a Society? (Optional)</label>
+              </div>
+            </div>
+          </div>
+
+          <div className={RegFormCSS.rightSide}>
+            <div className={RegFormCSS.sportsContainer}>
+              <EventsControl
+                setValue={setEvents}
+                label={"Events *"}
+                listData={eventsList}
+                info={"events"}
+                setEventsIds={setEventsIds}
+              />
+            </div>
+
+            <DropdownControl
+              setValue={setCollege}
+              label={"College *"}
+              listData={collegeList}
+              pattern=""
+              info={"college"}
+            />
+            <DropdownControl
+              setValue={setYear}
+              label={"Year Of Study *"}
+              listData={yearList}
+              info={"year"}
+            />
+            <TextInputControl
+              label={"City *"}
+              type={"text"}
+              info={"name"}
+              setValue={setLocation}
+            />
+          </div>
+        </div>
+
+        <div className={RegFormCSS.regFormBtns} ref={ref}>
+          <div className={RegFormCSS.promptCaret}>
+            <i className={`fa-solid fa-caret-down ${promptClass}`}></i>
+          </div>
+          <Button type="submit" form="reg-form" btn_title="Preview Registration" />
+          <div className={RegFormCSS.compulsoryText}>
+            All fields marked * are compulsory.
+          </div>
+          <a
+            href={InstrucBook}
+            rel="noreferrer"
+            target="_blank"
+            className={RegFormCSS.Instruc}
+          >
+            How to Register?
+          </a>
+        </div>
+      </form>
+    </div>
+  );
+};
+
+export default RegForm;

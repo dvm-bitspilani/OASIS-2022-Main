@@ -16,11 +16,12 @@
   margin: 3rem;
   font-size: 2rem;
 }
-.exit > i {
+.exit > button {
+  background: none; border: 0; color: inherit; font-size: inherit;
   /* cursor: pointer */
   transition: all 0.3s;
 }
-.exit > i:hover {
+.exit > button:hover {
   color: #ebb935;
 }
 .message {

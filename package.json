@@ -1,51 +1,37 @@
 {
-  "name": "oasis-main",
-  "homepage": ".",
-  "version": "0.1.0",
+  "name": "dvm-portfolio-oasis-2022",
+  "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "@stichiboi/react-elegant-mouse-trail": "^0.1.7",
-    "gsap": "^3.11.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-ga": "^3.3.1",
-    "react-google-recaptcha": "^2.1.0",
-    "react-icons": "^4.6.0",
-    "react-intersection-observer": "^9.4.0",
-    "react-responsive-carousel": "^3.2.23",
-    "react-router-dom": "^6.4.0",
-    "react-scripts": "^5.0.1",
-    "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4"
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "vite --host 127.0.0.1",
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "check": "node --test tests/*.test.mjs && npm run build",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name dvm-portfolio-oasis-2022 --branch main"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@fontsource/allura": "5.3.0",
+    "@fontsource/julius-sans-one": "5.3.0",
+    "@fontsource/montserrat": "5.3.0",
+    "@fontsource/mulish": "5.3.0",
+    "@fortawesome/fontawesome-free": "7.3.1",
+    "dompurify": "3.4.16",
+    "gsap": "3.15.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-intersection-observer": "11.0.1",
+    "react-router-dom": "7.18.4",
+    "react-slick": "0.31.0",
+    "slick-carousel": "1.8.1"
   },
   "devDependencies": {
-    "prettier": "^2.7.1"
+    "@vitejs/plugin-react": "6.1.1",
+    "vite": "8.3.1",
+    "wrangler": "4.145.0"
   }
 }

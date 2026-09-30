@@ -28,3 +28,5 @@ yarn-error.log*
 
 # Webstorm
 .idea/*
+/dist
+/.wrangler

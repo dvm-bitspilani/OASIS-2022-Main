@@ -1,0 +1,119 @@
+
+> dvm-portfolio-oasis-2022@1.0.0 check
+> node --test tests/*.test.mjs && npm run build
+
+✔ complete demo form passes without persisting or modifying input (2.409458ms)
+✔ empty form provides all actionable validation messages (0.373292ms)
+✔ free-text college and unknown event IDs cannot become valid selections (0.154083ms)
+✔ malformed phone, email and year are rejected (0.922292ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 284.572583
+
+> dvm-portfolio-oasis-2022@1.0.0 build
+> vite build
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 194 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                                1.12 kB │ gzip:   0.55 kB
+dist/assets/slick-Bi9J8BMx.eot                                 2.04 kB
+dist/assets/slick-BlzDm7g2.svg                                 2.15 kB │ gzip:   0.91 kB
+dist/assets/fa-v4compatibility-CErXDOsT.woff2                  4.16 kB
+dist/assets/ajax-loader-BcnMEykj.gif                           4.17 kB
+dist/assets/naman-Cc1AveHH.webp                                4.31 kB
+dist/assets/anshal-n2C4XLz-.webp                               4.88 kB
+dist/assets/ashirwad-6th0dYso.webp                             5.13 kB
+dist/assets/madhav-B7uj6tEu.webp                               5.61 kB
+dist/assets/logo-B-lSeAjH.png                                  6.90 kB
+dist/assets/rhythm-BanGuIu6.webp                               7.09 kB
+dist/assets/topLeft-CwM10kA8.png                               7.09 kB
+dist/assets/harshith-Bq2GyCGn.webp                             7.47 kB
+dist/assets/Event-B7hBvCH1.webp                                8.89 kB
+dist/assets/phoneLanderBg-wd6LZNuB.webp                        9.84 kB
+dist/assets/eclipseHeading-B5YQw0sa.png                       10.23 kB
+dist/assets/bottomRight-CBNz3vc-.png                          10.31 kB
+dist/assets/karishma-DT8camIf.webp                            10.43 kB
+dist/assets/mulish-latin-700-normal-DP36JSCV.woff2            13.33 kB
+dist/assets/mulish-latin-400-normal-C9Snyl1s.woff2            13.36 kB
+dist/assets/prateek-Dp2DbAnF.webp                             13.51 kB
+dist/assets/wavylinesBottomRight-DGaLdG4u.png                 13.55 kB
+dist/assets/dvm_logo-ZNRqEWQl.png                             14.06 kB
+dist/assets/julius-sans-one-latin-400-normal-By_cO9QL.woff    14.37 kB
+dist/assets/julius-sans-one-latin-400-normal-CreLQ_oK.woff2   16.02 kB
+dist/assets/wavylinesTopLeft-jZ7eCuMT.png                     16.22 kB
+dist/assets/mulish-latin-700-normal-LuPokTVX.woff             16.84 kB
+dist/assets/mulish-latin-400-normal-BRmeVNaI.woff             16.95 kB
+dist/assets/satwik-DIn468gC.webp                              17.13 kB
+dist/assets/midBottom-CM8FcNtb.png                            18.04 kB
+dist/assets/wavylinesBottomLeft-DuiBP5dA.png                  18.42 kB
+dist/assets/montserrat-latin-500-normal-DRFEGfly.woff2        18.74 kB
+dist/assets/montserrat-latin-400-normal-BLhwKU8k.woff2        18.78 kB
+dist/assets/fa-regular-400-DRN8N0d1.woff2                     19.51 kB
+dist/assets/montserrat-latin-500-normal-Dok2oTci.woff         20.60 kB
+dist/assets/montserrat-latin-400-normal-xItZbAXg.woff         20.64 kB
+dist/assets/aditya-BXK8NoMV.webp                              22.10 kB
+dist/assets/hoverTxt1-D2GjfRIB.webp                           22.39 kB
+dist/assets/hoverTxt2-DRxOY5IN.webp                           22.83 kB
+dist/assets/dummyImage-Bzoq-e-c.webp                          23.53 kB
+dist/assets/bottomLeft-DEA0s8aE.png                           24.22 kB
+dist/assets/prakhar-NJsYBLoh.webp                             24.32 kB
+dist/assets/pranav-DursrQ5Y.webp                              24.68 kB
+dist/assets/window-clouds-2-Br6OXBnK.webp                     25.21 kB
+dist/assets/allura-latin-400-normal-4sUZKTf1.woff2            26.48 kB
+dist/assets/swaha-U9YHd-e9.webp                               26.49 kB
+dist/assets/midTop-5KhGV-ff.png                               28.68 kB
+dist/assets/jay-BofPyb-f.webp                                 29.25 kB
+dist/assets/aaradhya-80lLZbdY.webp                            30.58 kB
+dist/assets/valo-oyr0eib_.webp                                30.64 kB
+dist/assets/allura-latin-400-normal-DcxZAN6k.woff             30.86 kB
+dist/assets/shivang-CWJR_w69.webp                             31.03 kB
+dist/assets/vaibhav-C705pxIX.webp                             31.21 kB
+dist/assets/clashroyale-BDP_t8aE.webp                         34.47 kB
+dist/assets/cursor-T6eF2q2a.svg                               39.75 kB │ gzip:  29.93 kB
+dist/assets/window-clouds-1-DzX4PUek.webp                     41.48 kB
+dist/assets/window-clouds-3-CStjfTFC.webp                     41.75 kB
+dist/assets/sejal-4ycpHBf9.webp                               42.43 kB
+dist/assets/shwetabh-CryBMpDa.webp                            43.43 kB
+dist/assets/codmobile-8VZ4UXg9.webp                           46.71 kB
+dist/assets/maanas-BKzOfaDy.webp                              52.19 kB
+dist/assets/title-DLzmHzx9.webp                               55.92 kB
+dist/assets/harsh-DaVhoCSb.webp                               67.34 kB
+dist/assets/wallsbg-AeOlKL2E.webp                             86.39 kB
+dist/assets/king-o36OD4FN.webp                                94.15 kB
+dist/assets/window-BxFsw0_i.webp                              96.80 kB
+dist/assets/utkarsh-By0Q2LuT.webp                            111.64 kB
+dist/assets/fa-brands-400-Bs6tcqqs.woff2                     115.42 kB
+dist/assets/background-BiNN2BKH.webp                         115.85 kB
+dist/assets/ringsYellow-DsAwffOJ.webp                        116.35 kB
+dist/assets/fa-solid-900-IAB4Droh.woff2                      119.48 kB
+dist/assets/ringsOrange-DxRL4yEZ.webp                        124.18 kB
+dist/assets/reg_guidelines-ikuhOr_g.pdf                      276.53 kB
+dist/assets/Carousel-fNvP-ooZ.css                              0.42 kB │ gzip:   0.28 kB
+dist/assets/Sponz-w-SvIDyO.css                                 1.32 kB │ gzip:   0.57 kB
+dist/assets/Registration-N3a-hX6_.css                          1.48 kB │ gzip:   0.57 kB
+dist/assets/Wallmag-Yf9zbf-R.css                               2.43 kB │ gzip:   0.91 kB
+dist/assets/Eclipse-5SkuYaG-.css                               3.36 kB │ gzip:   1.03 kB
+dist/assets/Developers-6F4J-NCy.css                            5.33 kB │ gzip:   1.47 kB
+dist/assets/Registration-6Ax5qmwZ.css                         14.46 kB │ gzip:   3.31 kB
+dist/assets/index-DQpLjSOy.css                               122.48 kB │ gzip:  33.34 kB
+dist/assets/wavylinesTopLeft-A7dDyxE8.js                       0.16 kB │ gzip:   0.13 kB
+dist/assets/Sponz.module-DOqILiqI.js                           0.25 kB │ gzip:   0.15 kB
+dist/assets/Registration.module-BFL-uWWi.js                    0.26 kB │ gzip:   0.16 kB
+dist/assets/Media-BinZFenW.js                                  3.07 kB │ gzip:   1.22 kB
+dist/assets/Eclipse-D3r_jFjR.js                                3.31 kB │ gzip:   1.30 kB
+dist/assets/Sponsors-fNG6p6nk.js                               3.31 kB │ gzip:   1.23 kB
+dist/assets/Registration-QysRz64K.js                          15.05 kB │ gzip:   5.17 kB
+dist/assets/Developers-CIaUp8Tn.js                            40.06 kB │ gzip:  13.30 kB
+dist/assets/Carousel-CCBwGQRG.js                              65.07 kB │ gzip:  17.13 kB
+dist/assets/Wallmag-CVAYpXjf.js                              141.03 kB │ gzip:  36.04 kB
+dist/assets/index-6jR2Vk0b.js                                378.15 kB │ gzip: 132.88 kB
+
+✓ built in 613ms
