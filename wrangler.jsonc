@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "dvm-portfolio-oasis-2022",
+  "account_id": "e6ad8a6f22a88b57a02e176325692373",
   "pages_build_output_dir": "./dist",
   "compatibility_date": "2026-09-30"
 }
