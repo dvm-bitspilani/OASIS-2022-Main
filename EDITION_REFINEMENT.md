@@ -10,9 +10,9 @@ The mobile/tablet menu now reflows the same original about text, map and links w
 
 ## Performance and caching
 
-First-pass build at `63ef0b2`: **145 files / 4,357,893 bytes**. Final build: **116 files / 3,351,141 bytes**, **23.10% smaller**, including the original font licences now distributed with the artifact.
+First-pass build at `63ef0b2`: **145 files / 4,357,893 bytes**. Final build: **116 files / 3,351,156 bytes**, **23.10% smaller**, including the original font licences now distributed with the artifact.
 
-Initial CSS changed from **122,485 to 26,490 bytes** (**78.37% smaller**). Initial JS changed from **378,153 to 369,077 bytes** (**2.40% smaller**). Final gzip measurements from Node zlib are **6,761 bytes** for initial CSS and **127,982 bytes** for initial JS. These are artifact measurements, not real-device load time or Core Web Vitals.
+Initial CSS changed from **122,485 to 26,505 bytes** (**78.36% smaller**). Initial JS changed from **378,153 to 369,077 bytes** (**2.40% smaller**). Final gzip measurements from Node zlib are **6,765 bytes** for initial CSS and **127,979 bytes** for initial JS. These are artifact measurements, not real-device load time or Core Web Vitals.
 
 Navigation intent prefetch and actual router navigation share cached module promises. Router lazy loading keeps the current route visible until the destination is ready, so no artificial loading page or blank Suspense replacement appears during uncached transitions. Carousel code and base carousel styles load near the video section; unused theme styles, spinner and icon font bundles no longer ship. Existing YouTube click-to-play, coarse-pointer and reduced-motion behavior remain. This edition has no audio payload; the former loader video is not imported or published. Below-fold contacts, logos and portraits load lazily.
 
@@ -37,3 +37,5 @@ Eclipse and WallMag global selectors were scoped to their pages so route prefetc
 - `git diff --check` passed.
 
 Parent performs desktop/mobile browser checks, cold/warm navigation measurements and publication. This report does not claim physical-device or cross-browser results. No push or deployment was performed by this refinement agent.
+
+Parent browser review passed desktop notice/menu/Eclipse and mobile hero notice checks. The closed mobile menu has a zero-width original container; its toggle now anchors to viewport width rather than the container’s right edge, so the original-size control remains on screen. Full mobile route checks continue in the parent pass.
