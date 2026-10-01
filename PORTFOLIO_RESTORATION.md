@@ -1,3 +1,5 @@
+This document records the first restoration pass. Current registration, visible wording, caching and measurements are documented in [EDITION_REFINEMENT.md](EDITION_REFINEMENT.md).
+
 # Oasis 2022 portfolio restoration
 
 Baseline: `95ad61bf87b70d532d22313ba8441e678b52eb8e` on `main`.

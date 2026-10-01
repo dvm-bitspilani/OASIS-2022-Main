@@ -1,4 +1,5 @@
 .hamContainer {
+  box-sizing: content-box;
   position: absolute;
   z-index: 300;
   border: 2px solid #d19a08e5;
@@ -258,9 +259,6 @@ a {
 }
 
 @media (max-width: 800px) {
-  .left {
-    display: none;
-  }
 
   .right {
     margin-inline: auto;
@@ -308,9 +306,6 @@ a {
 }
 
 @media (max-width: 900px) {
-  .about {
-    display: none;
-  }
 
   .map {
     width: 60%;
@@ -348,4 +343,20 @@ a {
   .text {
     font-size: 1rem;
   }
+}
+
+/* Reflow the original about, map and links instead of hiding them. */
+@media (max-width: 900px) {
+  .menu { top: 0; left: 0; flex-direction: column; align-items: stretch; box-sizing: border-box; min-height: 100vh; min-height: 100svh; max-height: 100vh; max-height: 100svh; overflow-y: auto; overscroll-behavior: contain; padding: 100px 24px 40px; gap: 24px; }
+  .hamContainer { left: auto; right: 16px; top: 20px; }
+  .left { display: flex; flex-direction: column; width: 100%; order: 1; gap: 24px; }
+  .right { width: 100%; margin: 0; order: 0; }
+  .right > a { min-height: 44px; display: flex; align-items: center; justify-content: center; margin: 0; }
+  .about { display: block; box-sizing: border-box; width: 100%; margin: 0; padding: 20px; }
+  .heading { margin: 0 0 16px; font-size: 2.5rem; }
+  .text { margin: 0; font-size: 1rem; line-height: 1.5; }
+  .map { box-sizing: border-box; width: 100%; margin: 0; flex-shrink: 0; }
+  .map iframe { width: 100% !important; height: 220px !important; display: block; }
+  .info { margin: 16px; font-size: 1rem; }
+  .list::after { display: none; }
 }

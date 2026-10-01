@@ -22,7 +22,7 @@ import Front from "../Assets/Developers/Front";
 import Design from "../Assets/Developers/Design";
 import Back from "../Assets/Developers/Back";
 
-import dvmlogo from "../Assets/Developers/dvm_logo.png";
+import dvmlogo from "../Assets/Developers/dvm_logo.webp";
 import hoverTxt1 from "../Assets/Developers/hoverTxt1.webp";
 import hoverTxt2 from "../Assets/Developers/hoverTxt2.webp";
 

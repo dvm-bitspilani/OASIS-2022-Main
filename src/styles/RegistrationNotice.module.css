@@ -1,0 +1,15 @@
+.notice {
+  box-sizing: border-box;
+  margin: auto;
+  width: min(360px, calc(100vw - 32px));
+  padding: 24px;
+  border: 1px solid #a98d48;
+  border-radius: 4px;
+  background: #17140e;
+  color: #ead28f;
+  font: 16px/1.5 "Mulish", sans-serif;
+}
+.notice::backdrop { background: #0009; }
+.notice h2 { margin: 0 0 12px; font: 700 1.25rem/1.4 "Mulish", sans-serif; }
+.notice p { margin: 0 0 20px; }
+.notice button { min-height: 44px; padding: 8px 20px; border: 1px solid #a98d48; border-radius: 3px; background: #302815; color: #ead28f; font: inherit; }

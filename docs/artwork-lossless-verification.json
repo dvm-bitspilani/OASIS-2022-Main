@@ -1,0 +1,255 @@
+[
+  {
+    "original": "src/Assets/arrowRight.png",
+    "asset": "src/Assets/arrowRight.webp",
+    "dimensions": [
+      24,
+      40
+    ],
+    "beforeBytes": 289,
+    "afterBytes": 148,
+    "pixelsEqual": true
+  },
+  {
+    "original": "src/Assets/arrowLeft.png",
+    "asset": "src/Assets/arrowLeft.webp",
+    "dimensions": [
+      24,
+      40
+    ],
+    "beforeBytes": 311,
+    "afterBytes": 158,
+    "pixelsEqual": true
+  },
+  {
+    "original": "src/Assets/logo.png",
+    "asset": "src/Assets/logo.webp",
+    "dimensions": [
+      69,
+      83
+    ],
+    "beforeBytes": 6906,
+    "afterBytes": 5496,
+    "pixelsEqual": true
+  },
+  {
+    "original": "src/Assets/Registration/wavylinesBottomLeft.png",
+    "asset": "src/Assets/Registration/wavylinesBottomLeft.webp",
+    "dimensions": [
+      311,
+      424
+    ],
+    "beforeBytes": 18425,
+    "afterBytes": 9742,
+    "pixelsEqual": true
+  },
+  {
+    "original": "src/Assets/Registration/wavylinesTopLeft.png",
+    "asset": "src/Assets/Registration/wavylinesTopLeft.webp",
+    "dimensions": [
+      541,
+      325
+    ],
+    "beforeBytes": 16225,
+    "afterBytes": 7598,
+    "pixelsEqual": true
+  },
+  {
+    "original": "src/Assets/Registration/wavylinesBottomRight.png",
+    "asset": "src/Assets/Registration/wavylinesBottomRight.webp",
+    "dimensions": [
+      308,
+      769
+    ],
+    "beforeBytes": 13555,
+    "afterBytes": 6350,
+    "pixelsEqual": true
+  },
+  {
+    "original": "src/Assets/Eclipse/eclipseHeading.png",
+    "asset": "src/Assets/Eclipse/eclipseHeading.webp",
+    "dimensions": [
+      317,
+      36
+    ],
+    "beforeBytes": 10238,
+    "afterBytes": 7650,
+    "pixelsEqual": true
+  },
+  {
+    "original": "public/Sponsors/tortoise.png",
+    "asset": "src/Assets/Sponsors/tortoise.webp",
+    "dimensions": [
+      1344,
+      822
+    ],
+    "beforeBytes": 29321,
+    "afterBytes": 12196,
+    "pixelsEqual": true
+  },
+  {
+    "original": "public/Sponsors/bharatx.png",
+    "asset": "src/Assets/Sponsors/bharatx.webp",
+    "dimensions": [
+      173,
+      52
+    ],
+    "beforeBytes": 2074,
+    "afterBytes": 896,
+    "pixelsEqual": true
+  },
+  {
+    "original": "public/Sponsors/monke.png",
+    "asset": "src/Assets/Sponsors/monke.webp",
+    "dimensions": [
+      1000,
+      1000
+    ],
+    "beforeBytes": 28922,
+    "afterBytes": 10946,
+    "pixelsEqual": true
+  },
+  {
+    "original": "public/Sponsors/ksheer.png",
+    "asset": "src/Assets/Sponsors/ksheer.webp",
+    "dimensions": [
+      567,
+      317
+    ],
+    "beforeBytes": 25376,
+    "afterBytes": 10434,
+    "pixelsEqual": true
+  },
+  {
+    "original": "public/Partners/news18.png",
+    "asset": "src/Assets/Partners/news18.webp",
+    "dimensions": [
+      326,
+      118
+    ],
+    "beforeBytes": 4137,
+    "afterBytes": 3428,
+    "pixelsEqual": true
+  },
+  {
+    "original": "public/Partners/1st.png",
+    "asset": "src/Assets/Partners/1st.webp",
+    "dimensions": [
+      512,
+      512
+    ],
+    "beforeBytes": 27085,
+    "afterBytes": 23150,
+    "pixelsEqual": true
+  },
+  {
+    "original": "src/Assets/Hamburger/bottomLeft.png",
+    "asset": "src/Assets/Hamburger/bottomLeft.webp",
+    "dimensions": [
+      311,
+      411
+    ],
+    "beforeBytes": 24226,
+    "afterBytes": 13444,
+    "pixelsEqual": true
+  },
+  {
+    "original": "src/Assets/Hamburger/info.png",
+    "asset": "src/Assets/Hamburger/info.webp",
+    "dimensions": [
+      25,
+      24
+    ],
+    "beforeBytes": 474,
+    "afterBytes": 238,
+    "pixelsEqual": true
+  },
+  {
+    "original": "src/Assets/Hamburger/topRight.png",
+    "asset": "src/Assets/Hamburger/topRight.webp",
+    "dimensions": [
+      645,
+      354
+    ],
+    "beforeBytes": 13872,
+    "afterBytes": 7216,
+    "pixelsEqual": true
+  },
+  {
+    "original": "src/Assets/Hamburger/topLeft.png",
+    "asset": "src/Assets/Hamburger/topLeft.webp",
+    "dimensions": [
+      496,
+      258
+    ],
+    "beforeBytes": 7095,
+    "afterBytes": 3458,
+    "pixelsEqual": true
+  },
+  {
+    "original": "src/Assets/Hamburger/midBottom.png",
+    "asset": "src/Assets/Hamburger/midBottom.webp",
+    "dimensions": [
+      394,
+      245
+    ],
+    "beforeBytes": 18045,
+    "afterBytes": 10356,
+    "pixelsEqual": true
+  },
+  {
+    "original": "src/Assets/Hamburger/midTop.png",
+    "asset": "src/Assets/Hamburger/midTop.webp",
+    "dimensions": [
+      548,
+      321
+    ],
+    "beforeBytes": 28689,
+    "afterBytes": 16946,
+    "pixelsEqual": true
+  },
+  {
+    "original": "src/Assets/Hamburger/bottomRight.png",
+    "asset": "src/Assets/Hamburger/bottomRight.webp",
+    "dimensions": [
+      275,
+      772
+    ],
+    "beforeBytes": 10313,
+    "afterBytes": 4640,
+    "pixelsEqual": true
+  },
+  {
+    "original": "src/Assets/Developers/dvm_logo.png",
+    "asset": "src/Assets/Developers/dvm_logo.webp",
+    "dimensions": [
+      593,
+      774
+    ],
+    "beforeBytes": 14064,
+    "afterBytes": 5344,
+    "pixelsEqual": true
+  },
+  {
+    "original": "src/Assets/Lander/Eyes/lefteye.png",
+    "asset": "src/Assets/Lander/Eyes/lefteye.webp",
+    "dimensions": [
+      25,
+      12
+    ],
+    "beforeBytes": 664,
+    "afterBytes": 578,
+    "pixelsEqual": true
+  },
+  {
+    "original": "src/Assets/Lander/Eyes/righteye.png",
+    "asset": "src/Assets/Lander/Eyes/righteye.webp",
+    "dimensions": [
+      25,
+      12
+    ],
+    "beforeBytes": 654,
+    "afterBytes": 588,
+    "pixelsEqual": true
+  }
+]

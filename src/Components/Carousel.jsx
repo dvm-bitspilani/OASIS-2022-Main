@@ -1,10 +1,11 @@
+import "../styles/CarouselVendor.css";
 import { useState } from "react";
 import ReactSlick from "react-slick";
 // react-slick exposes a nested default when consumed through native ESM.
 const Slider = ReactSlick.default ?? ReactSlick;
 import VideoCSS from "../styles/Video.module.css";
-import rightArrow from "../Assets/arrowRight.png";
-import leftArrow from "../Assets/arrowLeft.png";
+import rightArrow from "../Assets/arrowRight.webp";
+import leftArrow from "../Assets/arrowLeft.webp";
 const videos = [
   { id: "53_VKUrM5HY", text: "50 Years of Oasis" },
   { id: "u-Z00aGn5ro", text: "Oasis'22: Theme Reveal" },
@@ -12,7 +13,7 @@ const videos = [
 function Video({ video }) {
   const [playing, setPlaying] = useState(false);
   return <div className="card"><div className="container">
-    {playing ? <iframe src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1`} title={video.text} allow="autoplay; encrypted-media; picture-in-picture" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" /> : <button className="portfolio-video-play" onClick={() => setPlaying(true)} aria-label={`Play ${video.text}`}>▶<span>Play video</span></button>}
+    {playing ? <iframe src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1`} title={video.text} allow="autoplay; encrypted-media; picture-in-picture" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" /> : <button className="video-play" onClick={() => setPlaying(true)} aria-label={`Play ${video.text}`}>▶<span>Play video</span></button>}
   </div><div className="text">{video.text}</div></div>;
 }
 export default function Carousel() {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DOMPurify from "dompurify";
 import quote from "../Assets/quote.svg";
+import profilePlaceholder from "../Assets/profile-placeholder.svg";
 
 export default function WallMagArticle(props) {
   const [isOpen, setOpen] = useState(false);
@@ -29,7 +30,7 @@ export default function WallMagArticle(props) {
         <div className="header">
           <img
             className="square-img"
-            src="/archive-avatar.svg"
+            src={profilePlaceholder}
             alt="Historical profile photograph unavailable"
             loading="lazy"
           />

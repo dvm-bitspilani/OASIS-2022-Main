@@ -34,5 +34,5 @@ export function MouseTrail({ strokeColor = "#EBB935", lineWidthStart = 10 }) {
     window.addEventListener("pointermove", move, { passive: true });
     return () => { cancelAnimationFrame(frame); window.removeEventListener("resize", resize); window.removeEventListener("pointermove", move); };
   }, [strokeColor, lineWidthStart]);
-  return <canvas aria-hidden="true" ref={canvasRef} className="portfolio-trail" />;
+  return <canvas aria-hidden="true" ref={canvasRef} className="mouse-trail" />;
 }

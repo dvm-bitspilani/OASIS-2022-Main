@@ -11,20 +11,17 @@
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
-    "check": "node --test tests/*.test.mjs && npm run build",
+    "check": "node --test tests/*.test.mjs && npm run build && node scripts/verify-build.mjs",
     "deploy": "npm run build && CLOUDFLARE_ACCOUNT_ID=e6ad8a6f22a88b57a02e176325692373 wrangler pages deploy dist --project-name dvm-portfolio-oasis-2022 --branch main"
   },
   "dependencies": {
     "@fontsource/allura": "5.3.0",
-    "@fontsource/julius-sans-one": "5.3.0",
     "@fontsource/montserrat": "5.3.0",
     "@fontsource/mulish": "5.3.0",
-    "@fortawesome/fontawesome-free": "7.3.1",
     "dompurify": "3.4.16",
     "gsap": "3.15.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-intersection-observer": "11.0.1",
     "react-router-dom": "7.18.4",
     "react-slick": "0.31.0",
     "slick-carousel": "1.8.1"

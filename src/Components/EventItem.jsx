@@ -77,7 +77,7 @@ const EventItem = (props) => {
       style={style}
       role="button"
       tabIndex={props.idx === props.itrCount ? 0 : -1}
-      aria-label={`View ${props.eventName} demo details`}
+      aria-label={`View ${props.eventName} details`}
       onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") props.openPopUp(props.idx); }}
       onClick={() => {
         if (props.itrCount === props.idx) {

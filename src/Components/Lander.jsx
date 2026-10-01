@@ -5,11 +5,11 @@ import StrangeShard from "./StrangeShard";
 import Button from "./Button";
 
 import king from "../Assets/Lander/king.webp";
-import logo from "../Assets/logo.png";
+import logo from "../Assets/logo.webp";
 import title from "../Assets/Lander/title.webp";
 import windowImg from "../Assets/Lander/window.webp";
-import leftEye from "../Assets/Lander/Eyes/lefteye.png";
-import rightEye from "../Assets/Lander/Eyes/righteye.png";
+import leftEye from "../Assets/Lander/Eyes/lefteye.webp";
+import rightEye from "../Assets/Lander/Eyes/righteye.webp";
 
 import cloud1 from "../Assets/Lander/PortalClouds/window-clouds-1.webp";
 import cloud2 from "../Assets/Lander/PortalClouds/window-clouds-2.webp";

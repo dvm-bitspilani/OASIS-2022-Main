@@ -3,7 +3,7 @@ import { MouseTrail } from "../Components/MouseTrail";
 
 export default function ErrorPage() {
   const error = useRouteError();
-  document.title = "Archive page unavailable — Oasis 2022"
+  document.title = "Page unavailable — Oasis 2022"
 
   const trailProps = {
     lineDuration: 15,
@@ -30,7 +30,7 @@ export default function ErrorPage() {
         <MouseTrail {...trailProps} />
       </div>
       <h2>OOPS!</h2>
-      <p style={{ color: "#ead28f" }}>{error.status === 404 ? "This archive page does not exist." : "This archive page could not be opened."}</p>
+      <p style={{ color: "#ead28f" }}>{error?.status === 404 ? "This page does not exist." : "This page could not be opened."}</p>
       <a href="/" style={{ color: "#fcd776" }}>Return to Oasis 2022</a>
     </main>
   );

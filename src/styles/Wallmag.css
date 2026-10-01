@@ -2,9 +2,9 @@
   display: none;
 }
 
-h1,
-h2,
-h3 {
+.root-wallmag h1,
+.root-wallmag h2,
+.root-wallmag h3 {
   font-family: inherit;
   font-weight: inherit;
   font-size: inherit;

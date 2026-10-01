@@ -99,6 +99,7 @@ const Contact = React.forwardRef((props, ref) => {
               )
             ) : (
               <img
+                loading="lazy" decoding="async"
                 src={data[a].image}
                 alt={data[a].name}
                 className={ContactCSS.contactImage}

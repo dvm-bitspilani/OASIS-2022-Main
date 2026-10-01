@@ -2,14 +2,15 @@ import { useRef } from "react";
 import gsap, { Power4 } from "gsap";
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { prefetchRoute } from "../routeModules";
 import HamburgerCSS from "../styles/Hamburger.module.css";
 
-import bl from "../Assets/Hamburger/bottomLeft.png";
-import br from "../Assets/Hamburger/bottomRight.png";
-import mb from "../Assets/Hamburger/midBottom.png";
-import mt from "../Assets/Hamburger/midTop.png";
-import tl from "../Assets/Hamburger/topLeft.png";
-import icon from "../Assets/Hamburger/info.png";
+import bl from "../Assets/Hamburger/bottomLeft.webp";
+import br from "../Assets/Hamburger/bottomRight.webp";
+import mb from "../Assets/Hamburger/midBottom.webp";
+import mt from "../Assets/Hamburger/midTop.webp";
+import tl from "../Assets/Hamburger/topLeft.webp";
+import icon from "../Assets/Hamburger/info.webp";
 
 export default function Hamburger() {
   const [showMenu, setShowMenu] = React.useState(false);
@@ -23,6 +24,17 @@ export default function Hamburger() {
   let div1 = useRef(null);
   let div2 = useRef(null);
   let container = useRef(null);
+  const previousOverflow = useRef("");
+
+  useEffect(() => {
+    previousOverflow.current = document.documentElement.style.overflowY;
+    const keydown = event => { if (event.key === "Escape") setShowMenu(false); };
+    document.addEventListener("keydown", keydown);
+    return () => {
+      document.removeEventListener("keydown", keydown);
+      document.documentElement.style.overflowY = previousOverflow.current;
+    };
+  }, []);
 
   const staggerText = (node, node2, node3, node4, node5) => {
     gsap.to([node, node2, node3, node4, node5], {
@@ -69,14 +81,11 @@ export default function Hamburger() {
   };
 
   function toggleMenu() {
-    setShowMenu(!showMenu);
-
-    document.querySelector("html").style.overflowY = showMenu
-      ? "scroll"
-      : "hidden";
+    setShowMenu(open => !open);
   }
 
   useEffect(() => {
+    document.documentElement.style.overflowY = showMenu ? "hidden" : previousOverflow.current;
     let ham = document.getElementById("ham");
     let ham2 = document.getElementById("ham2");
 
@@ -102,6 +111,7 @@ export default function Hamburger() {
 
       ham.style.transform = "rotate(0deg) translate(-7px, 10px)";
       ham2.style.transform = "rotate(0deg) translate(-7px, -5px)";
+      return () => gsap.killTweensOf([menuDiv.current, div1.current, div2.current, menu1.current, menu2.current, menu3.current, menu4.current, menu5.current]);
     } else {
       ham.style.transform = "rotate(-45deg) translate(-6px, 2px)";
       ham2.style.transform = "rotate(-45deg) translate(-5px, -10px)";
@@ -126,7 +136,10 @@ export default function Hamburger() {
         container.current.style.width = "0vw";
         container.current.style.height = "0vh";
       }, 800);
-      return () => clearTimeout(closeTimer);
+      return () => {
+        clearTimeout(closeTimer);
+        gsap.killTweensOf([menuDiv.current, div1.current, div2.current, menu1.current, menu2.current, menu3.current, menu4.current, menu5.current]);
+      };
     }
   }, [showMenu]);
 
@@ -156,32 +169,27 @@ export default function Hamburger() {
   };
 
   function spons() {
-    document.querySelector("html").style.overflowY = "scroll";
     navigate("/sponsors");
   }
   function devs() {
-    document.querySelector("html").style.overflowY = "scroll";
     navigate("/developers");
   }
   function media() {
-    document.querySelector("html").style.overflowY = "scroll";
     navigate("/mediaPartners");
   }
   function eclipse() {
-    document.querySelector("html").style.overflowY = "scroll";
     navigate("/eclipse");
   }
   function wallmag() {
-    document.querySelector("html").style.overflowY = "scroll";
     navigate("/wallmag");
   }
 
   return (
     <div ref={container} className={HamburgerCSS.container}>
-      <div className={HamburgerCSS.hamContainer} onClick={toggleMenu} role="button" tabIndex="0" aria-label="Toggle navigation" aria-expanded={showMenu} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") toggleMenu(); }}>
+      <button type="button" className={HamburgerCSS.hamContainer} onClick={toggleMenu} aria-label="Toggle navigation" aria-expanded={showMenu} aria-controls="menu">
         <div className={HamburgerCSS.ham} id="ham"></div>
         <div className={HamburgerCSS.ham2} id="ham2"></div>
-      </div>
+      </button>
 
       <div ref={menuDiv} id="menu" inert={showMenu ? undefined : ""} aria-hidden={!showMenu} className={HamburgerCSS.menu}>
         <img alt="" src={bl} className={HamburgerCSS.bl}></img>
@@ -204,7 +212,7 @@ export default function Hamburger() {
           <div className={HamburgerCSS.map}>
             {showMenu && <iframe loading="lazy"
               src="https://maps.google.com/maps?q=BITS%20Pilani&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              title="pilani on map"
+              title="BITS Pilani on map"
               width="100%"
               height="80%"
               allowFullScreen
@@ -226,6 +234,7 @@ export default function Hamburger() {
         <div className={HamburgerCSS.right}>
           <a
             href="/developers/" onClick={(event) => { event.preventDefault(); devs(); }}
+            onPointerEnter={() => prefetchRoute("/developers")} onFocus={() => prefetchRoute("/developers")} onTouchStart={() => prefetchRoute("/developers")}
             ref={menu1}
             className={HamburgerCSS.list}
           >
@@ -233,6 +242,7 @@ export default function Hamburger() {
           </a>
           <a
             href="/sponsors/" onClick={(event) => { event.preventDefault(); spons(); }}
+            onPointerEnter={() => prefetchRoute("/sponsors")} onFocus={() => prefetchRoute("/sponsors")} onTouchStart={() => prefetchRoute("/sponsors")}
             ref={menu2}
             className={HamburgerCSS.list}
           >
@@ -240,6 +250,7 @@ export default function Hamburger() {
           </a>
           <a
             href="/eclipse/" onClick={(event) => { event.preventDefault(); eclipse(); }}
+            onPointerEnter={() => prefetchRoute("/eclipse")} onFocus={() => prefetchRoute("/eclipse")} onTouchStart={() => prefetchRoute("/eclipse")}
             ref={menu3}
             className={HamburgerCSS.list}
           >
@@ -247,6 +258,7 @@ export default function Hamburger() {
           </a>
           <a
             href="/mediaPartners/" onClick={(event) => { event.preventDefault(); media(); }}
+            onPointerEnter={() => prefetchRoute("/mediaPartners")} onFocus={() => prefetchRoute("/mediaPartners")} onTouchStart={() => prefetchRoute("/mediaPartners")}
             ref={menu4}
             className={HamburgerCSS.list}
           >
@@ -254,6 +266,7 @@ export default function Hamburger() {
           </a>
           <a
             href="/wallmag/" onClick={(event) => { event.preventDefault(); wallmag(); }}
+            onPointerEnter={() => prefetchRoute("/wallmag")} onFocus={() => prefetchRoute("/wallmag")} onTouchStart={() => prefetchRoute("/wallmag")}
             ref={menu5}
             className={HamburgerCSS.list}
           >

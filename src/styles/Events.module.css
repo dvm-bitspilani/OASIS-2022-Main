@@ -81,3 +81,7 @@
     --width: 60vw;
   }
 }
+
+.unavailable { flex-direction: column; gap: 32px; }
+.unavailable p { max-width: 90vw; color: #ead28f; text-align: center; font: 16px/1.5 "Mulish", sans-serif; }
+.unavailable img { display: block; object-fit: cover; object-position: bottom; }

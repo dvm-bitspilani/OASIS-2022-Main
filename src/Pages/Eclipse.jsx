@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import EclipseCSS from "../styles/Eclipse.module.css";
-import wlbl from "../Assets/Registration/wavylinesBottomLeft.png";
-import wlbr from "../Assets/Registration/wavylinesBottomRight.png";
-import wltl from "../Assets/Registration/wavylinesTopLeft.png";
-import EclipseHeading from "../Assets/Eclipse/eclipseHeading.png";
+import wlbl from "../Assets/Registration/wavylinesBottomLeft.webp";
+import wlbr from "../Assets/Registration/wavylinesBottomRight.webp";
+import wltl from "../Assets/Registration/wavylinesTopLeft.webp";
+import EclipseHeading from "../Assets/Eclipse/eclipseHeading.webp";
 import codMobile from "../Assets/Eclipse/codmobile.webp";
 import valo from "../Assets/Eclipse/valo.webp";
 import cr from "../Assets/Eclipse/clashroyale.webp";
@@ -11,9 +11,10 @@ import Button from "../Components/Button";
 import { MouseTrail } from "../Components/MouseTrail";
 
 import { useNavigate } from "react-router-dom";
+import Registration from "./Registration";
 
 const Eclipse = () => {
-  const [demoResult, setDemoResult] = useState("");
+  const [registrationOpen, setRegistrationOpen] = useState(false);
   document.title = "OASIS'22 | Eclipse"
   const navigate = useNavigate();
   
@@ -30,6 +31,7 @@ const Eclipse = () => {
 
   return (
     <div className={EclipseCSS.eclipseBackdrop}>
+      {registrationOpen && <Registration onClose={() => setRegistrationOpen(false)} />}
       <div style={{ zIndex: 1000 }}>
         <MouseTrail {...trailProps} />
       </div>
@@ -57,28 +59,27 @@ const Eclipse = () => {
             </svg>
           </div>
         </div>
-        <p className="portfolio-form-note" role="status">{demoResult || "Archived gaming showcase — registration controls are a local demonstration."}</p>
       <div className={EclipseCSS.games}>
           <div className={EclipseCSS.container1}>
             <div>COD Mobile</div>
             <div className={EclipseCSS.imgContainer}>
               <img src={codMobile}></img>
             </div>
-            <Button btn_title={"REGISTER"} onClick_fun={() => setDemoResult("Demo complete: no tournament registration was submitted or saved.")} />
+            <Button btn_title={"REGISTER"} onClick_fun={() => setRegistrationOpen(true)} />
           </div>
           <div className={EclipseCSS.container2}>
             <div>Valorant</div>
             <div className={EclipseCSS.imgContainer}>
               <img src={valo}></img>
             </div>
-            <Button btn_title={"REGISTER"} onClick_fun={() => setDemoResult("Demo complete: no tournament registration was submitted or saved.")} />
+            <Button btn_title={"REGISTER"} onClick_fun={() => setRegistrationOpen(true)} />
           </div>
           <div className={EclipseCSS.container3}>
             <div>Clash Royale</div>
             <div className={EclipseCSS.imgContainer}>
               <img src={cr}></img>
             </div>
-            <Button btn_title={"REGISTER"} onClick_fun={() => setDemoResult("Demo complete: no tournament registration was submitted or saved.")} />
+            <Button btn_title={"REGISTER"} onClick_fun={() => setRegistrationOpen(true)} />
           </div>
         </div>
         <img src={wlbl} className={EclipseCSS.wlbl}></img>

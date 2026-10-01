@@ -1,0 +1,8 @@
+@font-face { font-family: "Allura"; font-style: normal; font-weight: 400; font-display: swap; src: url('../../node_modules/@fontsource/allura/files/allura-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: "Mulish"; font-style: normal; font-weight: 400; font-display: swap; src: url('../../node_modules/@fontsource/mulish/files/mulish-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: "Mulish"; font-style: normal; font-weight: 700; font-display: swap; src: url('../../node_modules/@fontsource/mulish/files/mulish-latin-700-normal.woff2') format('woff2'); }
+@font-face { font-family: "Montserrat"; font-style: normal; font-weight: 400; font-display: swap; src: url('../../node_modules/@fontsource/montserrat/files/montserrat-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: "Montserrat"; font-style: normal; font-weight: 500; font-display: swap; src: url('../../node_modules/@fontsource/montserrat/files/montserrat-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: "Oasis Footer Icons"; font-style: normal; font-weight: 900; font-display: swap; src: url('../Assets/Fonts/footer-heart.woff2') format('woff2'); }
+.fa-heart { font-family: "Oasis Footer Icons"; font-style: normal; font-weight: 900; display: inline-block; line-height: 1; }
+.fa-heart::before { content: '\f004'; }

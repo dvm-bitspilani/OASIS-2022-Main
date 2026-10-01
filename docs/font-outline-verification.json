@@ -1,0 +1,7 @@
+{
+  "source": "@fortawesome/fontawesome-free 7.3.1, fa-solid-900.woff2",
+  "asset": "src/Assets/Fonts/footer-heart.woff2",
+  "heartOutlineAndMetricsEqual": true,
+  "beforeBytes": 119488,
+  "afterBytes": 672
+}
