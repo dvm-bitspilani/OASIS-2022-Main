@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { prefetchRoute } from "../routeModules";
 import HamburgerCSS from "../styles/Hamburger.module.css";
+import CampusMap from "./CampusMap";
 
 import bl from "../Assets/Hamburger/bottomLeft.webp";
 import br from "../Assets/Hamburger/bottomRight.webp";
@@ -210,13 +211,7 @@ export default function Hamburger() {
           </div>
 
           <div className={HamburgerCSS.map}>
-            {showMenu && <iframe loading="lazy"
-              src="https://maps.google.com/maps?q=BITS%20Pilani&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              title="BITS Pilani on map"
-              width="100%"
-              height="80%"
-              allowFullScreen
-            ></iframe>}
+            {showMenu && <CampusMap />}
 
             <div className={HamburgerCSS.info}>
               <a
